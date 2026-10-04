@@ -1,0 +1,304 @@
+{
+  "schema_version": "professional-development-snapshot/1",
+  "package_version": "0.4.0-dev.2",
+  "captured_at": "2026-10-04T04:21:03.944804+00:00",
+  "channel": "development",
+  "production_accepted": false,
+  "release_promotion_claimed": false,
+  "component_counts": {
+    "orchestration": 8,
+    "persona": 13,
+    "runtime": 2,
+    "skill": 31
+  },
+  "component_status": "provisional definitions; exact versions and hashes in release.json",
+  "report_acceptance": {
+    "qualified_companies": 0,
+    "lg_attempts": 31,
+    "completed_reports": 0,
+    "deadline_stops": 27,
+    "mean_stop_seconds": 443.19690883544183,
+    "median_stop_seconds": 479.3159999847412,
+    "min_stop_seconds": 73.45741105079651,
+    "max_stop_seconds": 589.4435169696808,
+    "completion_duration_observed": false,
+    "warning": "Stop times include stage deadlines and errors; they are not completed-report timings."
+  },
+  "capabilities": {
+    "package_integrity_and_install": "executable; this snapshot verification recorded separately",
+    "session_handoff_review_continuity": "implemented; native host tool availability required; fresh round policy",
+    "source_and_calculation_audits": "implemented; original scalar and independent arithmetic checks, not economic approval",
+    "class_distribution_model": "implemented; requires explicit evidenced future owner cashflows; reconciled_unreviewed only",
+    "terminal_capital_diagnostics": "implemented; explicit supplied cases only; no adopted financial forecasts",
+    "risk_and_cost": "implemented development/shadow policy; no authorization to lower protected controls",
+    "valuation_full_report": "experimental; no full report has passed all quality and timing conditions",
+    "fdd": "planning only",
+    "esg": "general professional orchestration planning only; separate learning/corpus adapter experimental"
+  },
+  "known_gaps": [
+    "No observed end-to-end completion baseline outside deadlines.",
+    "Class-rights cashflow, terminal reinvestment, investee and cash-bridge economics still need current evidence and independent resolution.",
+    "Printed dash tokens in source tables may remain insufficient; no automatic conversion to zero.",
+    "All first-document PDF pages and actual saved-file spreadsheet recalculation remain required.",
+    "Source component files and mechanical tests do not establish report or financial approval."
+  ],
+  "attempts": [
+    {
+      "attempt_id": "lg-001",
+      "status": "incomplete",
+      "reason": "material_input_gaps",
+      "elapsed_seconds": 499.4205229282379,
+      "source_path": "development/ten-company-valuation/runs/lg-001/attempt-result.json",
+      "source_sha256": "00c203643ed616e70d290921f333d76856ff85fe5cf517ff8602f6dd24e8327e"
+    },
+    {
+      "attempt_id": "lg-002",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for analyst reached",
+      "elapsed_seconds": 285.18273997306824,
+      "source_path": "development/ten-company-valuation/runs/lg-002/attempt-result.json",
+      "source_sha256": "a99da48ae260eb8c429c789bc3a9b4789271955b340f004f70219edfc483d67f"
+    },
+    {
+      "attempt_id": "lg-003",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for analyst reached",
+      "elapsed_seconds": 281.23200011253357,
+      "source_path": "development/ten-company-valuation/runs/lg-003/attempt-result.json",
+      "source_sha256": "06b1f5b1ab203fb16a20bffa8563b3ab2dc1bec612dd972645d134d0e91ac80d"
+    },
+    {
+      "attempt_id": "lg-004",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for analyst reached",
+      "elapsed_seconds": 285.26199984550476,
+      "source_path": "development/ten-company-valuation/runs/lg-004/attempt-result.json",
+      "source_sha256": "8f2760f93fb413eec841e4c3015077947f5cd403aec87b994aa1e3f888a74bed"
+    },
+    {
+      "attempt_id": "lg-005",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 285.26900005340576,
+      "source_path": "development/ten-company-valuation/runs/lg-005/attempt-result.json",
+      "source_sha256": "353135de6c96a16b73719576053a71d93f79484d73ecaa3489ec9750d79d0aa0"
+    },
+    {
+      "attempt_id": "lg-006",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 350.3359999656677,
+      "source_path": "development/ten-company-valuation/runs/lg-006/attempt-result.json",
+      "source_sha256": "c6f2e0ff4aabee32dfac549f3a48cceb415919b8385ca41250604f7e0e6cbf36"
+    },
+    {
+      "attempt_id": "lg-007",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 350.33899998664856,
+      "source_path": "development/ten-company-valuation/runs/lg-007/attempt-result.json",
+      "source_sha256": "70f50909f65837b1533722b986d8cebd983d7c927e27af9bea14a6e9bb705d01"
+    },
+    {
+      "attempt_id": "lg-008",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 350.335000038147,
+      "source_path": "development/ten-company-valuation/runs/lg-008/attempt-result.json",
+      "source_sha256": "67f870cf5c00f0ccf34e19ab0e4d68701c15d2225ebeae5f4e04870f9b8e8f47"
+    },
+    {
+      "attempt_id": "lg-009",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 345.88699984550476,
+      "source_path": "development/ten-company-valuation/runs/lg-009/attempt-result.json",
+      "source_sha256": "14adaa4ba01dbe6ba26a03ebf18a754ae1599964ca1193745eba8537b222a9a1"
+    },
+    {
+      "attempt_id": "lg-010",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 344.84099984169006,
+      "source_path": "development/ten-company-valuation/runs/lg-010/attempt-result.json",
+      "source_sha256": "5239d9049ca9620eb424383c2bd943474b8e3fabf21a5fb50b158a110f52419b"
+    },
+    {
+      "attempt_id": "lg-011",
+      "status": "incomplete",
+      "reason": "Error: {\"status\": \"incomplete\", \"error\": \"[Errno 17] File exists: '<original-development-workspace>/development/ten-company-valuation/runs/lg-011/model-result.json'\"}\n",
+      "elapsed_seconds": 306.34600019454956,
+      "source_path": "development/ten-company-valuation/runs/lg-011/attempt-result.json",
+      "source_sha256": "6e9044635f471fb6f80e64cbf2a8878dee5ed6f9835ea09f536def1a89c26e2c"
+    },
+    {
+      "attempt_id": "lg-012",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for analyst reached",
+      "elapsed_seconds": 353.40899991989136,
+      "source_path": "development/ten-company-valuation/runs/lg-012/attempt-result.json",
+      "source_sha256": "0a8eba103f86772912b9b8cee8152c6cbe8e2d02e693b7d4ec5ad07cf31231d3"
+    },
+    {
+      "attempt_id": "lg-013",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for author reached",
+      "elapsed_seconds": 479.3159999847412,
+      "source_path": "development/ten-company-valuation/runs/lg-013/attempt-result.json",
+      "source_sha256": "c56b1f7a9c580b4d2466fe61933839fd52a4fa8869b464bf20c3e052c8cf2f4e"
+    },
+    {
+      "attempt_id": "lg-014",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for reviewer reached",
+      "elapsed_seconds": 575.2324368953705,
+      "source_path": "development/ten-company-valuation/runs/lg-014/attempt-result.json",
+      "source_sha256": "4c3ab96e2a3ad5151f6e39e807bba7ddbffede025e37dedca0517c6141fe7390"
+    },
+    {
+      "attempt_id": "lg-015",
+      "status": "incomplete",
+      "reason": "Coordinator read wrong controller location before business execution; launch instruction omitted absolute controller path",
+      "elapsed_seconds": 73.45741105079651,
+      "source_path": "development/ten-company-valuation/runs/lg-015/attempt-result.json",
+      "source_sha256": "d45e21c21c493b0ce70a1252d0a1364065fc6c274ef7b1d5010717b3961ece8f"
+    },
+    {
+      "attempt_id": "lg-016",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for reviewer reached",
+      "elapsed_seconds": 576.4962122440338,
+      "source_path": "development/ten-company-valuation/runs/lg-016/attempt-result.json",
+      "source_sha256": "39b9057f7bbe230d1487ceb4f6d52f753cfbc559fdeef5879cb83a07241ad33d"
+    },
+    {
+      "attempt_id": "lg-017",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for author reached",
+      "elapsed_seconds": 480.13378500938416,
+      "source_path": "development/ten-company-valuation/runs/lg-017/attempt-result.json",
+      "source_sha256": "1bef35e7346f2f139d3cff08e95e4749e27865932c570c43b8527ab8e0825424"
+    },
+    {
+      "attempt_id": "lg-018",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for reviewer reached",
+      "elapsed_seconds": 574.2382049560547,
+      "source_path": "development/ten-company-valuation/runs/lg-018/attempt-result.json",
+      "source_sha256": "2f948a943c1f0ad849512e59bfe70fcd811b9707f1c50289fe4c5c00f1ec6dfd"
+    },
+    {
+      "attempt_id": "lg-019",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for reviewer reached",
+      "elapsed_seconds": 572.4546458721161,
+      "source_path": "development/ten-company-valuation/runs/lg-019/attempt-result.json",
+      "source_sha256": "a2ce8f8accb859dcb23cedaa302319c0ca3c7fdd2b65bfd2ccd9c96dd95bd4cd"
+    },
+    {
+      "attempt_id": "lg-020",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-left reached",
+      "elapsed_seconds": 583.7702159881592,
+      "source_path": "development/ten-company-valuation/runs/lg-020/attempt-result.json",
+      "source_sha256": "3a554e6b85e3a33da9f813e725e0fcf3ae6958f2d31120f4012b29fa534d65d2"
+    },
+    {
+      "attempt_id": "lg-021",
+      "status": "incomplete",
+      "reason": "Error: {\"status\": \"incomplete\", \"error\": \"PDF render incomplete or layout failed\"}\n",
+      "elapsed_seconds": 489.28413915634155,
+      "source_path": "development/ten-company-valuation/runs/lg-021/attempt-result.json",
+      "source_sha256": "747addcc069d4d778d09f1352ca63ffc4debc9fea518cb11b37642a3a65d0fb7"
+    },
+    {
+      "attempt_id": "lg-022",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-left reached",
+      "elapsed_seconds": 587.6309928894043,
+      "source_path": "development/ten-company-valuation/runs/lg-022/attempt-result.json",
+      "source_sha256": "031bda80c90c3417a30ae07750617d416e2dea76e2bd25ddd9a9d0772815f7ca"
+    },
+    {
+      "attempt_id": "lg-023",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-left reached",
+      "elapsed_seconds": 583.1590800285339,
+      "source_path": "development/ten-company-valuation/runs/lg-023/attempt-result.json",
+      "source_sha256": "3f1a093a22bfdf71c8ef0c67980a716b8ac669ccc35cb7eecc9c9f6824d18c15"
+    },
+    {
+      "attempt_id": "lg-024",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for reviewer reached",
+      "elapsed_seconds": 589.4435169696808,
+      "source_path": "development/ten-company-valuation/runs/lg-024/attempt-result.json",
+      "source_sha256": "0be6dcfccb691178108eb75eb8822040f09e63079de3e09f44da3b49023ed36a"
+    },
+    {
+      "attempt_id": "lg-025",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for author reached",
+      "elapsed_seconds": 472.7334041595459,
+      "source_path": "development/ten-company-valuation/runs/lg-025/attempt-result.json",
+      "source_sha256": "52ee20dd29e39acb02d266a3e893ebfdfc88d5bc1fb64e2e9e6783143c1a9071"
+    },
+    {
+      "attempt_id": "lg-026",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-left reached",
+      "elapsed_seconds": 586.1060299873352,
+      "source_path": "development/ten-company-valuation/runs/lg-026/attempt-result.json",
+      "source_sha256": "1979fa9a396c130b2c13e9a0cae45da47a08234392f85ef2627e439692453f89"
+    },
+    {
+      "attempt_id": "lg-027",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for curator reached",
+      "elapsed_seconds": 359.6313557624817,
+      "source_path": "development/ten-company-valuation/runs/lg-027/attempt-result.json",
+      "source_sha256": "508c05999b8913507f9986b594e46452c023d115e7387d87b79ec56c36dc8426"
+    },
+    {
+      "attempt_id": "lg-028",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-left reached",
+      "elapsed_seconds": 583.6082990169525,
+      "source_path": "development/ten-company-valuation/runs/lg-028/attempt-result.json",
+      "source_sha256": "0622e6efb99aabcd4216171ee51565e20a2320c0bd0d4157ccae30505f70f137"
+    },
+    {
+      "attempt_id": "lg-029",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-right reached",
+      "elapsed_seconds": 587.3553562164307,
+      "source_path": "development/ten-company-valuation/runs/lg-029/attempt-result.json",
+      "source_sha256": "cb3b2eb9f28dec1d315983d97f1cf2179491c60457e391e8ac545f07376ba820"
+    },
+    {
+      "attempt_id": "lg-030",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for analyst reached",
+      "elapsed_seconds": 358.0231900215149,
+      "source_path": "development/ten-company-valuation/runs/lg-030/attempt-result.json",
+      "source_sha256": "b6b0cf210645ac8b08883d67dd5f129c4582c83d8674b1083916e2d052011aa6"
+    },
+    {
+      "attempt_id": "lg-031",
+      "status": "incomplete",
+      "reason": "Error: Work deadline for visual-right reached",
+      "elapsed_seconds": 589.1706349849701,
+      "source_path": "development/ten-company-valuation/runs/lg-031/attempt-result.json",
+      "source_sha256": "2d369bef886f8827b37b5f394311c4891eab001014152e87814cf2040d3115e7"
+    }
+  ],
+  "protected_criteria_changed": false,
+  "global_active_release_changed": false,
+  "official_packaging_source": "https://developers.openai.com/plugins/build/plugins",
+  "public_distribution": {
+    "frozen_company_case_files": "not distributed; original local release retained",
+    "private_paths": "redacted in public documentation",
+    "protected_criteria": "unchanged",
+    "blind_holdout_claimed": false
+  }
+}

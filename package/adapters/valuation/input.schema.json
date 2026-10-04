@@ -1,0 +1,1922 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conditional segmented valuation input",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "0.1.0-dev.1"
+      ]
+    },
+    "company": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "[A-Z]{3}"
+    },
+    "amount_scale": {
+      "$ref": "#/$defs/positive"
+    },
+    "valuation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "base_year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 9990
+    },
+    "horizon": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "discount_timing": {
+      "$ref": "#/$defs/timing"
+    },
+    "industrial": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "[A-Za-z][A-Za-z0-9_-]{0,30}"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revenue": {
+            "$ref": "#/$defs/positive"
+          },
+          "reported_ebit": {
+            "$ref": "#/$defs/number"
+          },
+          "debt": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "cash": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "lease_liability": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "parent_ownership": {
+            "$ref": "#/$defs/fraction"
+          },
+          "nci_method": {
+            "$ref": "#/$defs/nci_method"
+          },
+          "lease_policy": {
+            "$ref": "#/$defs/lease_policy"
+          },
+          "lease_basis": {
+            "$ref": "#/$defs/text_atom"
+          },
+          "opening_nwc_rate": {
+            "$ref": "#/$defs/rate"
+          },
+          "forecast": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "growth": {
+                  "$ref": "#/$defs/rate"
+                },
+                "margin": {
+                  "$ref": "#/$defs/rate"
+                },
+                "da_rate": {
+                  "$ref": "#/$defs/rate"
+                },
+                "capex_rate": {
+                  "$ref": "#/$defs/rate"
+                },
+                "nwc_rate": {
+                  "$ref": "#/$defs/rate"
+                }
+              },
+              "required": [
+                "growth",
+                "margin",
+                "da_rate",
+                "capex_rate",
+                "nwc_rate"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 20
+          },
+          "wacc": {
+            "$ref": "#/$defs/positive"
+          },
+          "terminal_growth": {
+            "$ref": "#/$defs/rate"
+          },
+          "terminal_margin": {
+            "$ref": "#/$defs/rate"
+          },
+          "terminal_roic": {
+            "$ref": "#/$defs/positive"
+          },
+          "tax_rate": {
+            "$ref": "#/$defs/fraction"
+          },
+          "stub": {
+            "type": "object",
+            "properties": {
+              "revenue": {
+                "$ref": "#/$defs/number"
+              },
+              "ebit": {
+                "$ref": "#/$defs/number"
+              },
+              "cash_tax": {
+                "$ref": "#/$defs/number"
+              },
+              "da": {
+                "$ref": "#/$defs/number"
+              },
+              "capex": {
+                "$ref": "#/$defs/number"
+              },
+              "delta_nwc": {
+                "$ref": "#/$defs/number"
+              },
+              "opening_nwc": {
+                "$ref": "#/$defs/number"
+              },
+              "closing_nwc": {
+                "$ref": "#/$defs/number"
+              },
+              "fcff": {
+                "$ref": "#/$defs/number"
+              },
+              "full_year_revenue_anchor": {
+                "$ref": "#/$defs/positive"
+              }
+            },
+            "required": [
+              "revenue",
+              "ebit",
+              "cash_tax",
+              "da",
+              "capex",
+              "delta_nwc",
+              "opening_nwc",
+              "closing_nwc",
+              "fcff",
+              "full_year_revenue_anchor"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "revenue",
+          "reported_ebit",
+          "debt",
+          "cash",
+          "lease_liability",
+          "parent_ownership",
+          "nci_method",
+          "lease_policy",
+          "lease_basis",
+          "opening_nwc_rate",
+          "forecast",
+          "wacc",
+          "terminal_growth",
+          "terminal_margin",
+          "terminal_roic",
+          "tax_rate"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 20
+    },
+    "finance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "[A-Za-z][A-Za-z0-9_-]{0,30}"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revenue": {
+            "$ref": "#/$defs/number"
+          },
+          "reported_ebit": {
+            "$ref": "#/$defs/number"
+          },
+          "book_equity": {
+            "$ref": "#/$defs/positive"
+          },
+          "funding_debt": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "cash": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "parent_ownership": {
+            "$ref": "#/$defs/fraction"
+          },
+          "nci_method": {
+            "$ref": "#/$defs/finance_nci_method"
+          },
+          "finance_basis": {
+            "$ref": "#/$defs/text_atom"
+          },
+          "forecast": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "roe": {
+                  "$ref": "#/$defs/rate"
+                },
+                "payout": {
+                  "$ref": "#/$defs/fraction"
+                }
+              },
+              "required": [
+                "roe",
+                "payout"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 20
+          },
+          "cost_equity": {
+            "$ref": "#/$defs/positive"
+          },
+          "terminal_growth": {
+            "$ref": "#/$defs/rate"
+          },
+          "terminal_roe": {
+            "$ref": "#/$defs/positive"
+          },
+          "pb_multiple": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "stub": {
+            "type": "object",
+            "properties": {
+              "income": {
+                "$ref": "#/$defs/number"
+              },
+              "dividends": {
+                "$ref": "#/$defs/nonnegative"
+              }
+            },
+            "required": [
+              "income",
+              "dividends"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "revenue",
+          "reported_ebit",
+          "book_equity",
+          "funding_debt",
+          "cash",
+          "parent_ownership",
+          "nci_method",
+          "finance_basis",
+          "forecast",
+          "cost_equity",
+          "terminal_growth",
+          "terminal_roe",
+          "pb_multiple"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 20
+    },
+    "consolidation": {
+      "type": "object",
+      "properties": {
+        "revenue_eliminations": {
+          "$ref": "#/$defs/number"
+        },
+        "ebit_eliminations": {
+          "$ref": "#/$defs/number"
+        },
+        "debt_eliminations": {
+          "$ref": "#/$defs/number"
+        },
+        "cash_eliminations": {
+          "$ref": "#/$defs/number"
+        },
+        "consolidated_revenue": {
+          "$ref": "#/$defs/number"
+        },
+        "consolidated_ebit": {
+          "$ref": "#/$defs/number"
+        },
+        "consolidated_debt": {
+          "$ref": "#/$defs/number"
+        },
+        "consolidated_cash": {
+          "$ref": "#/$defs/number"
+        },
+        "finance_book_adjustment": {
+          "$ref": "#/$defs/number"
+        },
+        "consolidated_finance_book": {
+          "$ref": "#/$defs/number"
+        }
+      },
+      "required": [
+        "revenue_eliminations",
+        "ebit_eliminations",
+        "debt_eliminations",
+        "cash_eliminations",
+        "consolidated_revenue",
+        "consolidated_ebit",
+        "consolidated_debt",
+        "consolidated_cash",
+        "finance_book_adjustment",
+        "consolidated_finance_book"
+      ],
+      "additionalProperties": false
+    },
+    "bridge": {
+      "type": "object",
+      "properties": {
+        "nonoperating_assets": {
+          "$ref": "#/$defs/number"
+        },
+        "parent_liabilities": {
+          "$ref": "#/$defs/number"
+        },
+        "separately_valued_nci": {
+          "$ref": "#/$defs/number",
+          "description": "Incremental externally held equity claims valued separately and not already included in segment proportional NCI. Positive deduction; never a liability."
+        },
+        "industrial_ev_adjustment": {
+          "$ref": "#/$defs/number"
+        },
+        "finance_equity_adjustment": {
+          "$ref": "#/$defs/number"
+        }
+      },
+      "required": [
+        "nonoperating_assets",
+        "parent_liabilities",
+        "industrial_ev_adjustment",
+        "finance_equity_adjustment"
+      ],
+      "additionalProperties": false
+    },
+    "class_rights": {
+      "$ref": "#/$defs/rights"
+    },
+    "share_classes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "[A-Za-z][A-Za-z0-9_-]{0,30}"
+          },
+          "issued": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "treasury": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "participation_weight": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "fixed_claim_per_share": {
+            "$ref": "#/$defs/nonnegative"
+          },
+          "market_price": {
+            "description": "Optional sourced quote for market capitalization and reverse diagnostics only; never an intrinsic valuation driver.",
+            "$ref": "#/$defs/nonnegative"
+          }
+        },
+        "required": [
+          "id",
+          "issued",
+          "treasury"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 10
+    },
+    "sensitivity": {
+      "type": "object",
+      "properties": {
+        "discount_step": {
+          "$ref": "#/$defs/positive"
+        },
+        "growth_step": {
+          "$ref": "#/$defs/positive"
+        },
+        "roe_step": {
+          "$ref": "#/$defs/positive"
+        }
+      },
+      "required": [
+        "discount_step",
+        "growth_step",
+        "roe_step"
+      ],
+      "additionalProperties": false
+    },
+    "timing": {
+      "type": "object",
+      "properties": {
+        "time_to_cashflow": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/positive"
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "terminal_time": {
+          "$ref": "#/$defs/positive"
+        },
+        "finance_stub_charge": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "enum": [
+                "compound_effective_rate"
+              ]
+            },
+            "kind": {
+              "enum": [
+                "evidence",
+                "assumption",
+                "synthetic"
+              ]
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "locator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uri": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "(?:[0-9a-f]{64})?"
+                }
+              },
+              "required": [
+                "id",
+                "locator",
+                "uri",
+                "sha256"
+              ],
+              "additionalProperties": false
+            },
+            "as_of": {
+              "type": "string",
+              "format": "date"
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "rationale": {
+              "type": "string",
+              "minLength": 1
+            },
+            "review": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "unreviewed",
+                    "reviewed",
+                    "rejected"
+                  ]
+                },
+                "reviewer": {
+                  "type": "string"
+                },
+                "reference": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status",
+                "reviewer",
+                "reference"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "value",
+            "kind",
+            "source",
+            "as_of",
+            "unit",
+            "rationale",
+            "review"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "time_to_cashflow",
+        "terminal_time",
+        "finance_stub_charge"
+      ],
+      "additionalProperties": false
+    },
+    "report": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "enum": [
+            "ko",
+            "en"
+          ]
+        },
+        "report_sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "[A-Za-z][A-Za-z0-9_-]{0,60}"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lead": {
+                "type": "string"
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "enum": [
+                        "argument",
+                        "evidence",
+                        "condition",
+                        "paragraph"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 0,
+                      "maxItems": 50
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "text",
+                    "evidence_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "maxItems": 100
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "lead",
+              "blocks"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "section_order": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "maxItems": 200
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "class_cashflows": {
+      "type": "object",
+      "properties": {
+        "terminal_time": {
+          "$ref": "#/$defs/positive"
+        },
+        "terminal_total_claim": {
+          "$ref": "#/$defs/nonnegative"
+        },
+        "parent_events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/class_owner_event"
+          },
+          "maxItems": 1000
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/class_distribution_stream"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        }
+      },
+      "required": [
+        "terminal_time",
+        "terminal_total_claim",
+        "parent_events",
+        "classes"
+      ],
+      "additionalProperties": false,
+      "description": "Explicit parent and class owner cashflows in model amount units for existing cutoff holders only. Each class explicitly supplies every parent event, including zero; discount times are years after valuation date. No inferred rights, changing cohorts or automatic sensitivity repricing."
+    }
+  },
+  "required": [
+    "schema_version",
+    "company",
+    "synthetic",
+    "currency",
+    "amount_scale",
+    "valuation_date",
+    "base_year",
+    "horizon",
+    "discount_timing",
+    "industrial",
+    "finance",
+    "consolidation",
+    "bridge",
+    "class_rights",
+    "share_classes",
+    "sensitivity"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "number": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "rate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "positive": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "nonnegative": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "fraction": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "timing": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "year_end",
+            "explicit_stub"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "lease_policy": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "operating_expense",
+            "debt_like"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "nci_method": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "proportionate_segment_equity"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "finance_nci_method": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "proportionate_residual_income_equity"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "rights": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "pari_passu_fixed_then_weighted_residual",
+            "explicit_distribution_streams"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "text_atom": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    },
+    "class_owner_event": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "$ref": "#/$defs/positive"
+        },
+        "distribution": {
+          "$ref": "#/$defs/nonnegative"
+        },
+        "capital_contribution": {
+          "$ref": "#/$defs/nonnegative"
+        }
+      },
+      "required": [
+        "time",
+        "distribution",
+        "capital_contribution"
+      ],
+      "additionalProperties": false
+    },
+    "class_distribution_stream": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "[A-Za-z][A-Za-z0-9_-]{0,30}"
+        },
+        "cost_equity": {
+          "$ref": "#/$defs/positive"
+        },
+        "terminal_claim": {
+          "$ref": "#/$defs/nonnegative"
+        },
+        "rights_reference": {
+          "$ref": "#/$defs/class_rights_reference"
+        },
+        "terminal_reference": {
+          "$ref": "#/$defs/class_rights_reference"
+        },
+        "perimeter": {
+          "type": "string",
+          "enum": [
+            "existing_cutoff_holders"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/class_owner_event"
+          },
+          "maxItems": 1000
+        }
+      },
+      "required": [
+        "id",
+        "cost_equity",
+        "terminal_claim",
+        "rights_reference",
+        "terminal_reference",
+        "perimeter",
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "class_rights_reference": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "evidence",
+            "assumption",
+            "synthetic"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "(?:[0-9a-f]{64})?"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "uri",
+            "sha256"
+          ],
+          "additionalProperties": false
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "text"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "unreviewed",
+                "reviewed",
+                "rejected"
+              ]
+            },
+            "reviewer": {
+              "type": "string"
+            },
+            "reference": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "reviewer",
+            "reference"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "value",
+        "kind",
+        "source",
+        "as_of",
+        "unit",
+        "rationale",
+        "review"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "discount_timing": {
+            "properties": {
+              "value": {
+                "const": "explicit_stub"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "timing"
+        ],
+        "properties": {
+          "industrial": {
+            "items": {
+              "required": [
+                "stub"
+              ]
+            }
+          },
+          "finance": {
+            "items": {
+              "required": [
+                "stub"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "class_rights": {
+            "properties": {
+              "value": {
+                "const": "explicit_distribution_streams"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "class_cashflows"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "class_cashflows"
+          ]
+        },
+        "properties": {
+          "share_classes": {
+            "items": {
+              "required": [
+                "participation_weight",
+                "fixed_claim_per_share"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

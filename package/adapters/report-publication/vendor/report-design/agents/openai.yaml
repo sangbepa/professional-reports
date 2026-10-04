@@ -1,0 +1,4 @@
+interface:
+  display_name: "Native Report Design"
+  short_description: "Generate native A/B/C reports and select independently"
+  default_prompt: "Use $report-design to run the actual report-outfit A/B/C generator with my current reviewed content and select independently among three full reports."

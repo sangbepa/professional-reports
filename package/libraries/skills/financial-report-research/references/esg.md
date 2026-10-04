@@ -1,0 +1,27 @@
+# ESG and sustainability research
+
+Use with [the research workflow](../SKILL.md). Establish the purpose before collecting indicators: sustainability disclosure, ESG due diligence for a transaction or investment, or assurance readiness. Disclosure research tests decision-relevant completeness and support; due diligence investigates exposures and operational consequences; readiness assesses evidence and controls for a possible assurance engagement. These assignments are not interchangeable. Record the entity, sites, value chain, periods, selected framework, jurisdiction and intended reader. Investigate applicability through authoritative jurisdictional evidence rather than assuming that a published international standard is compulsory.
+
+## Material questions and competing explanations
+
+Separate sustainability matters affecting financial prospects from impacts on people or the environment. Apply financial materiality, impact materiality or both according to the selected framework and assignment; do not import one framework's test into another silently. IFRS S1's official overview concerns sustainability risks and opportunities affecting cash flows, access to finance or cost of capital, organized around governance, strategy, risk management and performance. Use that perspective where selected, without treating it as a complete impact assessment.
+
+Translate each material claim into a research question: what exposure exists, which assets or counterparties carry it, how mitigation works, and what could disprove management's account? Cover relevant environmental, workforce, supply-chain and governance matters rather than equating ESG with carbon alone. Investigate actual operating practices, management incentives and implemented controls alongside policies and targets. A target, rating or disclosure is evidence of a statement, not proof of delivery.
+
+## Boundaries and measurement evidence
+
+Trace material metrics to operational records, meters, invoices, incident logs, permits, workforce data, supplier evidence and documented estimates. Establish organizational and operational boundaries, ownership/control treatment, exclusions, reporting periods and base-year changes. Ask whether acquisitions, disposals, outsourcing or methodology changes explain an apparent improvement. Use the available evidence/extraction capability to freeze and normalize records; `valuation-evidence` is appropriate only where its contract fits. Domain specialists own measurement methods and calculations.
+
+For emissions, distinguish Scopes 1, 2 and 3 and relevant value-chain categories; evaluate exclusions and estimate coverage. Compare absolute totals with intensity and its actual denominator. Keep Scope 2 location-based and market-based results separately identified, and examine the contractual instruments behind market-based claims. Treat offsets, removals and avoided-emissions claims separately from gross inventory emissions; do not assume they cancel the operating footprint. GHG Protocol's Corporate Standard addresses inventory accounting, not a verification-engagement standard. Its Scope 2 Guidance supports examination of contractual-instrument quality.
+
+## Evidence quality and negative evidence
+
+Assess provenance, measurement proximity, coverage, independence, timeliness and reproducibility. Search deliberately for incidents, regulator findings, worker or community evidence, supplier failures, restatements and expenditure inconsistent with the claimed strategy. Evaluate allegations and management responses on their evidence; neither dismiss adverse records nor promote an uncorroborated allegation into a finding. No disclosed incident does not establish no incident. Explain inaccessible populations and the limits of public disclosures.
+
+Connect supported exposures to operating interruption, energy/input cost, capital expenditure, remediation, insurance, financing or customer access. Use domain-reviewed quantification or bounded scenarios with explicit uncertainty. Do not manufacture an ESG discount rate, fine, probability or valuation adjustment from a rating. Determine which missing fact would change the economic conclusion.
+
+## Readiness and handover
+
+For assurance readiness, investigate criteria, traceability, controls, estimation uncertainty and the gaps a practitioner would need to address. IAASB's ISSA 5000 is an assurance standard across sustainability topics/frameworks; referencing it does not perform an engagement, establish local adoption or issue human assurance. Deliver supported and contested claims, counterevidence and prioritized material research tasks. This profile implements analytical instructions; the existing native report-outfit has no `esg` template. Do not claim an ESG analyzer, renderer or assurance badge from this profile.
+
+Use authoritative starting references, verifying the current edition, amendments and jurisdictional applicability for each engagement: [IFRS S1](https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/ifrs-s1-general-requirements/), [GHG Protocol Corporate Standard](https://ghgprotocol.org/corporate-standard), [Scope 2 Guidance](https://ghgprotocol.org/scope-2-guidance), and [IAASB ISSA 5000](https://www.iaasb.org/publications/international-standard-sustainability-assurance-5000-general-requirements-sustainability-assurance). These pages identify starting standards; a page's date does not establish entity-level legal applicability.

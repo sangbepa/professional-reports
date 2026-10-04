@@ -1,0 +1,68 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "financial-report-writing",
+  "category": "judgment",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_packet",
+    "domain_analysis",
+    "writing_scope"
+  ],
+  "outputs": [
+    "purpose_profile",
+    "argument_requirements",
+    "content_packet",
+    "writing_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Select relevant writing profile and permitted conclusion strength.",
+    "Connect evidence, judgment, alternatives and consequences.",
+    "Preserve bound metrics and review limits.",
+    "Return content and unsupported claims to their analytical owner."
+  ],
+  "acceptance": [
+    {
+      "id": "financial-report-writing-acceptance-1",
+      "kind": "semantic",
+      "expectation": "Prose develops a supported decision argument without converting proposals or scenarios into facts."
+    },
+    {
+      "id": "financial-report-writing-acceptance-2",
+      "kind": "mechanical",
+      "expectation": "Material claims, numbers and dates have current bindings."
+    },
+    {
+      "id": "financial-report-writing-acceptance-3",
+      "kind": "semantic",
+      "expectation": "Formats and actual rendering/review limits remain explicit."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_packet",
+    "domain_analysis",
+    "writing_scope"
+  ],
+  "failure_returns": [
+    "report-argument",
+    "report-findings"
+  ],
+  "failure": {
+    "return_to": [
+      "report-argument",
+      "report-findings"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

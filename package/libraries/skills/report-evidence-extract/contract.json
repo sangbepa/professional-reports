@@ -1,0 +1,67 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-evidence-extract",
+  "category": "execution",
+  "inputs": [
+    "artifact_manifest",
+    "question_plan",
+    "source_assessments",
+    "original_artifacts",
+    "extraction_scope"
+  ],
+  "outputs": [
+    "evidence_observations",
+    "faithful_tables",
+    "extraction_exceptions",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Resolve scoped source IDs to assessed originals.",
+    "Extract observations with exact meaning, classification and measurement basis.",
+    "Preserve table headers, cells, footnotes and original locators.",
+    "Return faithful evidence and targeted extraction/source exceptions."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "question_plan",
+    "source_assessments",
+    "original_artifacts",
+    "extraction_scope"
+  ],
+  "failure_returns": [
+    "report-source-assess",
+    "report-research-plan"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "locator-coverage",
+      "kind": "mechanical",
+      "expectation": "Each observation and table cell resolves to a source/version and original locator with period, unit/scale/currency, perimeter and inherited eligibility."
+    },
+    {
+      "id": "faithful-extraction",
+      "kind": "semantic",
+      "expectation": "Transcription and paraphrase preserve original meaning, signs, definitions, table relationships and qualifications; missing values are not fabricated."
+    },
+    {
+      "id": "classification-fidelity",
+      "kind": "semantic",
+      "expectation": "Actuals, attributed assertions, forecasts, proposals, judgments and fictional records remain distinct without inferred cause or approval."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-source-assess",
+      "report-research-plan"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

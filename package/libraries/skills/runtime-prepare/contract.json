@@ -1,0 +1,29 @@
+{
+  "id": "runtime-prepare",
+  "schema_version": "report-operation/1",
+  "inputs": [
+    "required_capabilities",
+    "existing_environment_inventory"
+  ],
+  "outputs": [
+    "environment_manifest",
+    "smoke_results",
+    "provisional_components"
+  ],
+  "consumes": [
+    "runtime_requirements",
+    "dependency_versions"
+  ],
+  "acceptance": [
+    {
+      "id": "actual-environment-probes",
+      "kind": "mechanical",
+      "expectation": "Probe real imports, binaries and output formats; unattempted checks remain unverified."
+    },
+    {
+      "id": "setup-classification",
+      "kind": "semantic",
+      "expectation": "Company evidence collection is never environment setup; only global setup waits may be excluded."
+    }
+  ]
+}

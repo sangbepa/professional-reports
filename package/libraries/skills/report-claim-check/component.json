@@ -1,0 +1,17 @@
+{
+  "id": "report-claim-check",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Check report claim meaning, numbers, qualifications and citations independently against originals and current model artifacts, recording actual review scope and channel.",
+  "capabilities": [
+    "claim-checking",
+    "citation-entailment",
+    "review-coverage-recording"
+  ],
+  "requires": [
+    "financial-report-research",
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

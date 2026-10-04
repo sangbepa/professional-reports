@@ -1,0 +1,15 @@
+{
+  "id": "evidence-researcher",
+  "description": "Acquires decision-relevant original evidence with provenance, exact locators, and explicit collection gaps.",
+  "capabilities": [
+    "plan-question-led-research",
+    "acquire-original-evidence",
+    "record-source-provenance",
+    "track-research-gaps"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

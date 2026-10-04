@@ -1,0 +1,1494 @@
+{
+  "schema_version": "benchmark-review-candidate-five-axes/1",
+  "status": "candidate_requires_explicit_user_approval_before_protected_adoption",
+  "version": "candidate-2026-10-03.1",
+  "calibrated": false,
+  "approved": false,
+  "scoring_contract": {
+    "axes": [
+      "evidence",
+      "economics",
+      "calculation",
+      "decision_usefulness",
+      "document_quality"
+    ],
+    "integer_scores": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "minimum_each_axis": 3,
+    "minimum_total": 17,
+    "maximum_total": 20,
+    "aggregation": "unweighted sum; all five axes required; no 100-point conversion or compensating failed axis"
+  },
+  "interpretation": "These are proposed report behaviours and counterexamples based on observed source features. Levels 0-2 are constructed failure examples, not findings that B01-B03 earned those scores. Level 4 adds proposed robustness requirements and independent verification; this review does not award any source or system an overall grade.",
+  "scoring_rules": [
+    "Assess material sufficiency within each unchanged axis, not the number of checklist items.",
+    "A missing or unobservable material input is recorded as unverified and constrains the conclusion; it is never silently scored as satisfied.",
+    "No axis waiver or redistribution. A legitimate narrow mandate must still meet all five axes for that declared purpose; a partial full-valuation attempt is not relabelled as a successful report.",
+    "Independent review completion is recorded separately; it is necessary for the proposed level 4 but never sufficient by itself.",
+    "The 14 existing criteria may be evidence prompts mapped to axes, not extra scored dimensions."
+  ],
+  "axes": [
+    {
+      "axis": "evidence",
+      "levels": [
+        {
+          "score": 0,
+          "label": "Absent or false provenance",
+          "concrete_example": "A report presents the confidential SG Fleet Internal Projections or the Gold Road site work as work it obtained/performed, but has only the published PDFs; or invents a supporting page.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 53,
+              "printed_report_page": 13,
+              "section": "6.3"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 54,
+              "printed_report_page": 14,
+              "section": "6.3-6.4"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 80,
+              "section": "Appendix 2"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 178,
+              "printed_report_page": 95,
+              "section": "10.1-10.3"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 179,
+              "printed_report_page": 96,
+              "section": "10.3-10.4 continuation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.3"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 159,
+              "printed_report_page": 37,
+              "section": "Appendix 1"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 1,
+          "label": "Citation without decision-relevant support",
+          "concrete_example": "A SG Fleet forecast claim cites only the booklet title; its source list never distinguishes public history from management projections. The citation exists but does not allow the claim to be checked.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 53,
+              "printed_report_page": 13,
+              "section": "6.3"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 54,
+              "printed_report_page": 14,
+              "section": "6.3-6.4"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 80,
+              "section": "Appendix 2"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 178,
+              "printed_report_page": 95,
+              "section": "10.1-10.3"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 179,
+              "printed_report_page": 96,
+              "section": "10.3-10.4 continuation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.3"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 159,
+              "printed_report_page": 37,
+              "section": "Appendix 1"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 2,
+          "label": "Traceable yet materially incomplete",
+          "concrete_example": "The report cites SG Fleet 7.2-7.5 and 10.1, but still relies on unavailable private cash flows for a precise unconditional value, or misses the image-only Figure 39 while asserting it verified that bridge.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 53,
+              "printed_report_page": 13,
+              "section": "6.3"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 54,
+              "printed_report_page": 14,
+              "section": "6.3-6.4"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 80,
+              "section": "Appendix 2"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 178,
+              "printed_report_page": 95,
+              "section": "10.1-10.3"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 179,
+              "printed_report_page": 96,
+              "section": "10.3-10.4 continuation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.3"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 159,
+              "printed_report_page": 37,
+              "section": "Appendix 1"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 3,
+          "label": "Adequate traceability and bounded claims",
+          "concrete_example": "Each material SG Fleet claim identifies original/hash/page/table, as-of date and public/private origin. Missing private forecasts and extraction gaps are explicit; original images support quoted figures. Conclusions are restricted to what that evidence supports.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 53,
+              "printed_report_page": 13,
+              "section": "6.3"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 54,
+              "printed_report_page": 14,
+              "section": "6.3-6.4"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 80,
+              "section": "Appendix 2"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 178,
+              "printed_report_page": 95,
+              "section": "10.1-10.3"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 179,
+              "printed_report_page": 96,
+              "section": "10.3-10.4 continuation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.3"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 159,
+              "printed_report_page": 37,
+              "section": "Appendix 1"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 4,
+          "label": "Strong challenge and reconciled evidence",
+          "concrete_example": "Meets 3, plus a separate reviewer checks the exact claim-to-original chain, challenges contrary evidence (including the peer-comparability caveat in SG Fleet footnote 30), reconciles discrepancies and records residual uncertainty and its effect on the decision. Hashes alone or a reviewer name do not earn 4.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.29-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 155,
+              "printed_report_page": 72,
+              "section": "7.33-7.39"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.2.4-3.3"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        }
+      ]
+    },
+    {
+      "axis": "economics",
+      "levels": [
+        {
+          "score": 0,
+          "label": "Economically contradicted",
+          "concrete_example": "Apply an enterprise WACC to SG Fleet real geared equity cash flows without conversion, or value the finite Gold Road production assets as an undifferentiated perpetual earnings stream.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 103,
+              "printed_report_page": 63,
+              "section": "10.2.2"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "7.1-7.2"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 144,
+              "printed_report_page": 22,
+              "section": "3.2.1-3.2.2"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 1,
+          "label": "Generic method with unsupported economics",
+          "concrete_example": "Insert a standard DCF and arbitrary terminal growth; copy management fleet growth and synergy assumptions without testing orders, deliveries, residual income or funding needs.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.29-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 155,
+              "printed_report_page": 72,
+              "section": "7.33-7.39"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.2.4-3.3"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 2,
+          "label": "Recognised drivers, unresolved material premise",
+          "concrete_example": "Identify the fleet pipeline, EOL income and advance-rate risks but leave perpetual deliveries above orders, unexplained terminal reinvestment, or incompatible funding assumptions in the base case.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.29-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 155,
+              "printed_report_page": 72,
+              "section": "7.33-7.39"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.2.4-3.3"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 3,
+          "label": "Mandate-specific coherent economics",
+          "concrete_example": "Use operating evidence to normalise deliveries/orders and EOL income, test synergy timing and achievable funding, and connect terminal margins/growth to equity reinvestment. Explain why real equity flows require a real equity discount rate; for finite assets justify the separate residual-resource treatment.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.29-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 155,
+              "printed_report_page": 72,
+              "section": "7.33-7.39"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 145,
+              "printed_report_page": 23,
+              "section": "3.2.4-3.3"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 4,
+          "label": "Robust economics under credible alternatives",
+          "concrete_example": "Meets 3, plus an independent challenge quantifies interacting downside drivers, reconciles method differences and ownership/financing allocation, and demonstrates which evidence supports or changes the selected range. Explain why the unsupported EOL upside or extra synergies are not the central case; justify range selection rather than copying the published range.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 47"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16; interpretation below table"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        }
+      ]
+    },
+    {
+      "axis": "calculation",
+      "levels": [
+        {
+          "score": 0,
+          "label": "Materially wrong calculation or scope",
+          "concrete_example": "Use SG Fleet Figure 39 A$000 as A$m, discount equity flows and subtract debt again, or materially misstate the TPG-to-HTAL ownership bridge.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 48"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 1,
+          "label": "Reported answer with no reconstruction",
+          "concrete_example": "Copy HTAL or SG Fleet endpoints and per-share values into a polished table with no source-linked arithmetic, dilution schedule or sign convention.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 48"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 2,
+          "label": "Partial reconciliation, material unresolved issue",
+          "concrete_example": "Recompute the HTAL subtotal but mechanically deduct the positive other-balance-sheet amount because the row label says Less; or reproduce a nominal WACC but use it as real. Other arithmetic passing does not cure the open error.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 48"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 3,
+          "label": "Reproducible calculation for the stated scope",
+          "concrete_example": "Reperform the disclosed bridges with original units, signs, ownership, cash-flow basis and diluted shares; separate displayed rounding from unexplained differences. Distinguish Deloitte calculated real WACC from its selected WACC and flag unavailable private-model reconstruction.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 48"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 4,
+          "label": "Independent end-to-end and stress reconciliation",
+          "concrete_example": "Meets 3, plus a separate reviewer independently rebuilds material report outputs from the accessible approved inputs, tests perturbations and boundary cases, and ties charts, prose and tables to one frozen model. For a full valuation, public summary arithmetic alone cannot earn 4; missing model support restricts the output.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 48"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        }
+      ]
+    },
+    {
+      "axis": "decision_usefulness",
+      "levels": [
+        {
+          "score": 0,
+          "label": "Wrong question or unsupported conclusion",
+          "concrete_example": "Call an offer attractive merely because its price exceeds a historical quotation, apply the Australian transaction test to a different mandate without justification, or claim the unvalued SG Fleet scrip is fair.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 42,
+              "printed_report_page": 2,
+              "section": "3.1"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 47,
+              "printed_report_page": 7,
+              "section": "3.4 continuation; 3.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 95,
+              "printed_report_page": 12,
+              "section": "1.49 continuation; 1.50-1.51"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 96,
+              "printed_report_page": 13,
+              "section": "1.52-1.54"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 97,
+              "printed_report_page": 14,
+              "section": "1.56-1.59"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 99,
+              "printed_report_page": 16,
+              "section": "1.63 continuation; 1.64"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 3,
+              "section": "Basis of evaluation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 121,
+              "printed_report_page": 4,
+              "section": "Summary and conclusion; Table 1 and note"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 122,
+              "printed_report_page": 5,
+              "section": "Tables 2-3 and notes"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 1,
+          "label": "Conclusion with generic risk list",
+          "concrete_example": "State a fair value and list commodity, execution and liquidity risks, without explaining the intended shareholder decision, alternatives or how any risk changes the recommendation.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 42,
+              "printed_report_page": 2,
+              "section": "3.1"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 47,
+              "printed_report_page": 7,
+              "section": "3.4 continuation; 3.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 95,
+              "printed_report_page": 12,
+              "section": "1.49 continuation; 1.50-1.51"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 96,
+              "printed_report_page": 13,
+              "section": "1.52-1.54"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 97,
+              "printed_report_page": 14,
+              "section": "1.56-1.59"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 99,
+              "printed_report_page": 16,
+              "section": "1.63 continuation; 1.64"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 3,
+              "section": "Basis of evaluation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 121,
+              "printed_report_page": 4,
+              "section": "Summary and conclusion; Table 1 and note"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 122,
+              "printed_report_page": 5,
+              "section": "Tables 2-3 and notes"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 2,
+          "label": "Relevant analysis without resolving the choice",
+          "concrete_example": "Show Gold Road sensitivities or SG Fleet scenarios, but never explain selected versus rejected cases, no-deal consequences, or the limits of a cash-versus-scrip comparison.",
+          "source_locators": [
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figure 47"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16; interpretation below table"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 3,
+          "label": "Supported choice with a credible contrary case",
+          "concrete_example": "Name the reader, interest and test; link the conclusion to value evidence, no-deal alternatives and a material contrary argument such as SG Fleet holders surrendering future synergy upside. Preserve its explicit inability to estimate scrip reliably and the Gold Road valuation-date qualification.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 42,
+              "printed_report_page": 2,
+              "section": "3.1"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 47,
+              "printed_report_page": 7,
+              "section": "3.4 continuation; 3.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 95,
+              "printed_report_page": 12,
+              "section": "1.49 continuation; 1.50-1.51"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 96,
+              "printed_report_page": 13,
+              "section": "1.52-1.54"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 97,
+              "printed_report_page": 14,
+              "section": "1.56-1.59"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 99,
+              "printed_report_page": 16,
+              "section": "1.63 continuation; 1.64"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 3,
+              "section": "Basis of evaluation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 121,
+              "printed_report_page": 4,
+              "section": "Summary and conclusion; Table 1 and note"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 122,
+              "printed_report_page": 5,
+              "section": "Tables 2-3 and notes"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 4,
+          "label": "Decision remains accountable under changing evidence",
+          "concrete_example": "Meets 3, plus quantitatively identify the material change that could reverse or qualify the recommendation, explain range-selection judgment and dependent cross-checks, and specify the evidence/update or action the decision-maker needs. An independent reviewer challenges the strongest contrary case. These additions are candidate requirements, not claims that every source demonstrates all of them.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 42,
+              "printed_report_page": 2,
+              "section": "3.1"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 47,
+              "printed_report_page": 7,
+              "section": "3.4 continuation; 3.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 95,
+              "printed_report_page": 12,
+              "section": "1.49 continuation; 1.50-1.51"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 96,
+              "printed_report_page": 13,
+              "section": "1.52-1.54"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 97,
+              "printed_report_page": 14,
+              "section": "1.56-1.59"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 99,
+              "printed_report_page": 16,
+              "section": "1.63 continuation; 1.64"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 120,
+              "printed_report_page": 3,
+              "section": "Basis of evaluation"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 121,
+              "printed_report_page": 4,
+              "section": "Summary and conclusion; Table 1 and note"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 122,
+              "printed_report_page": 5,
+              "section": "Tables 2-3 and notes"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        }
+      ]
+    },
+    {
+      "axis": "document_quality",
+      "levels": [
+        {
+          "score": 0,
+          "label": "Unusable or misleading exhibit",
+          "concrete_example": "A final report drops SG Fleet Figure 39 values, loses low/high headings or unit labels, clips a material limitation, or draws a chart whose sign/axis reverses the finding.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27 and surrounding narrative"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34 and surrounding narrative"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39; 7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figures 47-48"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 158,
+              "printed_report_page": 75,
+              "section": "Figures 49-50 and notes"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 1,
+          "label": "Cosmetic polish without an analytical reading path",
+          "concrete_example": "Use professional colours and a long executive summary, but detach charts from their assumptions and sources, remove comparable-company footnotes, and leave the key decision buried.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27 and surrounding narrative"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34 and surrounding narrative"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39; 7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figures 47-48"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 158,
+              "printed_report_page": 75,
+              "section": "Figures 49-50 and notes"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 2,
+          "label": "Mostly readable, materially incomplete communication",
+          "concrete_example": "Tables are sourced and readable yet flatten SG Fleet Figure 47 into an unlabeled list, omit the associated concluded range, or omit Deloitte Table 16 emphasis and interpretation; the reader cannot connect the analysis to the conclusion.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27 and surrounding narrative"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34 and surrounding narrative"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39; 7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figures 47-48"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 158,
+              "printed_report_page": 75,
+              "section": "Figures 49-50 and notes"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 3,
+          "label": "Expert can trace the argument and exhibits",
+          "concrete_example": "Provide conclusion-first navigation, informative headings, table/figure IDs and cross-references, visible units/period/perimeter/basis, legible notes and a nearby interpretation. Preserve the scenario-to-range relationship and reconcile every quoted endpoint to its exhibit. Inspect the final rendered document.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27 and surrounding narrative"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34 and surrounding narrative"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39; 7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figures 47-48"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 158,
+              "printed_report_page": 75,
+              "section": "Figures 49-50 and notes"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        },
+        {
+          "score": 4,
+          "label": "Publication-ready analytical communication",
+          "concrete_example": "Meets 3, plus independently inspect every final page and all material charts/tables at normal reading size, test PDF/search/accessibility where required, and verify executive conclusions/limitations against the body. Use strong visual hierarchy and compact exhibits to expose the real analytical tradeoff; brand, length or a screenshot checklist cannot substitute.",
+          "source_locators": [
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 105,
+              "printed_report_page": 65,
+              "section": "Table 27 and surrounding narrative"
+            },
+            {
+              "source_id": "B01",
+              "source_sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+              "source_path": "benchmarks/originals/B01.pdf",
+              "pdf_page": 117,
+              "printed_report_page": 77,
+              "section": "Table 34 and surrounding narrative"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 148,
+              "printed_report_page": 65,
+              "section": "Figure 39; 7.2-7.5"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 154,
+              "printed_report_page": 71,
+              "section": "7.30-7.32; footnote 30"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 157,
+              "printed_report_page": 74,
+              "section": "Figures 47-48"
+            },
+            {
+              "source_id": "B02",
+              "source_sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+              "source_path": "benchmarks/originals/B02.pdf",
+              "pdf_page": 158,
+              "printed_report_page": 75,
+              "section": "Figures 49-50 and notes"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 152,
+              "printed_report_page": 30,
+              "section": "Figure 12; Table 16"
+            },
+            {
+              "source_id": "B03",
+              "source_sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+              "source_path": "benchmarks/originals/B03.pdf",
+              "pdf_page": 169,
+              "printed_report_page": 47,
+              "section": "Table 27"
+            }
+          ],
+          "example_status": "constructed_candidate_not_an_observed_report_grade"
+        }
+      ]
+    }
+  ]
+}

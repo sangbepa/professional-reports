@@ -1,0 +1,14 @@
+{
+  "id": "report-design",
+  "kind": "skill",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "description": "Bind current valuation content to packaged neutral report constructors; verify actual render and independent presentation acceptance.",
+  "capabilities": [
+    "report-design-reference",
+    "design-handoff",
+    "presentation-acceptance-method"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

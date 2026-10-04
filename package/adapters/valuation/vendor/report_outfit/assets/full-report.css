@@ -1,0 +1,49 @@
+/* Pagination/readability support only. All art direction comes from native A/B/C. */
+.full-report .cover h1{word-break:keep-all}
+.full-report table{table-layout:auto}.full-report th:first-child,.full-report td:first-child{width:auto}.full-report .page-body>table{margin-bottom:22px}.full-report .page-body>.exhibit-title{margin-top:14px}
+.full-report .retained-hero .metric-value small{display:block;font-size:10pt;letter-spacing:0;margin-top:12px}.full-report .retained-hero .metric:first-child{grid-column:auto}.full-report .detail-metrics{grid-template-columns:repeat(4,1fr);gap:15px;padding:15px 0}.full-report .detail-metrics .metric:first-child{grid-column:auto}.full-report .detail-metrics .metric-value,.full-report .detail-metrics .metric:first-child .metric-value{font-size:18pt;letter-spacing:-.5px;white-space:nowrap}
+.full-report .retained-source{margin-top:18px;margin-bottom:12px;font-size:8.6pt;line-height:1.6}.full-report .retained-source a{font-size:8.6pt}.full-report .retained-text{font-size:9pt;line-height:1.6;margin-bottom:12px}.full-report .page-body p{word-break:keep-all}.full-report .page-body blockquote{font-size:14pt;line-height:1.6}.full-report .page-body table td.num{white-space:normal}.full-report .page-body .data-chart text{font-family:Open Sans,Nanum Gothic,sans-serif}.full-report .continuation-note{font-size:8.5pt;color:var(--muted);margin-top:7px}.full-report .reader a{white-space:nowrap}.full-report header>div{font-size:8.5px}
+.full-report .native-chart,.full-report .native-table{margin-bottom:24px}
+.full-report .detail-metrics .metric-value,.full-report .detail-metrics .metric:first-child .metric-value{font-weight:400!important}.full-report .retained-hero{display:block!important}
+.full-report .report-contents{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:20px 0}.full-report .report-contents li{padding:8px 0;font-size:9.5pt}.full-report .report-contents a{gap:12px;align-items:center}.full-report .report-contents span{color:var(--ink);font-weight:400}.full-report .report-contents b{font-size:9pt;color:var(--muted)}
+@media screen and (max-width:850px){.full-report.continuous .detail-metrics{grid-template-columns:1fr 1fr}.full-report.continuous table{display:block;max-width:100%;overflow-x:auto}.full-report.continuous .native-table{max-width:100%;overflow-x:auto}}
+/* Shared exhibit grammar: compact enough for complete forecast/value compositions. */
+.full-report .page-heading{margin-top:22px;margin-bottom:22px}
+.full-report .page-heading h1{font-size:25pt;line-height:1.2;letter-spacing:-.6px;max-width:none}
+.full-report .lead{font-size:10pt;line-height:1.5}
+.full-report .page-body{font-size:10pt;line-height:1.6}
+.full-report .page-body p{margin-bottom:12px}
+.full-report .page-body blockquote{font-size:10.5pt;line-height:1.65;margin:16px 0;padding:12px 16px;background:var(--soft);border:0;border-left:3px solid var(--green);font-weight:400}
+.full-report .native-table{margin-bottom:17px}
+.full-report .native-table table{font-size:9pt;line-height:1.35}
+.full-report .native-table th{padding:8px 8px;font-size:8.3pt}
+.full-report .native-table td{padding:7px 8px}
+.full-report .native-table .exhibit-title{padding-bottom:8px;line-height:1.5;letter-spacing:.7px}
+.full-report .exhibit-title span{font-size:9pt;font-weight:600}
+.full-report .caption{font-size:8.2pt;line-height:1.45;margin-bottom:7px;color:#45544a}
+.full-report .row-subtotal td{border-top:1.5px solid var(--ink);font-weight:600;background:var(--soft)}
+.full-report .row-result td{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);font-weight:700;background:var(--result-fill,var(--soft))}
+.full-report .row-deduction td:first-child{font-weight:600}
+.full-report .row-crosscheck td{background:#f5f5f2;color:#435047;border-top:1px dashed #9ca89c}
+.full-report .row-memo td{font-size:8.5pt;color:#435047;background:#f4f5f3;border-top:1px dashed #9ca89c}
+.full-report .base-cell{outline:2px solid var(--ink);outline-offset:-2px;font-weight:700;background:#eef2e7}
+.full-report .base-marker{display:block;font-size:7pt;letter-spacing:.8px;line-height:1.2;margin-top:3px}
+.full-report .summary-result{padding:18px 20px;margin-bottom:17px;background:var(--soft);border-top:3px solid var(--green)}
+.full-report .summary-label{font-size:10pt;font-weight:600}
+.full-report .summary-value{font-size:32pt;line-height:1.3;font-weight:600;letter-spacing:-.7px}
+.full-report .summary-value small{font-size:11pt;letter-spacing:0;font-weight:400}
+.full-report .summary-status{font-size:9pt;font-weight:600;margin-top:6px}
+.full-report .joined-section{margin-top:24px;padding-top:20px;border-top:1px solid var(--rule)}
+.full-report .joined-section h2{font-size:17pt;line-height:1.35;font-weight:600;margin:0 0 8px;letter-spacing:-.4px}
+.full-report .joined-section .lead{margin-bottom:15px}
+.full-report .role-chart .role-label{font-size:10.7px;fill:#405348}
+.full-report .role-chart .bar-value{font-weight:700}
+.full-report .retained-source{font-size:8.5pt;margin:12px 0}
+.full-report .page-body .data-chart{margin:5px 0 12px}
+.full-report .cover .model-mark{font-size:9pt}
+@media screen and (max-width:850px){.full-report.continuous .summary-value{font-size:30px}.full-report.continuous .summary-value small{display:block}}
+.full-report .memo-panel{padding:10px 12px;margin:12px 0;background:#f3f5f1;border-left:2px solid #929f8f;font-size:8.5pt;line-height:1.5}
+.full-report .memo-panel>strong{display:block;margin-bottom:3px}
+.full-report #bridge .native-table{margin-bottom:12px}
+.full-report #bridge .native-table td{padding-top:5px;padding-bottom:5px}
+.full-report #bridge .page-body>p{font-size:9pt;line-height:1.5}

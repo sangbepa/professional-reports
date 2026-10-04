@@ -1,0 +1,64 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "financial-report-research",
+  "category": "judgment",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "existing_evidence",
+    "research_scope"
+  ],
+  "outputs": [
+    "purpose_profile",
+    "research_questions",
+    "evidence_requirements",
+    "research_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Select the decision-specific research profile.",
+    "Identify material questions and adverse explanations.",
+    "Define discriminating evidence, calibration and proportionate stopping conditions.",
+    "Return actual coverage and unresolved consequences, without assuming source tools."
+  ],
+  "acceptance": [
+    {
+      "id": "financial-report-research-acceptance-1",
+      "kind": "semantic",
+      "expectation": "Selected purpose fits mandate and preserves valuation/FDD/ESG/earnings/board distinctions."
+    },
+    {
+      "id": "financial-report-research-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Material questions have alternative explanations, discriminating tests and conclusion restrictions."
+    },
+    {
+      "id": "financial-report-research-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "Evidence claims bind available originals; planned searches are separate from executed inquiries."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "existing_evidence",
+    "research_scope"
+  ],
+  "failure_returns": [
+    "report-frame"
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

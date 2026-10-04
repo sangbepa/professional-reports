@@ -1,0 +1,69 @@
+{
+  "id": "esg-learning-report",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "input_contract": "esg-learning-report/1",
+  "input_schema": "schemas/esg-learning-report.schema.json",
+  "schema_path_basis": "package root",
+  "execution_support": "standalone-learning-adapter",
+  "production_quality_verified": false,
+  "production_report_execution_allowed": false,
+  "files": {
+    "policy": "POLICY.md",
+    "rules": "plan-rules.json"
+  },
+  "entry_skill": "esg-learning-report-method",
+  "interface": {
+    "module": "pr.esg",
+    "commands": [
+      "prepare",
+      "build",
+      "check"
+    ],
+    "required_arguments": [
+      "--input",
+      "--out"
+    ],
+    "aliases": [
+      "esg-prepare",
+      "esg-build",
+      "esg-check"
+    ],
+    "lifecycle": "Standalone adapter output directories, not engine Run.finish.",
+    "inputs": [
+      "learning_request",
+      "frozen_public_sources"
+    ],
+    "outputs": [
+      "esg-learning-input",
+      "esg-learning-report",
+      "esg-learning-review-register",
+      "esg-learning-limitations"
+    ],
+    "output_ownership": "Adapter emits input/report and mechanical checks; host authors review register and limitations. Consult installed CLI help and adapter documentation for exact filenames."
+  },
+  "scope_fields": [
+    "company",
+    "title",
+    "reporting_period",
+    "information_cutoff",
+    "status",
+    "framework.basis",
+    "framework.qualification",
+    "metrics[].boundary",
+    "metrics[].method"
+  ],
+  "review_roles": [
+    "source",
+    "judgment",
+    "document"
+  ],
+  "review_ownership": "Host-arranged independent review of exact current artifacts; declared obligations are not standalone CLI enforcement or a review pass.",
+  "limitations": [
+    "Public-source teaching reconstruction only, visibly marked 비공식 학습용.",
+    "No GRI compliance declaration, assurance opinion, official issuer report or investment recommendation.",
+    "General ESG remains planning-only; this component cannot be selected for engine report-mode completion.",
+    "Packaging, schema validation, hashes and rendered output do not prove original-source truth, cutoff eligibility, judgment adequacy or independent review.",
+    "Production promotion and protected acceptance remain outside this component."
+  ]
+}

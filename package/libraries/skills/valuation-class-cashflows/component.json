@@ -1,0 +1,10 @@
+{
+  "id": "valuation-class-cashflows",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Value explicit dated current-holder distributions, funding and continuing claims for distinct share classes with independent reconciliation.",
+  "capabilities": ["class-owner-cashflows", "class-parent-reconciliation"],
+  "requires": ["valuation-design"],
+  "entrypoint": "SKILL.md"
+}

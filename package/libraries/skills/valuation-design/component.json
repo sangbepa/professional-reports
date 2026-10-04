@@ -1,0 +1,34 @@
+{
+  "id": "valuation-design",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Select defensible valuation methods, design operating scenarios, reconcile enterprise-to-equity adjustments and explain differences between valuation indications.",
+  "capabilities": [
+    "valuation-method-selection",
+    "scenario-design",
+    "segment-reconciliation",
+    "nci-policy",
+    "consolidation-policy",
+    "lease-policy",
+    "share-rights-policy",
+    "equity-bridge-design",
+    "method-reconciliation",
+    "financial-equity-assessment",
+    "asset-nav-assessment",
+    "distress-assessment",
+    "early-stage-assessment",
+    "sotp-assessment",
+    "assumption-calibration",
+    "cycle-normalization",
+    "associate-attribution",
+    "financial-debt-perimeter",
+    "intercompany-elimination",
+    "dilution-analysis",
+    "reverse-dcf-assessment"
+  ],
+  "requires": [
+    "financial-report-research"
+  ],
+  "entrypoint": "SKILL.md"
+}

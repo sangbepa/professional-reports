@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/request",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "information_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "language": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "enum": [
+        "report",
+        "development",
+        "experiment"
+      ]
+    },
+    "report_benchmark": {
+      "type": "object",
+      "description": "Marks a full report timing trial even when its package/evaluator is provisional. Does not confer professional completion.",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "target_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 600
+        },
+        "delivery_reserve_seconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 60
+        }
+      },
+      "required": [
+        "enabled"
+      ],
+      "additionalProperties": false
+    },
+    "risk_mode": {
+      "enum": [
+        "legacy",
+        "shadow",
+        "enforced"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "text",
+    "audience",
+    "decision",
+    "scope",
+    "information_cutoff",
+    "language",
+    "requested_at",
+    "mode"
+  ],
+  "additionalProperties": true
+}

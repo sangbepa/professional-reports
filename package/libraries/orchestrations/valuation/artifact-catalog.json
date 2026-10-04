@@ -1,0 +1,228 @@
+{
+  "id": "valuation-artifact-catalog",
+  "version": "0.1.0-dev.1",
+  "artifacts": [
+    {
+      "id": "valuation-method-decisions",
+      "node_output_name": "valuation-method-decisions",
+      "required_by": [
+        "valuation-rule-core"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-core"
+      ]
+    },
+    {
+      "id": "valuation-equity-bridge",
+      "node_output_name": "valuation-equity-bridge",
+      "required_by": [
+        "valuation-rule-core"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-core"
+      ]
+    },
+    {
+      "id": "valuation-unknowns",
+      "node_output_name": "valuation-unknowns",
+      "required_by": [
+        "valuation-rule-core"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-core"
+      ]
+    },
+    {
+      "id": "financial-equity-method-assessment",
+      "node_output_name": "financial-equity-method-assessment",
+      "required_by": [
+        "valuation-rule-financial-segment"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-financial-segment"
+      ]
+    },
+    {
+      "id": "financial-regulatory-capital-schedule",
+      "node_output_name": "financial-regulatory-capital-schedule",
+      "required_by": [
+        "valuation-rule-financial-segment"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-financial-segment"
+      ]
+    },
+    {
+      "id": "segment-reconciliation",
+      "node_output_name": "segment-reconciliation",
+      "required_by": [
+        "valuation-rule-financial-segment",
+        "valuation-rule-sotp-selected"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-financial-segment",
+        "valuation-rule-sotp-selected"
+      ]
+    },
+    {
+      "id": "full-consolidation-nci-bridge",
+      "node_output_name": "full-consolidation-nci-bridge",
+      "required_by": [
+        "valuation-rule-full-nci"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-full-nci"
+      ]
+    },
+    {
+      "id": "proportional-ownership-bridge",
+      "node_output_name": "proportional-ownership-bridge",
+      "required_by": [
+        "valuation-rule-proportional-nci"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-proportional-nci"
+      ]
+    },
+    {
+      "id": "unit-ownership-attribution-map",
+      "node_output_name": "unit-ownership-attribution-map",
+      "required_by": [
+        "valuation-rule-mixed-consolidation"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-mixed-consolidation"
+      ]
+    },
+    {
+      "id": "lease-policy-schedule",
+      "node_output_name": "lease-policy-schedule",
+      "required_by": [
+        "valuation-rule-leases"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-leases"
+      ]
+    },
+    {
+      "id": "share-rights-waterfall",
+      "node_output_name": "share-rights-waterfall",
+      "required_by": [
+        "valuation-rule-share-rights"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-share-rights"
+      ]
+    },
+    {
+      "id": "point-in-time-dilution-schedule",
+      "node_output_name": "point-in-time-dilution-schedule",
+      "required_by": [
+        "valuation-rule-dilution"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-dilution"
+      ]
+    },
+    {
+      "id": "financial-funding-debt-attribution",
+      "node_output_name": "financial-funding-debt-attribution",
+      "required_by": [
+        "valuation-rule-financial-debt"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-financial-debt"
+      ]
+    },
+    {
+      "id": "associate-attribution-schedule",
+      "node_output_name": "associate-attribution-schedule",
+      "required_by": [
+        "valuation-rule-associates"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-associates"
+      ]
+    },
+    {
+      "id": "industrial-fcff-model",
+      "node_output_name": "industrial-fcff-model",
+      "required_by": [
+        "valuation-rule-industrial-fcff-selected"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-industrial-fcff-selected"
+      ]
+    },
+    {
+      "id": "capital-cost-policy",
+      "node_output_name": "capital-cost-policy",
+      "required_by": [
+        "valuation-rule-industrial-fcff-selected"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-industrial-fcff-selected"
+      ]
+    },
+    {
+      "id": "peer-comparability-schedule",
+      "node_output_name": "peer-comparability-schedule",
+      "required_by": [
+        "valuation-rule-comparables-selected"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-comparables-selected"
+      ]
+    },
+    {
+      "id": "sotp-unit-method-map",
+      "node_output_name": "sotp-unit-method-map",
+      "required_by": [
+        "valuation-rule-sotp-selected"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-sotp-selected"
+      ]
+    },
+    {
+      "id": "maintainable-economics-bridge",
+      "node_output_name": "maintainable-economics-bridge",
+      "required_by": [
+        "valuation-rule-cycle"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-cycle"
+      ]
+    },
+    {
+      "id": "going-concern-recovery-assessment",
+      "node_output_name": "going-concern-recovery-assessment",
+      "required_by": [
+        "valuation-rule-distress"
+      ],
+      "initial_status": "planned",
+      "basis_clauses": [
+        "valuation-rule-distress"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "cost-analysis",
+  "category": "analysis",
+  "inputs": [
+    "artifact_manifest",
+    "plan_snapshot",
+    "risk_register",
+    "profile_binding",
+    "review_plan",
+    "cost_observations",
+    "budget_spec"
+  ],
+  "outputs": [
+    "task_cost_ledger",
+    "cost_options",
+    "budget_feasibility",
+    "operation_record",
+    "failure_records"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "plan_snapshot",
+    "risk_register",
+    "profile_binding",
+    "review_plan",
+    "cost_observations",
+    "budget_spec"
+  ],
+  "procedure": [
+    "Separate one-time package development, sourcepack collection and environment preparation from each company engagement and its retries, fresh evidence collection, calculation, review, rendering and delivery.",
+    "Bind estimates and actuals to task ID/revision, attempt and risk/control/review coverage. Record currency, unit, rate source/date, observed tokens/cache split, elapsed intervals and uncertainty; unknown cost or usage is not zero. Prevent double counting shared setup and parallel wall-clock intervals.",
+    "Compare only options preserving mandatory checks and approved settings. Record forecast versus actual and cost tradeoffs; do not invent a cheapest feasible option. Report budget is exactly 600 seconds: 585 work plus 15 preservation/delivery; preparation is separate and engagement work cannot be relabeled setup."
+  ],
+  "failure_returns": [
+    "review-design",
+    "risk-frame"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "cost-analysis-bindings",
+      "kind": "mechanical",
+      "expectation": "Current inputs and actual plan task/risk bindings are recorded; stale inputs return restricted results."
+    },
+    {
+      "id": "cost-analysis-scope",
+      "kind": "semantic",
+      "expectation": "Named outputs reflect performed work, uncertainty and method-specific limits; risk evidence grants no authority."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "review-design",
+      "risk-frame"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required evidence or tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; affected object, missing evidence/test, owner, next action and restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

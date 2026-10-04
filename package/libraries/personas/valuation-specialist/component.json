@@ -1,0 +1,14 @@
+{
+  "id": "valuation-specialist",
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Translate reconciled business economics into methods, cash flows and attributable equity value.",
+  "capabilities": [
+    "valuation-judgment",
+    "method-reconciliation",
+    "capital-cost-judgment"
+  ],
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

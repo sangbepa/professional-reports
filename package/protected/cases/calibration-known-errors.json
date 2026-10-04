@@ -1,0 +1,13 @@
+{
+ "schema_version":"known-error-calibration/1","version":"1.0.0","label_basis":"deterministic arithmetic and explicitly supplied facts","human_labels":false,
+ "cases":[
+  {"id":"C01","question":"Terminal next-year FCFF is 10, WACC is 10%, perpetual growth is 3%. Reported terminal value is 100. Is there a material calculation error?","error":true,"reference":"10/(0.10-0.03)=142.857142857"},
+  {"id":"C02","question":"Enterprise value is 100, excess cash is 20, debt is 30 and NCI is 10. Reported parent equity value is 80. Is there a material calculation error?","error":false,"reference":"100+20-30-10=80"},
+  {"id":"C03","question":"A lending subsidiary has been valued directly to equity at 40. Parent owns 75%. Analyst adds 30 to parent SOTP and subtracts the same subsidiary funding debt of 200 again. Is there a material double-counting error?","error":true,"reference":"Equity already deducts financial funding liabilities; duplicate subtraction"},
+  {"id":"C04","question":"Publication cutoff is 2026-06-30. A valuation uses a disclosure first published on 2026-07-15 as observed information available at the cutoff. Is there a cutoff error?","error":true,"reference":"Publication after cutoff"},
+  {"id":"C05","question":"Parent owns 80% of a subsidiary with equity value 100. It records 100 gross equity and subtracts NCI of 20. Is there a material ownership error?","error":false,"reference":"100-20=80"},
+  {"id":"C06","question":"Sensitivity table center uses WACC 9%, growth 2%, next-year FCFF 7. Base and center terminal values both equal 100. Is the center calculation inconsistent?","error":false,"reference":"7/(0.09-0.02)=100"},
+  {"id":"C07","question":"There are 100 issued shares and 10 treasury shares. Parent equity is 900. Report uses 100 as outstanding shares and states value per outstanding share is 9. Is there a share-count error?","error":true,"reference":"900/(100-10)=10"},
+  {"id":"C08","question":"A report discloses financial and operating assumptions as conditional, uses unknown cost as null, and says independent review has not been performed. Does this statement itself invent a verified review or actual cost?","error":false,"reference":"Explicit unverified/null labels"}
+ ]
+}

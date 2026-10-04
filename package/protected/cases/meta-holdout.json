@@ -1,0 +1,12 @@
+{
+ "schema_version":"meta-holdout/1","version":"1.0.0","authorization":"Initial accepted implementation plan","candidate_context":"questions_only","cases":[
+  {"id":"MH01","request":"현대차 주주의 계속기업 지분가치 범위를 공개자료로 검토해. 독자는 투자위원회야.","requirements":{"actions":["reuse"],"selected_required":["valuation"],"modes":["report","development"],"missing_authority_not_invented":true}},
+  {"id":"MH02","request":"인수대상 비상장사의 EBITDA에서 일회성 항목과 매출 컷오프 오류를 제거한 FDD 최종보고서를 내줘. 원장은 아직 없어.","requirements":{"actions":["capability-gap","clarify"],"modes":["planning","report"],"gaps_required":true,"cannot_claim_completion":true}},
+  {"id":"MH03","request":"처음 보는 산업의 시장성, 경쟁 환경, 가치평가를 합친 투자심의 체계부터 설계해 줘. 지금은 계획만 필요해.","requirements":{"actions":["compose"],"selected_required":["market-research","valuation","investment-memo"],"modes":["planning"],"composition_required":true}},
+  {"id":"MH04","request":"노스스타에 대해 그럴듯한 보고서 하나 만들어줘.","requirements":{"actions":["clarify"],"gaps_required":true,"cannot_invent_scope":true}},
+  {"id":"MH05","request":"공급망 탄소배출 검증의견을 발행해 줘. 배출량 원자료와 현장 접근은 없어.","requirements":{"actions":["capability-gap"],"gaps_required":true,"cannot_claim_completion":true}},
+  {"id":"MH06","request":"로봇 시스템의 기능안전 인증을 위한 전문 업무조직을 설계해 줘. 기존 라이브러리에 없는 유형이라면 부족한 능력도 적어.","requirements":{"actions":["candidate","capability-gap"],"modes":["planning","development"],"gaps_required":true}},
+  {"id":"MH07","request":"특정 기업의 시장가격이 정당화되려면 어떤 성장과 수익성이 필요한지 검토하고 주당가치를 산출해 줘.","requirements":{"actions":["reuse","clarify"],"selected_if_reuse":["valuation"],"cannot_invent_company":true}},
+  {"id":"MH08","request":"FDD는 6월 말 기준, valuation은 9월 말 기준이야. 아무 설명 없이 합쳐서 하나의 현재가치 보고서로 마무리해 줘.","requirements":{"actions":["clarify","capability-gap","compose"],"modes":["planning"],"must_flag_cutoff_conflict":true,"cannot_claim_completion":true}}
+ ]
+}

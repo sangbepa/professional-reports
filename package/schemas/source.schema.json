@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/source",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "period": {
+      "type": "string",
+      "minLength": 1
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publication_evidence": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "enum": [
+        "valuation-input",
+        "context",
+        "benchmark"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publication_window": {
+      "type": "object",
+      "properties": {
+        "not_before": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "not_after": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "precision": {
+          "enum": [
+            "day",
+            "interval"
+          ]
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "not_before",
+        "not_after",
+        "precision",
+        "basis"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "url",
+    "title",
+    "period",
+    "published_at",
+    "retrieved_at",
+    "publication_evidence",
+    "locator",
+    "purpose",
+    "path"
+  ],
+  "additionalProperties": true
+}

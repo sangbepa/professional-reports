@@ -1,0 +1,14 @@
+{
+  "id": "market-research",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Market research planning contract only; production report execution is unsupported.",
+  "capabilities": [
+    "market-research-planning"
+  ],
+  "requires": [],
+  "entrypoint": "domain-contract.json",
+  "execution_support": "planning-only",
+  "production_quality_verified": false
+}

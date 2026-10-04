@@ -1,0 +1,18 @@
+{
+  "id": "valuation-evidence",
+  "kind": "skill",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "description": "Acquire and normalize source evidence for company valuation, with publication cutoffs, original locators, units, financial reconciliations and frozen snapshots.",
+  "capabilities": [
+    "valuation-evidence",
+    "segment-reconciliation",
+    "source-acquisition-method"
+  ],
+  "requires": [
+    "report-source-assess",
+    "report-evidence-extract",
+    "report-data-reconcile"
+  ],
+  "entrypoint": "SKILL.md"
+}

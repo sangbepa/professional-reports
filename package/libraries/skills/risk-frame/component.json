@@ -1,0 +1,12 @@
+{
+  "id": "risk-frame",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Frame task-specific failure risks from supplied evidence and a shadow or explicitly adopted profile.",
+  "capabilities": [
+    "risk-framing"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

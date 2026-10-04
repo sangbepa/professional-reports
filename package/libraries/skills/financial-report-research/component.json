@@ -1,0 +1,17 @@
+{
+  "id": "financial-report-research",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Design and conduct question-led evidence research for valuation, financial due diligence, ESG, earnings and board reports. Use to substantiate material assumptions, investigate conflicting evidence and identify what a decision-ready report can support.",
+  "capabilities": [
+    "purpose-led-research",
+    "valuation-research",
+    "fdd-research",
+    "esg-research",
+    "earnings-research",
+    "board-research"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

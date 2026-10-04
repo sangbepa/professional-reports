@@ -1,0 +1,119 @@
+{
+  "status": "candidate_requires_adoption",
+  "clauses": [
+    {
+      "id": "R-MANDATE",
+      "source_ids": [
+        "ASA320",
+        "B01",
+        "B03"
+      ],
+      "locator": "ASA320 §§2–4; B01 physical PDF41; B03 PDF119",
+      "interpretation": "Reader decision and purpose constrain significance",
+      "kind": "standard_requirement"
+    },
+    {
+      "id": "R-MATERIALITY",
+      "source_ids": [
+        "ASA320"
+      ],
+      "locator": "ASA320 §§2,9–14; original PDF, materiality and revision sections",
+      "interpretation": "Size, nature, aggregation and revision; no universal percentage supplied",
+      "kind": "standard_requirement"
+    },
+    {
+      "id": "R-INHERENT",
+      "source_ids": [
+        "ASA315"
+      ],
+      "locator": "ASA315 spectrum and likelihood/magnitude; physical PDF9,11",
+      "interpretation": "Assess likelihood and magnitude at assertion level",
+      "kind": "standard_requirement"
+    },
+    {
+      "id": "R-CONTROL",
+      "source_ids": [
+        "ASA330"
+      ],
+      "locator": "ASA330 §§8,13–16",
+      "interpretation": "Control reliance requires current relevant operating evidence",
+      "kind": "standard_requirement"
+    },
+    {
+      "id": "R-RESPONSE",
+      "source_ids": [
+        "ASA330"
+      ],
+      "locator": "ASA330 §§6,18,25",
+      "interpretation": "Link procedures to assessed risk; sufficient evidence remains required",
+      "kind": "standard_requirement"
+    },
+    {
+      "id": "R-CONSO",
+      "source_ids": [
+        "HMC-LEGACY"
+      ],
+      "locator": "cases consolidation,nci",
+      "interpretation": "High floors for consolidation and NCI; proposal informed by failures",
+      "kind": "proposed_rule"
+    },
+    {
+      "id": "R-WACC",
+      "source_ids": [
+        "HMC-LEGACY",
+        "B03"
+      ],
+      "locator": "legacy case wacc; B03 physical PDF152",
+      "interpretation": "High floor for discount-rate assumptions; sensitivity informs impact",
+      "kind": "proposed_rule"
+    },
+    {
+      "id": "R-RIGHTS",
+      "source_ids": [
+        "HMC-LEGACY"
+      ],
+      "locator": "legacy issue register, stock-right and lease cases",
+      "interpretation": "High floor for equity allocation and contractual rights",
+      "kind": "proposed_rule"
+    },
+    {
+      "id": "R-CUTOFF",
+      "source_ids": [
+        "ASA315",
+        "B01"
+      ],
+      "locator": "ASA315 evidence reliability; B01 transaction mandate PDF41",
+      "interpretation": "Post-cutoff information used in valuation is a qualitative major defect",
+      "kind": "proposed_rule"
+    },
+    {
+      "id": "R-PROVISIONAL",
+      "source_ids": [
+        "ASA330"
+      ],
+      "locator": "ASA330 §§8,13–16; package lifecycle definition",
+      "interpretation": "Untested provisional components cannot reduce review",
+      "kind": "proposed_rule"
+    },
+    {
+      "id": "R-SENSITIVITY",
+      "source_ids": [
+        "B02",
+        "B03"
+      ],
+      "locator": "B02 physical PDF154 §7.29; B03 PDF152",
+      "interpretation": "Use supported variable ranges and distinguish market/value indications",
+      "kind": "observed_practice"
+    },
+    {
+      "id": "R-UNKNOWN",
+      "source_ids": [
+        "B01",
+        "B02"
+      ],
+      "locator": "B01 PDF104; B02 PDF148,154",
+      "interpretation": "Unknown evidence is not low risk; no fabricated missing inputs",
+      "kind": "proposed_rule"
+    }
+  ]
+}

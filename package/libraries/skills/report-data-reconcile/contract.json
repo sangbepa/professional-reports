@@ -1,0 +1,84 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-data-reconcile",
+  "category": "execution",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_observations",
+    "faithful_tables",
+    "reconciliation_basis",
+    "current_model_artifacts"
+  ],
+  "outputs": [
+    "reconciled_data",
+    "reconciliation_bridges",
+    "metric_bindings",
+    "attribution_map",
+    "reconciliation_exceptions",
+    "operation_record",
+    "failure_records",
+    "segment_reconciliation",
+    "ownership_policy_exceptions"
+  ],
+  "procedure": [
+    "Bind observations, model results and authorized reconciliation basis.",
+    "Align supported calendars, currency, scale, definitions and perimeter.",
+    "Trace signed bridges, residuals and duplicate attribution.",
+    "Return metric bindings and unresolved reconciliation/domain work."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_observations",
+    "faithful_tables",
+    "reconciliation_basis",
+    "current_model_artifacts"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-evidence-extract",
+    "valuation-design"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "reproducible-alignment",
+      "kind": "mechanical",
+      "expectation": "Transformed metrics resolve to original inputs, formulas, units, conversion evidence and current model paths; signed bridge arithmetic and residuals are actually checked."
+    },
+    {
+      "id": "attribution-coverage",
+      "kind": "mechanical",
+      "expectation": "Underlying event/exposure IDs link all affected bridges and outcomes, with reused amounts and duplicate-treatment flags preserved."
+    },
+    {
+      "id": "measurement-comparability",
+      "kind": "semantic",
+      "expectation": "Calendar, stock/flow, currency, scale, definition and ownership/perimeter alignments are justified; no unsupported plug, normalization or causal inference closes a difference."
+    },
+    {
+      "id": "ownership-policy-reconciliation",
+      "kind": "semantic",
+      "expectation": "Supplied consolidation, NCI, lease and share-right policies reconcile by unit and attribution, without choosing missing policies."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-evidence-extract",
+      "valuation-design"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "domain_artifact_aliases": {
+    "segment-reconciliation": "segment_reconciliation"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

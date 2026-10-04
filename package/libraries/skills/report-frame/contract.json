@@ -1,0 +1,58 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-frame",
+  "category": "judgment",
+  "inputs": [
+    "artifact_manifest",
+    "mandate",
+    "supplied_constraints",
+    "available_deliverables"
+  ],
+  "outputs": [
+    "engagement_frame",
+    "deliverable_acceptance",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind the current mandate and constraints.",
+    "Define reader decision, perimeter, dates, cutoff and document mode.",
+    "Set feasible deliverables and purpose-specific acceptance conditions.",
+    "Return the frame and material mandate gaps."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "mandate",
+    "supplied_constraints",
+    "available_deliverables"
+  ],
+  "failure_returns": [],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "frame-binding",
+      "kind": "mechanical",
+      "expectation": "Input and output artifact locations, versions and actual hash/access observations are recorded; dates and cutoff are distinct fields."
+    },
+    {
+      "id": "mandate-fidelity",
+      "kind": "semantic",
+      "expectation": "The decision, audience, perimeter, mode and conclusion strength follow the mandate without issuer assumptions or invented authority."
+    },
+    {
+      "id": "feasible-acceptance",
+      "kind": "semantic",
+      "expectation": "Acceptance reflects actual access and output capabilities, preserves factual versus fictional board modes, and promises neither FDD completion nor assurance from screening."
+    }
+  ],
+  "failure": {
+    "return_to": [],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "report-outline",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Order accepted report arguments and findings for the specified expert reader and decision, without imposing a universal table of contents.",
+  "capabilities": [
+    "reader-outline",
+    "argument-coverage"
+  ],
+  "requires": [
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,123 @@
+{
+  "rules": [
+    {
+      "id": "valuation-rule-core",
+      "require_capabilities": ["mandate-framing", "valuation-evidence", "valuation-method-selection", "equity-bridge-design", "method-reconciliation", "valuation-challenge"],
+      "require_review_roles": ["source", "model", "judgment", "document"],
+      "require_artifacts": ["valuation-method-decisions", "valuation-equity-bridge", "valuation-unknowns"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-financial-segment",
+      "when": {"fact": "financial_segment_material", "equals": true},
+      "require_capabilities": ["financial-equity-valuation", "segment-reconciliation"],
+      "require_review_roles": ["source", "model", "judgment", "document"],
+      "require_artifacts": ["financial-equity-method-assessment", "financial-regulatory-capital-schedule", "segment-reconciliation"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-full-nci",
+      "when": {"fact": "full_consolidation_nci_material", "equals": true},
+      "require_capabilities": ["consolidation-policy", "nci-policy"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["full-consolidation-nci-bridge"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-proportional-nci",
+      "when": {"fact": "proportional_nci_material", "equals": true},
+      "require_capabilities": ["consolidation-policy", "nci-policy"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["proportional-ownership-bridge"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-mixed-consolidation",
+      "when": {"fact": "mixed_consolidation_material", "equals": true},
+      "require_capabilities": ["consolidation-policy", "segment-reconciliation"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["unit-ownership-attribution-map"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-leases",
+      "when": {"fact": "leases_material", "equals": true},
+      "require_capabilities": ["lease-policy", "equity-bridge-design"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["lease-policy-schedule"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-share-rights",
+      "when": {"fact": "multiple_share_classes", "equals": true},
+      "require_capabilities": ["share-rights-policy", "equity-bridge-design"],
+      "require_review_roles": ["source", "model", "judgment"],
+      "require_artifacts": ["share-rights-waterfall"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-dilution",
+      "when": {"fact": "potential_dilution_material", "equals": true},
+      "require_capabilities": ["share-rights-policy", "equity-bridge-design"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["point-in-time-dilution-schedule"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-financial-debt",
+      "when": {"fact": "financial_subsidiary_debt_material", "equals": true},
+      "require_capabilities": ["financial-equity-valuation", "segment-reconciliation", "equity-bridge-design"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["financial-funding-debt-attribution"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-associates",
+      "when": {"fact": "associates_material", "equals": true},
+      "require_capabilities": ["equity-bridge-design", "duplicate-attribution-detection"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["associate-attribution-schedule"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-industrial-fcff-selected",
+      "when": {"fact": "industrial_fcff_selected", "equals": true},
+      "require_capabilities": ["dcf-modeling", "terminal-economics", "wacc-calculation"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["industrial-fcff-model", "capital-cost-policy"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-comparables-selected",
+      "when": {"fact": "comparables_selected", "equals": true},
+      "require_capabilities": ["comparable-company-analysis", "peer-selection", "multiple-reconciliation"],
+      "require_review_roles": ["source", "model", "judgment"],
+      "require_artifacts": ["peer-comparability-schedule"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-sotp-selected",
+      "when": {"fact": "sotp_selected", "equals": true},
+      "require_capabilities": ["valuation-method-selection", "segment-reconciliation", "equity-bridge-design"],
+      "require_review_roles": ["model", "judgment"],
+      "require_artifacts": ["sotp-unit-method-map", "segment-reconciliation"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-cycle",
+      "when": {"fact": "cyclical_business_material", "equals": true},
+      "require_capabilities": ["valuation-research", "scenario-design", "economic-assumption-challenge"],
+      "require_review_roles": ["source", "judgment"],
+      "require_artifacts": ["maintainable-economics-bridge"],
+      "on_unknown": "assessment"
+    },
+    {
+      "id": "valuation-rule-distress",
+      "when": {"fact": "distress_material", "equals": true},
+      "require_capabilities": ["valuation-method-selection", "scenario-design"],
+      "require_review_roles": ["source", "model", "judgment"],
+      "require_artifacts": ["going-concern-recovery-assessment"],
+      "on_unknown": "assessment"
+    }
+  ]
+}

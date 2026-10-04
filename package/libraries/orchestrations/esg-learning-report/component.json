@@ -1,0 +1,17 @@
+{
+  "id": "esg-learning-report",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Public-source teaching reconstruction through a standalone development adapter; no production ESG engagement or assurance.",
+  "capabilities": [
+    "esg-learning-orchestration"
+  ],
+  "requires": [
+    "esg-learning-report-method"
+  ],
+  "entrypoint": "contract.json",
+  "execution_support": "standalone-learning-adapter",
+  "production_quality_verified": false,
+  "production_report_execution_allowed": false
+}

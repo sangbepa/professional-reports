@@ -1,0 +1,17 @@
+{
+  "id": "supervisor",
+  "description": "Reviews exact artifact revisions independently from their producers across separately evidenced source, arithmetic, economics, and design channels.",
+  "capabilities": [
+    "verify-review-independence",
+    "review-source-claim-fidelity",
+    "review-arithmetic-evidence",
+    "review-economic-reasoning",
+    "review-rendered-design",
+    "preserve-review-criteria"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

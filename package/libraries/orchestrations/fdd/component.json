@@ -1,0 +1,14 @@
+{
+  "id": "fdd",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Financial due diligence planning contract only; production report execution is unsupported.",
+  "capabilities": [
+    "fdd-planning"
+  ],
+  "requires": [],
+  "entrypoint": "domain-contract.json",
+  "execution_support": "planning-only",
+  "production_quality_verified": false
+}

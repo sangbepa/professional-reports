@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "id": "esg-rule-planning",
+      "require_capabilities": [
+        "mandate-framing",
+        "research-planning"
+      ],
+      "require_review_roles": [
+        "source",
+        "judgment"
+      ],
+      "require_artifacts": [
+        "esg-research-plan",
+        "esg-access-and-capability-gaps"
+      ],
+      "on_unknown": "assessment"
+    }
+  ]
+}

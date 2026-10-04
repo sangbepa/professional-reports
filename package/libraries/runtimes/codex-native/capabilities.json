@@ -1,0 +1,54 @@
+{
+  "schema_version": "professional-reports/runtime-capabilities/1",
+  "version": "0.1.0-dev.1",
+  "provided_as_instructions": [
+    "native-agent scheduling",
+    "host receipt binding",
+    "model inheritance policy",
+    "reasoning setting provenance",
+    "max-six concurrency policy"
+  ],
+  "required_environment": [
+    {
+      "id": "deterministic-engine",
+      "status": "external",
+      "probe": "python3 -m pr --help from installed release root, then relevant subcommand --help"
+    },
+    {
+      "id": "native-codex-subagents",
+      "status": "host-probed",
+      "probe": "Discover actual spawn/send/wait/close tools and retain observed schema/receipts."
+    },
+    {
+      "id": "installed-pinned-release",
+      "status": "external",
+      "probe": "CLI load resolves installed release and Registry.resolve validates component refs."
+    }
+  ],
+  "optional_unresolved": [
+    {
+      "id": "original-source-access",
+      "reason": "Web, filings and proprietary data access depend on the host and credentials; no connector bundled."
+    },
+    {
+      "id": "native-workbook-recalculation",
+      "reason": "No Excel engine bundled. Formula parsing and cached values are not native recalculation."
+    },
+    {
+      "id": "document-rendering",
+      "reason": "Renderer and approved design assets must resolve in the active environment and output pages must be inspected."
+    },
+    {
+      "id": "execution-effort-telemetry",
+      "reason": "Some hosts do not report effective reasoning effort; observed remains null."
+    }
+  ],
+  "not_provided": [
+    "LLM service implemented by local scripts",
+    "financial data subscriptions",
+    "human professional accreditation",
+    "production release certification",
+    "cryptographic proof of agent identity"
+  ],
+  "security_boundary": "Engine validates cooperative actor/receipt binding and artifacts. A string identity or local receipt file alone is not an authenticated human signature."
+}

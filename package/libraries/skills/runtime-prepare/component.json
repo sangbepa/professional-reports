@@ -1,0 +1,16 @@
+{
+  "id": "runtime-prepare",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Resolve, provision if authorized, and smoke-test a report execution environment; preserve its actual dependency manifest.",
+  "capabilities": [
+    "environment-design",
+    "dependency-resolution",
+    "runtime-smoke-testing"
+  ],
+  "requires": [
+    "valuation-native"
+  ],
+  "entrypoint": "SKILL.md"
+}

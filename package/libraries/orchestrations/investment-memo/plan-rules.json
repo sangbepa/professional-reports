@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "id": "investment-memo-rule-planning",
+      "require_capabilities": [
+        "mandate-framing",
+        "research-planning"
+      ],
+      "require_review_roles": [
+        "source",
+        "judgment"
+      ],
+      "require_artifacts": [
+        "investment-memo-research-plan",
+        "investment-memo-access-and-capability-gaps"
+      ],
+      "on_unknown": "assessment"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "professional-reports/session-policy/1",
+  "version": "0.2.0-dev.1",
+  "native_enforcement": "observational",
+  "authority": "Versioned operational contract; installed helper/schema validation is distinct from native enforcement. This file does not itself execute or configure host limits.",
+  "limits": {
+    "soft_calls": 10,
+    "handoff_calls": 15,
+    "last_input_tokens": 100000,
+    "prompt_chars": 8000,
+    "summary_chars": 1000,
+    "tool_summary_chars": 4000,
+    "images_per_batch": 2,
+    "pages_per_session": 5
+  },
+  "observations": {
+    "soft_calls_action": "prepare-handoff",
+    "handoff_trigger": "observed calls >= 15 OR observed last-input tokens >= 100000",
+    "unknown_usage": "unknown, never zero",
+    "count_scope": "actual native session, including same-task follow-ups; do not reset at dispatch batch"
+  },
+  "workers": {
+    "fork_context": false,
+    "model": "inherit",
+    "max_live": 6,
+    "capacity": "lower confirmed host/user/session limit applies",
+    "spawn_receipt_required": true,
+    "actual_close_required": true,
+    "close_receipt_required": true,
+    "resume_completed_for_new_tasks": false
+  },
+  "review": {
+    "fresh_independent_reviewer_per_round": true,
+    "original_reviewer_id_required": false,
+    "per_finding_resolution_evidence_required": true,
+    "per_finding_reopening_evidence_required": true,
+    "scope_accepted_decisions_and_closed_findings": true,
+    "allow_real_counterevidence": true
+  },
+  "evidence": {
+    "persist_raw_before_summary": true,
+    "references": [
+      "path",
+      "sha256",
+      "version",
+      "read_ranges"
+    ],
+    "handoff_scope": "task-only; relevant open/closed findings, accepted judgments, artifacts, inputs, checks, next actions and no-reread refs",
+    "no_reread": "unchanged hash, version, scope and conditions only; counterevidence permits targeted reread"
+  },
+  "images": {
+    "first_document": "inspect all pages across sessions",
+    "revisions": "inspect changed and affected pages; unknown impact requires full coverage",
+    "manifest_is_inspection_evidence": false
+  },
+  "main_roles": {
+    "separate_task_sessions": [
+      "meta-orchestrator",
+      "project-manager",
+      "coordination",
+      "integration"
+    ],
+    "actual_parent_conversation_reset": false
+  },
+  "report_budget": {
+    "ceiling_seconds": 600,
+    "work_cutoff_seconds": 585,
+    "delivery_reserve_seconds": 15,
+    "aspirational_seconds": 300
+  },
+  "experiment": {
+    "token_budget": 6000000,
+    "elapsed_budget_seconds": 1800,
+    "rounds": [
+      3,
+      6,
+      3
+    ],
+    "input_reduction": {
+      "minimum_pair_fraction": 0.6666666666666666,
+      "strictly_greater_than_percent": 5,
+      "remaining_pairs_delta_percent": [
+        -5,
+        5
+      ]
+    },
+    "uncached_input_max_increase_percent": {
+      "each_pair": 5,
+      "total": 5
+    },
+    "elapsed_max_increase_percent": 10,
+    "quality_reopen_reversal_nonregression": true,
+    "holdout_required": true,
+    "report_deadlines_unchanged": true,
+    "elapsed_comparison_scope": [
+      "each_pair",
+      "total"
+    ]
+  }
+}

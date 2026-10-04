@@ -1,0 +1,64 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "risk-frame",
+  "category": "classification",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "plan_snapshot",
+    "profile_record",
+    "change_log",
+    "sourcepack"
+  ],
+  "outputs": [
+    "risk_register",
+    "profile_binding",
+    "invalidation_map",
+    "operation_record",
+    "failure_records"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "plan_snapshot",
+    "profile_record",
+    "change_log",
+    "sourcepack"
+  ],
+  "procedure": [
+    "Identify failure events for the actual decision, task and assertion; record causes, affected objects, consequences, current controls and evidence gaps. Separate inherent exposure from residual exposure and qualitative judgment from measured likelihood.",
+    "Bind every risk to a current plan node ID/revision and source, calculation, claim or artifact ID/hash. Map impact and control coverage to the proposed profile without converting unsupported estimates to probabilities.",
+    "Check package adoption and task settings separately. A profile stays shadow unless a concrete version/hash and scoped user adoption record exist. Missing sourcepack standards remain missing; do not invent normative thresholds."
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-research-plan"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "risk-frame-bindings",
+      "kind": "mechanical",
+      "expectation": "Current inputs and actual plan task/risk bindings are recorded; stale inputs return restricted results."
+    },
+    {
+      "id": "risk-frame-scope",
+      "kind": "semantic",
+      "expectation": "Named outputs reflect performed work, uncertainty and method-specific limits; risk evidence grants no authority."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-research-plan"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required evidence or tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; affected object, missing evidence/test, owner, next action and restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "record_format": "references/risk-records.md"
+}

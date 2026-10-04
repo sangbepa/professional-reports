@@ -1,0 +1,62 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "review-design",
+  "category": "planning",
+  "inputs": [
+    "artifact_manifest",
+    "risk_register",
+    "profile_binding",
+    "control_test_results",
+    "plan_snapshot",
+    "acceptance_criteria"
+  ],
+  "outputs": [
+    "review_plan",
+    "coverage_gaps",
+    "operation_record",
+    "failure_records"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "risk_register",
+    "profile_binding",
+    "control_test_results",
+    "plan_snapshot",
+    "acceptance_criteria"
+  ],
+  "procedure": [
+    "Map each risk and material assertion to source, arithmetic, economics or design coverage using existing wire-schema review channels. Record required competence, actual producer lineage and independent reviewer scope.",
+    "Propose concrete review tasks with current node IDs/revisions, artifact hashes, criteria references, method bindings and failure routes. Use fresh independent reviewers per round and preserve resolution and reopening evidence.",
+    "Candidate review allocation remains shadow until concrete adoption. Never omit protected criteria, replace independent review with author checks or lower thresholds to satisfy cost. Return uncovered risks and conflicts for scoped resolution."
+  ],
+  "failure_returns": [
+    "risk-frame",
+    "report-frame"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "review-design-bindings",
+      "kind": "mechanical",
+      "expectation": "Current inputs and actual plan task/risk bindings are recorded; stale inputs return restricted results."
+    },
+    {
+      "id": "review-design-scope",
+      "kind": "semantic",
+      "expectation": "Named outputs reflect performed work, uncertainty and method-specific limits; risk evidence grants no authority."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "risk-frame",
+      "report-frame"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required evidence or tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; affected object, missing evidence/test, owner, next action and restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

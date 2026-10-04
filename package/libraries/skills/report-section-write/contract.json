@@ -1,0 +1,74 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-section-write",
+  "category": "expression",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "reader_outline",
+    "argument_records",
+    "argument_acceptance",
+    "metric_bindings",
+    "evidence_observations"
+  ],
+  "outputs": [
+    "section_draft",
+    "claim_bindings",
+    "exhibit_bindings",
+    "editorial_change_record",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind selected sections to current accepted arguments and metrics.",
+    "Write expert prose preserving evidence meaning and conclusion limits.",
+    "Attach passage-level evidence, metric and exhibit bindings without new numbers.",
+    "Return the draft, editorial record and unsupported-content work."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "reader_outline",
+    "argument_records",
+    "argument_acceptance",
+    "metric_bindings",
+    "evidence_observations"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-outline",
+    "report-argument"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "draft-numeric-binding",
+      "kind": "mechanical",
+      "expectation": "Every displayed metric resolves to a current metric ID and authorized display value; other numeric facts resolve to supplied fact/event IDs."
+    },
+    {
+      "id": "claim-and-citation-binding",
+      "kind": "mechanical",
+      "expectation": "Material passages and exhibits map to accepted arguments and exact current source/model locators; input acceptance and review records are not fabricated."
+    },
+    {
+      "id": "editorial-fidelity",
+      "kind": "semantic",
+      "expectation": "Prose serves the expert reader without new analysis, stronger unsupported conclusions, lost qualifications, invented board events or calculation changes."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-outline",
+      "report-argument"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "project-manager",
+  "description": "Frames the reader decision and coordinates evidence-led plans, dependencies, and handoffs without preselecting conclusions or granting review approval.",
+  "capabilities": [
+    "frame-reader-decision",
+    "define-evidence-perimeter",
+    "surface-mandate-ambiguity",
+    "propose-acceptance-criteria",
+    "coordinate-role-handoffs",
+    "track-plan-dependencies",
+    "escalate-decision-blockers"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

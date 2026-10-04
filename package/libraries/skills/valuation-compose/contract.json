@@ -1,0 +1,80 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-compose",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "reader_outline",
+    "argument_records",
+    "metric_bindings",
+    "current_model_artifacts",
+    "review_records",
+    "format_requirements"
+  ],
+  "outputs": [
+    "valuation_content_packet",
+    "claim_bindings",
+    "exhibit_bindings",
+    "content_retention_map",
+    "design_handoff",
+    "composition_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Check current content, model and review bindings.",
+    "Develop the valuation decision argument and conditions.",
+    "Bind numerical prose and exhibits to actual result paths.",
+    "Hand off content to design with unresolved rendering and review states."
+  ],
+  "acceptance": [
+    {
+      "id": "valuation-compose-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "Every material amount and exhibit binds scenario, unit, period, perimeter and current model/fact path."
+    },
+    {
+      "id": "valuation-compose-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Methods, alternatives, bridge and conclusion restrictions survive composition."
+    },
+    {
+      "id": "valuation-compose-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "No rendered output is claimed without actual verified generation and page inspection."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "reader_outline",
+    "argument_records",
+    "metric_bindings",
+    "current_model_artifacts",
+    "review_records",
+    "format_requirements"
+  ],
+  "failure_returns": [
+    "report-argument",
+    "report-section-write",
+    "report-data-reconcile",
+    "valuation-design"
+  ],
+  "failure": {
+    "return_to": [
+      "report-argument",
+      "report-section-write",
+      "report-data-reconcile",
+      "valuation-design"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

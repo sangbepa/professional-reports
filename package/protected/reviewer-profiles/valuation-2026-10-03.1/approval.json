@@ -1,0 +1,19 @@
+{
+  "schema_version": "explicit-user-approval/1",
+  "id": "evaluation-profile-adoption-2026-10-03",
+  "observed_at": "2026-10-03T11:15:43.482254+00:00",
+  "exact_user_answer": "채택하고 보정 실험 진행",
+  "question_item_id": "[\"request_user_input_async\",\"call_YfMNPjQSS7dTBex66D8B7tnJ\",0]",
+  "approved_bundle_sha256": "fb1dfa203cf0c1ece551bec2a8f14981c59e6e6fd55d8c63498a2b19dd94b89a",
+  "scope": [
+    "adopt exact scoring anchors and reviewer configuration as calibration basis",
+    "execute calibration experiments"
+  ],
+  "excludes": [
+    "claim professional calibration complete",
+    "release approval",
+    "weaken any score or completion criterion"
+  ],
+  "status": "approved_for_calibration",
+  "human_active_seconds": null
+}

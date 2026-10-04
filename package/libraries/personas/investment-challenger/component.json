@@ -1,0 +1,15 @@
+{
+  "id": "investment-challenger",
+  "description": "Challenges investment conclusions through competing hypotheses, downside mechanisms, and explicit judgment limits.",
+  "capabilities": [
+    "challenge-investment-thesis",
+    "test-downside-mechanisms",
+    "surface-disconfirming-evidence",
+    "bound-decision-conclusions"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

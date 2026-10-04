@@ -1,0 +1,43 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "dcf-model",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "installed-skill",
+      "logical_path": "dcf-model/SKILL.md",
+      "sha256": "2bb3ed672ab2fa76f8820ee919b158a67dc6df10e7052eeb661599140a9a2494",
+      "recorded_installation_sha256": "2bb3ed672ab2fa76f8820ee919b158a67dc6df10e7052eeb661599140a9a2494",
+      "matches_recorded_installation": true
+    }
+  ],
+  "changes": [
+    "Removed company fixtures, broad industry defaults, fixed layout/grid quotas and repeated user confirmation gates.",
+    "Corrected negative net-debt WACC weighting and distinguished terminal-value timing from explicit mid-year cash flows.",
+    "Retained formula traceability, driver projections, full sensitivity rebuild and editable model methods; removed unavailable recalc.py/tool assumptions."
+  ],
+  "license": {
+    "status": "upstream-license-found",
+    "spdx": "Apache-2.0",
+    "file": "LICENSE.upstream",
+    "observed_from": "output/anthropic-financial-services/UPSTREAM-LICENSE",
+    "notice_status": "No upstream NOTICE supplied in inspected installed subset or installation archive metadata; existence outside this subset remains unknown."
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed",
+  "upstream": {
+    "repository": "https://github.com/anthropics/financial-services",
+    "recorded_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "path": "plugins/vertical-plugins/financial-analysis/skills/dcf-model",
+    "installation_manifest": {
+      "repository_relative_path": "output/anthropic-financial-services/installation.json",
+      "sha256": "ff772c1067fd63d67eca9f1673c9be486cc89be5a535eab7a1f2e6a9ea17dca6"
+    },
+    "live_upstream_verification": "not_performed"
+  }
+}

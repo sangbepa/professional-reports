@@ -1,0 +1,89 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "financial-equity-valuation",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "financial_unit_profile",
+    "capital_constraints",
+    "equity_forecast_inputs",
+    "ownership_policy",
+    "tool_inventory"
+  ],
+  "outputs": [
+    "financial_business_classification",
+    "regulatory_capital_reconciliation",
+    "financial_equity_method_record",
+    "financial_equity_results",
+    "financial_debt_perimeter",
+    "financial_equity_limits",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Classify financial unit and map applicable distributable capital constraints.",
+    "Implement the selected equity cash flow, dividend or residual income method.",
+    "Reconcile equity capital, continuing economics and ownership rights.",
+    "Challenge plausible alternatives and return unsupported inputs or unavailable execution."
+  ],
+  "acceptance": [
+    {
+      "id": "financial-equity-valuation-acceptance-1",
+      "kind": "semantic",
+      "expectation": "Balance-sheet intermediation does not use industrial FCFF/WACC; prudential applicability is evidenced."
+    },
+    {
+      "id": "financial-equity-valuation-acceptance-2",
+      "kind": "mechanical",
+      "expectation": "Capital/equity rollforward, cash distributions, discount timing and rights allocation reconcile."
+    },
+    {
+      "id": "financial-equity-valuation-acceptance-3",
+      "kind": "semantic",
+      "expectation": "Clean-surplus adjustments and sustainable capital needs support the selected continuing-value method."
+    },
+    {
+      "id": "financial-equity-valuation-acceptance-4",
+      "kind": "mechanical",
+      "expectation": "Funding already reflected in equity is not deducted again in group bridge; tool test states are explicit."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "financial_unit_profile",
+    "capital_constraints",
+    "equity_forecast_inputs",
+    "ownership_policy",
+    "tool_inventory"
+  ],
+  "failure_returns": [
+    "valuation-design",
+    "report-data-reconcile",
+    "report-research-plan"
+  ],
+  "failure": {
+    "return_to": [
+      "valuation-design",
+      "report-data-reconcile",
+      "report-research-plan"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "domain_artifact_aliases": {
+    "financial-equity-method-assessment": "financial_equity_method_record",
+    "financial-regulatory-capital-schedule": "regulatory_capital_reconciliation",
+    "financial-funding-debt-attribution": "financial_debt_perimeter"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

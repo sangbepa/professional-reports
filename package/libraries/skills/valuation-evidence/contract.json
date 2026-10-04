@@ -1,0 +1,73 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-evidence",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "source_candidates",
+    "source_tool_inventory",
+    "reconciliation_basis"
+  ],
+  "outputs": [
+    "source_register",
+    "evidence_observations",
+    "normalized_valuation_data",
+    "segment_reconciliation",
+    "evidence_gaps",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Check source access and cutoff-specific availability.",
+    "Freeze originals and extract exact locators and classifications.",
+    "Align calendars, units and perimeter with recorded transformations.",
+    "Reconcile financial controls and return material missing evidence."
+  ],
+  "acceptance": [
+    {
+      "id": "valuation-evidence-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "Every supported observation binds actual source hash, locator, period and eligibility."
+    },
+    {
+      "id": "valuation-evidence-acceptance-2",
+      "kind": "mechanical",
+      "expectation": "Normalized values and segment controls rebuild from recorded transformations without plugs."
+    },
+    {
+      "id": "valuation-evidence-acceptance-3",
+      "kind": "semantic",
+      "expectation": "Unavailable access is not evidence of absence and observation is not assumption calibration."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "source_candidates",
+    "source_tool_inventory",
+    "reconciliation_basis"
+  ],
+  "failure_returns": [
+    "report-source-assess",
+    "report-evidence-extract",
+    "report-data-reconcile"
+  ],
+  "failure": {
+    "return_to": [
+      "report-source-assess",
+      "report-evidence-extract",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "runtime-engineer",
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Verify and provision the smallest reproducible environment required by actual work.",
+  "capabilities": [
+    "environment-design",
+    "dependency-resolution",
+    "runtime-smoke-testing"
+  ],
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-design",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "content_packet",
+    "claim_bindings",
+    "metric_bindings",
+    "format_requirements",
+    "design_reference",
+    "tool_inventory",
+    "review_records"
+  ],
+  "outputs": [
+    "design_reference_binding",
+    "design_handoff",
+    "presentation_acceptance",
+    "unresolved_capabilities",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Verify supplied/reference artifact bytes and historical review scope.",
+    "Map all current content to the requested design.",
+    "Identify actual renderer capability or explicit unresolved implementation.",
+    "Define and, only when tools exist, execute bound content-retention and page checks."
+  ],
+  "acceptance": [
+    {
+      "id": "report-design-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "Existing selected PDF and historical review hashes match before reference reuse."
+    },
+    {
+      "id": "report-design-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Historical presentation selection is not current financial approval or new artifact review."
+    },
+    {
+      "id": "report-design-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "Every content binding has a presentation destination; clipping, glyphs, tables, charts and notes require actual page checks."
+    },
+    {
+      "id": "report-design-acceptance-4",
+      "kind": "semantic",
+      "expectation": "Absent build/render helpers remain explicitly unavailable; no format capability is invented."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "content_packet",
+    "claim_bindings",
+    "metric_bindings",
+    "format_requirements",
+    "design_reference",
+    "tool_inventory",
+    "review_records"
+  ],
+  "failure_returns": [
+    "report-section-write",
+    "valuation-compose"
+  ],
+  "failure": {
+    "return_to": [
+      "report-section-write",
+      "valuation-compose"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

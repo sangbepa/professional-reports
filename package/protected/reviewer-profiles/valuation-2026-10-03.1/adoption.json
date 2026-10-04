@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "adopted_at": "2026-10-03T11:15:43.482254+00:00",
+  "approval_sha256": "a4d42c00f0a37827dc341fc75b4347c8eae6376d21fff35be759aecb67e6b4c6",
+  "old_profile_sha256": "a886870b5bfb6d1e63cdee1d4d80cc7e912730ce40d1c6b8ea00821a3b8df8a4",
+  "new_profile_sha256": "87b06ad7b02cd6f722b4bd2013eca0fd621ae0c44213203874a82275ffc94d40",
+  "files": [
+    {
+      "path": "candidate-five-axis-anchors.json",
+      "sha256": "7b36a8e132338778a5c65bd1445a47a2bc1d345b6339c22d1a7c27eb8fec067a"
+    },
+    {
+      "path": "candidate-five-axis-anchors.md",
+      "sha256": "1663f23eba4563a64be260841f0477af1164bc478cc36c2a09a1b615e1a714cc"
+    },
+    {
+      "path": "candidate-reviewer-config.json",
+      "sha256": "7d0967724bd276ba959f5bfc8fd0a03b2e3844886b2e8bf1aef1e8707178b496"
+    },
+    {
+      "path": "candidate-reviewer-instructions.md",
+      "sha256": "f2aa12c860b195c03941d3ca2960b637cd8e5ccfd68441eb7babcca91a6a7200"
+    },
+    {
+      "path": "candidate-calibration-plan.md",
+      "sha256": "91eb5802de25aecdd384bd1764a2dc52cbecf565322326566e95a060516a0f0b"
+    },
+    {
+      "path": "source-anchors.json",
+      "sha256": "a81761173707ac1b6b833484993f8b7ceb86013e2c150e92f730309a7aa7b6e5"
+    }
+  ],
+  "professional_grading_calibrated": false,
+  "source_dependency": {
+    "kind": "external_frozen_evidence",
+    "manifest": "development/benchmark-review/review-bundle-manifest.json",
+    "sha256": "c20e9118152d0fc469e35e5f1c1eed64a3b337129195d16db349287a587e0084",
+    "original_hashes_preserved": true,
+    "lookup": "source-anchors.json; source originals remain in evidence store, not installed definitions"
+  }
+}

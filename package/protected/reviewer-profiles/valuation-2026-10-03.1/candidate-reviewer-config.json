@@ -1,0 +1,184 @@
+{
+  "schema_version": "benchmark-review-candidate-reviewer-config/1",
+  "status": "candidate_requires_explicit_user_approval_before_protected_adoption",
+  "version": "candidate-2026-10-03.2",
+  "enabled": false,
+  "approved": false,
+  "professional_calibration_status": "not_run",
+  "calibration_results": null,
+  "scoring_contract": {
+    "axes": [
+      "evidence",
+      "economics",
+      "calculation",
+      "decision_usefulness",
+      "document_quality"
+    ],
+    "scale_min": 0,
+    "scale_max": 4,
+    "integer_only": true,
+    "minimum_each_axis": 3,
+    "minimum_total": 17,
+    "maximum_total": 20,
+    "weights": null
+  },
+  "purpose_scope": "Initial expert-facing valuation-development rubric; FDD/ESG/earnings/board use requires separate purpose-specific primary examples and calibration under the same axes.",
+  "roles": [
+    {
+      "role": "evidence_reviewer",
+      "focus": [
+        "originals and provenance",
+        "claim meaning and contrary sources",
+        "cutoff/access/assurance",
+        "numeric transcription and source hashes"
+      ],
+      "must_be_separate_from_author": true
+    },
+    {
+      "role": "economics_reviewer",
+      "focus": [
+        "maintainability",
+        "method selection and alternatives",
+        "rights and ownership",
+        "terminal or finite-life economics",
+        "cash-flow and funding logic"
+      ],
+      "must_be_separate_from_author": true
+    },
+    {
+      "role": "calculation_reviewer",
+      "focus": [
+        "independent material recalculation",
+        "units/signs/periods/perimeter",
+        "model-to-exhibit tie-out",
+        "perturbations and rounding"
+      ],
+      "must_be_separate_from_author": true
+    },
+    {
+      "role": "decision_and_document_reviewer",
+      "focus": [
+        "credible counterargument and judgment",
+        "decision-changing conditions",
+        "all final rendered pages",
+        "chart/table/footnote/summary consistency"
+      ],
+      "must_be_separate_from_author": true
+    }
+  ],
+  "execution": {
+    "mode": "future actual native independent workers; role labels alone do not constitute reviews",
+    "inherit_user_selected_model": true,
+    "pin_exact_runtime_model_and_prompt_hash": true,
+    "requested_model": "inherit-current",
+    "resolved_model": null,
+    "observed_model": null,
+    "requested_reasoning": "high",
+    "resolved_reasoning": null,
+    "observed_reasoning": null,
+    "no_silent_fallback": true,
+    "record_tools_and_versions": true,
+    "record_temperature_seed_or_not_supported": true,
+    "record_tool_budget_and_context_limits": true,
+    "do_not_record_hidden_reasoning": true
+  },
+  "reasoning_calibration": {
+    "initial_requested_setting": "high",
+    "comparison_settings": [
+      "xhigh",
+      "max"
+    ],
+    "run_only_if_supported_by_inherited_model": true,
+    "unsupported_setting_policy": "record unsupported; no silent substitution",
+    "selection": "compare on the same frozen source-backed packets and five-axis contract; record substantive findings, disagreement, stability and resource cost; freeze the user-approved choice and exact config hash",
+    "approved_choice": null,
+    "comparison_performed": false
+  },
+  "review_input": [
+    "frozen purpose, intended reader and cutoff",
+    "candidate output hash and accessible model/evidence pack",
+    "five-axis rubric version/hash",
+    "original files plus exact locators and inspected page renders",
+    "explicit private-data and extraction gaps"
+  ],
+  "blinding": [
+    "hide candidate identity/version label/change intent where feasible, preserving source identity necessary for verification",
+    "reviewers issue first judgments without other reviewers scores",
+    "candidate author never receives protected evaluation answers",
+    "B01-B03 and this review remain exposed development material; do not call them holdout"
+  ],
+  "record_schema": {
+    "required": [
+      "reviewer_actor_and_independence",
+      "artifact_hashes",
+      "model_and_reasoning_requested_resolved_observed",
+      "tool_versions",
+      "actual_pages_read_and_rendered",
+      "material_claims_checked",
+      "axis_integer_scores",
+      "per_axis_evidence_and_counterevidence",
+      "findings_and_residual_limits",
+      "failures_aborts_and_budget_exhaustion",
+      "adjudication_links"
+    ],
+    "unreviewed_axis": "null with reason; never pass or redistributed weight"
+  },
+  "adjudication": {
+    "trigger": "any pass/fail disagreement, difference greater than one point on any axis, or material finding affecting decision",
+    "process": "independent adjudicator with appropriate task competence (agent or human) examines exact originals/artifacts and records resolution; no automatic averaging",
+    "human_reference_labels": {
+      "required": false,
+      "available_in_this_review": false,
+      "use_when_available": "additional agreement/error measurements against recorded human judgments; record expertise, provenance, scope and disagreement",
+      "minimum_human_count": null,
+      "absence_policy": "continue source-anchored independent reviewer calibration; mark human-comparison metrics unavailable and do not claim human-validated grading"
+    }
+  },
+  "approval_boundary": {
+    "required_before_protected_adoption": true,
+    "approval_target": "exact candidate artifact versions and SHA-256 digests listed in review-bundle-manifest.json",
+    "adoption_performed": false,
+    "changes_to_existing_protected_gates": "none; preserve all existing protected gates, thresholds and review obligations; assess compatibility in a separately authorised adoption step",
+    "recalibration_trigger": "change to rubric, examples, prompt, model/tool setup, case mixture or decision rules"
+  },
+  "calibration_plan_path": "development/benchmark-review/candidate-calibration-plan.md",
+  "instruction_template": {
+    "path": "development/benchmark-review/candidate-reviewer-instructions.md",
+    "sha256": "f2aa12c860b195c03941d3ca2960b637cd8e5ccfd68441eb7babcca91a6a7200",
+    "status": "candidate_not_executed"
+  },
+  "reference_artifacts": [
+    {
+      "path": "development/benchmark-review/candidate-five-axis-anchors.json",
+      "sha256": "7b36a8e132338778a5c65bd1445a47a2bc1d345b6339c22d1a7c27eb8fec067a"
+    },
+    {
+      "path": "development/benchmark-review/source-anchors.json",
+      "sha256": "a81761173707ac1b6b833484993f8b7ceb86013e2c150e92f730309a7aa7b6e5"
+    },
+    {
+      "path": "development/benchmark-review/candidate-calibration-plan.md",
+      "sha256": "91eb5802de25aecdd384bd1764a2dc52cbecf565322326566e95a060516a0f0b"
+    }
+  ],
+  "original_source_pack": [
+    {
+      "source_id": "B01",
+      "path": "benchmarks/originals/B01.pdf",
+      "sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810",
+      "page_count": 135
+    },
+    {
+      "source_id": "B02",
+      "path": "benchmarks/originals/B02.pdf",
+      "sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398",
+      "page_count": 245
+    },
+    {
+      "source_id": "B03",
+      "path": "benchmarks/originals/B03.pdf",
+      "sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a",
+      "page_count": 466
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "dcf-model",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "reconciled_historicals",
+    "assumption_cases",
+    "discount_rate_result",
+    "ownership_policy",
+    "tool_inventory"
+  ],
+  "outputs": [
+    "dcf_model_or_formula_specification",
+    "driver_bindings",
+    "scenario_results",
+    "terminal_state",
+    "equity_bridge",
+    "sensitivity_results",
+    "tool_verification",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Build sourced drivers and coherent cash flows.",
+    "Apply matched discount convention and supported terminal economics.",
+    "Reconcile the single claims bridge and share rights.",
+    "Rebuild material sensitivities and verify formulas with actual tool coverage."
+  ],
+  "acceptance": [
+    {
+      "id": "dcf-model-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "History, projection identities, cash flow, discount timing and claims bridge reconcile with documented tolerance."
+    },
+    {
+      "id": "dcf-model-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Growth, reinvestment, return, rates, cash-flow claim and ownership policies are mutually consistent."
+    },
+    {
+      "id": "dcf-model-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "Sensitivity includes base tie and all affected model changes; invalid parameter combinations are explicit."
+    },
+    {
+      "id": "dcf-model-acceptance-4",
+      "kind": "mechanical",
+      "expectation": "Workbook formulas remain editable when provided; native recalculation and rendering are separate tested states."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "reconciled_historicals",
+    "assumption_cases",
+    "discount_rate_result",
+    "ownership_policy",
+    "tool_inventory"
+  ],
+  "failure_returns": [
+    "valuation-design",
+    "valuation-wacc",
+    "report-data-reconcile"
+  ],
+  "failure": {
+    "return_to": [
+      "valuation-design",
+      "valuation-wacc",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "domain_artifact_aliases": {
+    "industrial-fcff-model": "dcf_model_or_formula_specification"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

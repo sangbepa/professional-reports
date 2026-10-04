@@ -1,0 +1,18 @@
+{
+  "id": "reverse-dcf-diagnostic",
+  "kind": "orchestration",
+  "version": "0.1.0-candidate.3",
+  "status": "provisional",
+  "description": "Bounded fixed-input reverse DCF report through native short-session workers and existing specimen publication scripts.",
+  "capabilities": [
+    "conditional-reverse-dcf-report"
+  ],
+  "requires": [
+    "project-manager",
+    "report-writer",
+    "investment-challenger",
+    "codex-native"
+  ],
+  "entrypoint": "contract.json",
+  "production_quality_verified": false
+}

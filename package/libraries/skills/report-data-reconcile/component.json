@@ -1,0 +1,21 @@
+{
+  "id": "report-data-reconcile",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Align evidence and supplied model metrics across calendars, currencies, scale and perimeter, preserving bridges and detecting duplicated attribution.",
+  "capabilities": [
+    "data-reconciliation",
+    "segment-reconciliation",
+    "consolidation-policy",
+    "lease-policy",
+    "nci-policy",
+    "share-rights-policy",
+    "metric-binding",
+    "duplicate-attribution-detection"
+  ],
+  "requires": [
+    "financial-report-research"
+  ],
+  "entrypoint": "SKILL.md"
+}

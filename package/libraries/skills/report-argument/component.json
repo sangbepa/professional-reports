@@ -1,0 +1,15 @@
+{
+  "id": "report-argument",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Synthesize accepted findings into decision arguments with support, credible counterarguments, bound consequences and explicit judgment limits.",
+  "capabilities": [
+    "argument-synthesis",
+    "counterargument-assessment"
+  ],
+  "requires": [
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

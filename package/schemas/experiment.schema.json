@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/experiment",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "baseline_release": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "candidate_release": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "changed_layers": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "meta",
+          "plan",
+          "persona",
+          "skill",
+          "runtime",
+          "reasoning",
+          "input",
+          "evaluator",
+          "engine"
+        ]
+      },
+      "minItems": 1
+    },
+    "expected_behavior": {
+      "type": "string",
+      "minLength": 1
+    },
+    "side_effects": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conditions": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "input_snapshot": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1
+    },
+    "min_delta": {
+      "type": "number",
+      "minimum": 0
+    },
+    "equivalence_margin": {
+      "type": "number",
+      "minimum": 0
+    },
+    "min_pairs": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "proposed_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "quality",
+        "session_efficiency"
+      ]
+    },
+    "mode_version": {
+      "const": 1
+    },
+    "round_lengths": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "default": [
+        3,
+        6,
+        3
+      ]
+    },
+    "six_round_exploratory_target": {
+      "const": 0.3,
+      "description": "Exploratory six-round target only; never a promotion threshold."
+    },
+    "quality_reference": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "enum": [
+            "calibrated",
+            "fixed_reference"
+          ]
+        },
+        "evidence_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "known_defects_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "closures_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "known_defects": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "closure_cases": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "basis",
+        "evidence_sha256",
+        "known_defects_sha256",
+        "closures_sha256",
+        "known_defects",
+        "closure_cases"
+      ],
+      "additionalProperties": false
+    },
+    "holdout": {
+      "type": "object",
+      "properties": {
+        "input_snapshot": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "case_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "input_snapshot",
+        "case_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "hypothesis",
+    "problem_evidence",
+    "baseline_release",
+    "candidate_release",
+    "changed_layers",
+    "expected_behavior",
+    "side_effects",
+    "conditions",
+    "evaluation",
+    "input_snapshot",
+    "min_pairs",
+    "revision",
+    "proposed_by"
+  ],
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "session_efficiency"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "required": [
+          "mode_version",
+          "quality_reference",
+          "holdout"
+        ],
+        "properties": {
+          "metric": {
+            "const": "input_tokens"
+          },
+          "min_delta": {
+            "const": 0.05
+          },
+          "equivalence_margin": {
+            "const": 0.05
+          }
+        }
+      },
+      "else": {
+        "required": [
+          "metric",
+          "min_delta",
+          "equivalence_margin"
+        ]
+      }
+    }
+  ]
+}

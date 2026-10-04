@@ -1,0 +1,16 @@
+{
+  "id": "report-findings",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Infer scoped findings from reconciled evidence, separating observed or calculated results from explanations and the conclusion strength the evidence permits.",
+  "capabilities": [
+    "finding-inference",
+    "conclusion-strength-assessment"
+  ],
+  "requires": [
+    "financial-report-research",
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

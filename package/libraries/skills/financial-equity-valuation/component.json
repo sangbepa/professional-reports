@@ -1,0 +1,20 @@
+{
+  "id": "financial-equity-valuation",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Value balance-sheet financial businesses using supported equity cash flows, distributions or residual income and explicit prudential capital constraints.",
+  "capabilities": [
+    "financial-equity-valuation",
+    "financial-business-classification",
+    "regulatory-capital-assessment",
+    "dividend-discount-assessment",
+    "residual-income-assessment",
+    "financial-debt-perimeter"
+  ],
+  "requires": [
+    "valuation-design",
+    "report-data-reconcile"
+  ],
+  "entrypoint": "SKILL.md"
+}

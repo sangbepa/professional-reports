@@ -1,0 +1,21 @@
+{
+  "id": "valuation-challenge",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Independently challenge valuation evidence, maintainable economics, method selection, equity adjustments and the resulting investment or board conclusion.",
+  "capabilities": [
+    "valuation-challenge",
+    "economic-assumption-challenge",
+    "nci-policy",
+    "consolidation-policy",
+    "lease-policy",
+    "share-rights-policy"
+  ],
+  "requires": [
+    "valuation-design",
+    "audit-xls",
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

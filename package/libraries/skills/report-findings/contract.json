@@ -1,0 +1,79 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-findings",
+  "category": "judgment",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "source_assessments",
+    "evidence_observations",
+    "reconciled_data",
+    "metric_bindings",
+    "domain_analysis"
+  ],
+  "outputs": [
+    "finding_records",
+    "finding_gaps",
+    "conclusion_limits",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind eligible evidence, reconciled results and domain analysis.",
+    "Separate result, attributed explanation and inferred mechanism.",
+    "Test alternatives and assign supported conclusion strength.",
+    "Return scoped findings, conditions and targeted research/analysis gaps."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "source_assessments",
+    "evidence_observations",
+    "reconciled_data",
+    "metric_bindings",
+    "domain_analysis"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-research-plan",
+    "report-source-assess",
+    "report-evidence-extract",
+    "report-data-reconcile"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "finding-traceability",
+      "kind": "mechanical",
+      "expectation": "Finding IDs link question IDs, current source/observation/metric records, domain result paths and actual review coverage."
+    },
+    {
+      "id": "result-versus-explanation",
+      "kind": "semantic",
+      "expectation": "Reported or calculated results are distinguished from management explanations and analyst inference; contrary evidence and dependency limits are weighed."
+    },
+    {
+      "id": "strength-proportionality",
+      "kind": "semantic",
+      "expectation": "Disposition and headline strength follow calibration, alternatives and uncertainty, preserving factual/fictional board mode and unresolved material reversibility."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-research-plan",
+      "report-source-assess",
+      "report-evidence-extract",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

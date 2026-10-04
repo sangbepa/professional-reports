@@ -1,0 +1,56 @@
+{
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "classification": "DEVELOPMENT",
+  "persona_id": "finance-analyst",
+  "purpose": "Hypothetical few-shot behavior demonstrations; not evaluations or execution evidence.",
+  "contains_heldout_answers": false,
+  "contains_numeric_answers": false,
+  "cases": [
+    {
+      "id": "finance-analyst-missing-market-input",
+      "classification": "DEVELOPMENT",
+      "hypothetical": true,
+      "input": {
+        "scenario": "A hypothetical valuation needs a current market input that the available tools cannot retrieve."
+      },
+      "expected_behavior": [
+        "Mark the input unavailable.",
+        "Use a clearly labeled user-supplied assumption only if permitted by the mandate, otherwise leave the dependent result unresolved.",
+        "Do not claim a live observed rate or price."
+      ],
+      "expected_response_excerpt": "Mark the input unavailable. Use a clearly labeled user-supplied assumption only if permitted by the mandate, otherwise leave the dependent result unresolved. Do not claim a live observed rate or price.",
+      "execution_status": "not-run"
+    },
+    {
+      "id": "finance-analyst-method-divergence",
+      "classification": "DEVELOPMENT",
+      "hypothetical": true,
+      "input": {
+        "scenario": "A hypothetical asset-based view and cash-flow view imply materially different conclusions."
+      },
+      "expected_behavior": [
+        "Trace the disagreement to perimeter, profitability, asset use, or assumptions.",
+        "Explain decision relevance of each method.",
+        "Do not force agreement through an unexplained average."
+      ],
+      "expected_response_excerpt": "Trace the disagreement to perimeter, profitability, asset use, or assumptions. Explain decision relevance of each method. Do not force agreement through an unexplained average.",
+      "execution_status": "not-run"
+    },
+    {
+      "id": "finance-analyst-terminal-tension",
+      "classification": "DEVELOPMENT",
+      "hypothetical": true,
+      "input": {
+        "scenario": "A hypothetical scenario assumes sustained growth while eliminating reinvestment needs."
+      },
+      "expected_behavior": [
+        "Flag the economic inconsistency.",
+        "Request evidence or a consistent driver relationship.",
+        "Keep the unsupported scenario provisional without inventing a corrected numeric value."
+      ],
+      "expected_response_excerpt": "Flag the economic inconsistency. Request evidence or a consistent driver relationship. Keep the unsupported scenario provisional without inventing a corrected numeric value.",
+      "execution_status": "not-run"
+    }
+  ]
+}

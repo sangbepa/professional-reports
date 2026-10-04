@@ -1,0 +1,85 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-challenge",
+  "category": "verification",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "original_artifacts",
+    "editable_model",
+    "method_selection",
+    "assumption_cases",
+    "ownership_policy",
+    "proposed_conclusion",
+    "review_request"
+  ],
+  "outputs": [
+    "challenge_findings",
+    "review_coverage",
+    "substantive_claim_support",
+    "review_record",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Identify actual reviewer/channel and scope without spawning or simulating review.",
+    "Inspect originals, model and dominant assumptions independently when the host supplies that channel.",
+    "Challenge alternatives, ownership and method divergence.",
+    "Bind findings and any actual recheck closure to current hashes."
+  ],
+  "acceptance": [
+    {
+      "id": "valuation-challenge-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "Reviewer metadata records observed facts and distinguishes author checks from independent review."
+    },
+    {
+      "id": "valuation-challenge-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Challenge addresses economic adequacy and conclusion strength, not just arithmetic."
+    },
+    {
+      "id": "valuation-challenge-acceptance-3",
+      "kind": "semantic",
+      "expectation": "NCI, consolidation, leases and share rights are tested against actual perimeter and alternatives."
+    },
+    {
+      "id": "valuation-challenge-acceptance-4",
+      "kind": "mechanical",
+      "expectation": "Closure follows inspection of revised artifacts, never author relabeling."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "original_artifacts",
+    "editable_model",
+    "method_selection",
+    "assumption_cases",
+    "ownership_policy",
+    "proposed_conclusion",
+    "review_request"
+  ],
+  "failure_returns": [
+    "valuation-design",
+    "report-research-plan",
+    "audit-xls",
+    "report-argument"
+  ],
+  "failure": {
+    "return_to": [
+      "valuation-design",
+      "report-research-plan",
+      "audit-xls",
+      "report-argument"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

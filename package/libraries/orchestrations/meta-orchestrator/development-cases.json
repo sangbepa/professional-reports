@@ -1,0 +1,132 @@
+{
+  "schema_version": "professional-reports/development-cases/1",
+  "version": "0.1.0-dev.1",
+  "partition": "DEVELOPMENT",
+  "evaluation_use": "Illustrative training/debugging only; not protected evaluation input, answers or scoring evidence.",
+  "cases": [
+    {
+      "id": "dev-meta-unknown-finance",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "purpose": "valuation",
+        "profile": {
+          "financial_segment_material": null
+        },
+        "source": "Hypothetical group with lending subsidiary but no segment perimeter reconciliation"
+      },
+      "example_behavior": {
+        "decision": "Add materiality/perimeter assessment before method branch execution.",
+        "plan_delta": [
+          "evidence task for segment assets, earnings, ownership and funding",
+          "assessment artifact records unknown until evidence supports fact",
+          "if material financial business, require equity method and segment reconciliation"
+        ],
+        "forbidden": [
+          "treat null as false",
+          "subtract all group financial debt from industrial EV",
+          "assume DCF+comps required"
+        ]
+      },
+      "demonstrates": [
+        "unknown-is-assessment",
+        "contingent-methods"
+      ]
+    },
+    {
+      "id": "dev-meta-criteria-pressure",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "request": "Reviewer cannot support a material terminal assumption; author suggests deleting the criterion."
+      },
+      "example_behavior": {
+        "decision": "Preserve criterion and finding; repair evidence/model or submit a human criteria-change request with consequence.",
+        "approval_state": "not_granted",
+        "review_state": "unresolved"
+      },
+      "demonstrates": [
+        "human-only-criteria-change",
+        "no-fabricated-closure"
+      ]
+    },
+    {
+      "id": "dev-meta-approved-design",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "approveddesign": "User-supplied approved design artifact; actual hash must be computed when bound.",
+        "request": "Update analysis using the same design."
+      },
+      "example_behavior": {
+        "decision": "Resolve existing design manifest and assets; bind measured artifact hashes, reuse style, render current content and inspect current pages.",
+        "missing_assets": "Declare unresolved capability and retain approved style reference; do not silently replace design."
+      },
+      "demonstrates": [
+        "approveddesign-reuse",
+        "current-artifact-review"
+      ]
+    },
+    {
+      "id": "dev-meta-planning-only-fdd",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "purpose": "fdd",
+        "request": "Assess proposed diligence scope using public documents."
+      },
+      "example_behavior": {
+        "decision": "Return evidence/request list, proposed analyses, review roles and missing data access.",
+        "execution_mode": "planning-only",
+        "forbidden_claims": [
+          "transaction diligence complete",
+          "QoE independently verified"
+        ]
+      },
+      "demonstrates": [
+        "coverage-boundary"
+      ]
+    },
+    {
+      "id": "dev-meta-host-limited",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "requested": {
+          "model": "inherit",
+          "effort": "xhigh"
+        },
+        "host_receipt": {
+          "agent_id": "illustrative-agent",
+          "effort": null
+        }
+      },
+      "example_behavior": {
+        "resolved_effort": null,
+        "observed_effort": null,
+        "decision": "Retain actual receipt in a real run. Report unavailable metadata; block if an approved criterion requires confirmed effort.",
+        "sample_is_real_receipt": false
+      },
+      "demonstrates": [
+        "requested-resolved-observed"
+      ]
+    },
+    {
+      "id": "dev-meta-compose-boundary",
+      "version": "0.1.0-dev.1",
+      "input": {
+        "request": "Value an acquisition and certify transaction quality of earnings",
+        "available": [
+          "valuation",
+          "fdd planning-only"
+        ]
+      },
+      "example_behavior": {
+        "action": "capability-gap",
+        "decision": "Explain missing transaction diligence execution; offer a valuation plan plus FDD scope with explicit boundaries. A report-mode composition cannot bypass FDD planning-only support.",
+        "forbidden": [
+          "claim combined diligence completed",
+          "weaken selected evaluation profile"
+        ]
+      },
+      "demonstrates": [
+        "composition-does-not-upgrade-capability"
+      ]
+    }
+  ]
+}

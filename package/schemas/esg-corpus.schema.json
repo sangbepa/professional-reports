@@ -1,0 +1,604 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/esg-corpus.schema.json",
+  "title": "ESG corpus and exact mandate company-file contract",
+  "description": "Physical source SHA/page/evidence linkage, unique global IDs, public URLs, finite numbers, source scope and comparison permissions require runtime validation. Schema success is not semantic source review. Collection stubs are documented separately.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/corpus"
+    },
+    {
+      "$ref": "#/$defs/company_file"
+    }
+  ],
+  "$defs": {
+    "company": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "business_model": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "business_model"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reporting_period": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "publication_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "report_release_date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publication_date_basis": {
+          "type": "string"
+        },
+        "source_date_note": {
+          "type": "string"
+        },
+        "pdf_created_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pdf_modified_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "acquired_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_distribution_of_hash_verified": {
+          "type": "boolean"
+        },
+        "assurance_version_equivalence_verified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "url",
+        "path",
+        "sha256",
+        "pages",
+        "reporting_period",
+        "publication_date"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "metric_id": {
+          "enum": [
+            "scope1_ghg",
+            "scope2_lb_ghg",
+            "scope2_mb_ghg",
+            "scope3_ghg",
+            "electricity_consumption",
+            "energy_consumption",
+            "renewable_electricity_share",
+            "water_withdrawal",
+            "water_consumption",
+            "water_reuse_share",
+            "waste_generated",
+            "waste_recovery_share",
+            "hazardous_waste",
+            "employees_total",
+            "women_workforce_share",
+            "women_management_share",
+            "training_hours",
+            "ltir",
+            "work_fatalities",
+            "supplier_audits"
+          ]
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "page": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "company_id",
+        "metric_id",
+        "year",
+        "value",
+        "unit",
+        "boundary",
+        "method",
+        "source_id",
+        "page",
+        "evidence_text",
+        "note"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "value": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "note": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "oneOf": [
+              {
+                "properties": {
+                  "source_id": {
+                    "type": "null"
+                  },
+                  "page": {
+                    "type": "null"
+                  },
+                  "evidence_text": {
+                    "enum": [
+                      null,
+                      ""
+                    ]
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "source_id": {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+                  },
+                  "page": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "source_id",
+        "page"
+      ],
+      "additionalProperties": false
+    },
+    "company_file": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "$ref": "#/$defs/company"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/observation"
+          },
+          "minItems": 0
+        },
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "company",
+        "sources",
+        "observations",
+        "claims"
+      ],
+      "additionalProperties": false
+    },
+    "corpus": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "esg-corpus/1"
+        },
+        "information_cutoff": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "companies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/company_file"
+          },
+          "minItems": 1
+        },
+        "comparison_policy": {
+          "$ref": "#/$defs/policy"
+        },
+        "report_notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/report_note"
+          }
+        },
+        "source_status_notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_status_note"
+          }
+        }
+      },
+      "required": [
+        "schema",
+        "information_cutoff",
+        "companies"
+      ],
+      "additionalProperties": false
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": "esg-comparison-policy/1"
+        },
+        "default": {
+          "const": "context_only"
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "metric_ids"
+            ],
+            "properties": {
+              "metric_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "enum": [
+                    "scope1_ghg",
+                    "scope2_lb_ghg",
+                    "scope2_mb_ghg",
+                    "scope3_ghg",
+                    "electricity_consumption",
+                    "energy_consumption",
+                    "renewable_electricity_share",
+                    "water_withdrawal",
+                    "water_consumption",
+                    "water_reuse_share",
+                    "waste_generated",
+                    "waste_recovery_share",
+                    "hazardous_waste",
+                    "employees_total",
+                    "women_workforce_share",
+                    "women_management_share",
+                    "training_hours",
+                    "ltir",
+                    "work_fatalities",
+                    "supplier_audits"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "schema",
+        "default",
+        "rules"
+      ],
+      "additionalProperties": true
+    },
+    "report_note": {
+      "type": "object",
+      "required": [
+        "metric_id",
+        "text",
+        "source_refs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metric_id": {
+          "enum": [
+            "scope1_ghg",
+            "scope2_lb_ghg",
+            "scope2_mb_ghg",
+            "scope3_ghg",
+            "electricity_consumption",
+            "energy_consumption",
+            "renewable_electricity_share",
+            "water_withdrawal",
+            "water_consumption",
+            "water_reuse_share",
+            "waste_generated",
+            "waste_recovery_share",
+            "hazardous_waste",
+            "employees_total",
+            "women_workforce_share",
+            "women_management_share",
+            "training_hours",
+            "ltir",
+            "work_fatalities",
+            "supplier_audits"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "source_id",
+              "page"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        }
+      }
+    },
+    "source_status_note": {
+      "type": "object",
+      "required": [
+        "company_id",
+        "text",
+        "source_refs"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "source_id",
+              "page"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "page": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        }
+      }
+    }
+  }
+}

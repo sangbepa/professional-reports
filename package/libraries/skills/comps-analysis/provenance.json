@@ -1,0 +1,43 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "comps-analysis",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "installed-skill",
+      "logical_path": "comps-analysis/SKILL.md",
+      "sha256": "2d49d9d694297da6ca3b084564ce10ed496f4ff21f275dae6b6c50d7b4dd889a",
+      "recorded_installation_sha256": "2d49d9d694297da6ca3b084564ce10ed496f4ff21f275dae6b6c50d7b4dd889a",
+      "matches_recorded_installation": true
+    }
+  ],
+  "changes": [
+    "Retained peer selection, metric alignment, linked formulas, distribution statistics and source comments.",
+    "Removed fixed layout/metric quotas, copied company examples and routine approval gates.",
+    "Rejected zero-filling missing ratios, universal margin orderings and automatic method averaging."
+  ],
+  "license": {
+    "status": "upstream-license-found",
+    "spdx": "Apache-2.0",
+    "file": "LICENSE.upstream",
+    "observed_from": "output/anthropic-financial-services/UPSTREAM-LICENSE",
+    "notice_status": "No upstream NOTICE supplied in inspected installed subset or installation archive metadata; existence outside this subset remains unknown."
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed",
+  "upstream": {
+    "repository": "https://github.com/anthropics/financial-services",
+    "recorded_commit": "574ed3624aebd0418c7e96cd101262f30210ab26",
+    "path": "plugins/vertical-plugins/financial-analysis/skills/comps-analysis",
+    "installation_manifest": {
+      "repository_relative_path": "output/anthropic-financial-services/installation.json",
+      "sha256": "ff772c1067fd63d67eca9f1673c9be486cc89be5a535eab7a1f2e6a9ea17dca6"
+    },
+    "live_upstream_verification": "not_performed"
+  }
+}

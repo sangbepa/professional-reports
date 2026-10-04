@@ -1,0 +1,15 @@
+{
+  "id": "esg-learning-report-method",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Prepare cited ESG learning inputs, reconstruct disclosures, and define independent source, judgment and document review coverage.",
+  "capabilities": [
+    "esg-learning-reconstruction",
+    "esg-learning-citation-mapping",
+    "esg-learning-review-planning"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md",
+  "production_quality_verified": false
+}

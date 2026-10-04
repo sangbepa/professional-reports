@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "professional-reports",
+  "version": "0.4.0-dev.2",
+  "description": "자율 전문조직: 업무 선택, 전문가·스킬·환경 배정, 근거 추적 보고서와 검증된 개선"
+}

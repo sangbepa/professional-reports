@@ -1,0 +1,15 @@
+{
+  "name": "professional-reports-local",
+  "interface": {
+    "displayName": "Professional Reports"
+  },
+  "plugins": [
+    {
+      "name": "professional-reports",
+      "source": {
+        "source": "local",
+        "path": "./plugins/professional-reports"
+      }
+    }
+  ]
+}

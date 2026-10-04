@@ -1,0 +1,20 @@
+{
+  "origin": "workspace report-outfit",
+  "files": {
+    "NOTICE.md": "328c5fd39dc6ce4d979a7b7f6de371eaafd69c514d5346282affd85b3aa14af2",
+    "report_outfit/assets/NanumGothic-OFL.txt": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f",
+    "report_outfit/assets/NanumGothic.ttf": "76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31",
+    "report_outfit/assets/OpenSans-OFL.txt": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602",
+    "report_outfit/assets/OpenSans.ttf": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878",
+    "report_outfit/assets/base.css": "de39b38a6cedbc1081bcc185f2ea2d39370173e5f63483e6fe9ad9fdf2be8b35",
+    "report_outfit/assets/editorial.css": "f75f577b41d8f09b8f49c54ec3289a386092db05babf008b7a6b4aa733089556",
+    "report_outfit/assets/executive.css": "1db17add71d5e65d04bb285c2117e6eb5c7197c0b7e530bcb15cb973d515a675",
+    "report_outfit/assets/full-report.css": "ea24c91d44ffdf219373b3dc9dc5aa7b139378e6b94222d1ef72f849f2fc032f",
+    "report_outfit/assets/full-report.js": "dba58943c6ed7c60025e0d5a0d44558f2248b7dc69e61b388d47bea99e89aad2",
+    "report_outfit/assets/transaction.css": "c52094f706a6a1600d01101295761b06fd452e124ac8b6dc1dd2b8117a64dec5",
+    "report_outfit/build.py": "b76eeb5c2ccc79225a39bb34993620f3554a4f5ddd4b2b660a5742bd7bc7b52f",
+    "report_outfit/full_report.py": "7287717ad18e2344c61f114425fe79d0b4abf4e0f14f8b71780398121a3cadfc",
+    "report_outfit/html_dom.py": "583abdf4b4c2c3709ff9208d08a916356941fc4468ea2198fe6305a1e33474c1",
+    "report_outfit/render.mjs": "28dca7909cd40a314cd93db3c8c55847db26c2fb9a97cca32f8d930e15dbe0e1"
+  }
+}

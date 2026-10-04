@@ -1,0 +1,12 @@
+{
+  "id": "cost-analysis",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Compare evidenced setup and per-company task costs without reducing protected review requirements.",
+  "capabilities": [
+    "task-cost-analysis"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

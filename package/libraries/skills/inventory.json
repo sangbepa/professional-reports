@@ -1,0 +1,1214 @@
+{
+  "schema_version": "professional-reports/skill-inventory/1",
+  "status": "provisional",
+  "scope": "professional-reports/libraries/skills",
+  "reference_authority": "pr.registry.Registry.reference; hashes change on any component file edit",
+  "components": [
+    {
+      "reference": {
+        "id": "audit-xls",
+        "version": "0.1.0-dev.1",
+        "sha256": "ed20eeff2d57b860ec67abfd2b463bef5bad696b7b2862dd5ddacae450ba4d45"
+      },
+      "requires": [],
+      "capabilities": [
+        "spreadsheet-audit",
+        "formula-inspection",
+        "financial-model-integrity",
+        "recalculation-evidence-assessment"
+      ],
+      "basis_clause_ids": [
+        "audit-xls-method",
+        "audit-xls-acceptance",
+        "audit-xls-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "audit-xls/LICENSE.local",
+        "audit-xls/LICENSE.upstream",
+        "audit-xls/NOTICE",
+        "audit-xls/SKILL.md",
+        "audit-xls/component.json",
+        "audit-xls/contract.json",
+        "audit-xls/provenance.json",
+        "audit-xls/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "comps-analysis",
+        "version": "0.1.0-dev.1",
+        "sha256": "63d0ddc950f1da2bfb431673e5f3fee5c28b0d1e0569b202f658350216830ecf"
+      },
+      "requires": [
+        "valuation-design",
+        "report-data-reconcile"
+      ],
+      "capabilities": [
+        "comparable-company-analysis",
+        "peer-selection",
+        "multiple-reconciliation"
+      ],
+      "basis_clause_ids": [
+        "comps-analysis-method",
+        "comps-analysis-acceptance",
+        "comps-analysis-failure"
+      ],
+      "domain_artifact_aliases": {
+        "peer-comparability-schedule": "peer_selection"
+      },
+      "files": [
+        "comps-analysis/LICENSE.local",
+        "comps-analysis/LICENSE.upstream",
+        "comps-analysis/NOTICE",
+        "comps-analysis/SKILL.md",
+        "comps-analysis/component.json",
+        "comps-analysis/contract.json",
+        "comps-analysis/provenance.json",
+        "comps-analysis/references/domain-artifacts.md",
+        "comps-analysis/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "dcf-model",
+        "version": "0.1.0-dev.1",
+        "sha256": "a2f3b69b5aebf12d1de85857f7eb60dbd407294d362e9013356ae5259597bb4f"
+      },
+      "requires": [
+        "valuation-design",
+        "valuation-wacc"
+      ],
+      "capabilities": [
+        "dcf-modeling",
+        "cashflow-projection",
+        "terminal-economics",
+        "sensitivity-analysis",
+        "equity-bridge-modeling"
+      ],
+      "basis_clause_ids": [
+        "dcf-model-method",
+        "dcf-model-acceptance",
+        "dcf-model-failure"
+      ],
+      "domain_artifact_aliases": {
+        "industrial-fcff-model": "dcf_model_or_formula_specification"
+      },
+      "files": [
+        "dcf-model/LICENSE.local",
+        "dcf-model/LICENSE.upstream",
+        "dcf-model/NOTICE",
+        "dcf-model/SKILL.md",
+        "dcf-model/component.json",
+        "dcf-model/contract.json",
+        "dcf-model/provenance.json",
+        "dcf-model/references/domain-artifacts.md",
+        "dcf-model/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "financial-equity-valuation",
+        "version": "0.1.0-dev.1",
+        "sha256": "b9792e44bd3576c0972e207db0e5e9ced834b1b98eab8fde7f7717ecb45baa7b"
+      },
+      "requires": [
+        "valuation-design",
+        "report-data-reconcile"
+      ],
+      "capabilities": [
+        "financial-equity-valuation",
+        "financial-business-classification",
+        "regulatory-capital-assessment",
+        "dividend-discount-assessment",
+        "residual-income-assessment",
+        "financial-debt-perimeter"
+      ],
+      "basis_clause_ids": [
+        "financial-equity-valuation-method",
+        "financial-equity-valuation-acceptance",
+        "financial-equity-valuation-failure"
+      ],
+      "domain_artifact_aliases": {
+        "financial-equity-method-assessment": "financial_equity_method_record",
+        "financial-regulatory-capital-schedule": "regulatory_capital_reconciliation",
+        "financial-funding-debt-attribution": "financial_debt_perimeter"
+      },
+      "files": [
+        "financial-equity-valuation/LICENSE.local",
+        "financial-equity-valuation/NOTICE",
+        "financial-equity-valuation/SKILL.md",
+        "financial-equity-valuation/component.json",
+        "financial-equity-valuation/contract.json",
+        "financial-equity-valuation/provenance.json",
+        "financial-equity-valuation/references/domain-artifacts.md",
+        "financial-equity-valuation/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "financial-report-research",
+        "version": "0.1.0-dev.1",
+        "sha256": "49a47732ee21222fe7e1d13415edc2b8bc88e52e3376b98f465ff9092023f722"
+      },
+      "requires": [],
+      "capabilities": [
+        "purpose-led-research",
+        "valuation-research",
+        "fdd-research",
+        "esg-research",
+        "earnings-research",
+        "board-research"
+      ],
+      "basis_clause_ids": [
+        "financial-report-research-method",
+        "financial-report-research-acceptance",
+        "financial-report-research-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "financial-report-research/LICENSE.local",
+        "financial-report-research/NOTICE",
+        "financial-report-research/SKILL.md",
+        "financial-report-research/component.json",
+        "financial-report-research/contract.json",
+        "financial-report-research/provenance.json",
+        "financial-report-research/references/board.md",
+        "financial-report-research/references/earnings.md",
+        "financial-report-research/references/esg.md",
+        "financial-report-research/references/evidence-contract.md",
+        "financial-report-research/references/execution-contract.md",
+        "financial-report-research/references/fdd.md",
+        "financial-report-research/references/industry-lenses.md",
+        "financial-report-research/references/valuation.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "financial-report-writing",
+        "version": "0.1.0-dev.1",
+        "sha256": "c144fea5a68e4dcd729a8af64af11f06ef4178064b210fdcbb879d0f44e27b0a"
+      },
+      "requires": [],
+      "capabilities": [
+        "purpose-led-writing",
+        "valuation-writing",
+        "fdd-writing",
+        "esg-writing",
+        "earnings-writing",
+        "board-writing"
+      ],
+      "basis_clause_ids": [
+        "financial-report-writing-method",
+        "financial-report-writing-acceptance",
+        "financial-report-writing-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "financial-report-writing/LICENSE.local",
+        "financial-report-writing/NOTICE",
+        "financial-report-writing/SKILL.md",
+        "financial-report-writing/component.json",
+        "financial-report-writing/contract.json",
+        "financial-report-writing/provenance.json",
+        "financial-report-writing/references/argument-contract.md",
+        "financial-report-writing/references/board.md",
+        "financial-report-writing/references/earnings.md",
+        "financial-report-writing/references/esg.md",
+        "financial-report-writing/references/execution-contract.md",
+        "financial-report-writing/references/fdd.md",
+        "financial-report-writing/references/valuation.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-argument",
+        "version": "0.1.0-dev.1",
+        "sha256": "e2406c8201f51b07053ad5bc7741688be8b0e78be9c1af9fc98a4ac7435918dd"
+      },
+      "requires": [
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "argument-synthesis",
+        "counterargument-assessment"
+      ],
+      "basis_clause_ids": [
+        "report-argument-method",
+        "report-argument-acceptance",
+        "report-argument-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-argument/LICENSE.local",
+        "report-argument/NOTICE",
+        "report-argument/SKILL.md",
+        "report-argument/component.json",
+        "report-argument/contract.json",
+        "report-argument/provenance.json",
+        "report-argument/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-claim-check",
+        "version": "0.1.0-dev.1",
+        "sha256": "f5b716938b516b4593ea0728349a2a0f909267fef579232f44fc42d15546e892"
+      },
+      "requires": [
+        "financial-report-research",
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "claim-checking",
+        "citation-entailment",
+        "review-coverage-recording"
+      ],
+      "basis_clause_ids": [
+        "report-claim-check-method",
+        "report-claim-check-acceptance",
+        "report-claim-check-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-claim-check/LICENSE.local",
+        "report-claim-check/NOTICE",
+        "report-claim-check/SKILL.md",
+        "report-claim-check/component.json",
+        "report-claim-check/contract.json",
+        "report-claim-check/provenance.json",
+        "report-claim-check/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-data-reconcile",
+        "version": "0.1.0-dev.1",
+        "sha256": "e72d76a3466d73f276d328c0d8ece8332cc0e3a308a8400089f6ab2cf587837f"
+      },
+      "requires": [
+        "financial-report-research"
+      ],
+      "capabilities": [
+        "data-reconciliation",
+        "segment-reconciliation",
+        "consolidation-policy",
+        "lease-policy",
+        "nci-policy",
+        "share-rights-policy",
+        "metric-binding",
+        "duplicate-attribution-detection"
+      ],
+      "basis_clause_ids": [
+        "report-data-reconcile-method",
+        "report-data-reconcile-acceptance",
+        "report-data-reconcile-failure"
+      ],
+      "domain_artifact_aliases": {
+        "segment-reconciliation": "segment_reconciliation"
+      },
+      "files": [
+        "report-data-reconcile/LICENSE.local",
+        "report-data-reconcile/NOTICE",
+        "report-data-reconcile/SKILL.md",
+        "report-data-reconcile/component.json",
+        "report-data-reconcile/contract.json",
+        "report-data-reconcile/provenance.json",
+        "report-data-reconcile/references/domain-artifacts.md",
+        "report-data-reconcile/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-design",
+        "version": "0.1.0-dev.1",
+        "sha256": "410f7ed2d964eda6b81aee9385ad985400c241f75ca036b7b33176af75ba3c7a"
+      },
+      "requires": [],
+      "capabilities": [
+        "report-design-reference",
+        "design-handoff",
+        "presentation-acceptance-method"
+      ],
+      "basis_clause_ids": [
+        "report-design-method",
+        "report-design-acceptance",
+        "report-design-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-design/LICENSE.local",
+        "report-design/NOTICE",
+        "report-design/SKILL.md",
+        "report-design/component.json",
+        "report-design/contract.json",
+        "report-design/provenance.json",
+        "report-design/references/approved-design.json",
+        "report-design/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-evidence-extract",
+        "version": "0.1.0-dev.1",
+        "sha256": "bc92ceb9a8bc315b0a14003223e3ef83c714507b5f3b632c6868430230047bc9"
+      },
+      "requires": [
+        "financial-report-research"
+      ],
+      "capabilities": [
+        "evidence-extraction",
+        "table-transcription",
+        "evidence-classification"
+      ],
+      "basis_clause_ids": [
+        "report-evidence-extract-method",
+        "report-evidence-extract-acceptance",
+        "report-evidence-extract-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-evidence-extract/LICENSE.local",
+        "report-evidence-extract/NOTICE",
+        "report-evidence-extract/SKILL.md",
+        "report-evidence-extract/component.json",
+        "report-evidence-extract/contract.json",
+        "report-evidence-extract/provenance.json",
+        "report-evidence-extract/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-findings",
+        "version": "0.1.0-dev.1",
+        "sha256": "2bdb956218a9be98b904c739ed023dba8402fadea1cf22fa3c03c0077647f430"
+      },
+      "requires": [
+        "financial-report-research",
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "finding-inference",
+        "conclusion-strength-assessment"
+      ],
+      "basis_clause_ids": [
+        "report-findings-method",
+        "report-findings-acceptance",
+        "report-findings-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-findings/LICENSE.local",
+        "report-findings/NOTICE",
+        "report-findings/SKILL.md",
+        "report-findings/component.json",
+        "report-findings/contract.json",
+        "report-findings/provenance.json",
+        "report-findings/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-frame",
+        "version": "0.1.0-dev.1",
+        "sha256": "5582e8e0695925404873a9e5dc5367f3c9f886533031488a9cab47ec308885b0"
+      },
+      "requires": [
+        "financial-report-research",
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "mandate-framing",
+        "deliverable-acceptance"
+      ],
+      "basis_clause_ids": [
+        "report-frame-method",
+        "report-frame-acceptance",
+        "report-frame-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-frame/LICENSE.local",
+        "report-frame/NOTICE",
+        "report-frame/SKILL.md",
+        "report-frame/component.json",
+        "report-frame/contract.json",
+        "report-frame/provenance.json",
+        "report-frame/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-outline",
+        "version": "0.1.0-dev.1",
+        "sha256": "7087d0448adda6c40faf4ad880be62956403e4ae626fc48383a297e8d25429e3"
+      },
+      "requires": [
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "reader-outline",
+        "argument-coverage"
+      ],
+      "basis_clause_ids": [
+        "report-outline-method",
+        "report-outline-acceptance",
+        "report-outline-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-outline/LICENSE.local",
+        "report-outline/NOTICE",
+        "report-outline/SKILL.md",
+        "report-outline/component.json",
+        "report-outline/contract.json",
+        "report-outline/provenance.json",
+        "report-outline/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-research-plan",
+        "version": "0.1.0-dev.1",
+        "sha256": "2c5516fe8c244920e4ba15ab5e1c7fcb51586e0272d74175b929569eef08e332"
+      },
+      "requires": [
+        "financial-report-research"
+      ],
+      "capabilities": [
+        "research-planning",
+        "hypothesis-testing-plan",
+        "calibration-planning"
+      ],
+      "basis_clause_ids": [
+        "report-research-plan-method",
+        "report-research-plan-acceptance",
+        "report-research-plan-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-research-plan/LICENSE.local",
+        "report-research-plan/NOTICE",
+        "report-research-plan/SKILL.md",
+        "report-research-plan/component.json",
+        "report-research-plan/contract.json",
+        "report-research-plan/provenance.json",
+        "report-research-plan/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-section-write",
+        "version": "0.1.0-dev.1",
+        "sha256": "b21b8939aaf2ddf73accb617a0d284f0dfbd23e130f73dd708341d4fa57c05f2"
+      },
+      "requires": [
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "section-writing",
+        "claim-binding"
+      ],
+      "basis_clause_ids": [
+        "report-section-write-method",
+        "report-section-write-acceptance",
+        "report-section-write-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-section-write/LICENSE.local",
+        "report-section-write/NOTICE",
+        "report-section-write/SKILL.md",
+        "report-section-write/component.json",
+        "report-section-write/contract.json",
+        "report-section-write/provenance.json",
+        "report-section-write/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "report-source-assess",
+        "version": "0.1.0-dev.1",
+        "sha256": "b3e998fa177f024caf24763a796fc3a7196e4e7e90062a63bdc47f88f23c5562"
+      },
+      "requires": [
+        "financial-report-research"
+      ],
+      "capabilities": [
+        "source-assessment",
+        "information-cutoff-validation",
+        "source-provenance"
+      ],
+      "basis_clause_ids": [
+        "report-source-assess-method",
+        "report-source-assess-acceptance",
+        "report-source-assess-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "report-source-assess/LICENSE.local",
+        "report-source-assess/NOTICE",
+        "report-source-assess/SKILL.md",
+        "report-source-assess/component.json",
+        "report-source-assess/contract.json",
+        "report-source-assess/provenance.json",
+        "report-source-assess/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "valuation-challenge",
+        "version": "0.1.0-dev.1",
+        "sha256": "b52f26cb5d7e92c218e9710bd7c7ed1fe2350f4b00a81ba9cf4587d8ceda3512"
+      },
+      "requires": [
+        "valuation-design",
+        "audit-xls",
+        "financial-report-writing"
+      ],
+      "capabilities": [
+        "valuation-challenge",
+        "economic-assumption-challenge",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy"
+      ],
+      "basis_clause_ids": [
+        "valuation-challenge-method",
+        "valuation-challenge-acceptance",
+        "valuation-challenge-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "valuation-challenge/LICENSE.local",
+        "valuation-challenge/NOTICE",
+        "valuation-challenge/SKILL.md",
+        "valuation-challenge/component.json",
+        "valuation-challenge/contract.json",
+        "valuation-challenge/provenance.json",
+        "valuation-challenge/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "valuation-compose",
+        "version": "0.1.0-dev.1",
+        "sha256": "eb24d730c59cff24d5a7bb534391e9931d69c155b7d6dea2e64fd76d2a7552c7"
+      },
+      "requires": [
+        "financial-report-writing",
+        "report-section-write",
+        "report-design"
+      ],
+      "capabilities": [
+        "valuation-content-composition",
+        "model-to-report-binding"
+      ],
+      "basis_clause_ids": [
+        "valuation-compose-method",
+        "valuation-compose-acceptance",
+        "valuation-compose-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "valuation-compose/LICENSE.local",
+        "valuation-compose/NOTICE",
+        "valuation-compose/SKILL.md",
+        "valuation-compose/component.json",
+        "valuation-compose/contract.json",
+        "valuation-compose/provenance.json",
+        "valuation-compose/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "valuation-design",
+        "version": "0.1.0-dev.1",
+        "sha256": "16d6dd9d3acaf7ab14d92846dff1370e02f80626b4a057dd1e12689314577471"
+      },
+      "requires": [
+        "financial-report-research"
+      ],
+      "capabilities": [
+        "valuation-method-selection",
+        "scenario-design",
+        "segment-reconciliation",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy",
+        "equity-bridge-design",
+        "method-reconciliation",
+        "financial-equity-assessment",
+        "asset-nav-assessment",
+        "distress-assessment",
+        "early-stage-assessment",
+        "sotp-assessment",
+        "assumption-calibration",
+        "cycle-normalization",
+        "associate-attribution",
+        "financial-debt-perimeter",
+        "intercompany-elimination",
+        "dilution-analysis",
+        "reverse-dcf-assessment"
+      ],
+      "basis_clause_ids": [
+        "valuation-design-method",
+        "valuation-design-acceptance",
+        "valuation-design-failure"
+      ],
+      "domain_artifact_aliases": {
+        "valuation-method-decisions": "method_selection",
+        "valuation-equity-bridge": "equity_bridge_design",
+        "valuation-unknowns": "design_returns",
+        "full-consolidation-nci-bridge": "ownership_policy",
+        "proportional-ownership-bridge": "ownership_policy",
+        "unit-ownership-attribution-map": "ownership_policy",
+        "lease-policy-schedule": "ownership_policy",
+        "share-rights-waterfall": "ownership_policy",
+        "point-in-time-dilution-schedule": "ownership_policy",
+        "associate-attribution-schedule": "equity_bridge_design",
+        "sotp-unit-method-map": "method_selection",
+        "maintainable-economics-bridge": "assumption_cases",
+        "going-concern-recovery-assessment": "method_selection",
+        "capital-cost-policy": "assumption_cases"
+      },
+      "files": [
+        "valuation-design/LICENSE.local",
+        "valuation-design/NOTICE",
+        "valuation-design/SKILL.md",
+        "valuation-design/component.json",
+        "valuation-design/contract.json",
+        "valuation-design/provenance.json",
+        "valuation-design/references/domain-artifacts.md",
+        "valuation-design/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "valuation-evidence",
+        "version": "0.1.0-dev.1",
+        "sha256": "b6dfa3cd37b05afbfd4434ce81c2ff77c8c557819ae264c9ac70e48e7e73fba2"
+      },
+      "requires": [
+        "report-source-assess",
+        "report-evidence-extract",
+        "report-data-reconcile"
+      ],
+      "capabilities": [
+        "valuation-evidence",
+        "segment-reconciliation",
+        "source-acquisition-method"
+      ],
+      "basis_clause_ids": [
+        "valuation-evidence-method",
+        "valuation-evidence-acceptance",
+        "valuation-evidence-failure"
+      ],
+      "domain_artifact_aliases": {},
+      "files": [
+        "valuation-evidence/LICENSE.local",
+        "valuation-evidence/NOTICE",
+        "valuation-evidence/SKILL.md",
+        "valuation-evidence/component.json",
+        "valuation-evidence/contract.json",
+        "valuation-evidence/provenance.json",
+        "valuation-evidence/references/execution-contract.md"
+      ]
+    },
+    {
+      "reference": {
+        "id": "valuation-wacc",
+        "version": "0.1.0-dev.1",
+        "sha256": "7e10bb944ddd32f2a65e03cf77cfcce077e945f384833daf6920b9e16bfe01ad"
+      },
+      "requires": [
+        "valuation-design"
+      ],
+      "capabilities": [
+        "wacc-calculation",
+        "capital-cost-policy-check"
+      ],
+      "basis_clause_ids": [
+        "valuation-wacc-method",
+        "valuation-wacc-acceptance",
+        "valuation-wacc-failure"
+      ],
+      "domain_artifact_aliases": {
+        "capital-cost-policy": "capital-cost-policy.json"
+      },
+      "files": [
+        "valuation-wacc/LICENSE.local",
+        "valuation-wacc/NOTICE",
+        "valuation-wacc/SKILL.md",
+        "valuation-wacc/component.json",
+        "valuation-wacc/contract.json",
+        "valuation-wacc/provenance.json",
+        "valuation-wacc/references/domain-artifacts.md",
+        "valuation-wacc/references/execution-contract.md",
+        "valuation-wacc/scripts/calculate.py",
+        "valuation-wacc/tests/test_calculate.py"
+      ]
+    }
+  ],
+  "capability_providers": {
+    "spreadsheet-audit": [
+      "audit-xls"
+    ],
+    "formula-inspection": [
+      "audit-xls"
+    ],
+    "financial-model-integrity": [
+      "audit-xls"
+    ],
+    "recalculation-evidence-assessment": [
+      "audit-xls"
+    ],
+    "comparable-company-analysis": [
+      "comps-analysis"
+    ],
+    "peer-selection": [
+      "comps-analysis"
+    ],
+    "multiple-reconciliation": [
+      "comps-analysis"
+    ],
+    "dcf-modeling": [
+      "dcf-model"
+    ],
+    "cashflow-projection": [
+      "dcf-model"
+    ],
+    "terminal-economics": [
+      "dcf-model"
+    ],
+    "sensitivity-analysis": [
+      "dcf-model"
+    ],
+    "equity-bridge-modeling": [
+      "dcf-model"
+    ],
+    "financial-equity-valuation": [
+      "financial-equity-valuation"
+    ],
+    "financial-business-classification": [
+      "financial-equity-valuation"
+    ],
+    "regulatory-capital-assessment": [
+      "financial-equity-valuation"
+    ],
+    "dividend-discount-assessment": [
+      "financial-equity-valuation"
+    ],
+    "residual-income-assessment": [
+      "financial-equity-valuation"
+    ],
+    "financial-debt-perimeter": [
+      "financial-equity-valuation",
+      "valuation-design"
+    ],
+    "purpose-led-research": [
+      "financial-report-research"
+    ],
+    "valuation-research": [
+      "financial-report-research"
+    ],
+    "fdd-research": [
+      "financial-report-research"
+    ],
+    "esg-research": [
+      "financial-report-research"
+    ],
+    "earnings-research": [
+      "financial-report-research"
+    ],
+    "board-research": [
+      "financial-report-research"
+    ],
+    "purpose-led-writing": [
+      "financial-report-writing"
+    ],
+    "valuation-writing": [
+      "financial-report-writing"
+    ],
+    "fdd-writing": [
+      "financial-report-writing"
+    ],
+    "esg-writing": [
+      "financial-report-writing"
+    ],
+    "earnings-writing": [
+      "financial-report-writing"
+    ],
+    "board-writing": [
+      "financial-report-writing"
+    ],
+    "argument-synthesis": [
+      "report-argument"
+    ],
+    "counterargument-assessment": [
+      "report-argument"
+    ],
+    "claim-checking": [
+      "report-claim-check"
+    ],
+    "citation-entailment": [
+      "report-claim-check"
+    ],
+    "review-coverage-recording": [
+      "report-claim-check"
+    ],
+    "data-reconciliation": [
+      "report-data-reconcile"
+    ],
+    "segment-reconciliation": [
+      "report-data-reconcile",
+      "valuation-design",
+      "valuation-evidence"
+    ],
+    "consolidation-policy": [
+      "report-data-reconcile",
+      "valuation-challenge",
+      "valuation-design"
+    ],
+    "lease-policy": [
+      "report-data-reconcile",
+      "valuation-challenge",
+      "valuation-design"
+    ],
+    "nci-policy": [
+      "report-data-reconcile",
+      "valuation-challenge",
+      "valuation-design"
+    ],
+    "share-rights-policy": [
+      "report-data-reconcile",
+      "valuation-challenge",
+      "valuation-design"
+    ],
+    "metric-binding": [
+      "report-data-reconcile"
+    ],
+    "duplicate-attribution-detection": [
+      "report-data-reconcile"
+    ],
+    "report-design-reference": [
+      "report-design"
+    ],
+    "design-handoff": [
+      "report-design"
+    ],
+    "presentation-acceptance-method": [
+      "report-design"
+    ],
+    "evidence-extraction": [
+      "report-evidence-extract"
+    ],
+    "table-transcription": [
+      "report-evidence-extract"
+    ],
+    "evidence-classification": [
+      "report-evidence-extract"
+    ],
+    "finding-inference": [
+      "report-findings"
+    ],
+    "conclusion-strength-assessment": [
+      "report-findings"
+    ],
+    "mandate-framing": [
+      "report-frame"
+    ],
+    "deliverable-acceptance": [
+      "report-frame"
+    ],
+    "reader-outline": [
+      "report-outline"
+    ],
+    "argument-coverage": [
+      "report-outline"
+    ],
+    "research-planning": [
+      "report-research-plan"
+    ],
+    "hypothesis-testing-plan": [
+      "report-research-plan"
+    ],
+    "calibration-planning": [
+      "report-research-plan"
+    ],
+    "section-writing": [
+      "report-section-write"
+    ],
+    "claim-binding": [
+      "report-section-write"
+    ],
+    "source-assessment": [
+      "report-source-assess"
+    ],
+    "information-cutoff-validation": [
+      "report-source-assess"
+    ],
+    "source-provenance": [
+      "report-source-assess"
+    ],
+    "valuation-challenge": [
+      "valuation-challenge"
+    ],
+    "economic-assumption-challenge": [
+      "valuation-challenge"
+    ],
+    "valuation-content-composition": [
+      "valuation-compose"
+    ],
+    "model-to-report-binding": [
+      "valuation-compose"
+    ],
+    "valuation-method-selection": [
+      "valuation-design"
+    ],
+    "scenario-design": [
+      "valuation-design"
+    ],
+    "equity-bridge-design": [
+      "valuation-design"
+    ],
+    "method-reconciliation": [
+      "valuation-design"
+    ],
+    "financial-equity-assessment": [
+      "valuation-design"
+    ],
+    "asset-nav-assessment": [
+      "valuation-design"
+    ],
+    "distress-assessment": [
+      "valuation-design"
+    ],
+    "early-stage-assessment": [
+      "valuation-design"
+    ],
+    "sotp-assessment": [
+      "valuation-design"
+    ],
+    "assumption-calibration": [
+      "valuation-design"
+    ],
+    "cycle-normalization": [
+      "valuation-design"
+    ],
+    "associate-attribution": [
+      "valuation-design"
+    ],
+    "intercompany-elimination": [
+      "valuation-design"
+    ],
+    "dilution-analysis": [
+      "valuation-design"
+    ],
+    "reverse-dcf-assessment": [
+      "valuation-design"
+    ],
+    "valuation-evidence": [
+      "valuation-evidence"
+    ],
+    "source-acquisition-method": [
+      "valuation-evidence"
+    ],
+    "wacc-calculation": [
+      "valuation-wacc"
+    ],
+    "capital-cost-policy-check": [
+      "valuation-wacc"
+    ]
+  },
+  "domain_rule_binding": {
+    "repository_relative_path": "professional-reports/libraries/orchestrations/valuation/plan-rules.json",
+    "sha256": "408695a7072fe6ad5b8c4b7d14df3533fdbda1a90dce42f33818a7474091f800"
+  },
+  "files_written": [
+    "audit-xls/LICENSE.local",
+    "audit-xls/LICENSE.upstream",
+    "audit-xls/NOTICE",
+    "audit-xls/SKILL.md",
+    "audit-xls/component.json",
+    "audit-xls/contract.json",
+    "audit-xls/provenance.json",
+    "audit-xls/references/execution-contract.md",
+    "comps-analysis/LICENSE.local",
+    "comps-analysis/LICENSE.upstream",
+    "comps-analysis/NOTICE",
+    "comps-analysis/SKILL.md",
+    "comps-analysis/component.json",
+    "comps-analysis/contract.json",
+    "comps-analysis/provenance.json",
+    "comps-analysis/references/domain-artifacts.md",
+    "comps-analysis/references/execution-contract.md",
+    "dcf-model/LICENSE.local",
+    "dcf-model/LICENSE.upstream",
+    "dcf-model/NOTICE",
+    "dcf-model/SKILL.md",
+    "dcf-model/component.json",
+    "dcf-model/contract.json",
+    "dcf-model/provenance.json",
+    "dcf-model/references/domain-artifacts.md",
+    "dcf-model/references/execution-contract.md",
+    "financial-equity-valuation/LICENSE.local",
+    "financial-equity-valuation/NOTICE",
+    "financial-equity-valuation/SKILL.md",
+    "financial-equity-valuation/component.json",
+    "financial-equity-valuation/contract.json",
+    "financial-equity-valuation/provenance.json",
+    "financial-equity-valuation/references/domain-artifacts.md",
+    "financial-equity-valuation/references/execution-contract.md",
+    "financial-report-research/LICENSE.local",
+    "financial-report-research/NOTICE",
+    "financial-report-research/SKILL.md",
+    "financial-report-research/component.json",
+    "financial-report-research/contract.json",
+    "financial-report-research/provenance.json",
+    "financial-report-research/references/board.md",
+    "financial-report-research/references/earnings.md",
+    "financial-report-research/references/esg.md",
+    "financial-report-research/references/evidence-contract.md",
+    "financial-report-research/references/execution-contract.md",
+    "financial-report-research/references/fdd.md",
+    "financial-report-research/references/industry-lenses.md",
+    "financial-report-research/references/valuation.md",
+    "financial-report-writing/LICENSE.local",
+    "financial-report-writing/NOTICE",
+    "financial-report-writing/SKILL.md",
+    "financial-report-writing/component.json",
+    "financial-report-writing/contract.json",
+    "financial-report-writing/provenance.json",
+    "financial-report-writing/references/argument-contract.md",
+    "financial-report-writing/references/board.md",
+    "financial-report-writing/references/earnings.md",
+    "financial-report-writing/references/esg.md",
+    "financial-report-writing/references/execution-contract.md",
+    "financial-report-writing/references/fdd.md",
+    "financial-report-writing/references/valuation.md",
+    "report-argument/LICENSE.local",
+    "report-argument/NOTICE",
+    "report-argument/SKILL.md",
+    "report-argument/component.json",
+    "report-argument/contract.json",
+    "report-argument/provenance.json",
+    "report-argument/references/execution-contract.md",
+    "report-claim-check/LICENSE.local",
+    "report-claim-check/NOTICE",
+    "report-claim-check/SKILL.md",
+    "report-claim-check/component.json",
+    "report-claim-check/contract.json",
+    "report-claim-check/provenance.json",
+    "report-claim-check/references/execution-contract.md",
+    "report-data-reconcile/LICENSE.local",
+    "report-data-reconcile/NOTICE",
+    "report-data-reconcile/SKILL.md",
+    "report-data-reconcile/component.json",
+    "report-data-reconcile/contract.json",
+    "report-data-reconcile/provenance.json",
+    "report-data-reconcile/references/domain-artifacts.md",
+    "report-data-reconcile/references/execution-contract.md",
+    "report-design/LICENSE.local",
+    "report-design/NOTICE",
+    "report-design/SKILL.md",
+    "report-design/component.json",
+    "report-design/contract.json",
+    "report-design/provenance.json",
+    "report-design/references/approved-design.json",
+    "report-design/references/execution-contract.md",
+    "report-evidence-extract/LICENSE.local",
+    "report-evidence-extract/NOTICE",
+    "report-evidence-extract/SKILL.md",
+    "report-evidence-extract/component.json",
+    "report-evidence-extract/contract.json",
+    "report-evidence-extract/provenance.json",
+    "report-evidence-extract/references/execution-contract.md",
+    "report-findings/LICENSE.local",
+    "report-findings/NOTICE",
+    "report-findings/SKILL.md",
+    "report-findings/component.json",
+    "report-findings/contract.json",
+    "report-findings/provenance.json",
+    "report-findings/references/execution-contract.md",
+    "report-frame/LICENSE.local",
+    "report-frame/NOTICE",
+    "report-frame/SKILL.md",
+    "report-frame/component.json",
+    "report-frame/contract.json",
+    "report-frame/provenance.json",
+    "report-frame/references/execution-contract.md",
+    "report-outline/LICENSE.local",
+    "report-outline/NOTICE",
+    "report-outline/SKILL.md",
+    "report-outline/component.json",
+    "report-outline/contract.json",
+    "report-outline/provenance.json",
+    "report-outline/references/execution-contract.md",
+    "report-research-plan/LICENSE.local",
+    "report-research-plan/NOTICE",
+    "report-research-plan/SKILL.md",
+    "report-research-plan/component.json",
+    "report-research-plan/contract.json",
+    "report-research-plan/provenance.json",
+    "report-research-plan/references/execution-contract.md",
+    "report-section-write/LICENSE.local",
+    "report-section-write/NOTICE",
+    "report-section-write/SKILL.md",
+    "report-section-write/component.json",
+    "report-section-write/contract.json",
+    "report-section-write/provenance.json",
+    "report-section-write/references/execution-contract.md",
+    "report-source-assess/LICENSE.local",
+    "report-source-assess/NOTICE",
+    "report-source-assess/SKILL.md",
+    "report-source-assess/component.json",
+    "report-source-assess/contract.json",
+    "report-source-assess/provenance.json",
+    "report-source-assess/references/execution-contract.md",
+    "validate_library.py",
+    "valuation-challenge/LICENSE.local",
+    "valuation-challenge/NOTICE",
+    "valuation-challenge/SKILL.md",
+    "valuation-challenge/component.json",
+    "valuation-challenge/contract.json",
+    "valuation-challenge/provenance.json",
+    "valuation-challenge/references/execution-contract.md",
+    "valuation-compose/LICENSE.local",
+    "valuation-compose/NOTICE",
+    "valuation-compose/SKILL.md",
+    "valuation-compose/component.json",
+    "valuation-compose/contract.json",
+    "valuation-compose/provenance.json",
+    "valuation-compose/references/execution-contract.md",
+    "valuation-design/LICENSE.local",
+    "valuation-design/NOTICE",
+    "valuation-design/SKILL.md",
+    "valuation-design/component.json",
+    "valuation-design/contract.json",
+    "valuation-design/provenance.json",
+    "valuation-design/references/domain-artifacts.md",
+    "valuation-design/references/execution-contract.md",
+    "valuation-evidence/LICENSE.local",
+    "valuation-evidence/NOTICE",
+    "valuation-evidence/SKILL.md",
+    "valuation-evidence/component.json",
+    "valuation-evidence/contract.json",
+    "valuation-evidence/provenance.json",
+    "valuation-evidence/references/execution-contract.md",
+    "valuation-wacc/LICENSE.local",
+    "valuation-wacc/NOTICE",
+    "valuation-wacc/SKILL.md",
+    "valuation-wacc/component.json",
+    "valuation-wacc/contract.json",
+    "valuation-wacc/provenance.json",
+    "valuation-wacc/references/domain-artifacts.md",
+    "valuation-wacc/references/execution-contract.md",
+    "valuation-wacc/scripts/calculate.py",
+    "valuation-wacc/tests/test_calculate.py",
+    "inventory.json",
+    "validation.json"
+  ]
+}

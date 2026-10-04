@@ -1,0 +1,2824 @@
+{
+  "schema_version": "0.1.0-dev.1",
+  "company": "SYNTHETIC Cross-Company Scenario",
+  "synthetic": true,
+  "currency": "USD",
+  "amount_scale": {
+    "value": 1000000,
+    "kind": "synthetic",
+    "source": {
+      "id": "SYNTHETIC",
+      "locator": "Fixed test fixture",
+      "uri": "",
+      "sha256": ""
+    },
+    "as_of": "2025-12-31",
+    "unit": "currency_per_amount",
+    "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+    "review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "reference": ""
+    }
+  },
+  "valuation_date": "2026-10-03",
+  "base_year": 2025,
+  "horizon": 5,
+  "discount_timing": {
+    "value": "explicit_stub",
+    "kind": "synthetic",
+    "source": {
+      "id": "SYNTHETIC",
+      "locator": "Fixed test fixture",
+      "uri": "",
+      "sha256": ""
+    },
+    "as_of": "2025-12-31",
+    "unit": "policy",
+    "rationale": "Explicit stub flows; no annual proration.",
+    "review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "reference": ""
+    }
+  },
+  "industrial": [
+    {
+      "id": "Products",
+      "name": "Synthetic Products",
+      "revenue": {
+        "value": 1000,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "reported_ebit": {
+        "value": 150,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "debt": {
+        "value": 100,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "cash": {
+        "value": 40,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_liability": {
+        "value": 5,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "parent_ownership": {
+        "value": 0.8,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "nci_method": {
+        "value": "proportionate_segment_equity",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_policy": {
+        "value": "debt_like",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_basis": {
+        "value": "EBIT excludes lease interest; D&A and capex include ROU depreciation and additions.",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "forecast": [
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        }
+      ],
+      "opening_nwc_rate": {
+        "value": 0.12,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "wacc": {
+        "value": 0.1,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_growth": {
+        "value": 0.02,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_margin": {
+        "value": 0.15,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_roic": {
+        "value": 0.12,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "tax_rate": {
+        "value": 0.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "stub": {
+        "revenue": {
+          "value": 260,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "ebit": {
+          "value": 36,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "cash_tax": {
+          "value": 9,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "da": {
+          "value": 8,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "capex": {
+          "value": 13,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "delta_nwc": {
+          "value": 2,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "opening_nwc": {
+          "value": 120,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "closing_nwc": {
+          "value": 122,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "fcff": {
+          "value": 20,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "full_year_revenue_anchor": {
+          "value": 1040,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "Services",
+      "name": "Synthetic Services",
+      "revenue": {
+        "value": 500,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "reported_ebit": {
+        "value": 75,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "debt": {
+        "value": 30,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "cash": {
+        "value": 10,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_liability": {
+        "value": 5,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "parent_ownership": {
+        "value": 1,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "nci_method": {
+        "value": "proportionate_segment_equity",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_policy": {
+        "value": "debt_like",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "lease_basis": {
+        "value": "EBIT excludes lease interest; D&A and capex include ROU depreciation and additions.",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "forecast": [
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "growth": {
+            "value": 0.04,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "margin": {
+            "value": 0.15,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "da_rate": {
+            "value": 0.03,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "capex_rate": {
+            "value": 0.05,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "nwc_rate": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        }
+      ],
+      "opening_nwc_rate": {
+        "value": 0.12,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "wacc": {
+        "value": 0.1,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_growth": {
+        "value": 0.02,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_margin": {
+        "value": 0.15,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_roic": {
+        "value": 0.12,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "tax_rate": {
+        "value": 0.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "stub": {
+        "revenue": {
+          "value": 130.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "ebit": {
+          "value": 18.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "cash_tax": {
+          "value": 4.5,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "da": {
+          "value": 4.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "capex": {
+          "value": 6.5,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "delta_nwc": {
+          "value": 1.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "opening_nwc": {
+          "value": 60.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "closing_nwc": {
+          "value": 61.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "fcff": {
+          "value": 10.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "full_year_revenue_anchor": {
+          "value": 520.0,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        }
+      }
+    }
+  ],
+  "finance": [
+    {
+      "id": "Finance",
+      "name": "Synthetic Finance",
+      "revenue": {
+        "value": 100,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "reported_ebit": {
+        "value": 20,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "book_equity": {
+        "value": 200,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "funding_debt": {
+        "value": 800,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "cash": {
+        "value": 30,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "amount",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "parent_ownership": {
+        "value": 0.9,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "nci_method": {
+        "value": "proportionate_residual_income_equity",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "finance_basis": {
+        "value": "Book equity, ROE and payouts include funding debt and finance leases.",
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "policy",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "forecast": [
+        {
+          "roe": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "payout": {
+            "value": 0.5,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "roe": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "payout": {
+            "value": 0.5,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "roe": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "payout": {
+            "value": 0.5,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        },
+        {
+          "roe": {
+            "value": 0.12,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          },
+          "payout": {
+            "value": 0.5,
+            "kind": "synthetic",
+            "source": {
+              "id": "SYNTHETIC",
+              "locator": "Fixed test fixture",
+              "uri": "",
+              "sha256": ""
+            },
+            "as_of": "2025-12-31",
+            "unit": "ratio",
+            "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+            "review": {
+              "status": "unreviewed",
+              "reviewer": "",
+              "reference": ""
+            }
+          }
+        }
+      ],
+      "cost_equity": {
+        "value": 0.11,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_growth": {
+        "value": 0.02,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "terminal_roe": {
+        "value": 0.12,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "pb_multiple": {
+        "value": 1.1,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "stub": {
+        "income": {
+          "value": 7,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        },
+        "dividends": {
+          "value": 3,
+          "kind": "synthetic",
+          "source": {
+            "id": "SYNTHETIC",
+            "locator": "Fixed test fixture",
+            "uri": "",
+            "sha256": ""
+          },
+          "as_of": "2025-12-31",
+          "unit": "amount",
+          "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+          "review": {
+            "status": "unreviewed",
+            "reviewer": "",
+            "reference": ""
+          }
+        }
+      }
+    }
+  ],
+  "consolidation": {
+    "revenue_eliminations": {
+      "value": -50,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "ebit_eliminations": {
+      "value": -5,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "debt_eliminations": {
+      "value": 0,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "cash_eliminations": {
+      "value": 0,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "consolidated_revenue": {
+      "value": 1550,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "consolidated_ebit": {
+      "value": 240,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "consolidated_debt": {
+      "value": 930,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "consolidated_cash": {
+      "value": 80,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "finance_book_adjustment": {
+      "value": 0,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "consolidated_finance_book": {
+      "value": 200,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    }
+  },
+  "bridge": {
+    "nonoperating_assets": {
+      "value": 20,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "parent_liabilities": {
+      "value": 10,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "industrial_ev_adjustment": {
+      "value": -40,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "finance_equity_adjustment": {
+      "value": 0,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "amount",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    }
+  },
+  "class_rights": {
+    "value": "pari_passu_fixed_then_weighted_residual",
+    "kind": "synthetic",
+    "source": {
+      "id": "SYNTHETIC",
+      "locator": "Fixed test fixture",
+      "uri": "",
+      "sha256": ""
+    },
+    "as_of": "2025-12-31",
+    "unit": "policy",
+    "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+    "review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "reference": ""
+    }
+  },
+  "share_classes": [
+    {
+      "id": "Common",
+      "issued": {
+        "value": 10000000,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "shares",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "treasury": {
+        "value": 1000000,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "shares",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "participation_weight": {
+        "value": 1,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "fixed_claim_per_share": {
+        "value": 0,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "currency_per_share",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "market_price": {
+        "value": 120,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "currency_per_share",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      }
+    },
+    {
+      "id": "ClassB",
+      "issued": {
+        "value": 1000000,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "shares",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "treasury": {
+        "value": 0,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "shares",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "participation_weight": {
+        "value": 0.8,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "ratio",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "fixed_claim_per_share": {
+        "value": 10,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "currency_per_share",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      "market_price": {
+        "value": 105,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "currency_per_share",
+        "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      }
+    }
+  ],
+  "sensitivity": {
+    "discount_step": {
+      "value": 0.005,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "ratio",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "growth_step": {
+      "value": 0.005,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "ratio",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "roe_step": {
+      "value": 0.01,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "ratio",
+      "rationale": "Fixed synthetic test assumption; no company or market evidence.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    }
+  },
+  "timing": {
+    "time_to_cashflow": [
+      {
+        "value": 0.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "years",
+        "rationale": "Fixed explicit discount time; not inferred from dates.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      {
+        "value": 1.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "years",
+        "rationale": "Fixed explicit discount time; not inferred from dates.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      {
+        "value": 2.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "years",
+        "rationale": "Fixed explicit discount time; not inferred from dates.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      {
+        "value": 3.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "years",
+        "rationale": "Fixed explicit discount time; not inferred from dates.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      },
+      {
+        "value": 4.25,
+        "kind": "synthetic",
+        "source": {
+          "id": "SYNTHETIC",
+          "locator": "Fixed test fixture",
+          "uri": "",
+          "sha256": ""
+        },
+        "as_of": "2025-12-31",
+        "unit": "years",
+        "rationale": "Fixed explicit discount time; not inferred from dates.",
+        "review": {
+          "status": "unreviewed",
+          "reviewer": "",
+          "reference": ""
+        }
+      }
+    ],
+    "terminal_time": {
+      "value": 4.25,
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "years",
+      "rationale": "Terminal value at the last forecast cash-flow date.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    },
+    "finance_stub_charge": {
+      "value": "compound_effective_rate",
+      "kind": "synthetic",
+      "source": {
+        "id": "SYNTHETIC",
+        "locator": "Fixed test fixture",
+        "uri": "",
+        "sha256": ""
+      },
+      "as_of": "2025-12-31",
+      "unit": "policy",
+      "rationale": "Effective annual cost of equity compounded over the explicit first-period time.",
+      "review": {
+        "status": "unreviewed",
+        "reviewer": "",
+        "reference": ""
+      }
+    }
+  },
+  "report": {
+    "language": "ko",
+    "report_sections": [
+      {
+        "id": "decision",
+        "title": "\uac80\ud1a0 \ubaa9\uc801\uacfc \uc870\uac74\ubd80 \uacb0\ub860",
+        "lead": "\uc2e4\uc81c \uae30\uc5c5 \ud3c9\uac00\uac00 \uc544\ub2cc \uacf5\ud1b5 \ubaa8\ud615 \uc2e4\ud589 \uc0ac\ub840",
+        "blocks": [
+          {
+            "kind": "argument",
+            "text": "\ud3c9\uac00\uae30\uc900\uc77c {{context:valuation_date}}\uc758 \ud569\uc131 \uc2dc\ub098\ub9ac\uc624\ub2e4. \uc9c0\ubc30\uc8fc\uc8fc \uc9c0\ubd84\uac00\uce58\ub294 {{model:bridge.parent_equity|amount}} \ubaa8\ud615 \ub2e8\uc704\uc774\uba70, \uc2e4\uc81c \uae30\uc5c5\uc758 \ud22c\uc790 \ud310\ub2e8\uc774\ub098 \ubaa9\ud45c\uc8fc\uac00\uac00 \uc544\ub2c8\ub2e4.",
+            "evidence_ids": []
+          },
+          {
+            "kind": "condition",
+            "text": "{{context:review_status}} \uc0c1\ud0dc\ub2e4. \uc785\ub825 \ucd9c\ucc98, \uc5f0\uacb0 \ubc94\uc704, \uac00\uc815\uacfc \uc885\ub958\uc8fc \uad8c\ub9ac\uc5d0 \ub300\ud55c \ub3c5\ub9bd \uac80\ud1a0\ub97c \uc644\ub8cc\ud574\uc57c \uc2e4\uc81c \ubcf4\uace0\uc11c\uc758 \uacb0\ub860\uc73c\ub85c \uc0ac\uc6a9\ud560 \uc218 \uc788\ub2e4.",
+            "evidence_ids": []
+          }
+        ]
+      },
+      {
+        "id": "argument",
+        "title": "\uc0b0\uc5c5\ubd80\ubb38\uacfc \uae08\uc735\ubd80\ubb38\uc744 \uad6c\ubd84\ud558\ub294 \uc774\uc720",
+        "lead": "\uc911\ubcf5 \ucc28\uac10 \ubc29\uc9c0\uc640 \uc9c0\ubd84 \uadc0\uc18d",
+        "blocks": [
+          {
+            "kind": "argument",
+            "text": "\uae08\uc735\ubd80\ubb38\uc758 \uc870\ub2ec\ubd80\ucc44 {{model:bridge.finance_funding_debt_excluded|amount}}\ub294 \uc7a5\ubd80\uc790\ubcf8\uacfc \uc218\uc775\uc131\uc5d0 \ubc18\uc601\ub418\ub294 \ud56d\ubaa9\uc774\ub2e4. \uc0b0\uc5c5\ubd80\ubb38 \uae30\uc5c5\uac00\uce58\uc5d0\uc11c \ub2e4\uc2dc \ucc28\uac10\ud558\uc9c0 \uc54a\ub294\ub2e4. \ube44\uc9c0\ubc30\uc9c0\ubd84\uc740 \uae30\uc5c5\uac00\uce58\uac00 \uc544\ub2cc \ubd80\ubb38\ubcc4 \uc9c0\ubd84\uac00\uce58\uc5d0\uc11c \uc0b0\uc815\ud55c\ub2e4.",
+            "evidence_ids": []
+          },
+          {
+            "kind": "evidence",
+            "text": "\ud569\uc131 \uc785\ub825\uc73c\ub85c \uc9c1\uc811 \uacf5\uae09\ud55c \uccab \uc0b0\uc5c5\ubd80\ubb38 \uc794\uc5ec\uae30\uac04 FCFF\ub294 {{input:industrial.0.stub.fcff|amount}}\uc774\uace0, \uae08\uc735\ubd80\ubb38 \uc794\uc5ec\uae30\uac04 \uc774\uc775\uc740 {{input:finance.0.stub.income|amount}}\uc774\ub2e4. \uc5f0\uac04 \uc804\ub9dd\uc744 \ube44\ub840 \ucd95\uc18c\ud55c \uac12\uc774 \uc544\ub2c8\ub2e4.",
+            "evidence_ids": [
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "kind": "condition",
+            "text": "\uccab \uc0b0\uc5c5\ubd80\ubb38 \uc601\uad6c\uc131\uc7a5\ub960 {{input:industrial.0.terminal_growth|percent}}\uc640 ROIC {{input:industrial.0.terminal_roic|percent}}\ub294 \uc2dc\ud5d8\uc6a9 \uac00\uc815\uc774\ub2e4. \uc7ac\ubb34\uc801 \ud0c0\ub2f9\uc131\uc774\ub098 \uc2b9\uc778\ub41c \uac00\uc815\uc73c\ub85c \ud574\uc11d\ud574\uc11c\ub294 \uc548 \ub41c\ub2e4.",
+            "evidence_ids": [
+              "SYNTHETIC"
+            ]
+          }
+        ]
+      }
+    ],
+    "section_order": [
+      "narrative:decision",
+      "narrative:argument",
+      "calculated:timing",
+      "calculated:bridge",
+      "calculated:industrial-0",
+      "calculated:industrial-1",
+      "calculated:finance-0",
+      "calculated:rights",
+      "calculated:sensitivity-industrial",
+      "calculated:sensitivity-finance",
+      "calculated:reverse",
+      "calculated:chart",
+      "calculated:consolidation"
+    ]
+  }
+}

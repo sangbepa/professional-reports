@@ -1,0 +1,88 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "comps-analysis",
+  "category": "execution",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "peer_candidates",
+    "dated_market_observations",
+    "financial_observations",
+    "reconciliation_basis",
+    "tool_inventory"
+  ],
+  "outputs": [
+    "peer_selection",
+    "aligned_peer_metrics",
+    "peer_claims_bridges",
+    "multiples_and_statistics",
+    "comps_indication",
+    "comps_limits",
+    "tool_verification",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Choose peers and economically relevant metrics.",
+    "Align dates, calendars, definitions, ownership and claims.",
+    "Calculate comparable multiples and eligible-population statistics.",
+    "Explain dispersion, selected interpretation and dependence on other methods."
+  ],
+  "acceptance": [
+    {
+      "id": "comps-analysis-acceptance-1",
+      "kind": "semantic",
+      "expectation": "Inclusion/exclusion and selected multiple are defensible for the target unit and claim."
+    },
+    {
+      "id": "comps-analysis-acceptance-2",
+      "kind": "mechanical",
+      "expectation": "EV/equity numerators match denominators, dates, leases, NCI and currency basis."
+    },
+    {
+      "id": "comps-analysis-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "Undefined or missing values are not zero-filled or included silently in statistics."
+    },
+    {
+      "id": "comps-analysis-acceptance-4",
+      "kind": "semantic",
+      "expectation": "Method divergence and shared dependencies are disclosed; no automatic averaging."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "method_selection",
+    "peer_candidates",
+    "dated_market_observations",
+    "financial_observations",
+    "reconciliation_basis",
+    "tool_inventory"
+  ],
+  "failure_returns": [
+    "valuation-design",
+    "report-data-reconcile",
+    "report-source-assess"
+  ],
+  "failure": {
+    "return_to": [
+      "valuation-design",
+      "report-data-reconcile",
+      "report-source-assess"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "domain_artifact_aliases": {
+    "peer-comparability-schedule": "peer_selection"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

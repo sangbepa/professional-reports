@@ -1,0 +1,15 @@
+{
+  "id": "report-section-write",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Write expert report sections from current accepted arguments, preserving qualifications and binding all metrics without adding numbers or changing calculations.",
+  "capabilities": [
+    "section-writing",
+    "claim-binding"
+  ],
+  "requires": [
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

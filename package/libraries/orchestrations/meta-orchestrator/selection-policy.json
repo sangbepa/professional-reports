@@ -1,0 +1,62 @@
+{
+  "schema_version": "professional-reports/meta-selection/1",
+  "version": "0.1.0-dev.1",
+  "classification_basis": [
+    "reader decision",
+    "requested conclusion",
+    "economic perimeter",
+    "evidence access",
+    "actual domain capability",
+    "required deliverables"
+  ],
+  "actions": {
+    "reuse": {
+      "when": "Exactly one domain covers the decision and requested mode with no material contract gap.",
+      "selected_count": 1,
+      "return": "One exact orchestration ref, rationale, rejected alternatives and actual gaps."
+    },
+    "compose": {
+      "when": "At least two supported domains contribute necessary distinct work that cannot be covered faithfully by one domain.",
+      "minimum_selected": 2,
+      "required_contract": [
+        "shared scope",
+        "shared perimeter",
+        "shared currency",
+        "shared information cutoff",
+        "responsibility for every selected domain",
+        "explicit from/to artifact handoffs",
+        "duplicate-work and conflicting-claim resolution"
+      ],
+      "condition": "No unresolved contract conflicts. Every selected domain must support the requested execution mode; planning-only domains cannot be laundered into report mode by composition.",
+      "return": "Exact selected refs and the installed composition schema, including handoff boundaries and review responsibility."
+    },
+    "candidate": {
+      "when": "No existing orchestration fits, but a bounded new capability design can be proposed from available components.",
+      "return": "Proposed contract, development cases, capability gaps and evaluation requirements.",
+      "boundary": "Candidate work does not certify itself, change protected criteria or enter a pinned release silently."
+    },
+    "clarify": {
+      "when": "A material ambiguity in the human mandate prevents selecting a useful domain or setting its perimeter.",
+      "return": "Smallest decision-relevant missing question plus independent work that remains possible; preserve existing mandate until clarified."
+    },
+    "capability-gap": {
+      "when": "The decision is clear but required evidence, methods, tools, independent review or execution support is unavailable.",
+      "return": "Precise missing prerequisite, affected conclusion, feasible bounded deliverable and restoration condition.",
+      "boundary": "Do not relabel an unsupported execution as planning and claim the original request completed."
+    }
+  },
+  "modes": {
+    "report": "Requires selected orchestration execution support and all current release gates; a complete instruction contract is not production verification.",
+    "planning": "Produces scoped work/data/review plan only.",
+    "development": "Tests or develops candidate components using DEVELOPMENT data without making professional report claims.",
+    "experiment": "Uses engine-authorized comparison protocols and criteria; does not access protected answers."
+  },
+  "common_invalid_selections": [
+    "Selecting by report title keywords alone",
+    "Selecting DCF plus comps before issuer evidence",
+    "Composing domains with different dates/currency/perimeter and ignoring conflict",
+    "Using latest instead of an exact installed ref",
+    "Choosing a weaker evaluation profile because a stricter result failed"
+  ],
+  "wire_authority": "Use installed meta.schema.json and composition.schema.json; actions and modes here explain decisions, not alternate schemas."
+}

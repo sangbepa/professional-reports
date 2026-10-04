@@ -1,0 +1,15 @@
+{
+  "id": "finance-analyst",
+  "description": "Designs reproducible valuation methods, operating scenarios, and value bridges consistent with supplied evidence.",
+  "capabilities": [
+    "select-evidence-fit-valuation-methods",
+    "design-operating-scenarios",
+    "maintain-value-bridges",
+    "specify-model-sensitivities"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

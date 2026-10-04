@@ -1,0 +1,13 @@
+{
+  "id": "risk-assessor",
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Independently assesses task failure risks and evidence changes without authorizing reduced controls.",
+  "capabilities": [
+    "independent-risk-assessment",
+    "risk-change-observation"
+  ],
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

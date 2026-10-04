@@ -1,0 +1,38 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "report-evidence-extract",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-evidence-extract/SKILL.md",
+      "sha256": "70ffc46d25512b6113462231cf0a7fe714d72e0891f534dc1e912fa753176e90"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-evidence-extract/contract.json",
+      "sha256": "ac7808da7b3bbd7b4fe7aede8bed990698bbe515ec0bf263379dcf7ac9f4c8cc"
+    }
+  ],
+  "changes": [
+    "Adapted reusable method into a provisional self-contained component with explicit inputs, outputs, acceptance, failure routes and stable Markdown clauses.",
+    "Removed external author-machine paths, orchestration-contract dependencies and unsupported runtime promises.",
+    "Preserved domain-specific source, calibration, judgment and review boundaries."
+  ],
+  "license": {
+    "status": "repository-license-found-provenance-scope-limited",
+    "spdx": "MIT",
+    "file": "LICENSE.local",
+    "observed_from": "LICENSE",
+    "unknowns": [
+      "No separate per-skill upstream license was found in inspected valuation-workbench skill sources. Root license does not establish third-party data, standard text, branding, font or linked-artifact rights."
+    ]
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed"
+}

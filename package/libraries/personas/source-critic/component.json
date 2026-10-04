@@ -1,0 +1,15 @@
+{
+  "id": "source-critic",
+  "description": "Challenges provenance, information timing, authority, and coverage of evidence independently from its collection.",
+  "capabilities": [
+    "assess-original-provenance",
+    "check-information-cutoff",
+    "challenge-source-coverage",
+    "quarantine-uncertain-evidence"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

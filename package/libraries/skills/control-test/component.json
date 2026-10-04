@@ -1,0 +1,12 @@
+{
+  "id": "control-test",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Test specified controls against current risk objects and retain execution and exception evidence.",
+  "capabilities": [
+    "control-testing"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

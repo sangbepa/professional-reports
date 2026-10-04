@@ -1,0 +1,50 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "financial-equity-valuation",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/valuation-design/SKILL.md",
+      "sha256": "d44b4e19ee36cd41697b85b4da417e7430c0151b04ff5bac24176364c3c6a7ab"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/industry-lenses.md",
+      "sha256": "3f5a355dadfdf24e9bb6a80573e92b41677624b598be8ae158fc2daff847e4ce"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/valuation.md",
+      "sha256": "d5a168c0cae9266a98cae4c14070be0915243f5f4f0dc6c3cd489007d47b6404"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "professional-reports/libraries/orchestrations/valuation/domain-contract.json",
+      "sha256": "d6872469a184e8b9f2da396f55b2a4a00cc085d15968d03482c8ea21cc240b73",
+      "initial_observed_sha256": "f669d01ae0d70e381c5bf7c788ae8235e35c58dad1bb8d249483259b3395fe17",
+      "note": "Re-read current simple-rule-compatible domain contract during integration; original intermediate snapshot hash retained."
+    }
+  ],
+  "changes": [
+    "Adapted reusable method into a provisional self-contained component with explicit inputs, outputs, acceptance, failure routes and stable Markdown clauses.",
+    "Removed external author-machine paths, orchestration-contract dependencies and unsupported runtime promises.",
+    "Preserved domain-specific source, calibration, judgment and review boundaries."
+  ],
+  "license": {
+    "status": "repository-license-found-provenance-scope-limited",
+    "spdx": "MIT",
+    "file": "LICENSE.local",
+    "observed_from": "LICENSE",
+    "unknowns": [
+      "No separate per-skill upstream license was found in inspected valuation-workbench skill sources. Root license does not establish third-party data, standard text, branding, font or linked-artifact rights."
+    ]
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed"
+}

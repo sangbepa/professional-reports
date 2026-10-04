@@ -1,0 +1,15 @@
+{
+  "id": "valuation-wacc",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Calculate a reproducible WACC from selected capital-market inputs and consistent market-value weights. Use as an isolated discount-rate work unit within an enterprise valuation.",
+  "capabilities": [
+    "wacc-calculation",
+    "capital-cost-policy-check"
+  ],
+  "requires": [
+    "valuation-design"
+  ],
+  "entrypoint": "SKILL.md"
+}

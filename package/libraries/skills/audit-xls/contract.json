@@ -1,0 +1,79 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "audit-xls",
+  "category": "verification",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "workbook_artifacts",
+    "audit_scope",
+    "audit_criteria",
+    "supporting_model_inputs",
+    "tool_inventory",
+    "repair_authorization"
+  ],
+  "outputs": [
+    "audit_findings",
+    "audit_coverage",
+    "integrity_checks",
+    "recalculation_evidence",
+    "render_evidence",
+    "repair_record",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind audit scope and inspect workbook dependencies.",
+    "Trace material formulas, units and financial control identities.",
+    "Test relevant edge cases and record actual recalculation/render coverage.",
+    "Report findings or perform already authorized versioned repairs and targeted rechecks."
+  ],
+  "acceptance": [
+    {
+      "id": "audit-xls-acceptance-1",
+      "kind": "mechanical",
+      "expectation": "Findings name sheet/cell/range, input hash, evidence, expected/observed difference and consequence."
+    },
+    {
+      "id": "audit-xls-acceptance-2",
+      "kind": "mechanical",
+      "expectation": "Financial controls and relevant model-specific checks have quantified residuals or recorded untested scope."
+    },
+    {
+      "id": "audit-xls-acceptance-3",
+      "kind": "semantic",
+      "expectation": "Author/independent review and structural/arithmetic/native/render checks remain separate."
+    },
+    {
+      "id": "audit-xls-acceptance-4",
+      "kind": "mechanical",
+      "expectation": "Repairs preserve original versions and recheck affected calculations; no native recalculation is inferred from caches."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "workbook_artifacts",
+    "audit_scope",
+    "audit_criteria",
+    "supporting_model_inputs",
+    "tool_inventory",
+    "repair_authorization"
+  ],
+  "failure_returns": [
+    "report-data-reconcile",
+    "valuation-design"
+  ],
+  "failure": {
+    "return_to": [
+      "report-data-reconcile",
+      "valuation-design"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

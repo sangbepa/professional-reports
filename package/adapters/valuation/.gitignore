@@ -1,0 +1,4 @@
+__pycache__/
+.validation/
+.test-tmp/
+node_modules/

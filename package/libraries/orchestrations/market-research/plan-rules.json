@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "id": "market-research-rule-planning",
+      "require_capabilities": [
+        "mandate-framing",
+        "research-planning"
+      ],
+      "require_review_roles": [
+        "source",
+        "judgment"
+      ],
+      "require_artifacts": [
+        "market-research-research-plan",
+        "market-research-access-and-capability-gaps"
+      ],
+      "on_unknown": "assessment"
+    }
+  ]
+}

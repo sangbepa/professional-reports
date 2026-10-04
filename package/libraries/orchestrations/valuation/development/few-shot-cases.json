@@ -1,0 +1,472 @@
+{
+  "id": "valuation-development-few-shot-cases",
+  "version": "0.1.0-dev.1",
+  "classification": "DEVELOPMENT",
+  "notice": "Visible illustrative planning sketches, not full engine plans, heldout answers, completed reviews or release evidence. Nodes deliberately omit actual refs/actors/attempts; a host must compile and bind an actual plan.",
+  "cases": [
+    {
+      "id": "valuation-development-industrial-without-peers",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "industrial-without-peers",
+          "synthetic_premise": "Synthetic industrial unit with supported operating forecasts, cycle exposure and no suitable peers."
+        },
+        "facts": {
+          "financial_segment_material": false,
+          "full_consolidation_nci_material": false,
+          "proportional_nci_material": false,
+          "mixed_consolidation_material": false,
+          "leases_material": false,
+          "multiple_share_classes": false,
+          "potential_dilution_material": false,
+          "financial_subsidiary_debt_material": false,
+          "associates_material": false,
+          "industrial_fcff_selected": true,
+          "comparables_selected": false,
+          "sotp_selected": false,
+          "cyclical_business_material": true,
+          "distress_material": false
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Assess calibrated industrial FCFF and cycle normalization; omit comparables. No fixed two-method bundle.",
+        "nodes": [
+          {
+            "id": "valuation-development-industrial-without-peers-work",
+            "capabilities": [
+              "dcf-modeling",
+              "economic-assumption-challenge",
+              "equity-bridge-design",
+              "mandate-framing",
+              "method-reconciliation",
+              "scenario-design",
+              "terminal-economics",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection",
+              "valuation-research",
+              "wacc-calculation"
+            ],
+            "outputs": [
+              "capital-cost-policy",
+              "industrial-fcff-model",
+              "maintainable-economics-bridge",
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core",
+              "valuation-rule-industrial-fcff-selected",
+              "valuation-rule-cycle"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    },
+    {
+      "id": "valuation-development-regulated-bank",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "regulated-bank",
+          "synthetic_premise": "Synthetic standalone balance-sheet bank with financial capital constraints; industrial FCFF and comparables are not selected."
+        },
+        "facts": {
+          "financial_segment_material": true,
+          "full_consolidation_nci_material": false,
+          "proportional_nci_material": false,
+          "mixed_consolidation_material": false,
+          "leases_material": false,
+          "multiple_share_classes": false,
+          "potential_dilution_material": false,
+          "financial_subsidiary_debt_material": false,
+          "associates_material": false,
+          "industrial_fcff_selected": false,
+          "comparables_selected": false,
+          "sotp_selected": false,
+          "cyclical_business_material": false,
+          "distress_material": false
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Assess DDM versus residual income, clean surplus and capital-constrained distributions. Method adoption remains subject to actual input support.",
+        "nodes": [
+          {
+            "id": "valuation-development-regulated-bank-work",
+            "capabilities": [
+              "equity-bridge-design",
+              "financial-equity-valuation",
+              "mandate-framing",
+              "method-reconciliation",
+              "segment-reconciliation",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection"
+            ],
+            "outputs": [
+              "financial-equity-method-assessment",
+              "financial-regulatory-capital-schedule",
+              "segment-reconciliation",
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core",
+              "valuation-rule-financial-segment"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    },
+    {
+      "id": "valuation-development-mixed-group-rights",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "mixed-group-rights",
+          "synthetic_premise": "Synthetic industrial and financial units use different methods and ownership bases, with leases, associates and preference shares."
+        },
+        "facts": {
+          "financial_segment_material": true,
+          "full_consolidation_nci_material": true,
+          "proportional_nci_material": true,
+          "mixed_consolidation_material": true,
+          "leases_material": true,
+          "multiple_share_classes": true,
+          "potential_dilution_material": true,
+          "financial_subsidiary_debt_material": true,
+          "associates_material": true,
+          "industrial_fcff_selected": true,
+          "comparables_selected": false,
+          "sotp_selected": true,
+          "cyclical_business_material": false,
+          "distress_material": false
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Map unit methods and rights; financial equity and industrial FCFF can coexist on different units. Deduct full-basis NCI once, no second proportional NCI; reconcile financial funding, associates and leases.",
+        "nodes": [
+          {
+            "id": "valuation-development-mixed-group-rights-work",
+            "capabilities": [
+              "consolidation-policy",
+              "dcf-modeling",
+              "duplicate-attribution-detection",
+              "equity-bridge-design",
+              "financial-equity-valuation",
+              "lease-policy",
+              "mandate-framing",
+              "method-reconciliation",
+              "nci-policy",
+              "segment-reconciliation",
+              "share-rights-policy",
+              "terminal-economics",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection",
+              "wacc-calculation"
+            ],
+            "outputs": [
+              "associate-attribution-schedule",
+              "capital-cost-policy",
+              "financial-equity-method-assessment",
+              "financial-funding-debt-attribution",
+              "financial-regulatory-capital-schedule",
+              "full-consolidation-nci-bridge",
+              "industrial-fcff-model",
+              "lease-policy-schedule",
+              "point-in-time-dilution-schedule",
+              "proportional-ownership-bridge",
+              "segment-reconciliation",
+              "share-rights-waterfall",
+              "sotp-unit-method-map",
+              "unit-ownership-attribution-map",
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core",
+              "valuation-rule-financial-segment",
+              "valuation-rule-full-nci",
+              "valuation-rule-proportional-nci",
+              "valuation-rule-mixed-consolidation",
+              "valuation-rule-leases",
+              "valuation-rule-share-rights",
+              "valuation-rule-dilution",
+              "valuation-rule-financial-debt",
+              "valuation-rule-associates",
+              "valuation-rule-industrial-fcff-selected",
+              "valuation-rule-sotp-selected"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    },
+    {
+      "id": "valuation-development-asset-holding-company",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "asset-holding-company",
+          "synthetic_premise": "Synthetic holding company with separable stakes; neither industrial FCFF nor comparables has been selected."
+        },
+        "facts": {
+          "financial_segment_material": false,
+          "full_consolidation_nci_material": false,
+          "proportional_nci_material": false,
+          "mixed_consolidation_material": false,
+          "leases_material": false,
+          "multiple_share_classes": false,
+          "potential_dilution_material": false,
+          "financial_subsidiary_debt_material": false,
+          "associates_material": true,
+          "industrial_fcff_selected": false,
+          "comparables_selected": false,
+          "sotp_selected": false,
+          "cyclical_business_material": false,
+          "distress_material": false
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Assess NAV, realizability, tax leakage and stake attribution. Confirm actual NAV capability before calculation; method assessment does not assert a model exists.",
+        "nodes": [
+          {
+            "id": "valuation-development-asset-holding-company-work",
+            "capabilities": [
+              "duplicate-attribution-detection",
+              "equity-bridge-design",
+              "mandate-framing",
+              "method-reconciliation",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection"
+            ],
+            "outputs": [
+              "associate-attribution-schedule",
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core",
+              "valuation-rule-associates"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    },
+    {
+      "id": "valuation-development-unknown-financial-perimeter",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "unknown-financial-perimeter",
+          "synthetic_premise": "Synthetic profile omits subsidiary financial business model and funding perimeter."
+        },
+        "facts": {
+          "financial_segment_material": null,
+          "full_consolidation_nci_material": false,
+          "proportional_nci_material": false,
+          "mixed_consolidation_material": false,
+          "leases_material": false,
+          "multiple_share_classes": false,
+          "potential_dilution_material": false,
+          "financial_subsidiary_debt_material": null,
+          "associates_material": false,
+          "industrial_fcff_selected": false,
+          "comparables_selected": false,
+          "sotp_selected": false,
+          "cyclical_business_material": false,
+          "distress_material": false
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Create pending applicability tasks for both unknowns. Do not default them false, fabricate evidence or execute dependent group valuation.",
+        "nodes": [
+          {
+            "id": "valuation-development-unknown-financial-perimeter-work",
+            "capabilities": [
+              "equity-bridge-design",
+              "mandate-framing",
+              "method-reconciliation",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection"
+            ],
+            "outputs": [
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [
+          {
+            "rule_id": "valuation-rule-financial-segment",
+            "fact": "financial_segment_material",
+            "status": "pending",
+            "next_work": "Inspect actual unit profile and original disclosures before determining applicability."
+          },
+          {
+            "rule_id": "valuation-rule-financial-debt",
+            "fact": "financial_subsidiary_debt_material",
+            "status": "pending",
+            "next_work": "Inspect actual unit profile and original disclosures before determining applicability."
+          }
+        ],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    },
+    {
+      "id": "valuation-development-distressed-company",
+      "classification": "DEVELOPMENT",
+      "input": {
+        "mandate": {
+          "purpose": "illustrative method and work planning",
+          "requested_conclusion": "development-only; no real company value"
+        },
+        "company_profile": {
+          "id": "distressed-company",
+          "synthetic_premise": "Synthetic distressed issuer with preference claims and uncertain going concern."
+        },
+        "facts": {
+          "financial_segment_material": false,
+          "full_consolidation_nci_material": false,
+          "proportional_nci_material": false,
+          "mixed_consolidation_material": false,
+          "leases_material": false,
+          "multiple_share_classes": true,
+          "potential_dilution_material": false,
+          "financial_subsidiary_debt_material": false,
+          "associates_material": false,
+          "industrial_fcff_selected": false,
+          "comparables_selected": false,
+          "sotp_selected": false,
+          "cyclical_business_material": false,
+          "distress_material": true
+        },
+        "fact_evidence": "Explicit fictional premises only: true/false entries are supplied for this example, not inferred from real evidence; null remains unknown."
+      },
+      "illustrative_output": {
+        "status": "illustrative-plan-only",
+        "method_decision": "Assess restructuring/recovery and rights waterfall. Return actual specialist/model gaps; no unsupported terminal perpetuity.",
+        "nodes": [
+          {
+            "id": "valuation-development-distressed-company-work",
+            "capabilities": [
+              "equity-bridge-design",
+              "mandate-framing",
+              "method-reconciliation",
+              "scenario-design",
+              "share-rights-policy",
+              "valuation-challenge",
+              "valuation-evidence",
+              "valuation-method-selection"
+            ],
+            "outputs": [
+              "going-concern-recovery-assessment",
+              "share-rights-waterfall",
+              "valuation-equity-bridge",
+              "valuation-method-decisions",
+              "valuation-unknowns"
+            ],
+            "basis_clauses": [
+              "valuation-rule-core",
+              "valuation-rule-share-rights",
+              "valuation-rule-distress"
+            ]
+          }
+        ],
+        "required_review_roles": [
+          "source",
+          "model",
+          "judgment",
+          "document"
+        ],
+        "unknowns": [],
+        "gates_status": "pending",
+        "production_quality_verified": false
+      }
+    }
+  ]
+}

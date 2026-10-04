@@ -1,0 +1,68 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "financial-report-research",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/SKILL.md",
+      "sha256": "6609f43fb3f46e0cc5523522d09e5f5f046212c884167e57de29e6b686d90495"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/board.md",
+      "sha256": "53209f4d26dbd62d46d60383de89505bdc6d77bfba2124845900e6eab3bad1a1"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/earnings.md",
+      "sha256": "cbaeb121584b1a3186533acefd1a77e5ee9271493b1f4b06a055b5688848c5d4"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/esg.md",
+      "sha256": "c7d165b98406ea72ac4c9102e25ca7981b425ea6640691f72ab72ad6acb2a551"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/evidence-contract.md",
+      "sha256": "f1019b55b0dcb5c2f1a7a4c95d72b56e1059024448ac592e0f6ce3db46c40d7a"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/fdd.md",
+      "sha256": "ed149165352b1ef18518425fc56c57f6137dcea0340205039e6e97fe9ca368ba"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/industry-lenses.md",
+      "sha256": "3f5a355dadfdf24e9bb6a80573e92b41677624b598be8ae158fc2daff847e4ce"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/financial-report-research/references/valuation.md",
+      "sha256": "d5a168c0cae9266a98cae4c14070be0915243f5f4f0dc6c3cd489007d47b6404"
+    }
+  ],
+  "changes": [
+    "Adapted reusable method into a provisional self-contained component with explicit inputs, outputs, acceptance, failure routes and stable Markdown clauses.",
+    "Removed external author-machine paths, orchestration-contract dependencies and unsupported runtime promises.",
+    "Preserved domain-specific source, calibration, judgment and review boundaries."
+  ],
+  "license": {
+    "status": "repository-license-found-provenance-scope-limited",
+    "spdx": "MIT",
+    "file": "LICENSE.local",
+    "observed_from": "LICENSE",
+    "unknowns": [
+      "No separate per-skill upstream license was found in inspected valuation-workbench skill sources. Root license does not establish third-party data, standard text, branding, font or linked-artifact rights."
+    ]
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed"
+}

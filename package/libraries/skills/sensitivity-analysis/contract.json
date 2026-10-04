@@ -1,0 +1,60 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "sensitivity-analysis",
+  "category": "analysis",
+  "inputs": [
+    "artifact_manifest",
+    "model_snapshot",
+    "scenario_spec",
+    "risk_register",
+    "plan_snapshot"
+  ],
+  "outputs": [
+    "sensitivity_results",
+    "decision_boundaries",
+    "operation_record",
+    "failure_records"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "model_snapshot",
+    "scenario_spec",
+    "risk_register",
+    "plan_snapshot"
+  ],
+  "procedure": [
+    "Confirm the baseline reproduces the bound model. Record units, horizon, perimeter, formula versions, baseline assumptions and feasible joint scenario constraints before changing selected variables.",
+    "Recompute supplied scenarios, including dependencies and nonlinear discontinuities; show absolute and relative changes with denominators and identify decision boundary crossings. Flag noncomputable cases rather than filling fabricated results.",
+    "Sensitivity is a conditional output response, not event likelihood, control effectiveness or a calibrated risk score. Link results to risk IDs as evidence only; do not reduce review because an output appears stable."
+  ],
+  "failure_returns": [
+    "risk-frame",
+    "report-data-reconcile"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "sensitivity-analysis-bindings",
+      "kind": "mechanical",
+      "expectation": "Current inputs and actual plan task/risk bindings are recorded; stale inputs return restricted results."
+    },
+    {
+      "id": "sensitivity-analysis-scope",
+      "kind": "semantic",
+      "expectation": "Named outputs reflect performed work, uncertainty and method-specific limits; risk evidence grants no authority."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "risk-frame",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required evidence or tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; affected object, missing evidence/test, owner, next action and restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

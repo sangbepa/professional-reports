@@ -1,0 +1,17 @@
+{
+  "id": "valuation-compose",
+  "kind": "skill",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "description": "Bind current valuation arguments and model metrics into a content packet and pass presentation to an explicitly verified renderer.",
+  "capabilities": [
+    "valuation-content-composition",
+    "model-to-report-binding"
+  ],
+  "requires": [
+    "financial-report-writing",
+    "report-section-write",
+    "report-design"
+  ],
+  "entrypoint": "SKILL.md"
+}

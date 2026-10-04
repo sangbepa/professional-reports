@@ -1,0 +1,15 @@
+{
+  "id": "industry-specialist",
+  "description": "Tests business-driver explanations against industry structure, cycles, competitive behavior, and operating constraints.",
+  "capabilities": [
+    "analyze-industry-driver-evidence",
+    "challenge-peer-comparability",
+    "identify-cycle-exposure",
+    "test-operating-constraints"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

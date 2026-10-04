@@ -1,0 +1,4 @@
+# Optional independent PDF/text/raster review support; isolated from core CLI.
+pypdf==6.19.0
+pypdfium2==5.12.1
+Pillow==12.3.0

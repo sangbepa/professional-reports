@@ -1,0 +1,67 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-outline",
+  "category": "expression",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "deliverable_acceptance",
+    "argument_records",
+    "argument_acceptance"
+  ],
+  "outputs": [
+    "reader_outline",
+    "coverage_map",
+    "outline_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind the audience, user structure and accepted arguments.",
+    "Order claims by reader decision needs and argument dependencies.",
+    "Assign scoped section questions, exhibits, qualifications and coverage.",
+    "Return the outline and missing/conflicting argument work."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "deliverable_acceptance",
+    "argument_records",
+    "argument_acceptance"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-argument"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "outline-coverage",
+      "kind": "mechanical",
+      "expectation": "Section IDs resolve to current argument/metric IDs; the coverage map accounts for each material accepted argument and unresolved issue."
+    },
+    {
+      "id": "reader-order",
+      "kind": "semantic",
+      "expectation": "Order, titles, exhibits and transitions serve the specified expert decision and requested structure rather than a universal TOC."
+    },
+    {
+      "id": "scope-preservation",
+      "kind": "semantic",
+      "expectation": "Qualifications remain adjacent to affected claims; event relationships, proposal status and fictional mode survive editorial organization."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-argument"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-wacc",
+  "category": "execution",
+  "execution_mode": "agent_with_local_calculation",
+  "inputs": [
+    "artifact_manifest",
+    "capital-cost-input.json",
+    "capital-cost-policy.json",
+    "cashflow-perimeter.json"
+  ],
+  "outputs": [
+    "capital-cost-result.json",
+    "capital-cost-policy.json",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Confirm selected perimeter, rate units and weighting policy",
+    "Run the isolated calculator",
+    "Reconcile the selected rate to the consuming cash-flow model"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "capital-cost-input.json",
+    "capital-cost-policy.json",
+    "cashflow-perimeter.json"
+  ],
+  "failure_returns": [
+    "valuation-design",
+    "report-data-reconcile"
+  ],
+  "acceptance": [
+    {
+      "id": "market-weight-tie",
+      "kind": "mechanical",
+      "expectation": "Equity/debt weights sum to one; CAPM and after-tax debt cost rebuild"
+    },
+    {
+      "id": "rate-perimeter-support",
+      "kind": "semantic",
+      "expectation": "Selected beta, tax shield and market inputs fit the currency, date and operating perimeter"
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "valuation-design",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed",
+      "Invalid finite-number/rate/weight input",
+      "Binding hash mismatch or nonportable input path",
+      "Output exists"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "helper": "scripts/calculate.py",
+  "domain_artifact_aliases": {
+    "capital-cost-policy": "capital-cost-policy.json"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-claim-check",
+  "category": "verification",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "section_draft",
+    "claim_bindings",
+    "argument_records",
+    "source_assessments",
+    "original_artifacts",
+    "metric_bindings",
+    "current_model_artifacts",
+    "review_request"
+  ],
+  "outputs": [
+    "claim_check_findings",
+    "claim_check_coverage",
+    "review_record",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind draft, originals, current model and requested review scope.",
+    "Establish actual reviewer/channel independence or record unavailability.",
+    "Check numerical binding, original meaning, qualifications and substantive support.",
+    "Return issue-level findings, inspected coverage and actual review outcome."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "section_draft",
+    "claim_bindings",
+    "argument_records",
+    "source_assessments",
+    "original_artifacts",
+    "metric_bindings",
+    "current_model_artifacts",
+    "review_request"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-research-plan",
+    "report-source-assess",
+    "report-evidence-extract",
+    "report-data-reconcile",
+    "report-findings",
+    "report-argument",
+    "report-outline",
+    "report-section-write"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "review-current-binding",
+      "kind": "mechanical",
+      "expectation": "Coverage records inspected original/draft/model versions and measured hashes or access limits; citations and numeric displays are actually checked against those artifacts."
+    },
+    {
+      "id": "actual-independence",
+      "kind": "mechanical",
+      "expectation": "Independent review has a real channel identity and observed outcome; unavailable review, self-check and unperformed coverage cannot be recorded as an independent pass."
+    },
+    {
+      "id": "claim-entailment",
+      "kind": "semantic",
+      "expectation": "Meaning, calculation basis, qualifications, alternatives and decision consequence are supported by originals and current analysis, with factual/fictional modes preserved."
+    },
+    {
+      "id": "review-disposition",
+      "kind": "semantic",
+      "expectation": "Source, numerical, substantive and editorial outcomes stay distinct; unresolved material findings restrict acceptance and route to their responsible owner."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-research-plan",
+      "report-source-assess",
+      "report-evidence-extract",
+      "report-data-reconcile",
+      "report-findings",
+      "report-argument",
+      "report-outline",
+      "report-section-write"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

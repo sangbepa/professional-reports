@@ -1,0 +1,16 @@
+{
+  "id": "valuation",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Provisional contingent valuation execution-domain contract, routed through bound native skills and host adapters with per-run evidence, capability and review gates.",
+  "capabilities": [
+    "valuation-domain-contract",
+    "contingent-valuation-orchestration",
+    "valuation-development-examples"
+  ],
+  "requires": [],
+  "entrypoint": "domain-contract.json",
+  "execution_support": "complete",
+  "production_quality_verified": false
+}

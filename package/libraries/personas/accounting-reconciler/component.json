@@ -1,0 +1,15 @@
+{
+  "id": "accounting-reconciler",
+  "description": "Builds traceable bridges across accounting definitions, periods, currencies, and entity perimeters.",
+  "capabilities": [
+    "reconcile-accounting-perimeters",
+    "trace-metric-bridges",
+    "detect-double-attribution",
+    "record-unexplained-differences"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

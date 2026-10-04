@@ -1,0 +1,55 @@
+{
+  "schema_version": "professional-reports/reasoning-policy/1",
+  "version": "0.1.0-dev.1",
+  "model": "inherit",
+  "max_concurrent_subagents": 6,
+  "allocation": [
+    {
+      "work": "bounded extraction, source metadata indexing, formatting already-approved content",
+      "requested_effort": "medium",
+      "minimum_evidence": "scope, exact locators, observed tool outcomes"
+    },
+    {
+      "work": "mandate framing, source conflict assessment, segment reconciliation, peer selection, argument construction",
+      "requested_effort": "high",
+      "minimum_evidence": "alternatives, discriminating evidence, material consequences"
+    },
+    {
+      "work": "method selection with mixed financial segments, share rights, terminal economics, material challenge and independent final review",
+      "requested_effort": "xhigh",
+      "minimum_evidence": "current artifacts, counterevidence, scoped acceptance or actionable findings"
+    }
+  ],
+  "escalation": "Escalate a bounded unresolved material issue after identifying missing evidence or conflicting assumptions; higher effort does not substitute for missing data.",
+  "downgrade": "If host cannot resolve the requested setting, preserve the request, record actual resolved setting or null and reason. Do not silently claim the stronger setting. If mandate requires an unavailable setting, block that node.",
+  "metadata": {
+    "requested": {
+      "model": "inherit",
+      "effort": "planner intention, before spawn"
+    },
+    "resolved": {
+      "model": "host-confirmed effective model or null",
+      "effort": "host-confirmed accepted/effective effort or null",
+      "evidence": "actual spawn receipt or host configuration record; sending an option alone is not confirmation"
+    },
+    "observed": {
+      "model": "model reported by execution telemetry or null",
+      "effort": "effort reported by execution telemetry or null",
+      "evidence": "retained host result/telemetry or unavailable reason"
+    }
+  },
+  "constraints": [
+    "Omit model from the native spawn call unless the human explicitly requests an override.",
+    "If host supports reasoning_effort, send the requested value; otherwise record unresolved capability.",
+    "Never infer observed effort from persona, result quality, response duration or requested setting.",
+    "Record operational rationale and evidence summaries, not hidden chain of thought.",
+    "Maintain at most the effective limit of live child agents across this run (never more than six); obey confirmed lower host/session limits and do not replace timed-out workers that remain live."
+  ],
+  "concurrency": {
+    "package_upper_bound": 6,
+    "effective_limit": "minimum of package upper bound, confirmed host limit and any lower user/session limit",
+    "host_limit_unknown": "Do not assume six available slots; probe host capacity and schedule conservatively, one new worker at a time until supported capacity is known. Respect host rejections and existing live workers.",
+    "run_record": "Record source of observed host/user limit and active child ids; current session may have a limit lower than six.",
+    "on_limit": "Do useful local work or reuse/close completed agents after preserving results; never repeatedly spawn against a known limit."
+  }
+}

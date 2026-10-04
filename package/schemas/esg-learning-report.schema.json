@@ -1,0 +1,679 @@
+{
+  "type": "object",
+  "properties": {
+    "company": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "reporting_period": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "information_cutoff": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "status": {
+      "const": "비공식 학습용"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source"
+      },
+      "minItems": 1
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/metric"
+      },
+      "minItems": 0
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      },
+      "minItems": 0
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/report_page"
+      },
+      "minItems": 20,
+      "maxItems": 30
+    },
+    "framework": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "qualification": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "basis",
+        "qualification"
+      ],
+      "additionalProperties": false
+    },
+    "schema": {
+      "const": "esg-learning-report/1"
+    },
+    "contract": {
+      "const": "esg-learning-report/1"
+    }
+  },
+  "required": [
+    "company",
+    "title",
+    "reporting_period",
+    "information_cutoff",
+    "status",
+    "sources",
+    "metrics",
+    "claims",
+    "pages",
+    "framework"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:professional-reports:esg-learning-report:1",
+  "title": "ESG public-source learning report / 1",
+  "description": "Structural input contract for the standalone development learning adapter. Cross-reference validity, source hashes, page bounds, finite numbers, original meaning and actual reviews require separate observed checks.",
+  "x-contract-version": "esg-learning-report/1",
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "source_id",
+        "page"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "url",
+        "path",
+        "sha256",
+        "pages"
+      ],
+      "additionalProperties": false
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9999
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "year",
+        "value"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "properties": {
+            "value": {
+              "type": "null"
+            }
+          },
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "source_id"
+                ]
+              },
+              {
+                "required": [
+                  "page"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "source_id",
+            "page"
+          ]
+        }
+      ]
+    },
+    "metric": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "boundary": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/value"
+          },
+          "minItems": 1
+        },
+        "footnotes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "unit",
+        "boundary",
+        "method",
+        "values",
+        "footnotes"
+      ],
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "source_id",
+        "page"
+      ],
+      "additionalProperties": false
+    },
+    "report_page": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "kicker": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "lead": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "blocks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          },
+          "minItems": 1
+        },
+        "claim_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "classification": {
+          "const": "analysis"
+        },
+        "non_company_assertion": {
+          "const": true
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "kicker",
+        "lead",
+        "blocks"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "claim_ids"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "classification"
+                ]
+              },
+              {
+                "required": [
+                  "non_company_assertion"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "classification",
+            "non_company_assertion"
+          ],
+          "not": {
+            "required": [
+              "claim_ids"
+            ]
+          }
+        }
+      ]
+    },
+    "block": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "paragraph"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "claim_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "classification": {
+              "enum": [
+                "analysis"
+              ]
+            },
+            "non_company_assertion": {
+              "const": true
+            }
+          },
+          "required": [
+            "kind",
+            "text"
+          ],
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "claim_ids"
+              ],
+              "properties": {
+                "claim_ids": {
+                  "minItems": 1
+                }
+              },
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "classification"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "non_company_assertion"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "required": [
+                "classification",
+                "non_company_assertion"
+              ],
+              "properties": {
+                "classification": {
+                  "const": "analysis"
+                },
+                "claim_ids": {
+                  "maxItems": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "finding"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "claim_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "minItems": 0,
+              "uniqueItems": true
+            },
+            "classification": {
+              "enum": [
+                "analysis"
+              ]
+            },
+            "non_company_assertion": {
+              "const": true
+            }
+          },
+          "required": [
+            "kind",
+            "text"
+          ],
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "claim_ids"
+              ],
+              "properties": {
+                "claim_ids": {
+                  "minItems": 1
+                }
+              },
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "classification"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "non_company_assertion"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "required": [
+                "classification",
+                "non_company_assertion"
+              ],
+              "properties": {
+                "classification": {
+                  "const": "analysis"
+                },
+                "claim_ids": {
+                  "maxItems": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "metrics"
+            },
+            "ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "kind",
+            "ids"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "table"
+            },
+            "headers": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            },
+            "rows": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 1
+              },
+              "minItems": 1
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/source_ref"
+              },
+              "minItems": 1
+            },
+            "metric_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "kind",
+            "headers",
+            "rows",
+            "source_refs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "chart"
+            },
+            "metric_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"
+              },
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "kind",
+            "metric_ids",
+            "caption"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "source"
+            },
+            "refs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/source_ref"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "kind",
+            "refs"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "schema"
+      ]
+    },
+    {
+      "required": [
+        "contract"
+      ]
+    }
+  ]
+}

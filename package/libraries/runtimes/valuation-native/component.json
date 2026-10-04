@@ -1,0 +1,17 @@
+{
+  "id": "valuation-native",
+  "kind": "runtime",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Pinned native Python/model/XLSX/PDF environment recipe with measured probes; no assumed Docker or external API.",
+  "capabilities": [
+    "deterministic-calculation",
+    "xlsx-authoring",
+    "pdf-rendering-recipe",
+    "environment-smoke-testing"
+  ],
+  "requires": [
+    "codex-native"
+  ],
+  "entrypoint": "RUNTIME.md"
+}

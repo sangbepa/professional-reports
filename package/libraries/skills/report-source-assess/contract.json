@@ -1,0 +1,65 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-source-assess",
+  "category": "verification",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "candidate_sources"
+  ],
+  "outputs": [
+    "source_assessments",
+    "timing_quarantine",
+    "source_conflicts",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind candidate content to current source versions.",
+    "Establish original provenance, access, periods and availability.",
+    "Quarantine unknown timing and exclude post-cutoff support.",
+    "Return source eligibility, dependencies, conflicts and targeted inquiries."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "question_plan",
+    "candidate_sources"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-research-plan"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "source-identity-and-time",
+      "kind": "mechanical",
+      "expectation": "Source/version locations, measured hashes or access reasons, covered periods, availability evidence, retrieval times and cutoff dispositions are recorded separately."
+    },
+    {
+      "id": "timing-quarantine",
+      "kind": "mechanical",
+      "expectation": "Unknown-timing and post-cutoff records are present in the quarantine register and are not marked eligible as-of support."
+    },
+    {
+      "id": "provenance-scope",
+      "kind": "semantic",
+      "expectation": "Assessment distinguishes original observations, dependent retellings, issuer assertions, conflicting versions and unavailable evidence without approving assumption plausibility."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-research-plan"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

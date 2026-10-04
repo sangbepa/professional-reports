@@ -1,0 +1,194 @@
+{
+  "id": "valuation-risk",
+  "version": "0.1.0-candidate.1",
+  "status": "candidate",
+  "sources": [
+    {
+      "id": "ASA320",
+      "locator": "https://www.auasb.gov.au/media/agfl1rsi/asa320_12-23.pdf",
+      "sha256": "907984e2772c6d42d46ecd995aa1273bd3541bceaa141c36cbd8953407a2d038"
+    },
+    {
+      "id": "ASA315",
+      "locator": "https://www.auasb.gov.au/media/1ppnfkvx/asa315_12-23-1.pdf",
+      "sha256": "1ca076e506e0bda845f8af4e93fde093e5086b52a9e8a6bd9102d7ff26ed3bad"
+    },
+    {
+      "id": "ASA330",
+      "locator": "https://standards.auasb.gov.au/asa-330-nov-2021",
+      "sha256": "4cfe2ac1596a65104887211fa1d4f05ca9c35b840a6e4332de91ee44223da939"
+    },
+    {
+      "id": "B01",
+      "locator": "https://announcements.asx.com.au/asxpdf/20250610/pdf/06kl2krw45cbhp.pdf",
+      "sha256": "4275eb272eb6b302007e1c368e27b6194b08b8fb1d0ded351a70d5ac90774810"
+    },
+    {
+      "id": "B02",
+      "locator": "https://announcements.asx.com.au/asxpdf/20250221/pdf/06fsctwmjwcj5f.pdf",
+      "sha256": "65cf077c190e149dbe5e2d11e2c23255999d00840645a7828c4b1fb77e959398"
+    },
+    {
+      "id": "B03",
+      "locator": "https://announcements.asx.com.au/asxpdf/20250815/pdf/06mxpjvcw9991s.pdf",
+      "sha256": "6ede48d2a72c8f11750198ac306585455896b71e991988d9ab3b8b59e192af6a"
+    },
+    {
+      "id": "HMC-LEGACY",
+      "locator": "development/regression/hyundai-legacy-issues.json",
+      "sha256": "5dba2f3b12cd2f106c4a8b0fa8384da68285077d8cebc492a9c25361fee7bd4b"
+    }
+  ],
+  "clauses": [
+    {
+      "id": "R-MANDATE",
+      "source_ids": [
+        "ASA320",
+        "B01",
+        "B03"
+      ]
+    },
+    {
+      "id": "R-MATERIALITY",
+      "source_ids": [
+        "ASA320"
+      ]
+    },
+    {
+      "id": "R-INHERENT",
+      "source_ids": [
+        "ASA315"
+      ]
+    },
+    {
+      "id": "R-CONTROL",
+      "source_ids": [
+        "ASA330"
+      ]
+    },
+    {
+      "id": "R-RESPONSE",
+      "source_ids": [
+        "ASA330"
+      ]
+    },
+    {
+      "id": "R-CONSO",
+      "source_ids": [
+        "HMC-LEGACY"
+      ]
+    },
+    {
+      "id": "R-WACC",
+      "source_ids": [
+        "HMC-LEGACY",
+        "B03"
+      ]
+    },
+    {
+      "id": "R-RIGHTS",
+      "source_ids": [
+        "HMC-LEGACY"
+      ]
+    },
+    {
+      "id": "R-CUTOFF",
+      "source_ids": [
+        "ASA315",
+        "B01"
+      ]
+    },
+    {
+      "id": "R-PROVISIONAL",
+      "source_ids": [
+        "ASA330"
+      ]
+    },
+    {
+      "id": "R-SENSITIVITY",
+      "source_ids": [
+        "B02",
+        "B03"
+      ]
+    },
+    {
+      "id": "R-UNKNOWN",
+      "source_ids": [
+        "B01",
+        "B02"
+      ]
+    }
+  ],
+  "high_exposures": [
+    "consolidation",
+    "currency_scale",
+    "cutoff",
+    "dilution",
+    "fabrication",
+    "finance",
+    "leases",
+    "missing_material_input",
+    "nci",
+    "perimeter",
+    "provisional",
+    "rights",
+    "unsupported_conclusion",
+    "wacc"
+  ],
+  "fact_rules": [
+    {
+      "fact": "financial_segment_material",
+      "exposure": "finance"
+    },
+    {
+      "fact": "full_consolidation_nci_material",
+      "exposure": "nci"
+    },
+    {
+      "fact": "mixed_consolidation_material",
+      "exposure": "consolidation"
+    },
+    {
+      "fact": "potential_dilution_material",
+      "exposure": "dilution"
+    }
+  ],
+  "quantitative_rules": null,
+  "all_minimum": [
+    "code"
+  ],
+  "medium_minimum": [
+    "code",
+    "source"
+  ],
+  "high_minimum": [
+    "code",
+    "source",
+    "recalculate",
+    "judgment"
+  ],
+  "qualitative_major": [
+    "consolidation",
+    "nci",
+    "finance",
+    "wacc",
+    "rights",
+    "dilution",
+    "cutoff",
+    "fabrication",
+    "missing_material_input",
+    "currency_scale",
+    "perimeter",
+    "unsupported_conclusion"
+  ],
+  "benign_categories": [
+    "typography",
+    "spelling",
+    "spacing",
+    "accepted_rounding",
+    "chart_style",
+    "pagination",
+    "caption_style",
+    "footnote_style"
+  ]
+}

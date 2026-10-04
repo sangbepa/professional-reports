@@ -1,0 +1,19 @@
+{
+  "id": "meta-orchestrator",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Compile an evidence-led, mandate-specific plan, allocate native expert agents, and route revision and independent review without changing approved criteria.",
+  "capabilities": [
+    "meta-planning",
+    "capability-routing",
+    "criteria-preservation",
+    "dependency-planning",
+    "review-routing"
+  ],
+  "requires": [
+    "codex-native"
+  ],
+  "entrypoint": "ORCHESTRATION.md",
+  "execution_support": "planning-only"
+}

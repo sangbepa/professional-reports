@@ -1,0 +1,15 @@
+{
+  "id": "audit-xls",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Inspect spreadsheet formulas and financial-model integrity with explicit scope, recalculation limits and artifact-bound findings.",
+  "capabilities": [
+    "spreadsheet-audit",
+    "formula-inspection",
+    "financial-model-integrity",
+    "recalculation-evidence-assessment"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

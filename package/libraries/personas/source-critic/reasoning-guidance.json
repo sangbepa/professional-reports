@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "document_kind": "persona-reasoning-guidance",
+  "purpose": "Descriptive native-host reporting guidance; not a replacement for the central runtime envelope.",
+  "model_policy": "inherit-host-session-model",
+  "runtime_policy_owner": "central-runtime",
+  "concurrency_guidance": "Central runtime policy sets max6; this persona does not schedule or spawn agents.",
+  "effort_guidance": "Central runtime allocates effort. Unsupported or unobservable effort remains unknown, not inferred.",
+  "reporting_shape": {
+    "requested": {
+      "model": "inherit",
+      "reasoning_effort": null,
+      "dispatch_reference": null
+    },
+    "resolved": {
+      "model": null,
+      "reasoning_effort": null,
+      "host_configuration_evidence": null
+    },
+    "observed": {
+      "model": null,
+      "reasoning_effort": null,
+      "execution_metadata_evidence": null
+    },
+    "host_limitations": []
+  },
+  "field_rules": [
+    "This shape is illustrative and contains no executed result.",
+    "Requested values describe instructions, resolved values describe evidenced host configuration, observed values describe actual execution metadata.",
+    "Use null plus an explanation for unavailable facts; never copy intended settings into observed facts.",
+    "Record each evidenced host limitation with affected capability, attempted action or not-attempted status, evidence reference, and consequence.",
+    "Do not claim independent identity from a persona name; record actual producer and reviewer provenance when available.",
+    "Offer concise rationale and reproducible checks, not private chain-of-thought.",
+    "Bare ID hints are not component references. Obtain exact {id,version,sha256} references from the live registry; never fabricate digest values.",
+    "Nulls in this descriptive shape are unpopulated guidance, not valid dispatch requests. The runtime must supply the requested reasoning value allowed by the central plan schema.",
+    "The explicit none reasoning setting is distinct from unknown or unobservable reasoning; never use none to conceal missing evidence."
+  ],
+  "orchestration_id_hint": "meta-orchestrator",
+  "runtime_id_hint": "codex-native"
+}

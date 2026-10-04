@@ -1,0 +1,14 @@
+{
+  "id": "investment-memo",
+  "kind": "orchestration",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Investment memo planning contract only; production report execution is unsupported.",
+  "capabilities": [
+    "investment-memo-planning"
+  ],
+  "requires": [],
+  "entrypoint": "domain-contract.json",
+  "execution_support": "planning-only",
+  "production_quality_verified": false
+}

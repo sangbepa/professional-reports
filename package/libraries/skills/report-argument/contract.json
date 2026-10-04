@@ -1,0 +1,71 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-argument",
+  "category": "judgment",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "finding_records",
+    "conclusion_limits",
+    "metric_bindings",
+    "domain_analysis"
+  ],
+  "outputs": [
+    "argument_records",
+    "argument_acceptance",
+    "argument_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind accepted findings, conclusion limits and current metrics.",
+    "Synthesize claims, support, mechanism and credible counterarguments.",
+    "Bind decision consequences and articulate judgment, conditions and action.",
+    "Return arguments, actual acceptance status and unsupported relationships."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "finding_records",
+    "conclusion_limits",
+    "metric_bindings",
+    "domain_analysis"
+  ],
+  "failure_returns": [
+    "report-frame",
+    "report-findings",
+    "report-data-reconcile"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "argument-binding",
+      "kind": "mechanical",
+      "expectation": "Each argument resolves to finding/evidence and current metric/model IDs; acceptance and review metadata cite actual records."
+    },
+    {
+      "id": "consequence-support",
+      "kind": "semantic",
+      "expectation": "Quantified effects use supported current results and actual decision mechanisms, with reasoned unquantified or inapplicable consequences where needed."
+    },
+    {
+      "id": "synthesis-and-strength",
+      "kind": "semantic",
+      "expectation": "Claim, counterargument, selected judgment and action cohere without exceeding finding limits or turning illustrative/proposed board content into factual approval."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame",
+      "report-findings",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

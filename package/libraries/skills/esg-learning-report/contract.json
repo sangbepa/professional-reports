@@ -1,0 +1,99 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "esg-learning-report-method",
+  "version": "0.1.0-dev.1",
+  "execution_mode": "host-method-with-standalone-adapter",
+  "inputs": [
+    "learning_request",
+    "frozen_public_sources",
+    "review_request"
+  ],
+  "consumes": [
+    "learning_request",
+    "frozen_public_sources",
+    "review_request"
+  ],
+  "outputs": [
+    "esg-learning-input",
+    "esg-learning-report",
+    "esg-learning-review-register",
+    "esg-learning-limitations"
+  ],
+  "procedure": [
+    "Frame entity, period, cutoff, framework basis and actual public evidence access.",
+    "Freeze originals and trace every material company assertion and numeric observation to source ID and physical PDF page.",
+    "Author the learning request without inventing facts or replacing unavailable values with zero.",
+    "Use standalone prepare/build/check; retain their observed outputs and limitations.",
+    "Arrange independent source, judgment and document review through the host, record findings and re-review changed artifacts."
+  ],
+  "acceptance": [
+    {
+      "id": "esgl-input-shape",
+      "kind": "mechanical",
+      "expectation": "Validate the actual request against esg-learning-report/1; schema validation does not test cross-record references."
+    },
+    {
+      "id": "esgl-source-bindings",
+      "kind": "mechanical",
+      "expectation": "Observe local source hash, ID and physical-page checks; preserve failures and missing files."
+    },
+    {
+      "id": "esgl-source-entailment",
+      "kind": "semantic",
+      "expectation": "Inspect original wording, metric boundary/method/unit, numeric values and cutoff evidence; citations alone do not entail a claim."
+    },
+    {
+      "id": "esgl-learning-boundary",
+      "kind": "semantic",
+      "expectation": "Keep unofficial learning status visible; separate analysis from cited company assertions, null from zero, and reconstruction from compliance or assurance."
+    },
+    {
+      "id": "esgl-review-coverage",
+      "kind": "semantic",
+      "expectation": "Record actual independent source, judgment and document reviewers, exact inspected hashes and issue dispositions, or pending/unavailable coverage."
+    },
+    {
+      "id": "esgl-document-checks",
+      "kind": "mechanical",
+      "expectation": "Record actual rendering, page count, visible citations and all-page inspection; HTML-only output is not a PDF pass."
+    }
+  ],
+  "review_scopes": {
+    "source": [
+      "Original meaning, source identity/hash, locator, publication timing at cutoff, units, periods, boundary and calculation basis."
+    ],
+    "judgment": [
+      "Teaching scope, methodological commentary, counterevidence, material omissions and limits on conclusions; no assurance/compliance claim."
+    ],
+    "document": [
+      "Exact current input/HTML/PDF bindings, visible source references, every page, charts/tables, clipping and faithful qualifications."
+    ]
+  },
+  "review_record_fields": [
+    "review_role",
+    "reviewer_identity",
+    "independence_evidence",
+    "inspected_artifacts_with_sha256",
+    "coverage",
+    "observations",
+    "findings",
+    "disposition",
+    "status",
+    "limitations"
+  ],
+  "failure": {
+    "return_to": [
+      "source-assessment",
+      "learning-author",
+      "adapter-owner",
+      "independent-reviewer"
+    ],
+    "record": "Affected IDs/artifact hashes, missing or failed check, consequence, next action and interim conclusion restriction.",
+    "conditions": [
+      "Unsupported or missing source, dependency or rendering capability.",
+      "Stale source/input/output binding, broken citations or failed checks.",
+      "Material unresolved findings or unavailable independent review."
+    ]
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

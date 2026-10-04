@@ -1,0 +1,16 @@
+{
+  "id": "reverse-dcf-report",
+  "kind": "skill",
+  "version": "0.1.0-candidate.3",
+  "status": "provisional",
+  "description": "Registered-case reverse DCF author/reviewer/publication path.",
+  "capabilities": [
+    "reverse-dcf-report-build",
+    "short-native-report-sessions"
+  ],
+  "requires": [
+    "financial-report-writing",
+    "report-design"
+  ],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "professional-reports/stable-ids/1",
+  "version": "0.1.0-dev.1",
+  "component_id": {
+    "format": "lowercase kebab-case, globally unique across all four libraries",
+    "meaning": "Persistent capability identity, independent of directory, version, company, model or agent nickname",
+    "collision": "Prefix a new colliding identity by its kind; never silently rename a released identity."
+  },
+  "reference": {
+    "fields": [
+      "id",
+      "version",
+      "sha256"
+    ],
+    "hash_authority": "pr.registry.Registry.reference and resolve",
+    "hash_format": "64 lowercase hexadecimal characters generated from canonical relative component file membership and actual bytes",
+    "forbidden": [
+      "latest alias in an execution plan",
+      "fabricated digest",
+      "hand-written replacement for registry hashing",
+      "absolute author-machine dependency"
+    ]
+  },
+  "node_id": {
+    "meaning": "Stable semantic work identity within a plan lineage; preserve across revisions while goal and output meaning remain the same.",
+    "new_identity": "Split, merge or changed economic scope receives new ids and supersedes links.",
+    "attempt": "Attempt/version identity is engine-issued and distinct from node id; never reuse old attempt tokens on new inputs."
+  },
+  "criteria_id": {
+    "meaning": "Stable human-approved acceptance criterion; revisions carry old/new content hashes, approval evidence and affected nodes.",
+    "authority": "Explicit human approval only; model-authored critique is not authority to weaken a criterion."
+  },
+  "other_ids": {
+    "source": "Separate source logical identity from immutable snapshot identity. A changed download is a new snapshot.",
+    "finding": "Stable issue id with original reviewer and artifact/attempt binding; new closure evidence never overwrites the finding.",
+    "case": "Development case id plus version. A changed expected behavior requires version bump; never relabel development material heldout."
+  },
+  "versioning": {
+    "initial": "0.1.0-dev.1",
+    "status": "provisional",
+    "content_change": "Change component version when material semantics or resources change; any byte change changes its reference hash. Never alter bytes under an installed pinned release.",
+    "production": "Only engine-owned evaluation and actual review evidence can authorize a quality-verified release."
+  }
+}

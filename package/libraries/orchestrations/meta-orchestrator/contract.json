@@ -1,0 +1,98 @@
+{
+  "schema_version": "professional-reports/meta/1",
+  "version": "0.1.0-dev.1",
+  "execution": "native-agent-guidance-plus-deterministic-engine",
+  "inputs": [
+    "human_mandate",
+    "installed_release_ref",
+    "available_capabilities",
+    "fresh_information_cutoff",
+    "fresh_source_snapshot_manifest",
+    "approved_criteria_ref",
+    "approveddesign_ref_or_explicit_absence"
+  ],
+  "outputs": [
+    "meta_plan",
+    "capability_gap_register",
+    "plan_candidate",
+    "reasoning_allocation",
+    "review_ownership",
+    "criteria_change_requests_if_any"
+  ],
+  "plan_requirements": {
+    "identity": [
+      "plan_id",
+      "version",
+      "parent_plan_ref_or_null",
+      "mandate_ref",
+      "criteria_ref",
+      "release_ref",
+      "cutoff",
+      "domain_ref"
+    ],
+    "nodes": [
+      "stable_node_id",
+      "goal",
+      "dependencies",
+      "input_bindings",
+      "expected_artifacts",
+      "capabilities",
+      "persona_ref",
+      "skill_ref",
+      "runtime_ref",
+      "acceptance_criteria_ids",
+      "review_roles",
+      "requested_effort",
+      "risk_basis"
+    ],
+    "facts": "Map of engine rule fact names to true, false or null, with separate evidence/provenance records. Null means unknown, never false.",
+    "binding": "Every component reference is exactly {id,version,sha256}. Every source/model/design input retains its own artifact binding; component refs do not substitute for artifact refs.",
+    "graph": "Directed acyclic graph, including explicit assessment tasks for unknown material facts and independent review dependencies. No fixed financial method sequence.",
+    "capability_truth": "Every node capability must be supplied by its bound skill components and actual environment. Persona and runtime references must resolve but do not add skill capabilities.",
+    "wire_schema": "Installed schemas/plan.schema.json is authoritative: expert is a persona ref; skills is an array of skill refs; runtime is a runtime ref; reasoning is requested effort. Conceptual requirements here are not alternative field names."
+  },
+  "decisions": [
+    {
+      "id": "choose-domain",
+      "rule": "Use the requested purpose and decision; non-valuation domains currently yield planning-only artifacts."
+    },
+    {
+      "id": "scope-evidence",
+      "rule": "Inspect originals and current access before promising a conclusion; source acquisition may precede final method choice."
+    },
+    {
+      "id": "choose-methods",
+      "rule": "Apply domain plan-rules to supported profile facts, then justify suitable methods and credible rejected alternatives."
+    },
+    {
+      "id": "decompose",
+      "rule": "Split by independent inputs, outputs, failure owner or review boundary; keep tightly coupled mechanical work together."
+    },
+    {
+      "id": "assign",
+      "rule": "Assign one accountable producer per node. Reviewer must be an actual separate native agent with no authorship of reviewed artifacts."
+    },
+    {
+      "id": "revise",
+      "rule": "New evidence may revise analysis and graph through a versioned plan; criteria additions, removals, thresholds and waivers require explicit human approval."
+    }
+  ],
+  "invariants": [
+    "Fresh cutoff and fresh source snapshots for every report attempt; cache reuse requires new manifest and verified eligibility.",
+    "No protected evaluation access or answers in candidate library content.",
+    "Development cases are examples, not evaluation scores or release evidence.",
+    "A successful deterministic validator is structural evidence only.",
+    "Unresolved material findings cannot be closed by the artifact author.",
+    "No exporter or document builder upgrades a conditional analysis into professional assurance."
+  ],
+  "failures": [
+    "missing-installed-release",
+    "pin-mismatch",
+    "missing-capability",
+    "unknown-material-fact",
+    "cycle-or-unbound-input",
+    "criteria-change-awaits-human",
+    "independent-review-unavailable",
+    "material-finding-unresolved"
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/review",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "reviewer_agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_task_attempt": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "role": {
+      "enum": [
+        "source",
+        "model",
+        "judgment",
+        "document",
+        "task",
+        "risk"
+      ]
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "name",
+          "sha256"
+        ],
+        "additionalProperties": true
+      },
+      "minItems": 1
+    },
+    "verdict": {
+      "enum": [
+        "pass",
+        "revise",
+        "insufficient"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "severity": {
+            "enum": [
+              "critical",
+              "major",
+              "minor"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "severity",
+          "description"
+        ],
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "resolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "targets": {
+            "$ref": "#/$defs/continuityTargets"
+          },
+          "evidence": {
+            "$ref": "#/$defs/continuityEvidence"
+          },
+          "explanation": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "review_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "finding_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          }
+        },
+        "required": [
+          "scope",
+          "targets",
+          "evidence",
+          "explanation",
+          "review_id",
+          "finding_id"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "reopenings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "targets": {
+            "$ref": "#/$defs/continuityTargets"
+          },
+          "evidence": {
+            "$ref": "#/$defs/continuityEvidence"
+          },
+          "explanation": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "review_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "finding_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "replacement_review_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "reason": {
+            "enum": [
+              "new_evidence",
+              "changed_conditions",
+              "counterevidence"
+            ]
+          }
+        },
+        "required": [
+          "scope",
+          "targets",
+          "evidence",
+          "explanation",
+          "review_id",
+          "finding_id",
+          "replacement_review_id",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "accepted_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "decision": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "scope": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "targets": {
+            "$ref": "#/$defs/continuityTargets"
+          },
+          "evidence": {
+            "$ref": "#/$defs/continuityEvidence"
+          }
+        },
+        "required": [
+          "id",
+          "decision",
+          "scope",
+          "targets",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    },
+    "accepted_decision_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "targets": {
+            "$ref": "#/$defs/continuityTargets"
+          },
+          "evidence": {
+            "$ref": "#/$defs/continuityEvidence"
+          },
+          "explanation": {
+            "$ref": "#/$defs/continuityText"
+          },
+          "review_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "decision_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "disposition": {
+            "enum": [
+              "upheld",
+              "challenged"
+            ]
+          },
+          "reason": {
+            "enum": [
+              "new_evidence",
+              "changed_conditions",
+              "counterevidence"
+            ]
+          }
+        },
+        "required": [
+          "scope",
+          "targets",
+          "evidence",
+          "explanation",
+          "review_id",
+          "decision_id",
+          "disposition"
+        ],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "id",
+    "attempt_id",
+    "reviewer_agent_id",
+    "review_task_attempt",
+    "role",
+    "targets",
+    "verdict",
+    "scope",
+    "evidence",
+    "findings"
+  ],
+  "additionalProperties": true,
+  "$defs": {
+    "continuityText": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "continuityTargets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "name",
+          "sha256"
+        ],
+        "additionalProperties": true
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "continuityEvidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}

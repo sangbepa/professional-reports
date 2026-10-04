@@ -1,0 +1,890 @@
+{
+  "schema_version": "professional-reports/library-inventory/1",
+  "version": "0.1.0-dev.3",
+  "components": [
+    {
+      "id": "esg",
+      "version": "0.1.0-dev.1",
+      "sha256": "881bd5a325d3674c2f9056b5d42a01c5a3b2399cd1686891c9ad9345c3fd25d5",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "esg-planning"
+      ],
+      "description": "ESG research and readiness planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "fdd",
+      "version": "0.1.0-dev.1",
+      "sha256": "a66bc2323cca6db8ea559a5789223aa5ac283945e241839ac09098ddd99c60b7",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "fdd-planning"
+      ],
+      "description": "Financial due diligence planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "investment-memo",
+      "version": "0.1.0-dev.1",
+      "sha256": "240616f9f697634ed1fd161d2a79acfe15965e50066e68a2659adfaf7de84e62",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "investment-memo-planning"
+      ],
+      "description": "Investment memo planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "market-research",
+      "version": "0.1.0-dev.1",
+      "sha256": "c5d592d7c577b740e87d11d8bc6273cc9ea5e3b797592f6216e048f16d997cfa",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "market-research-planning"
+      ],
+      "description": "Market research planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "meta-orchestrator",
+      "version": "0.1.0-dev.1",
+      "sha256": "6764cee2d049fba978572f459dd844d62c0e813920d1a9ac89012b4fa66863e3",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "meta-planning",
+        "capability-routing",
+        "criteria-preservation",
+        "dependency-planning",
+        "review-routing"
+      ],
+      "description": "Compile an evidence-led, mandate-specific plan, allocate native expert agents, and route revision and independent review without changing approved criteria."
+    },
+    {
+      "id": "valuation",
+      "version": "0.1.0-dev.1",
+      "sha256": "1cebf9bf6f50fcd680abc319c5db06abe101b5f0264dbe602caff1d9d478f200",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-domain-contract",
+        "contingent-valuation-orchestration",
+        "valuation-development-examples"
+      ],
+      "description": "Provisional contingent valuation execution-domain contract, routed through bound native skills and host adapters with per-run evidence, capability and review gates."
+    },
+    {
+      "id": "accounting-reconciler",
+      "version": "0.1.0-dev.1",
+      "sha256": "ad2790df507bf22c2b269c4ddc6a185eace50c3a8ee8e051fa469551f96c30cd",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "reconcile-accounting-perimeters",
+        "trace-metric-bridges",
+        "detect-double-attribution",
+        "record-unexplained-differences"
+      ],
+      "description": "Builds traceable bridges across accounting definitions, periods, currencies, and entity perimeters."
+    },
+    {
+      "id": "design-editor",
+      "version": "0.1.0-dev.1",
+      "sha256": "e7d908af0c55b962dcd2a7fdd9e546066fe60e89b71e3cfffea4f4478c80a904",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "preserve-supplied-approved-design",
+        "track-design-artifact-hashes",
+        "rerender-current-report-content",
+        "inspect-rendered-report-layout"
+      ],
+      "description": "Preserves a user-supplied approved design while rerendering current report content and inspecting the actual rendered pages."
+    },
+    {
+      "id": "evidence-researcher",
+      "version": "0.1.0-dev.1",
+      "sha256": "f38bb6dcfd0e8b7bff838c536793142f1521f6b70ec9645f0da106221e8bf1a5",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "plan-question-led-research",
+        "acquire-original-evidence",
+        "record-source-provenance",
+        "track-research-gaps"
+      ],
+      "description": "Acquires decision-relevant original evidence with provenance, exact locators, and explicit collection gaps."
+    },
+    {
+      "id": "finance-analyst",
+      "version": "0.1.0-dev.1",
+      "sha256": "fd9be97b671f0548ad348b74dc754d0b5289d188cdb82de70b94974de3493eee",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "select-evidence-fit-valuation-methods",
+        "design-operating-scenarios",
+        "maintain-value-bridges",
+        "specify-model-sensitivities"
+      ],
+      "description": "Designs reproducible valuation methods, operating scenarios, and value bridges consistent with supplied evidence."
+    },
+    {
+      "id": "industry-specialist",
+      "version": "0.1.0-dev.1",
+      "sha256": "d91c57f3e5307f2439c17f2661bbee5ac9d555fc84ef8221695d00fb0f3020fd",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "analyze-industry-driver-evidence",
+        "challenge-peer-comparability",
+        "identify-cycle-exposure",
+        "test-operating-constraints"
+      ],
+      "description": "Tests business-driver explanations against industry structure, cycles, competitive behavior, and operating constraints."
+    },
+    {
+      "id": "investment-challenger",
+      "version": "0.1.0-dev.1",
+      "sha256": "684256520dd5997ebe97711c1a40098fb795750e4ef89e00fe2fd8040c412d33",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "challenge-investment-thesis",
+        "test-downside-mechanisms",
+        "surface-disconfirming-evidence",
+        "bound-decision-conclusions"
+      ],
+      "description": "Challenges investment conclusions through competing hypotheses, downside mechanisms, and explicit judgment limits."
+    },
+    {
+      "id": "project-manager",
+      "version": "0.1.0-dev.2",
+      "sha256": "5ebb965373522689ee1df41e629022422d17b43b89d11f57f11f1af7b0554e2e",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "frame-reader-decision",
+        "define-evidence-perimeter",
+        "surface-mandate-ambiguity",
+        "propose-acceptance-criteria",
+        "coordinate-role-handoffs",
+        "track-plan-dependencies",
+        "escalate-decision-blockers"
+      ],
+      "description": "Frames the reader decision and coordinates evidence-led plans, dependencies, and handoffs without preselecting conclusions or granting review approval."
+    },
+    {
+      "id": "report-writer",
+      "version": "0.1.0-dev.1",
+      "sha256": "15c468bfa836074fe79991721d57c4c87c792f23f87a8c414f26e32bc7ade923",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "compose-evidence-linked-arguments",
+        "preserve-claim-qualifications",
+        "structure-reader-decisions",
+        "flag-writing-evidence-gaps"
+      ],
+      "description": "Writes decision-oriented report prose from accepted evidence and analysis while preserving qualifiers and traceability."
+    },
+    {
+      "id": "runtime-engineer",
+      "version": "0.1.0-dev.1",
+      "sha256": "fded27c6a45dbd24713245fd6e7517030fe716cea9002aa172ab69bc931b87e2",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "environment-design",
+        "dependency-resolution",
+        "runtime-smoke-testing"
+      ],
+      "description": "Verify and provision the smallest reproducible environment required by actual work."
+    },
+    {
+      "id": "source-critic",
+      "version": "0.1.0-dev.1",
+      "sha256": "a23a23338129c94c0348d6ce8fd57b96193da659bf275896321bb1f4435d51e1",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "assess-original-provenance",
+        "check-information-cutoff",
+        "challenge-source-coverage",
+        "quarantine-uncertain-evidence"
+      ],
+      "description": "Challenges provenance, information timing, authority, and coverage of evidence independently from its collection."
+    },
+    {
+      "id": "supervisor",
+      "version": "0.1.0-dev.2",
+      "sha256": "f31cba866509418e6513516d206ec653dc82d2003eb222ab6ec9474a8a3021ce",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "verify-review-independence",
+        "review-source-claim-fidelity",
+        "review-arithmetic-evidence",
+        "review-economic-reasoning",
+        "review-rendered-design",
+        "preserve-review-criteria"
+      ],
+      "description": "Reviews exact artifact revisions independently from their producers across separately evidenced source, arithmetic, economics, and design channels."
+    },
+    {
+      "id": "valuation-specialist",
+      "version": "0.1.0-dev.1",
+      "sha256": "f42018cdb95372e0faae12a093ca450534bf867caa0c2f4ba88b9cc827d49fe0",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-judgment",
+        "method-reconciliation",
+        "capital-cost-judgment"
+      ],
+      "description": "Translate reconciled business economics into methods, cash flows and attributable equity value."
+    },
+    {
+      "id": "codex-native",
+      "version": "0.1.0-dev.1",
+      "sha256": "84559c40122e16b00cd0c4e500b9cc00f239e12a92934e4aba1888fa01bf1926",
+      "kind": "runtime",
+      "status": "provisional",
+      "capabilities": [
+        "native-agent-dispatch",
+        "host-result-binding",
+        "reasoning-allocation",
+        "concurrency-control"
+      ],
+      "description": "Host-native Codex subagent dispatch protocol with inherited model, at most six simultaneous agents, explicit observed metadata and immutable attempt binding."
+    },
+    {
+      "id": "valuation-native",
+      "version": "0.1.0-dev.1",
+      "sha256": "e9272332eb88f7851f1ab880b52b02d8b3346107669c54f5d4c419078a0a1f10",
+      "kind": "runtime",
+      "status": "provisional",
+      "capabilities": [
+        "deterministic-calculation",
+        "xlsx-authoring",
+        "pdf-rendering-recipe",
+        "environment-smoke-testing"
+      ],
+      "description": "Pinned native Python/model/XLSX/PDF environment recipe with measured probes; no assumed Docker or external API."
+    },
+    {
+      "id": "audit-xls",
+      "version": "0.1.0-dev.1",
+      "sha256": "ed20eeff2d57b860ec67abfd2b463bef5bad696b7b2862dd5ddacae450ba4d45",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "spreadsheet-audit",
+        "formula-inspection",
+        "financial-model-integrity",
+        "recalculation-evidence-assessment"
+      ],
+      "description": "Inspect spreadsheet formulas and financial-model integrity with explicit scope, recalculation limits and artifact-bound findings."
+    },
+    {
+      "id": "comps-analysis",
+      "version": "0.1.0-dev.1",
+      "sha256": "63d0ddc950f1da2bfb431673e5f3fee5c28b0d1e0569b202f658350216830ecf",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "comparable-company-analysis",
+        "peer-selection",
+        "multiple-reconciliation"
+      ],
+      "description": "Construct economically comparable peer evidence and reproducible multiples without automatic method averaging or zero-filled missing data."
+    },
+    {
+      "id": "dcf-model",
+      "version": "0.1.0-dev.1",
+      "sha256": "a2f3b69b5aebf12d1de85857f7eb60dbd407294d362e9013356ae5259597bb4f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "dcf-modeling",
+        "cashflow-projection",
+        "terminal-economics",
+        "sensitivity-analysis",
+        "equity-bridge-modeling"
+      ],
+      "description": "Build a selected DCF from calibrated drivers, consistent cash flows and an explicit equity bridge; spreadsheet execution remains tool-dependent."
+    },
+    {
+      "id": "financial-equity-valuation",
+      "version": "0.1.0-dev.1",
+      "sha256": "b9792e44bd3576c0972e207db0e5e9ced834b1b98eab8fde7f7717ecb45baa7b",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "financial-equity-valuation",
+        "financial-business-classification",
+        "regulatory-capital-assessment",
+        "dividend-discount-assessment",
+        "residual-income-assessment",
+        "financial-debt-perimeter"
+      ],
+      "description": "Value balance-sheet financial businesses using supported equity cash flows, distributions or residual income and explicit prudential capital constraints."
+    },
+    {
+      "id": "financial-report-research",
+      "version": "0.1.0-dev.1",
+      "sha256": "49a47732ee21222fe7e1d13415edc2b8bc88e52e3376b98f465ff9092023f722",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "purpose-led-research",
+        "valuation-research",
+        "fdd-research",
+        "esg-research",
+        "earnings-research",
+        "board-research"
+      ],
+      "description": "Design and conduct question-led evidence research for valuation, financial due diligence, ESG, earnings and board reports. Use to substantiate material assumptions, investigate conflicting evidence and identify what a decision-ready report can support."
+    },
+    {
+      "id": "financial-report-writing",
+      "version": "0.1.0-dev.2",
+      "sha256": "fee0fe0a33d082379effa3bf5d47629068e1223a94d59e7395059e12a336ad8f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "purpose-led-writing",
+        "valuation-writing",
+        "fdd-writing",
+        "esg-writing",
+        "earnings-writing",
+        "board-writing"
+      ],
+      "description": "Turn current research and reviewed analysis into expert-facing valuation, FDD, ESG, earnings or board documents. Build evidence-based arguments, explicit judgments and decision implications; return material research gaps rather than disguise them with confident prose."
+    },
+    {
+      "id": "report-argument",
+      "version": "0.1.0-dev.1",
+      "sha256": "e2406c8201f51b07053ad5bc7741688be8b0e78be9c1af9fc98a4ac7435918dd",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "argument-synthesis",
+        "counterargument-assessment"
+      ],
+      "description": "Synthesize accepted findings into decision arguments with support, credible counterarguments, bound consequences and explicit judgment limits."
+    },
+    {
+      "id": "report-claim-check",
+      "version": "0.1.0-dev.1",
+      "sha256": "f5b716938b516b4593ea0728349a2a0f909267fef579232f44fc42d15546e892",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "claim-checking",
+        "citation-entailment",
+        "review-coverage-recording"
+      ],
+      "description": "Check report claim meaning, numbers, qualifications and citations independently against originals and current model artifacts, recording actual review scope and channel."
+    },
+    {
+      "id": "report-data-reconcile",
+      "version": "0.1.0-dev.1",
+      "sha256": "e72d76a3466d73f276d328c0d8ece8332cc0e3a308a8400089f6ab2cf587837f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "data-reconciliation",
+        "segment-reconciliation",
+        "consolidation-policy",
+        "lease-policy",
+        "nci-policy",
+        "share-rights-policy",
+        "metric-binding",
+        "duplicate-attribution-detection"
+      ],
+      "description": "Align evidence and supplied model metrics across calendars, currencies, scale and perimeter, preserving bridges and detecting duplicated attribution."
+    },
+    {
+      "id": "report-design",
+      "version": "0.1.0-dev.2",
+      "sha256": "c7a80d4df040fff50a9cd9528b0202f743bcf2765cc3de01582494eda960b797",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "report-design-reference",
+        "design-handoff",
+        "presentation-acceptance-method"
+      ],
+      "description": "Bind current valuation content to packaged neutral report constructors; verify actual render and independent presentation acceptance."
+    },
+    {
+      "id": "report-evidence-extract",
+      "version": "0.1.0-dev.1",
+      "sha256": "bc92ceb9a8bc315b0a14003223e3ef83c714507b5f3b632c6868430230047bc9",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "evidence-extraction",
+        "table-transcription",
+        "evidence-classification"
+      ],
+      "description": "Extract faithful observations and tables from assessed originals with exact locators, units, periods, perimeter and evidence classification."
+    },
+    {
+      "id": "report-findings",
+      "version": "0.1.0-dev.1",
+      "sha256": "2bdb956218a9be98b904c739ed023dba8402fadea1cf22fa3c03c0077647f430",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "finding-inference",
+        "conclusion-strength-assessment"
+      ],
+      "description": "Infer scoped findings from reconciled evidence, separating observed or calculated results from explanations and the conclusion strength the evidence permits."
+    },
+    {
+      "id": "report-frame",
+      "version": "0.1.0-dev.1",
+      "sha256": "5582e8e0695925404873a9e5dc5367f3c9f886533031488a9cab47ec308885b0",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "mandate-framing",
+        "deliverable-acceptance"
+      ],
+      "description": "Frame a report mandate into its reader decision, perimeter, information cutoff and deliverable acceptance conditions before research or drafting."
+    },
+    {
+      "id": "report-outline",
+      "version": "0.1.0-dev.1",
+      "sha256": "7087d0448adda6c40faf4ad880be62956403e4ae626fc48383a297e8d25429e3",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "reader-outline",
+        "argument-coverage"
+      ],
+      "description": "Order accepted report arguments and findings for the specified expert reader and decision, without imposing a universal table of contents."
+    },
+    {
+      "id": "report-research-plan",
+      "version": "0.1.0-dev.1",
+      "sha256": "2c5516fe8c244920e4ba15ab5e1c7fcb51586e0272d74175b929569eef08e332",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "research-planning",
+        "hypothesis-testing-plan",
+        "calibration-planning"
+      ],
+      "description": "Plan material decision questions, discriminating evidence, calibration work and search stopping conditions for a framed report mandate."
+    },
+    {
+      "id": "report-section-write",
+      "version": "0.1.0-dev.1",
+      "sha256": "b21b8939aaf2ddf73accb617a0d284f0dfbd23e130f73dd708341d4fa57c05f2",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "section-writing",
+        "claim-binding"
+      ],
+      "description": "Write expert report sections from current accepted arguments, preserving qualifications and binding all metrics without adding numbers or changing calculations."
+    },
+    {
+      "id": "report-source-assess",
+      "version": "0.1.0-dev.1",
+      "sha256": "b3e998fa177f024caf24763a796fc3a7196e4e7e90062a63bdc47f88f23c5562",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "source-assessment",
+        "information-cutoff-validation",
+        "source-provenance"
+      ],
+      "description": "Assess originals, provenance, period and information-set availability of candidate report sources; quarantine uncertain timing without judging assumption plausibility."
+    },
+    {
+      "id": "runtime-prepare",
+      "version": "0.1.0-dev.1",
+      "sha256": "57918a9155b85177904bbd2b2123856b306b150ebc16dd3abb59f1a7d3f5ad81",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "environment-design",
+        "dependency-resolution",
+        "runtime-smoke-testing"
+      ],
+      "description": "Resolve, provision if authorized, and smoke-test a report execution environment; preserve its actual dependency manifest."
+    },
+    {
+      "id": "valuation-challenge",
+      "version": "0.1.0-dev.1",
+      "sha256": "b52f26cb5d7e92c218e9710bd7c7ed1fe2350f4b00a81ba9cf4587d8ceda3512",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-challenge",
+        "economic-assumption-challenge",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy"
+      ],
+      "description": "Independently challenge valuation evidence, maintainable economics, method selection, equity adjustments and the resulting investment or board conclusion."
+    },
+    {
+      "id": "valuation-compose",
+      "version": "0.1.0-dev.2",
+      "sha256": "8ab481d8799a322b41b934e6d80a7be59c98e789eadf2b8080abba8b9f1b9c9a",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-content-composition",
+        "model-to-report-binding"
+      ],
+      "description": "Bind current valuation arguments and model metrics into a content packet and pass presentation to an explicitly verified renderer."
+    },
+    {
+      "id": "valuation-design",
+      "version": "0.1.0-dev.1",
+      "sha256": "16d6dd9d3acaf7ab14d92846dff1370e02f80626b4a057dd1e12689314577471",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-method-selection",
+        "scenario-design",
+        "segment-reconciliation",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy",
+        "equity-bridge-design",
+        "method-reconciliation",
+        "financial-equity-assessment",
+        "asset-nav-assessment",
+        "distress-assessment",
+        "early-stage-assessment",
+        "sotp-assessment",
+        "assumption-calibration",
+        "cycle-normalization",
+        "associate-attribution",
+        "financial-debt-perimeter",
+        "intercompany-elimination",
+        "dilution-analysis",
+        "reverse-dcf-assessment"
+      ],
+      "description": "Select defensible valuation methods, design operating scenarios, reconcile enterprise-to-equity adjustments and explain differences between valuation indications."
+    },
+    {
+      "id": "valuation-evidence",
+      "version": "0.1.0-dev.2",
+      "sha256": "c214b082711c43c2c0cc4906835009bea7aca09167f08dd9e586115dc98f0a54",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-evidence",
+        "segment-reconciliation",
+        "source-acquisition-method"
+      ],
+      "description": "Acquire and normalize source evidence for company valuation, with publication cutoffs, original locators, units, financial reconciliations and frozen snapshots."
+    },
+    {
+      "id": "valuation-wacc",
+      "version": "0.1.0-dev.1",
+      "sha256": "7e10bb944ddd32f2a65e03cf77cfcce077e945f384833daf6920b9e16bfe01ad",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "wacc-calculation",
+        "capital-cost-policy-check"
+      ],
+      "description": "Calculate a reproducible WACC from selected capital-market inputs and consistent market-value weights. Use as an isolated discount-rate work unit within an enterprise valuation."
+    }
+  ],
+  "files": [
+    "orchestrations/esg/POLICY.md",
+    "orchestrations/esg/component.json",
+    "orchestrations/esg/domain-contract.json",
+    "orchestrations/esg/plan-rules.json",
+    "orchestrations/fdd/POLICY.md",
+    "orchestrations/fdd/component.json",
+    "orchestrations/fdd/domain-contract.json",
+    "orchestrations/fdd/plan-rules.json",
+    "orchestrations/investment-memo/POLICY.md",
+    "orchestrations/investment-memo/component.json",
+    "orchestrations/investment-memo/domain-contract.json",
+    "orchestrations/investment-memo/plan-rules.json",
+    "orchestrations/library.json",
+    "orchestrations/market-research/POLICY.md",
+    "orchestrations/market-research/component.json",
+    "orchestrations/market-research/domain-contract.json",
+    "orchestrations/market-research/plan-rules.json",
+    "orchestrations/meta-orchestrator/ORCHESTRATION.md",
+    "orchestrations/meta-orchestrator/component.json",
+    "orchestrations/meta-orchestrator/contract.json",
+    "orchestrations/meta-orchestrator/development-cases.json",
+    "orchestrations/meta-orchestrator/selection-policy.json",
+    "orchestrations/meta-orchestrator/stable-ids.json",
+    "orchestrations/valuation/INTEGRATION.md",
+    "orchestrations/valuation/POLICY.md",
+    "orchestrations/valuation/artifact-catalog.json",
+    "orchestrations/valuation/component.json",
+    "orchestrations/valuation/development/check_contracts.py",
+    "orchestrations/valuation/development/few-shot-cases.json",
+    "orchestrations/valuation/domain-contract.json",
+    "orchestrations/valuation/plan-rules.json",
+    "personas/README.md",
+    "personas/accounting-reconciler/ROLE.md",
+    "personas/accounting-reconciler/component.json",
+    "personas/accounting-reconciler/development-cases.json",
+    "personas/accounting-reconciler/reasoning-guidance.json",
+    "personas/design-editor/ROLE.md",
+    "personas/design-editor/component.json",
+    "personas/design-editor/development-cases.json",
+    "personas/design-editor/reasoning-guidance.json",
+    "personas/evidence-researcher/ROLE.md",
+    "personas/evidence-researcher/component.json",
+    "personas/evidence-researcher/development-cases.json",
+    "personas/evidence-researcher/reasoning-guidance.json",
+    "personas/finance-analyst/ROLE.md",
+    "personas/finance-analyst/component.json",
+    "personas/finance-analyst/development-cases.json",
+    "personas/finance-analyst/reasoning-guidance.json",
+    "personas/industry-specialist/ROLE.md",
+    "personas/industry-specialist/component.json",
+    "personas/industry-specialist/development-cases.json",
+    "personas/industry-specialist/reasoning-guidance.json",
+    "personas/investment-challenger/ROLE.md",
+    "personas/investment-challenger/component.json",
+    "personas/investment-challenger/development-cases.json",
+    "personas/investment-challenger/reasoning-guidance.json",
+    "personas/library.json",
+    "personas/project-manager/ROLE.md",
+    "personas/project-manager/component.json",
+    "personas/project-manager/development-cases.json",
+    "personas/project-manager/reasoning-guidance.json",
+    "personas/report-writer/ROLE.md",
+    "personas/report-writer/component.json",
+    "personas/report-writer/development-cases.json",
+    "personas/report-writer/reasoning-guidance.json",
+    "personas/runtime-engineer/ROLE.md",
+    "personas/runtime-engineer/component.json",
+    "personas/source-critic/ROLE.md",
+    "personas/source-critic/component.json",
+    "personas/source-critic/development-cases.json",
+    "personas/source-critic/reasoning-guidance.json",
+    "personas/supervisor/ROLE.md",
+    "personas/supervisor/component.json",
+    "personas/supervisor/development-cases.json",
+    "personas/supervisor/reasoning-guidance.json",
+    "personas/valuation-specialist/ROLE.md",
+    "personas/valuation-specialist/component.json",
+    "runtimes/codex-native/RUNTIME.md",
+    "runtimes/codex-native/capabilities.json",
+    "runtimes/codex-native/component.json",
+    "runtimes/codex-native/host-protocol.json",
+    "runtimes/codex-native/reasoning-policy.json",
+    "runtimes/library.json",
+    "runtimes/valuation-native/RUNTIME.md",
+    "runtimes/valuation-native/component.json",
+    "runtimes/valuation-native/requirements.lock",
+    "runtimes/valuation-native/scripts/prepare.py",
+    "skills/audit-xls/LICENSE.local",
+    "skills/audit-xls/LICENSE.upstream",
+    "skills/audit-xls/NOTICE",
+    "skills/audit-xls/SKILL.md",
+    "skills/audit-xls/component.json",
+    "skills/audit-xls/contract.json",
+    "skills/audit-xls/provenance.json",
+    "skills/audit-xls/references/execution-contract.md",
+    "skills/comps-analysis/LICENSE.local",
+    "skills/comps-analysis/LICENSE.upstream",
+    "skills/comps-analysis/NOTICE",
+    "skills/comps-analysis/SKILL.md",
+    "skills/comps-analysis/component.json",
+    "skills/comps-analysis/contract.json",
+    "skills/comps-analysis/provenance.json",
+    "skills/comps-analysis/references/domain-artifacts.md",
+    "skills/comps-analysis/references/execution-contract.md",
+    "skills/dcf-model/LICENSE.local",
+    "skills/dcf-model/LICENSE.upstream",
+    "skills/dcf-model/NOTICE",
+    "skills/dcf-model/SKILL.md",
+    "skills/dcf-model/component.json",
+    "skills/dcf-model/contract.json",
+    "skills/dcf-model/provenance.json",
+    "skills/dcf-model/references/domain-artifacts.md",
+    "skills/dcf-model/references/execution-contract.md",
+    "skills/financial-equity-valuation/LICENSE.local",
+    "skills/financial-equity-valuation/NOTICE",
+    "skills/financial-equity-valuation/SKILL.md",
+    "skills/financial-equity-valuation/component.json",
+    "skills/financial-equity-valuation/contract.json",
+    "skills/financial-equity-valuation/provenance.json",
+    "skills/financial-equity-valuation/references/domain-artifacts.md",
+    "skills/financial-equity-valuation/references/execution-contract.md",
+    "skills/financial-report-research/LICENSE.local",
+    "skills/financial-report-research/NOTICE",
+    "skills/financial-report-research/SKILL.md",
+    "skills/financial-report-research/component.json",
+    "skills/financial-report-research/contract.json",
+    "skills/financial-report-research/provenance.json",
+    "skills/financial-report-research/references/board.md",
+    "skills/financial-report-research/references/earnings.md",
+    "skills/financial-report-research/references/esg.md",
+    "skills/financial-report-research/references/evidence-contract.md",
+    "skills/financial-report-research/references/execution-contract.md",
+    "skills/financial-report-research/references/fdd.md",
+    "skills/financial-report-research/references/industry-lenses.md",
+    "skills/financial-report-research/references/valuation.md",
+    "skills/financial-report-writing/LICENSE.local",
+    "skills/financial-report-writing/NOTICE",
+    "skills/financial-report-writing/SKILL.md",
+    "skills/financial-report-writing/component.json",
+    "skills/financial-report-writing/contract.json",
+    "skills/financial-report-writing/provenance.json",
+    "skills/financial-report-writing/references/argument-contract.md",
+    "skills/financial-report-writing/references/board.md",
+    "skills/financial-report-writing/references/earnings.md",
+    "skills/financial-report-writing/references/esg.md",
+    "skills/financial-report-writing/references/execution-contract.md",
+    "skills/financial-report-writing/references/fdd.md",
+    "skills/financial-report-writing/references/valuation.md",
+    "skills/inventory.json",
+    "skills/library.json",
+    "skills/report-argument/LICENSE.local",
+    "skills/report-argument/NOTICE",
+    "skills/report-argument/SKILL.md",
+    "skills/report-argument/component.json",
+    "skills/report-argument/contract.json",
+    "skills/report-argument/provenance.json",
+    "skills/report-argument/references/execution-contract.md",
+    "skills/report-claim-check/LICENSE.local",
+    "skills/report-claim-check/NOTICE",
+    "skills/report-claim-check/SKILL.md",
+    "skills/report-claim-check/component.json",
+    "skills/report-claim-check/contract.json",
+    "skills/report-claim-check/provenance.json",
+    "skills/report-claim-check/references/execution-contract.md",
+    "skills/report-data-reconcile/LICENSE.local",
+    "skills/report-data-reconcile/NOTICE",
+    "skills/report-data-reconcile/SKILL.md",
+    "skills/report-data-reconcile/component.json",
+    "skills/report-data-reconcile/contract.json",
+    "skills/report-data-reconcile/provenance.json",
+    "skills/report-data-reconcile/references/domain-artifacts.md",
+    "skills/report-data-reconcile/references/execution-contract.md",
+    "skills/report-design/LICENSE.local",
+    "skills/report-design/NOTICE",
+    "skills/report-design/SKILL.md",
+    "skills/report-design/component.json",
+    "skills/report-design/contract.json",
+    "skills/report-design/provenance.json",
+    "skills/report-design/references/approved-design.json",
+    "skills/report-design/references/execution-contract.md",
+    "skills/report-evidence-extract/LICENSE.local",
+    "skills/report-evidence-extract/NOTICE",
+    "skills/report-evidence-extract/SKILL.md",
+    "skills/report-evidence-extract/component.json",
+    "skills/report-evidence-extract/contract.json",
+    "skills/report-evidence-extract/provenance.json",
+    "skills/report-evidence-extract/references/execution-contract.md",
+    "skills/report-findings/LICENSE.local",
+    "skills/report-findings/NOTICE",
+    "skills/report-findings/SKILL.md",
+    "skills/report-findings/component.json",
+    "skills/report-findings/contract.json",
+    "skills/report-findings/provenance.json",
+    "skills/report-findings/references/execution-contract.md",
+    "skills/report-frame/LICENSE.local",
+    "skills/report-frame/NOTICE",
+    "skills/report-frame/SKILL.md",
+    "skills/report-frame/component.json",
+    "skills/report-frame/contract.json",
+    "skills/report-frame/provenance.json",
+    "skills/report-frame/references/execution-contract.md",
+    "skills/report-outline/LICENSE.local",
+    "skills/report-outline/NOTICE",
+    "skills/report-outline/SKILL.md",
+    "skills/report-outline/component.json",
+    "skills/report-outline/contract.json",
+    "skills/report-outline/provenance.json",
+    "skills/report-outline/references/execution-contract.md",
+    "skills/report-research-plan/LICENSE.local",
+    "skills/report-research-plan/NOTICE",
+    "skills/report-research-plan/SKILL.md",
+    "skills/report-research-plan/component.json",
+    "skills/report-research-plan/contract.json",
+    "skills/report-research-plan/provenance.json",
+    "skills/report-research-plan/references/execution-contract.md",
+    "skills/report-section-write/LICENSE.local",
+    "skills/report-section-write/NOTICE",
+    "skills/report-section-write/SKILL.md",
+    "skills/report-section-write/component.json",
+    "skills/report-section-write/contract.json",
+    "skills/report-section-write/provenance.json",
+    "skills/report-section-write/references/execution-contract.md",
+    "skills/report-source-assess/LICENSE.local",
+    "skills/report-source-assess/NOTICE",
+    "skills/report-source-assess/SKILL.md",
+    "skills/report-source-assess/component.json",
+    "skills/report-source-assess/contract.json",
+    "skills/report-source-assess/provenance.json",
+    "skills/report-source-assess/references/execution-contract.md",
+    "skills/runtime-prepare/SKILL.md",
+    "skills/runtime-prepare/component.json",
+    "skills/runtime-prepare/contract.json",
+    "skills/validate_library.py",
+    "skills/validation.json",
+    "skills/valuation-challenge/LICENSE.local",
+    "skills/valuation-challenge/NOTICE",
+    "skills/valuation-challenge/SKILL.md",
+    "skills/valuation-challenge/component.json",
+    "skills/valuation-challenge/contract.json",
+    "skills/valuation-challenge/provenance.json",
+    "skills/valuation-challenge/references/execution-contract.md",
+    "skills/valuation-compose/LICENSE.local",
+    "skills/valuation-compose/NOTICE",
+    "skills/valuation-compose/SKILL.md",
+    "skills/valuation-compose/component.json",
+    "skills/valuation-compose/contract.json",
+    "skills/valuation-compose/provenance.json",
+    "skills/valuation-compose/references/execution-contract.md",
+    "skills/valuation-design/LICENSE.local",
+    "skills/valuation-design/NOTICE",
+    "skills/valuation-design/SKILL.md",
+    "skills/valuation-design/component.json",
+    "skills/valuation-design/contract.json",
+    "skills/valuation-design/provenance.json",
+    "skills/valuation-design/references/domain-artifacts.md",
+    "skills/valuation-design/references/execution-contract.md",
+    "skills/valuation-evidence/LICENSE.local",
+    "skills/valuation-evidence/NOTICE",
+    "skills/valuation-evidence/SKILL.md",
+    "skills/valuation-evidence/component.json",
+    "skills/valuation-evidence/contract.json",
+    "skills/valuation-evidence/provenance.json",
+    "skills/valuation-evidence/references/execution-contract.md",
+    "skills/valuation-wacc/LICENSE.local",
+    "skills/valuation-wacc/NOTICE",
+    "skills/valuation-wacc/SKILL.md",
+    "skills/valuation-wacc/component.json",
+    "skills/valuation-wacc/contract.json",
+    "skills/valuation-wacc/provenance.json",
+    "skills/valuation-wacc/references/domain-artifacts.md",
+    "skills/valuation-wacc/references/execution-contract.md",
+    "skills/valuation-wacc/scripts/calculate.py",
+    "skills/valuation-wacc/tests/test_calculate.py"
+  ],
+  "file_list_scope": "All delivered library files except this inventory itself; no root engine files.",
+  "entry_skill": "skills/professional-reports/SKILL.md",
+  "guide": "docs/library-guide.md",
+  "author_selfcheck": "docs/library-forward-check.json",
+  "production_quality_verified": false,
+  "refreshed_at": "2026-10-03T11:38:20.461000+00:00",
+  "component_count": 43,
+  "author_selfcheck_scope": "Historical forward-check preserved; current Registry structural validation and final-tests-core-v3 recorded in external development evidence."
+}

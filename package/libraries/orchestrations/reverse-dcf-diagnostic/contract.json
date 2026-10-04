@@ -1,0 +1,38 @@
+{
+  "id": "reverse-dcf-diagnostic",
+  "version": "0.1.0-candidate.2",
+  "status": "provisional",
+  "supported_case": "hyundai-2026-09-22",
+  "mandate": "Fixed-input conditional reverse DCF, one uniform nonfinancial revenue growth variable, independent report content review. Not a full company valuation or verified market close.",
+  "policy": [
+    {
+      "id": "RD-01",
+      "rule": "Use a pinned installed release and registered case inputs, recalculate every run; no previous body/input/PDF/results."
+    },
+    {
+      "id": "RD-02",
+      "rule": "Fresh coordinator, author and independent reviewer; fork_context false and completed close receipts."
+    },
+    {
+      "id": "RD-03",
+      "rule": "Protected twelve checks and five-axis rubric; 585s work cutoff, 600s overall; insufficient or failed is preserved."
+    },
+    {
+      "id": "RD-04",
+      "rule": "Use exactly bundled executive specimen scripts. No new design or design judging; all-page automatic technical checks and independent content review."
+    },
+    {
+      "id": "RD-05",
+      "rule": "Price, rights, NCI, leases and consensus limitations must retain their bound scope."
+    }
+  ],
+  "roles": {
+    "coordinator": "project-manager",
+    "author": "report-writer",
+    "reviewer": "investment-challenger"
+  },
+  "entry_skill": "reverse-dcf-report",
+  "protected_profile": "valuation-2026-10-03.1",
+  "host_requirements": "Actual native agent tools; browser sandbox approval if needed; host runtime config",
+  "generalization": "Common report lifecycle supports registered adapters; only this named Hyundai adapter evaluated in this candidate."
+}

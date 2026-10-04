@@ -1,0 +1,104 @@
+{
+  "scope": "Exact existing native report specimen scripts and assets; user requested direct reuse. No new design.",
+  "profile": "executive",
+  "members": [
+    {
+      "path": "SKILL.md",
+      "sha256": "c1ca9db7e7b49511d35053c1eb34aff3309fd9cb8f275a080d92b1665489a8d8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "1f5304f2480a0ec2868499d10e9c033f49a9015ced637829c1fbcb054f167e47"
+    },
+    {
+      "path": "assets/NanumGothic-OFL.txt",
+      "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f"
+    },
+    {
+      "path": "assets/NanumGothic.ttf",
+      "sha256": "76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31"
+    },
+    {
+      "path": "assets/OpenSans-OFL.txt",
+      "sha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602"
+    },
+    {
+      "path": "assets/OpenSans.ttf",
+      "sha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+    },
+    {
+      "path": "assets/base.css",
+      "sha256": "7a78029de95cbbf0ce5c5bc304eb591db1ff51f4395be00d4e69c212572f57ea"
+    },
+    {
+      "path": "assets/deloitte-dark.svg",
+      "sha256": "1a3a5298649010533118b562311b8931ae894d50f988ea34baa2feb0b7fc222a"
+    },
+    {
+      "path": "assets/deloitte.svg",
+      "sha256": "5bb42e99345cf26877a6460d85a8c40b2ce85e66d64a00307a9419364939ba08"
+    },
+    {
+      "path": "assets/editorial.css",
+      "sha256": "6e8eef90d527759b31ebf8c2b54af0f0071fe6ab644cda9c141b729613b366e4"
+    },
+    {
+      "path": "assets/executive.css",
+      "sha256": "7c9f2bef8fdde6459632a4a08c36e106670e617a9347f18cfa01f7c86be3dc4f"
+    },
+    {
+      "path": "assets/full-report.css",
+      "sha256": "02cf84f76b40564d0f2950828f5ca0e6e810a508aa2984540e63a0a15d5279fe"
+    },
+    {
+      "path": "assets/full-report.js",
+      "sha256": "847554d7c273a92231d934e01ecc001389675087a21b8f0c4b42c33fe7c064b2"
+    },
+    {
+      "path": "assets/transaction.css",
+      "sha256": "151a860798d82e687fca20e5b621512783d35afb5d826865fe2895babb9834da"
+    },
+    {
+      "path": "references/content-contract.md",
+      "sha256": "6acec9841a4ac5c0e926aa1b964e4777a6d330c75f6f467767a800e5798f7f8e"
+    },
+    {
+      "path": "references/design-judgment.md",
+      "sha256": "a3b6e8f1f19ea18433fd253bd759b91114f1ee69dd9e99348279a728466f94d6"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "740caa833e54bb6f12bbc5d80b7a89aefb37c245c5a9a671c83781040a528b80"
+    },
+    {
+      "path": "scripts/build.py",
+      "sha256": "23f4e1c390f78cfd4a420c3bd0ac8cc29b09f1e31daa1e77c34fb1ffd8ad7b4c"
+    },
+    {
+      "path": "scripts/full_report.py",
+      "sha256": "d78f9161712e6f0b0471b8bb0e3237f15c020b29fe9d30d78d3d7363c5b724b1"
+    },
+    {
+      "path": "scripts/html_dom.py",
+      "sha256": "583abdf4b4c2c3709ff9208d08a916356941fc4468ea2198fe6305a1e33474c1"
+    },
+    {
+      "path": "scripts/ledger.py",
+      "sha256": "e95b447e4c66eb563443c7447946897ad76977d8ebbcad5e3c0cec4423729af5"
+    },
+    {
+      "path": "scripts/prepare_report.py",
+      "sha256": "459d3ac4b544460ce20dcbe3d6dd4e82b0c8a42d47d775db86c68a845b870056"
+    },
+    {
+      "path": "scripts/render.mjs",
+      "sha256": "bd3acd5eebeabdb6d07379179c17d63e4c64fe41405d1d4e9db5c9d0c6088da9"
+    },
+    {
+      "path": "scripts/verify_report.py",
+      "sha256": "9782dc7637294d8476a64c611dd1836ce4159bbdbf09e27541ed0f406f08b6a7"
+    }
+  ],
+  "source": "vendored report-design snapshot",
+  "rights": "Existing locally supplied assets, font licenses retained; not third-party firm endorsement."
+}

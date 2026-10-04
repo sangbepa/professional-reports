@@ -1,0 +1,16 @@
+{
+  "id": "report-research-plan",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Plan material decision questions, discriminating evidence, calibration work and search stopping conditions for a framed report mandate.",
+  "capabilities": [
+    "research-planning",
+    "hypothesis-testing-plan",
+    "calibration-planning"
+  ],
+  "requires": [
+    "financial-report-research"
+  ],
+  "entrypoint": "SKILL.md"
+}

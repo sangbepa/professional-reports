@@ -1,0 +1,17 @@
+{
+  "id": "financial-report-writing",
+  "kind": "skill",
+  "version": "0.1.0-dev.2",
+  "status": "provisional",
+  "description": "Turn current research and reviewed analysis into expert-facing valuation, FDD, ESG, earnings or board documents. Build evidence-based arguments, explicit judgments and decision implications; return material research gaps rather than disguise them with confident prose.",
+  "capabilities": [
+    "purpose-led-writing",
+    "valuation-writing",
+    "fdd-writing",
+    "esg-writing",
+    "earnings-writing",
+    "board-writing"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "professional-reports/design-reference/1",
+  "lookup_root": "repository-root (supplied by consumer)",
+  "selected_profile": "transaction",
+  "artifact": {
+    "repository_relative_path": "output/report-outfit-samsung-20261003-01/release-v2/transaction/report.pdf",
+    "sha256": "3af77a2e4d5f1fafbeafc5cd63c00105416ba5db6ba8dc9e19f7450c517e8e3a"
+  },
+  "historical_review": {
+    "repository_relative_path": "output/report-outfit-samsung-20261003-01/review/design-selection-v3.json",
+    "sha256": "42f36fe800868633b0c74b9bab0cc7505cf627ee1091f837765e4d3244bbf13a",
+    "reported_selection_status": "accepted_presentation_selection_mandatory_fixes_closed",
+    "reported_scope": "bounded presentation reselection and mandatory-fix closure",
+    "reported_independence": "historical record assertion; not independently established by this packaging task",
+    "reported_model_and_effort": "unverified"
+  },
+  "verification_here": {
+    "pdf_hash_matches_historical_review": true,
+    "new_visual_inspection": false,
+    "new_independent_review": false,
+    "new_build_or_render": false
+  },
+  "reuse_limits": [
+    "External reference is not bundled; verify supplied file by hash before reuse.",
+    "No historical company values, heldout answers, branded assets or review pass is imported into a new run.",
+    "Changed content or artifacts require current substantive and presentation checks.",
+    "Historical nonmandatory presentation recommendations remain in the original review.",
+    "External report branding and data redistribution rights are not established by the local code license."
+  ],
+  "unresolved_capabilities": [
+    "current-host-native-Excel-if-required",
+    "current-company-financial-and-layout-approval"
+  ],
+  "package_status": "provisional",
+  "package_adapter": {
+    "path": "adapters/valuation/build.py",
+    "assets_manifest": "adapters/valuation/vendor/manifest.json",
+    "profiles": [
+      "transaction",
+      "executive",
+      "editorial"
+    ],
+    "status": "provisional; current run/tool/visual evidence required",
+    "historical_acceptance_transfers": false
+  }
+}

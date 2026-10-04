@@ -1,0 +1,11 @@
+.runtime/
+.state/
+.env
+.env.*
+!.env.example
+outputs/
+runs/
+__pycache__/
+*.pyc
+.DS_Store
+*.log

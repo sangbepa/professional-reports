@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/composition",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "perimeter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "information_cutoff": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "handoffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+          },
+          "artifact_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "acceptance": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "artifact_type",
+          "acceptance"
+        ],
+        "additionalProperties": true
+      },
+      "minItems": 0
+    },
+    "responsibilities": {
+      "type": "object",
+      "minProperties": 2,
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "integration_reviews": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "scope",
+    "perimeter",
+    "currency",
+    "information_cutoff",
+    "handoffs",
+    "responsibilities",
+    "integration_reviews",
+    "conflicts"
+  ],
+  "additionalProperties": true
+}

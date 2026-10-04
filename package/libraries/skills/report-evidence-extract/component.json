@@ -1,0 +1,16 @@
+{
+  "id": "report-evidence-extract",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Extract faithful observations and tables from assessed originals with exact locators, units, periods, perimeter and evidence classification.",
+  "capabilities": [
+    "evidence-extraction",
+    "table-transcription",
+    "evidence-classification"
+  ],
+  "requires": [
+    "financial-report-research"
+  ],
+  "entrypoint": "SKILL.md"
+}

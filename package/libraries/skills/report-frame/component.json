@@ -1,0 +1,16 @@
+{
+  "id": "report-frame",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Frame a report mandate into its reader decision, perimeter, information cutoff and deliverable acceptance conditions before research or drafting.",
+  "capabilities": [
+    "mandate-framing",
+    "deliverable-acceptance"
+  ],
+  "requires": [
+    "financial-report-research",
+    "financial-report-writing"
+  ],
+  "entrypoint": "SKILL.md"
+}

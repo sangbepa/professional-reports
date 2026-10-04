@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "id": "esgl-rule-learning-coverage",
+      "require_capabilities": [
+        "esg-learning-reconstruction",
+        "esg-learning-citation-mapping",
+        "esg-learning-review-planning"
+      ],
+      "require_review_roles": [
+        "source",
+        "judgment",
+        "document"
+      ],
+      "require_artifacts": [
+        "esg-learning-input",
+        "esg-learning-report",
+        "esg-learning-review-register",
+        "esg-learning-limitations"
+      ],
+      "on_unknown": "assessment"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "dcf-model",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Build a selected DCF from calibrated drivers, consistent cash flows and an explicit equity bridge; spreadsheet execution remains tool-dependent.",
+  "capabilities": [
+    "dcf-modeling",
+    "cashflow-projection",
+    "terminal-economics",
+    "sensitivity-analysis",
+    "equity-bridge-modeling"
+  ],
+  "requires": [
+    "valuation-design",
+    "valuation-wacc"
+  ],
+  "entrypoint": "SKILL.md"
+}

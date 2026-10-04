@@ -1,0 +1,19 @@
+{
+  "schema_version": "professional-reports/library/1",
+  "id": "orchestrations",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "component_kind": "orchestration",
+  "description": "Compose mandate-specific work and review dependencies; domain policy is distinct from execution state.",
+  "discovery": "*/component.json",
+  "component_ref": {
+    "required": [
+      "id",
+      "version",
+      "sha256"
+    ],
+    "additional_properties": false
+  },
+  "pinning": "Registry.reference(id) creates a reference from actual component membership and bytes; Registry.resolve(ref) validates the exact reference. Never invent hashes or fall back to latest.",
+  "ownership": "Component folders are candidate-owned; protected/evaluations profiles and release authority are main-engine-owned."
+}

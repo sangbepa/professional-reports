@@ -1,0 +1,18 @@
+{
+  "id": "valuation-v1",
+  "version": "1.0.0",
+  "authorization": "Initial baseline explicitly requested by user in accepted implementation plan; later changes require a distinct human approval receipt.",
+  "calibration_status": "pending_professional_anchor_and_grader_calibration",
+  "axes": ["evidence", "economics", "calculation", "decision_usefulness", "document_quality"],
+  "minimum_axis": 3,
+  "minimum_total": 17,
+  "required_review_roles": ["source", "model", "judgment", "document"],
+  "coverage": {"source": ["source_registry", "model_results"], "model": ["excel", "model_results"], "judgment": ["model_results", "html"], "document": ["html", "pdf"]},
+  "required_checks": ["source_cutoff", "numeric_replay", "spreadsheet_recalculate_save_reopen", "material_input_propagation", "claim_trace", "all_pdf_pages_visual"],
+  "required_artifacts": ["html", "pdf", "excel", "model_results", "source_registry", "workspec", "plan_diagram", "execution_diagram", "reproduction_guide"],
+  "report_deadline_seconds": 600,
+  "maximum_workers": 6,
+  "evaluator": {"model": "inherit-current", "reasoning": "calibration_required", "prompt_version": "1.0.0", "configuration_status": "unselected"},
+  "anchors": {"0": "Absent or materially wrong; conclusions cannot be used.", "1": "Major omissions or unsupported claims; substantial reconstruction needed.", "2": "Usable partial analysis with unresolved material limitations.", "3": "Decision-grade evidence, analysis and qualification; no unresolved material errors.", "4": "Professional reference standard exceeded on depth, alternatives and actionable conditions."},
+  "protected": true
+}

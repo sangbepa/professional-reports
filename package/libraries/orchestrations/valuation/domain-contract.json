@@ -1,0 +1,142 @@
+{
+  "id": "valuation-domain-contract",
+  "component_id": "valuation",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "execution_support": "complete",
+  "interface": {
+    "inputs": [
+      "mandate",
+      "company_profile",
+      "facts",
+      "fact_evidence"
+    ],
+    "mandate_fields": [
+      "subject_interest",
+      "purpose",
+      "reader_decision",
+      "valuation_date",
+      "information_cutoff",
+      "currency",
+      "value_basis",
+      "ownership_basis",
+      "requested_conclusion"
+    ],
+    "company_profile_fields": [
+      "stable_company_id",
+      "economic_units_with_stable_ids",
+      "legal_ownership_and_consolidation",
+      "financial_business_models",
+      "leases",
+      "equity_classes_and_dilution",
+      "funding_debt",
+      "associates"
+    ],
+    "fact_values": [
+      "boolean",
+      "null"
+    ],
+    "outputs": [
+      "required_work",
+      "gates",
+      "unknowns",
+      "method_decisions",
+      "capability_gaps"
+    ],
+    "required_work_fields": [
+      "id",
+      "goal",
+      "unit_ids",
+      "capabilities",
+      "outputs",
+      "basis_clause",
+      "dependencies"
+    ],
+    "gate_fields": [
+      "id",
+      "review_role",
+      "required_artifacts",
+      "status"
+    ],
+    "unknown_fields": [
+      "fact",
+      "rule_id",
+      "affected_unit_ids",
+      "reason",
+      "evidence",
+      "assessment_task_id",
+      "conclusion_restriction"
+    ],
+    "method_decision_fields": [
+      "unit_id",
+      "method",
+      "role",
+      "evidence_bindings",
+      "alternatives",
+      "rationale",
+      "limitations"
+    ],
+    "initial_gate_status": "pending",
+    "engine_plan_schema": "schemas/plan.schema.json",
+    "engine_meta_schema": "schemas/meta.schema.json",
+    "component_reference_fields": [
+      "id",
+      "version",
+      "sha256"
+    ]
+  },
+  "files": {
+    "semantic_policy": "POLICY.md",
+    "rule_semantics_and_ids": "INTEGRATION.md",
+    "rules": "plan-rules.json",
+    "artifact_catalog": "artifact-catalog.json",
+    "development_examples": "development/few-shot-cases.json"
+  },
+  "review_roles": [
+    "source",
+    "model",
+    "judgment",
+    "document"
+  ],
+  "host_ownership": {
+    "meta_component_id": "meta-orchestrator",
+    "runtime_component_id": "codex-native",
+    "owns": [
+      "component-resolution",
+      "native-dispatch",
+      "attempts",
+      "artifact-state",
+      "protected-evaluation-profiles",
+      "release"
+    ]
+  },
+  "provenance": {
+    "kind": "Adapted policy, not executed historical results.",
+    "repository_relative_sources": [
+      "valuation-workbench/skills/valuation-report/SKILL.md",
+      "valuation-workbench/skills/valuation-report/references/work-contract.md",
+      "valuation-workbench/skills/valuation-design/SKILL.md",
+      "valuation-workbench/skills/valuation-evidence/SKILL.md",
+      "valuation-workbench/skills/valuation-wacc/SKILL.md",
+      "valuation-workbench/skills/valuation-challenge/SKILL.md",
+      "valuation-workbench/skills/report-orchestrator/SKILL.md",
+      "valuation-workbench/skills/report-data-reconcile/SKILL.md",
+      "valuation-workbench/skills/report-claim-check/SKILL.md"
+    ]
+  },
+  "limitations": [
+    "Complete domain instruction coverage is not production quality verification; each run must establish actual tools, evidence, model, rendering and review coverage.",
+    "Rule engine checks plan-wide capability, review-role and output-name coverage, not unit-specific economic correctness or review completion.",
+    "Actual method providers, source access and independent review remain engagement-specific prerequisites."
+  ],
+  "production_quality_verified": false,
+  "report_mode_selection_allowed": true,
+  "execution_requirements": [
+    "exact-component-bindings",
+    "available-method-and-tool-capabilities",
+    "fresh-cutoff-and-source-snapshots",
+    "observed-calculation-and-rendering-results",
+    "actual-independent-source-model-judgment-document-reviews",
+    "host-release-gates"
+  ]
+}

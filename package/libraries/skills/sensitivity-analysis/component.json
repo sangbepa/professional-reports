@@ -1,0 +1,12 @@
+{
+  "id": "sensitivity-analysis",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Measure how bounded assumption changes affect current model outputs and decision boundaries.",
+  "capabilities": [
+    "sensitivity-analysis"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}

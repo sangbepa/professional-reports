@@ -1,0 +1,15 @@
+{
+  "id": "report-writer",
+  "description": "Writes decision-oriented report prose from accepted evidence and analysis while preserving qualifiers and traceability.",
+  "capabilities": [
+    "compose-evidence-linked-arguments",
+    "preserve-claim-qualifications",
+    "structure-reader-decisions",
+    "flag-writing-evidence-gaps"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

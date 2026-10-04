@@ -1,0 +1,15 @@
+{
+  "id": "design-editor",
+  "description": "Preserves a user-supplied approved design while rerendering current report content and inspecting the actual rendered pages.",
+  "capabilities": [
+    "preserve-supplied-approved-design",
+    "track-design-artifact-hashes",
+    "rerender-current-report-content",
+    "inspect-rendered-report-layout"
+  ],
+  "kind": "persona",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "requires": [],
+  "entrypoint": "ROLE.md"
+}

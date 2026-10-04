@@ -1,0 +1,5 @@
+# Official stable Python client, checked 2026-10-04:
+# https://duckdb.org/docs/stable/clients/python/overview
+duckdb==1.5.6
+pypdf==6.19.0
+jsonschema==4.26.0

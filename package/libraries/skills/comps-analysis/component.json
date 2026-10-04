@@ -1,0 +1,17 @@
+{
+  "id": "comps-analysis",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Construct economically comparable peer evidence and reproducible multiples without automatic method averaging or zero-filled missing data.",
+  "capabilities": [
+    "comparable-company-analysis",
+    "peer-selection",
+    "multiple-reconciliation"
+  ],
+  "requires": [
+    "valuation-design",
+    "report-data-reconcile"
+  ],
+  "entrypoint": "SKILL.md"
+}

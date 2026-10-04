@@ -1,0 +1,83 @@
+{
+  "id": "valuation-v1",
+  "version": "1.1.0",
+  "authorization": "Explicit user approval recorded in protected/reviewer-profiles/valuation-2026-10-03.1/approval.json; thresholds, required gates, artifacts, review roles and coverage unchanged.",
+  "calibration_status": "adopted_basis_calibration_pending",
+  "axes": [
+    "evidence",
+    "economics",
+    "calculation",
+    "decision_usefulness",
+    "document_quality"
+  ],
+  "minimum_axis": 3,
+  "minimum_total": 17,
+  "required_review_roles": [
+    "source",
+    "model",
+    "judgment",
+    "document"
+  ],
+  "coverage": {
+    "source": [
+      "source_registry",
+      "model_results"
+    ],
+    "model": [
+      "excel",
+      "model_results"
+    ],
+    "judgment": [
+      "model_results",
+      "html"
+    ],
+    "document": [
+      "html",
+      "pdf"
+    ]
+  },
+  "required_checks": [
+    "source_cutoff",
+    "numeric_replay",
+    "spreadsheet_recalculate_save_reopen",
+    "material_input_propagation",
+    "claim_trace",
+    "all_pdf_pages_visual"
+  ],
+  "required_artifacts": [
+    "html",
+    "pdf",
+    "excel",
+    "model_results",
+    "source_registry",
+    "workspec",
+    "plan_diagram",
+    "execution_diagram",
+    "reproduction_guide"
+  ],
+  "report_deadline_seconds": 600,
+  "maximum_workers": 6,
+  "evaluator": {
+    "model": "inherit-current",
+    "reasoning": "high",
+    "prompt_version": "candidate-2026-10-03.2",
+    "configuration_status": "approved_for_calibration"
+  },
+  "anchors": {
+    "0": "Absent or materially wrong; conclusions cannot be used.",
+    "1": "Major omissions or unsupported claims; substantial reconstruction needed.",
+    "2": "Usable partial analysis with unresolved material limitations.",
+    "3": "Decision-grade evidence, analysis and qualification; no unresolved material errors.",
+    "4": "Professional reference standard exceeded on depth, alternatives and actionable conditions."
+  },
+  "protected": true,
+  "reviewer_profile": {
+    "path": "protected/reviewer-profiles/valuation-2026-10-03.1",
+    "approval_sha256": "a4d42c00f0a37827dc341fc75b4347c8eae6376d21fff35be759aecb67e6b4c6",
+    "bundle_sha256": "fb1dfa203cf0c1ece551bec2a8f14981c59e6e6fd55d8c63498a2b19dd94b89a",
+    "config_sha256": "7d0967724bd276ba959f5bfc8fd0a03b2e3844886b2e8bf1aef1e8707178b496",
+    "anchors_sha256": "7b36a8e132338778a5c65bd1445a47a2bc1d345b6339c22d1a7c27eb8fec067a",
+    "instructions_sha256": "f2aa12c860b195c03941d3ca2960b637cd8e5ccfd68441eb7babcca91a6a7200",
+    "authorization_interpretation": "Preserved candidate banners are historical. This explicit approval adopts their exact contents for calibration only; professional calibration and release status remain pending."
+  }
+}

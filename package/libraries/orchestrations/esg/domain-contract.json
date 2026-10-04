@@ -1,0 +1,88 @@
+{
+  "id": "esg-domain-contract",
+  "component_id": "esg",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "execution_support": "planning-only",
+  "production_quality_verified": false,
+  "production_report_execution_allowed": false,
+  "files": {
+    "policy": "POLICY.md",
+    "rules": "plan-rules.json"
+  },
+  "interface": {
+    "inputs": [
+      "mandate",
+      "company_profile",
+      "facts",
+      "evidence_access_manifest"
+    ],
+    "mandate_fields": [
+      "purpose",
+      "entity_sites_value_chain",
+      "reporting_period",
+      "information_cutoff",
+      "framework_and_jurisdiction",
+      "materiality_basis",
+      "operational_record_access"
+    ],
+    "outputs": [
+      "required_work",
+      "gates",
+      "unknowns",
+      "capability_gaps"
+    ],
+    "required_work": [
+      "materiality-and-boundary-plan",
+      "metric-provenance-test-plan",
+      "counterevidence-inquiry-plan",
+      "framework-and-access-gaps"
+    ],
+    "gates": [
+      {
+        "id": "esg-gate-scope",
+        "status": "pending",
+        "review_role": "judgment"
+      },
+      {
+        "id": "esg-gate-evidence-access",
+        "status": "pending",
+        "review_role": "source"
+      },
+      {
+        "id": "esg-gate-production-execution",
+        "status": "blocked",
+        "reason": "Planning-only domain; no report-mode execution support."
+      }
+    ],
+    "unknown_fields": [
+      "question",
+      "affected_work",
+      "missing_evidence",
+      "next_assessment",
+      "conclusion_restriction"
+    ],
+    "engine_node_output_names": [
+      "esg-research-plan",
+      "esg-access-and-capability-gaps"
+    ],
+    "component_reference_fields": [
+      "id",
+      "version",
+      "sha256"
+    ]
+  },
+  "basis_clauses": [
+    "esg-rule-planning",
+    "esg-policy-production-block"
+  ],
+  "host_ownership": {
+    "meta_component_id": "meta-orchestrator",
+    "runtime_component_id": "codex-native"
+  },
+  "limitations": [
+    "Planning instructions do not implement a completed domain engagement, calculations, assurance or investment approval.",
+    "Unknown facts remain unknown; no access is not evidence of no issue.",
+    "Any future execution support requires explicit versioned domain/provider coverage and actual review; a valuation adapter does not silently confer it."
+  ]
+}

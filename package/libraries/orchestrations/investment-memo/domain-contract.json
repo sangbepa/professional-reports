@@ -1,0 +1,88 @@
+{
+  "id": "investment-memo-domain-contract",
+  "component_id": "investment-memo",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "execution_support": "planning-only",
+  "production_quality_verified": false,
+  "production_report_execution_allowed": false,
+  "files": {
+    "policy": "POLICY.md",
+    "rules": "plan-rules.json"
+  },
+  "interface": {
+    "inputs": [
+      "mandate",
+      "company_profile",
+      "facts",
+      "evidence_access_manifest"
+    ],
+    "mandate_fields": [
+      "decision_owner",
+      "investment_instrument",
+      "subject_interest",
+      "decision_date",
+      "information_cutoff",
+      "risk_budget_if_supplied",
+      "available_analysis"
+    ],
+    "outputs": [
+      "required_work",
+      "gates",
+      "unknowns",
+      "capability_gaps"
+    ],
+    "required_work": [
+      "investment-thesis-test-plan",
+      "downside-and-catalyst-inquiry-plan",
+      "valuation-handoff-plan",
+      "decision-and-evidence-gaps"
+    ],
+    "gates": [
+      {
+        "id": "investment-memo-gate-scope",
+        "status": "pending",
+        "review_role": "judgment"
+      },
+      {
+        "id": "investment-memo-gate-evidence-access",
+        "status": "pending",
+        "review_role": "source"
+      },
+      {
+        "id": "investment-memo-gate-production-execution",
+        "status": "blocked",
+        "reason": "Planning-only domain; no report-mode execution support."
+      }
+    ],
+    "unknown_fields": [
+      "question",
+      "affected_work",
+      "missing_evidence",
+      "next_assessment",
+      "conclusion_restriction"
+    ],
+    "engine_node_output_names": [
+      "investment-memo-research-plan",
+      "investment-memo-access-and-capability-gaps"
+    ],
+    "component_reference_fields": [
+      "id",
+      "version",
+      "sha256"
+    ]
+  },
+  "basis_clauses": [
+    "investment-memo-rule-planning",
+    "investment-memo-policy-production-block"
+  ],
+  "host_ownership": {
+    "meta_component_id": "meta-orchestrator",
+    "runtime_component_id": "codex-native"
+  },
+  "limitations": [
+    "Planning instructions do not implement a completed domain engagement, calculations, assurance or investment approval.",
+    "Unknown facts remain unknown; no access is not evidence of no issue.",
+    "Any future execution support requires explicit versioned domain/provider coverage and actual review; a valuation adapter does not silently confer it."
+  ]
+}

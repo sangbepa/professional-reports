@@ -1,0 +1,16 @@
+{
+  "id": "report-source-assess",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Assess originals, provenance, period and information-set availability of candidate report sources; quarantine uncertain timing without judging assumption plausibility.",
+  "capabilities": [
+    "source-assessment",
+    "information-cutoff-validation",
+    "source-provenance"
+  ],
+  "requires": [
+    "financial-report-research"
+  ],
+  "entrypoint": "SKILL.md"
+}

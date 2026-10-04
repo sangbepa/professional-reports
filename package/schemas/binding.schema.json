@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://professional-reports.local/schemas/v1/binding",
+  "type": "object",
+  "properties": {
+    "attempt_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "agent_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "enum": [
+        "codex-native",
+        "deterministic",
+        "human"
+      ]
+    },
+    "instruction_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "requested": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resolved": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "requested",
+        "resolved",
+        "observed"
+      ],
+      "additionalProperties": true
+    },
+    "reasoning": {
+      "type": "object",
+      "properties": {
+        "requested": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resolved": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "requested",
+        "resolved",
+        "observed"
+      ],
+      "additionalProperties": true
+    },
+    "host_receipt": {
+      "type": "object",
+      "properties": {
+        "tool": {
+          "type": "string",
+          "minLength": 1
+        },
+        "response": {
+          "type": "object"
+        },
+        "captured_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "tool",
+        "response",
+        "captured_at"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "attempt_id",
+    "agent_id",
+    "provider",
+    "instruction_sha256",
+    "model",
+    "reasoning",
+    "host_receipt"
+  ],
+  "additionalProperties": true
+}

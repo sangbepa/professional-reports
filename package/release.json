@@ -1,0 +1,2858 @@
+{
+  "schema_version": "professional-release/1",
+  "name": "professional-reports",
+  "version": "0.4.0-dev.2",
+  "channel": "development",
+  "created_at": "2026-10-04T04:56:07.100313+00:00",
+  "compatibility": {
+    "python": ">=3.11",
+    "host": "Codex native tool bridge v1"
+  },
+  "components": [
+    {
+      "id": "esg",
+      "version": "0.1.0-dev.1",
+      "sha256": "881bd5a325d3674c2f9056b5d42a01c5a3b2399cd1686891c9ad9345c3fd25d5",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "esg-planning"
+      ],
+      "description": "ESG research and readiness planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "esg-learning-report",
+      "version": "0.1.0-dev.1",
+      "sha256": "5e0f7a854d3cebaa8b0081cb8d3250347b6da7ebc9347c1a8ada1cc498a943c2",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "esg-learning-orchestration"
+      ],
+      "description": "Public-source teaching reconstruction through a standalone development adapter; no production ESG engagement or assurance."
+    },
+    {
+      "id": "fdd",
+      "version": "0.1.0-dev.1",
+      "sha256": "a66bc2323cca6db8ea559a5789223aa5ac283945e241839ac09098ddd99c60b7",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "fdd-planning"
+      ],
+      "description": "Financial due diligence planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "investment-memo",
+      "version": "0.1.0-dev.1",
+      "sha256": "240616f9f697634ed1fd161d2a79acfe15965e50066e68a2659adfaf7de84e62",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "investment-memo-planning"
+      ],
+      "description": "Investment memo planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "market-research",
+      "version": "0.1.0-dev.1",
+      "sha256": "c5d592d7c577b740e87d11d8bc6273cc9ea5e3b797592f6216e048f16d997cfa",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "market-research-planning"
+      ],
+      "description": "Market research planning contract only; production report execution is unsupported."
+    },
+    {
+      "id": "meta-orchestrator",
+      "version": "0.1.0-dev.1",
+      "sha256": "6764cee2d049fba978572f459dd844d62c0e813920d1a9ac89012b4fa66863e3",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "meta-planning",
+        "capability-routing",
+        "criteria-preservation",
+        "dependency-planning",
+        "review-routing"
+      ],
+      "description": "Compile an evidence-led, mandate-specific plan, allocate native expert agents, and route revision and independent review without changing approved criteria."
+    },
+    {
+      "id": "reverse-dcf-diagnostic",
+      "version": "0.1.0-candidate.3",
+      "sha256": "874178b8702c8dd899a869c3721712a5755c93a2ab1f8ca5abdc0e81e1a6aa77",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "conditional-reverse-dcf-report"
+      ],
+      "description": "Bounded fixed-input reverse DCF report through native short-session workers and existing specimen publication scripts."
+    },
+    {
+      "id": "valuation",
+      "version": "0.1.0-dev.1",
+      "sha256": "5e3eafaa9d99d64b369cdea806db68193368b0c3218fced044f57c529079d710",
+      "kind": "orchestration",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-domain-contract",
+        "contingent-valuation-orchestration",
+        "valuation-development-examples"
+      ],
+      "description": "Provisional contingent valuation execution-domain contract, routed through bound native skills and host adapters with per-run evidence, capability and review gates."
+    },
+    {
+      "id": "accounting-reconciler",
+      "version": "0.1.0-dev.1",
+      "sha256": "ad2790df507bf22c2b269c4ddc6a185eace50c3a8ee8e051fa469551f96c30cd",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "reconcile-accounting-perimeters",
+        "trace-metric-bridges",
+        "detect-double-attribution",
+        "record-unexplained-differences"
+      ],
+      "description": "Builds traceable bridges across accounting definitions, periods, currencies, and entity perimeters."
+    },
+    {
+      "id": "design-editor",
+      "version": "0.1.0-dev.1",
+      "sha256": "e7d908af0c55b962dcd2a7fdd9e546066fe60e89b71e3cfffea4f4478c80a904",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "preserve-supplied-approved-design",
+        "track-design-artifact-hashes",
+        "rerender-current-report-content",
+        "inspect-rendered-report-layout"
+      ],
+      "description": "Preserves a user-supplied approved design while rerendering current report content and inspecting the actual rendered pages."
+    },
+    {
+      "id": "evidence-researcher",
+      "version": "0.1.0-dev.1",
+      "sha256": "f38bb6dcfd0e8b7bff838c536793142f1521f6b70ec9645f0da106221e8bf1a5",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "plan-question-led-research",
+        "acquire-original-evidence",
+        "record-source-provenance",
+        "track-research-gaps"
+      ],
+      "description": "Acquires decision-relevant original evidence with provenance, exact locators, and explicit collection gaps."
+    },
+    {
+      "id": "finance-analyst",
+      "version": "0.1.0-dev.1",
+      "sha256": "fd9be97b671f0548ad348b74dc754d0b5289d188cdb82de70b94974de3493eee",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "select-evidence-fit-valuation-methods",
+        "design-operating-scenarios",
+        "maintain-value-bridges",
+        "specify-model-sensitivities"
+      ],
+      "description": "Designs reproducible valuation methods, operating scenarios, and value bridges consistent with supplied evidence."
+    },
+    {
+      "id": "industry-specialist",
+      "version": "0.1.0-dev.1",
+      "sha256": "d91c57f3e5307f2439c17f2661bbee5ac9d555fc84ef8221695d00fb0f3020fd",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "analyze-industry-driver-evidence",
+        "challenge-peer-comparability",
+        "identify-cycle-exposure",
+        "test-operating-constraints"
+      ],
+      "description": "Tests business-driver explanations against industry structure, cycles, competitive behavior, and operating constraints."
+    },
+    {
+      "id": "investment-challenger",
+      "version": "0.1.0-dev.1",
+      "sha256": "684256520dd5997ebe97711c1a40098fb795750e4ef89e00fe2fd8040c412d33",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "challenge-investment-thesis",
+        "test-downside-mechanisms",
+        "surface-disconfirming-evidence",
+        "bound-decision-conclusions"
+      ],
+      "description": "Challenges investment conclusions through competing hypotheses, downside mechanisms, and explicit judgment limits."
+    },
+    {
+      "id": "project-manager",
+      "version": "0.1.0-dev.2",
+      "sha256": "5ebb965373522689ee1df41e629022422d17b43b89d11f57f11f1af7b0554e2e",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "frame-reader-decision",
+        "define-evidence-perimeter",
+        "surface-mandate-ambiguity",
+        "propose-acceptance-criteria",
+        "coordinate-role-handoffs",
+        "track-plan-dependencies",
+        "escalate-decision-blockers"
+      ],
+      "description": "Frames the reader decision and coordinates evidence-led plans, dependencies, and handoffs without preselecting conclusions or granting review approval."
+    },
+    {
+      "id": "report-writer",
+      "version": "0.1.0-dev.1",
+      "sha256": "15c468bfa836074fe79991721d57c4c87c792f23f87a8c414f26e32bc7ade923",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "compose-evidence-linked-arguments",
+        "preserve-claim-qualifications",
+        "structure-reader-decisions",
+        "flag-writing-evidence-gaps"
+      ],
+      "description": "Writes decision-oriented report prose from accepted evidence and analysis while preserving qualifiers and traceability."
+    },
+    {
+      "id": "risk-assessor",
+      "version": "0.1.0-dev.1",
+      "sha256": "bdbd18075f0f128a5d44bed26e2ad29c1e3aeec0f3bb1cf6873778ea8dd9d72b",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "independent-risk-assessment",
+        "risk-change-observation"
+      ],
+      "description": "Independently assesses task failure risks and evidence changes without authorizing reduced controls."
+    },
+    {
+      "id": "runtime-engineer",
+      "version": "0.1.0-dev.1",
+      "sha256": "fded27c6a45dbd24713245fd6e7517030fe716cea9002aa172ab69bc931b87e2",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "environment-design",
+        "dependency-resolution",
+        "runtime-smoke-testing"
+      ],
+      "description": "Verify and provision the smallest reproducible environment required by actual work."
+    },
+    {
+      "id": "source-critic",
+      "version": "0.1.0-dev.1",
+      "sha256": "a23a23338129c94c0348d6ce8fd57b96193da659bf275896321bb1f4435d51e1",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "assess-original-provenance",
+        "check-information-cutoff",
+        "challenge-source-coverage",
+        "quarantine-uncertain-evidence"
+      ],
+      "description": "Challenges provenance, information timing, authority, and coverage of evidence independently from its collection."
+    },
+    {
+      "id": "supervisor",
+      "version": "0.1.0-dev.2",
+      "sha256": "f31cba866509418e6513516d206ec653dc82d2003eb222ab6ec9474a8a3021ce",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "verify-review-independence",
+        "review-source-claim-fidelity",
+        "review-arithmetic-evidence",
+        "review-economic-reasoning",
+        "review-rendered-design",
+        "preserve-review-criteria"
+      ],
+      "description": "Reviews exact artifact revisions independently from their producers across separately evidenced source, arithmetic, economics, and design channels."
+    },
+    {
+      "id": "valuation-specialist",
+      "version": "0.1.0-dev.1",
+      "sha256": "f42018cdb95372e0faae12a093ca450534bf867caa0c2f4ba88b9cc827d49fe0",
+      "kind": "persona",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-judgment",
+        "method-reconciliation",
+        "capital-cost-judgment"
+      ],
+      "description": "Translate reconciled business economics into methods, cash flows and attributable equity value."
+    },
+    {
+      "id": "codex-native",
+      "version": "0.2.0-dev.1",
+      "sha256": "e02a56b86dc851fc94419d711f9f69b0e5a7b8a998329e27634ba2e9e42ea870",
+      "kind": "runtime",
+      "status": "provisional",
+      "capabilities": [
+        "native-agent-dispatch",
+        "host-result-binding",
+        "reasoning-allocation",
+        "concurrency-control"
+      ],
+      "description": "Task-scoped native Codex workers with fresh independent review rounds, inherited model, observed session limits and actual spawn/close receipts."
+    },
+    {
+      "id": "valuation-native",
+      "version": "0.1.0-dev.1",
+      "sha256": "e9272332eb88f7851f1ab880b52b02d8b3346107669c54f5d4c419078a0a1f10",
+      "kind": "runtime",
+      "status": "provisional",
+      "capabilities": [
+        "deterministic-calculation",
+        "xlsx-authoring",
+        "pdf-rendering-recipe",
+        "environment-smoke-testing"
+      ],
+      "description": "Pinned native Python/model/XLSX/PDF environment recipe with measured probes; no assumed Docker or external API."
+    },
+    {
+      "id": "audit-xls",
+      "version": "0.1.0-dev.1",
+      "sha256": "ed20eeff2d57b860ec67abfd2b463bef5bad696b7b2862dd5ddacae450ba4d45",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "spreadsheet-audit",
+        "formula-inspection",
+        "financial-model-integrity",
+        "recalculation-evidence-assessment"
+      ],
+      "description": "Inspect spreadsheet formulas and financial-model integrity with explicit scope, recalculation limits and artifact-bound findings."
+    },
+    {
+      "id": "comps-analysis",
+      "version": "0.1.0-dev.1",
+      "sha256": "63d0ddc950f1da2bfb431673e5f3fee5c28b0d1e0569b202f658350216830ecf",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "comparable-company-analysis",
+        "peer-selection",
+        "multiple-reconciliation"
+      ],
+      "description": "Construct economically comparable peer evidence and reproducible multiples without automatic method averaging or zero-filled missing data."
+    },
+    {
+      "id": "control-test",
+      "version": "0.1.0-dev.1",
+      "sha256": "bc53f25c8dd46e546b3b27ea74257d84426e50d209a2d39bf01c3fb02a4abcef",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "control-testing"
+      ],
+      "description": "Test specified controls against current risk objects and retain execution and exception evidence."
+    },
+    {
+      "id": "cost-analysis",
+      "version": "0.1.0-dev.1",
+      "sha256": "b714b32d48d9176a00ce637c3bfdca01e0f5509a6294050072e138bdd45e35bb",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "task-cost-analysis"
+      ],
+      "description": "Compare evidenced setup and per-company task costs without reducing protected review requirements."
+    },
+    {
+      "id": "dcf-model",
+      "version": "0.1.0-dev.1",
+      "sha256": "a2f3b69b5aebf12d1de85857f7eb60dbd407294d362e9013356ae5259597bb4f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "dcf-modeling",
+        "cashflow-projection",
+        "terminal-economics",
+        "sensitivity-analysis",
+        "equity-bridge-modeling"
+      ],
+      "description": "Build a selected DCF from calibrated drivers, consistent cash flows and an explicit equity bridge; spreadsheet execution remains tool-dependent."
+    },
+    {
+      "id": "esg-learning-report-method",
+      "version": "0.1.0-dev.1",
+      "sha256": "08dcfe195402567bad73af21669c4ccc6206302dd443910608d70eec161174c9",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "esg-learning-reconstruction",
+        "esg-learning-citation-mapping",
+        "esg-learning-review-planning"
+      ],
+      "description": "Prepare cited ESG learning inputs, reconstruct disclosures, and define independent source, judgment and document review coverage."
+    },
+    {
+      "id": "financial-equity-valuation",
+      "version": "0.1.0-dev.1",
+      "sha256": "b9792e44bd3576c0972e207db0e5e9ced834b1b98eab8fde7f7717ecb45baa7b",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "financial-equity-valuation",
+        "financial-business-classification",
+        "regulatory-capital-assessment",
+        "dividend-discount-assessment",
+        "residual-income-assessment",
+        "financial-debt-perimeter"
+      ],
+      "description": "Value balance-sheet financial businesses using supported equity cash flows, distributions or residual income and explicit prudential capital constraints."
+    },
+    {
+      "id": "financial-report-research",
+      "version": "0.1.0-dev.1",
+      "sha256": "49a47732ee21222fe7e1d13415edc2b8bc88e52e3376b98f465ff9092023f722",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "purpose-led-research",
+        "valuation-research",
+        "fdd-research",
+        "esg-research",
+        "earnings-research",
+        "board-research"
+      ],
+      "description": "Design and conduct question-led evidence research for valuation, financial due diligence, ESG, earnings and board reports. Use to substantiate material assumptions, investigate conflicting evidence and identify what a decision-ready report can support."
+    },
+    {
+      "id": "financial-report-writing",
+      "version": "0.1.0-dev.2",
+      "sha256": "fee0fe0a33d082379effa3bf5d47629068e1223a94d59e7395059e12a336ad8f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "purpose-led-writing",
+        "valuation-writing",
+        "fdd-writing",
+        "esg-writing",
+        "earnings-writing",
+        "board-writing"
+      ],
+      "description": "Turn current research and reviewed analysis into expert-facing valuation, FDD, ESG, earnings or board documents. Build evidence-based arguments, explicit judgments and decision implications; return material research gaps rather than disguise them with confident prose."
+    },
+    {
+      "id": "report-argument",
+      "version": "0.1.0-dev.1",
+      "sha256": "e2406c8201f51b07053ad5bc7741688be8b0e78be9c1af9fc98a4ac7435918dd",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "argument-synthesis",
+        "counterargument-assessment"
+      ],
+      "description": "Synthesize accepted findings into decision arguments with support, credible counterarguments, bound consequences and explicit judgment limits."
+    },
+    {
+      "id": "report-claim-check",
+      "version": "0.1.0-dev.1",
+      "sha256": "f5b716938b516b4593ea0728349a2a0f909267fef579232f44fc42d15546e892",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "claim-checking",
+        "citation-entailment",
+        "review-coverage-recording"
+      ],
+      "description": "Check report claim meaning, numbers, qualifications and citations independently against originals and current model artifacts, recording actual review scope and channel."
+    },
+    {
+      "id": "report-data-reconcile",
+      "version": "0.1.0-dev.1",
+      "sha256": "e72d76a3466d73f276d328c0d8ece8332cc0e3a308a8400089f6ab2cf587837f",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "data-reconciliation",
+        "segment-reconciliation",
+        "consolidation-policy",
+        "lease-policy",
+        "nci-policy",
+        "share-rights-policy",
+        "metric-binding",
+        "duplicate-attribution-detection"
+      ],
+      "description": "Align evidence and supplied model metrics across calendars, currencies, scale and perimeter, preserving bridges and detecting duplicated attribution."
+    },
+    {
+      "id": "report-design",
+      "version": "0.1.0-dev.2",
+      "sha256": "c7a80d4df040fff50a9cd9528b0202f743bcf2765cc3de01582494eda960b797",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "report-design-reference",
+        "design-handoff",
+        "presentation-acceptance-method"
+      ],
+      "description": "Bind current valuation content to packaged neutral report constructors; verify actual render and independent presentation acceptance."
+    },
+    {
+      "id": "report-evidence-extract",
+      "version": "0.1.0-dev.1",
+      "sha256": "bc92ceb9a8bc315b0a14003223e3ef83c714507b5f3b632c6868430230047bc9",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "evidence-extraction",
+        "table-transcription",
+        "evidence-classification"
+      ],
+      "description": "Extract faithful observations and tables from assessed originals with exact locators, units, periods, perimeter and evidence classification."
+    },
+    {
+      "id": "report-findings",
+      "version": "0.1.0-dev.1",
+      "sha256": "2bdb956218a9be98b904c739ed023dba8402fadea1cf22fa3c03c0077647f430",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "finding-inference",
+        "conclusion-strength-assessment"
+      ],
+      "description": "Infer scoped findings from reconciled evidence, separating observed or calculated results from explanations and the conclusion strength the evidence permits."
+    },
+    {
+      "id": "report-frame",
+      "version": "0.1.0-dev.1",
+      "sha256": "5582e8e0695925404873a9e5dc5367f3c9f886533031488a9cab47ec308885b0",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "mandate-framing",
+        "deliverable-acceptance"
+      ],
+      "description": "Frame a report mandate into its reader decision, perimeter, information cutoff and deliverable acceptance conditions before research or drafting."
+    },
+    {
+      "id": "report-outline",
+      "version": "0.1.0-dev.1",
+      "sha256": "7087d0448adda6c40faf4ad880be62956403e4ae626fc48383a297e8d25429e3",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "reader-outline",
+        "argument-coverage"
+      ],
+      "description": "Order accepted report arguments and findings for the specified expert reader and decision, without imposing a universal table of contents."
+    },
+    {
+      "id": "report-research-plan",
+      "version": "0.1.0-dev.1",
+      "sha256": "2c5516fe8c244920e4ba15ab5e1c7fcb51586e0272d74175b929569eef08e332",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "research-planning",
+        "hypothesis-testing-plan",
+        "calibration-planning"
+      ],
+      "description": "Plan material decision questions, discriminating evidence, calibration work and search stopping conditions for a framed report mandate."
+    },
+    {
+      "id": "report-section-write",
+      "version": "0.1.0-dev.1",
+      "sha256": "b21b8939aaf2ddf73accb617a0d284f0dfbd23e130f73dd708341d4fa57c05f2",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "section-writing",
+        "claim-binding"
+      ],
+      "description": "Write expert report sections from current accepted arguments, preserving qualifications and binding all metrics without adding numbers or changing calculations."
+    },
+    {
+      "id": "report-source-assess",
+      "version": "0.1.0-dev.1",
+      "sha256": "b3e998fa177f024caf24763a796fc3a7196e4e7e90062a63bdc47f88f23c5562",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "source-assessment",
+        "information-cutoff-validation",
+        "source-provenance"
+      ],
+      "description": "Assess originals, provenance, period and information-set availability of candidate report sources; quarantine uncertain timing without judging assumption plausibility."
+    },
+    {
+      "id": "reverse-dcf-report",
+      "version": "0.1.0-candidate.3",
+      "sha256": "260dd298f0e4cc05d1c5aacc05023baad6232407bf17cf5407ac93a879c1ceba",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "reverse-dcf-report-build",
+        "short-native-report-sessions"
+      ],
+      "description": "Registered-case reverse DCF author/reviewer/publication path."
+    },
+    {
+      "id": "review-design",
+      "version": "0.1.0-dev.1",
+      "sha256": "3fc40fa0ef3a76b92216c897d848b9a9b12a4cb41e34cc62bedcf36dfda8c823",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "risk-review-design"
+      ],
+      "description": "Design independent review coverage for task risks while preserving existing acceptance criteria."
+    },
+    {
+      "id": "risk-frame",
+      "version": "0.1.0-dev.1",
+      "sha256": "9ae38ab30bf4131eb471a58d6f412eaf5277b7547bb2b10c52b17a33b7e0c005",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "risk-framing"
+      ],
+      "description": "Frame task-specific failure risks from supplied evidence and a shadow or explicitly adopted profile."
+    },
+    {
+      "id": "runtime-prepare",
+      "version": "0.1.0-dev.1",
+      "sha256": "57918a9155b85177904bbd2b2123856b306b150ebc16dd3abb59f1a7d3f5ad81",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "environment-design",
+        "dependency-resolution",
+        "runtime-smoke-testing"
+      ],
+      "description": "Resolve, provision if authorized, and smoke-test a report execution environment; preserve its actual dependency manifest."
+    },
+    {
+      "id": "sensitivity-analysis",
+      "version": "0.1.0-dev.1",
+      "sha256": "3ca91607d6f6ce0901042c01f4f4ead4663a3d0905819c7592410acd4b9053ea",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "sensitivity-analysis"
+      ],
+      "description": "Measure how bounded assumption changes affect current model outputs and decision boundaries."
+    },
+    {
+      "id": "valuation-challenge",
+      "version": "0.1.0-dev.1",
+      "sha256": "b52f26cb5d7e92c218e9710bd7c7ed1fe2350f4b00a81ba9cf4587d8ceda3512",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-challenge",
+        "economic-assumption-challenge",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy"
+      ],
+      "description": "Independently challenge valuation evidence, maintainable economics, method selection, equity adjustments and the resulting investment or board conclusion."
+    },
+    {
+      "id": "valuation-class-cashflows",
+      "version": "0.1.0-dev.1",
+      "sha256": "17cb7b5742c31a0bfbebf09cfafa415bf6d6a38c48716eba67dd947195b164be",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "class-owner-cashflows",
+        "class-parent-reconciliation"
+      ],
+      "description": "Value explicit dated current-holder distributions, funding and continuing claims for distinct share classes with independent reconciliation."
+    },
+    {
+      "id": "valuation-compose",
+      "version": "0.1.0-dev.2",
+      "sha256": "8ab481d8799a322b41b934e6d80a7be59c98e789eadf2b8080abba8b9f1b9c9a",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-content-composition",
+        "model-to-report-binding"
+      ],
+      "description": "Bind current valuation arguments and model metrics into a content packet and pass presentation to an explicitly verified renderer."
+    },
+    {
+      "id": "valuation-design",
+      "version": "0.1.0-dev.1",
+      "sha256": "16d6dd9d3acaf7ab14d92846dff1370e02f80626b4a057dd1e12689314577471",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-method-selection",
+        "scenario-design",
+        "segment-reconciliation",
+        "nci-policy",
+        "consolidation-policy",
+        "lease-policy",
+        "share-rights-policy",
+        "equity-bridge-design",
+        "method-reconciliation",
+        "financial-equity-assessment",
+        "asset-nav-assessment",
+        "distress-assessment",
+        "early-stage-assessment",
+        "sotp-assessment",
+        "assumption-calibration",
+        "cycle-normalization",
+        "associate-attribution",
+        "financial-debt-perimeter",
+        "intercompany-elimination",
+        "dilution-analysis",
+        "reverse-dcf-assessment"
+      ],
+      "description": "Select defensible valuation methods, design operating scenarios, reconcile enterprise-to-equity adjustments and explain differences between valuation indications."
+    },
+    {
+      "id": "valuation-evidence",
+      "version": "0.1.0-dev.2",
+      "sha256": "c214b082711c43c2c0cc4906835009bea7aca09167f08dd9e586115dc98f0a54",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "valuation-evidence",
+        "segment-reconciliation",
+        "source-acquisition-method"
+      ],
+      "description": "Acquire and normalize source evidence for company valuation, with publication cutoffs, original locators, units, financial reconciliations and frozen snapshots."
+    },
+    {
+      "id": "valuation-wacc",
+      "version": "0.1.0-dev.1",
+      "sha256": "7e10bb944ddd32f2a65e03cf77cfcce077e945f384833daf6920b9e16bfe01ad",
+      "kind": "skill",
+      "status": "provisional",
+      "capabilities": [
+        "wacc-calculation",
+        "capital-cost-policy-check"
+      ],
+      "description": "Calculate a reproducible WACC from selected capital-market inputs and consistent market-value weights. Use as an isolated discount-rate work unit within an enterprise valuation."
+    }
+  ],
+  "members": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "be4c484deda2cad4582f9c73d4e3acaf9ad9082aa231bfffdba352f3b6fda251"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9bbf85af20ae6301484c4ef5fa40d316869ae7d5c5b0121d072bd44d0059aff7"
+    },
+    {
+      "path": "adapters/esg-system/requirements.txt",
+      "sha256": "e7c0e4b071ef09880f311542e8b94f672bd8b2c4dd8a50321c3f913778c3062b"
+    },
+    {
+      "path": "adapters/esg/README.md",
+      "sha256": "3682df62866c4a56aa6dce6c003dc4ee90943d98f08306c83b7e066cf56347b7"
+    },
+    {
+      "path": "adapters/esg/assets/NanumGothic-OFL.txt",
+      "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f"
+    },
+    {
+      "path": "adapters/esg/assets/NanumGothic.ttf",
+      "sha256": "76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31"
+    },
+    {
+      "path": "adapters/esg/development-summary.md",
+      "sha256": "ad29c1d857c2e5ed1187181773c5567c899f4a2c317bb80fcd89c4701e1d231b"
+    },
+    {
+      "path": "adapters/esg/package-lock.json",
+      "sha256": "b410596e54f2e0549c1cb6786676effa7cc9a291ca35cec06175a5c0eafade39"
+    },
+    {
+      "path": "adapters/esg/package.json",
+      "sha256": "db6e263ed71eadc26318159df69f1357e62031a488546959cdeb0e471f8a3012"
+    },
+    {
+      "path": "adapters/esg/render.mjs",
+      "sha256": "b2028ac433dd9d1ad0e7e9573c542a4fbf8016b9812a682a789a076e7ea37b67"
+    },
+    {
+      "path": "adapters/esg/report.css",
+      "sha256": "5836f5787a163a792d0bc55ff4d5b844967b0d9416b974a33579a9001d6b0166"
+    },
+    {
+      "path": "adapters/esg/requirements.txt",
+      "sha256": "40069d8ecca157168459195d4c1e32fe9dc731da3b0794a7ab5d4cda67235c5d"
+    },
+    {
+      "path": "adapters/evidence/dart.py",
+      "sha256": "f2fcc9c402eab5295607b18f75269af201f62ed53998ff808c8ef298528730cb"
+    },
+    {
+      "path": "adapters/evidence/dart_extract.py",
+      "sha256": "e1ee9c996839f8254caf230b45a217bf2b69795b13ae3d541b35d05c5adb27ee"
+    },
+    {
+      "path": "adapters/report-publication/vendor/manifest.json",
+      "sha256": "5a7359cadc1034776ca1382a41f78a84c5ba6b04b02b192e6f94a031e3c019d5"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/SKILL.md",
+      "sha256": "c1ca9db7e7b49511d35053c1eb34aff3309fd9cb8f275a080d92b1665489a8d8"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/agents/openai.yaml",
+      "sha256": "1f5304f2480a0ec2868499d10e9c033f49a9015ced637829c1fbcb054f167e47"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/NanumGothic-OFL.txt",
+      "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/NanumGothic.ttf",
+      "sha256": "76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/OpenSans-OFL.txt",
+      "sha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/OpenSans.ttf",
+      "sha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/base.css",
+      "sha256": "7a78029de95cbbf0ce5c5bc304eb591db1ff51f4395be00d4e69c212572f57ea"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/deloitte-dark.svg",
+      "sha256": "1a3a5298649010533118b562311b8931ae894d50f988ea34baa2feb0b7fc222a"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/deloitte.svg",
+      "sha256": "5bb42e99345cf26877a6460d85a8c40b2ce85e66d64a00307a9419364939ba08"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/editorial.css",
+      "sha256": "6e8eef90d527759b31ebf8c2b54af0f0071fe6ab644cda9c141b729613b366e4"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/executive.css",
+      "sha256": "7c9f2bef8fdde6459632a4a08c36e106670e617a9347f18cfa01f7c86be3dc4f"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/full-report.css",
+      "sha256": "02cf84f76b40564d0f2950828f5ca0e6e810a508aa2984540e63a0a15d5279fe"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/full-report.js",
+      "sha256": "847554d7c273a92231d934e01ecc001389675087a21b8f0c4b42c33fe7c064b2"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/assets/transaction.css",
+      "sha256": "151a860798d82e687fca20e5b621512783d35afb5d826865fe2895babb9834da"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/references/content-contract.md",
+      "sha256": "6acec9841a4ac5c0e926aa1b964e4777a6d330c75f6f467767a800e5798f7f8e"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/references/design-judgment.md",
+      "sha256": "a3b6e8f1f19ea18433fd253bd759b91114f1ee69dd9e99348279a728466f94d6"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/references/workflow.md",
+      "sha256": "740caa833e54bb6f12bbc5d80b7a89aefb37c245c5a9a671c83781040a528b80"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/build.py",
+      "sha256": "23f4e1c390f78cfd4a420c3bd0ac8cc29b09f1e31daa1e77c34fb1ffd8ad7b4c"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/full_report.py",
+      "sha256": "d78f9161712e6f0b0471b8bb0e3237f15c020b29fe9d30d78d3d7363c5b724b1"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/html_dom.py",
+      "sha256": "583abdf4b4c2c3709ff9208d08a916356941fc4468ea2198fe6305a1e33474c1"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/ledger.py",
+      "sha256": "e95b447e4c66eb563443c7447946897ad76977d8ebbcad5e3c0cec4423729af5"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/prepare_report.py",
+      "sha256": "459d3ac4b544460ce20dcbe3d6dd4e82b0c8a42d47d775db86c68a845b870056"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/render.mjs",
+      "sha256": "bd3acd5eebeabdb6d07379179c17d63e4c64fe41405d1d4e9db5c9d0c6088da9"
+    },
+    {
+      "path": "adapters/report-publication/vendor/report-design/scripts/verify_report.py",
+      "sha256": "9782dc7637294d8476a64c611dd1836ce4159bbdbf09e27541ed0f406f08b6a7"
+    },
+    {
+      "path": "adapters/reverse-dcf/calculator.py",
+      "sha256": "7fe239c67cd59af97d7a5979f834d03113ec5b08396a6b267669828a065f6d85"
+    },
+    {
+      "path": "adapters/reverse-dcf/cases.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "adapters/reverse-dcf/coordinator.js",
+      "sha256": "70726b3af2522e12c76249d59a5f95ff68fba63490fa4bc318987b5e5a452fc3"
+    },
+    {
+      "path": "adapters/reverse-dcf/prepare-publication.py",
+      "sha256": "f539afc7ee451f8469a2a38c6642e0a78a219d48c9627cfb5bbdf4f759bc7f19"
+    },
+    {
+      "path": "adapters/reverse-dcf/runtime-checks.py",
+      "sha256": "bf796c30bd704b403e533104b0c6e0ae770cabc45dd9f76fe5dd3e195162fb09"
+    },
+    {
+      "path": "adapters/reverse-dcf/stress.py",
+      "sha256": "23d91cd5402eae8b74b2a952e94c116ee2e8d873d686c2485e3c1dd841c04eee"
+    },
+    {
+      "path": "adapters/reverse-dcf/writer_builder.py",
+      "sha256": "581b1eea47d4d1c1890d190a92f4e0cbf76689bcb661ca6e1a6189e719969b63"
+    },
+    {
+      "path": "adapters/valuation/.gitignore",
+      "sha256": "da1fce90ce8c6841bbf3b3b0d95ba4cb07cb712b4a5d98d30c4b9dc517bbf15e"
+    },
+    {
+      "path": "adapters/valuation/README.md",
+      "sha256": "e529ea304bf013f22a18a340b535007c7e9dca7412464e9837508403a444238f"
+    },
+    {
+      "path": "adapters/valuation/VALIDATION.md",
+      "sha256": "c57d78405cbd681e7fae97a5ba8447544f53e12d6be44e094232e2bc6b23fd2c"
+    },
+    {
+      "path": "adapters/valuation/__init__.py",
+      "sha256": "224f50484c595dc302c7b851ed6f45782043e99169366784e9830fbb29aa9a12"
+    },
+    {
+      "path": "adapters/valuation/_make_schema.py",
+      "sha256": "17dc4178f715e0715633cef40befa4b09a0ec69915b8007842e5f0daf3f4fcae"
+    },
+    {
+      "path": "adapters/valuation/analysis_review.py",
+      "sha256": "f9e9a6150823a6e141d0f3d5a1631e29e5a2d8e87755ac0d7e405da384db0a46"
+    },
+    {
+      "path": "adapters/valuation/archive.py",
+      "sha256": "b074e0ed9a9dd6ce289608a946cdbb0a4826c94dc8ca9971a1b657d04aff5574"
+    },
+    {
+      "path": "adapters/valuation/assembly.py",
+      "sha256": "f52d19770e8366dbcdae3f554c619885e35f260f94b0b7901d312487a42e8ac7"
+    },
+    {
+      "path": "adapters/valuation/audit_kit.py",
+      "sha256": "38cf725233c51346813600781bea0307e6ab4b2335c4cd32f68665e6ae1526e8"
+    },
+    {
+      "path": "adapters/valuation/author_packet.py",
+      "sha256": "37b0a56e8a170fe61dce4ccc1b19f5b0268ce1a6e727c2a9e89fa7a7a40ccbe8"
+    },
+    {
+      "path": "adapters/valuation/build.py",
+      "sha256": "d9fde2b5bb9a6eaa7a833db0d75c1d8a84e1b3f025b11590cd0c456e408e81ec"
+    },
+    {
+      "path": "adapters/valuation/class_cashflows.py",
+      "sha256": "c51f8cfb2981dcd08265bc065538c9eec9acbe5f39865e614be710ebeb5f7d27"
+    },
+    {
+      "path": "adapters/valuation/coldrun.py",
+      "sha256": "604459b9bcf0f87aafb3b67584c8942a97bcec6b2c12c60722822e502f31e742"
+    },
+    {
+      "path": "adapters/valuation/collect.py",
+      "sha256": "52c5c5b11c2e983055b71d8eb6580fcea377cbb8d623b62cd35a36a7428fcfa9"
+    },
+    {
+      "path": "adapters/valuation/compile_input.py",
+      "sha256": "1615b30a62f2c44c4255ed8a30d6852f1d86a27aaa03c239991cbf20f022dda6"
+    },
+    {
+      "path": "adapters/valuation/controller.js",
+      "sha256": "db2c970d77691878148fde5d6851cf569ded626f256407e71e892b7835ccc393"
+    },
+    {
+      "path": "adapters/valuation/dart_probe.py",
+      "sha256": "98582ca93c35be91d201fc2dc7c8317c4c68249d79215d581db95b0a488a9d85"
+    },
+    {
+      "path": "adapters/valuation/dart_tables.py",
+      "sha256": "57915182e4341239288015927d496f24b2b19cafbb6f194b127e6daf578aa8c6"
+    },
+    {
+      "path": "adapters/valuation/design_revision.py",
+      "sha256": "16c3085926e1228b06bd59badeead2de0320db655b1bc8224a73b6db8efd3b0b"
+    },
+    {
+      "path": "adapters/valuation/dispatch.py",
+      "sha256": "a6da2949a58c9709bda06125b1b28663e16bae25f60cd692dc3b9e3cc8e0d251"
+    },
+    {
+      "path": "adapters/valuation/equity_claims.py",
+      "sha256": "b10aab166b9f44ff87139430210ea4635ffb5a3af40b82e6fce83208182089a9"
+    },
+    {
+      "path": "adapters/valuation/examples/synthetic-stub.json",
+      "sha256": "454d3682b9b73b54f9a0a738d4f74fa6c0d7f9ece7b3f94bd29116067761c234"
+    },
+    {
+      "path": "adapters/valuation/examples/synthetic.json",
+      "sha256": "bab99b0fb318a28ceb62605014aa7ad80c3fa1a5a700254afb819ccb52b89fdd"
+    },
+    {
+      "path": "adapters/valuation/history.py",
+      "sha256": "01f88115b007157a42920498d5b9deabf893a5c93eacea48590049f08fed6448"
+    },
+    {
+      "path": "adapters/valuation/input.schema.json",
+      "sha256": "c4c8687e14050709637346006a7456ec79decdfa5123cf544af2c0d43ac89140"
+    },
+    {
+      "path": "adapters/valuation/input_units.py",
+      "sha256": "471fbb7b0fa4d5e78c0a648c0506675e99f6a8d4098f15ecd974fb41b84506bd"
+    },
+    {
+      "path": "adapters/valuation/math_audit.py",
+      "sha256": "464f736c2120f5a13e0c065827ea2c60b745af866df517a5f42599856a4eba5f"
+    },
+    {
+      "path": "adapters/valuation/model.py",
+      "sha256": "b36dcdd62d641c0233d91377d72379e27670357010883abcbacc47278d4632b5"
+    },
+    {
+      "path": "adapters/valuation/model_support.py",
+      "sha256": "61c8890fb049fa6e36c48517228a4460d71c30dc48079b3552a651a6a339dea9"
+    },
+    {
+      "path": "adapters/valuation/narrative.py",
+      "sha256": "4f0ea58763308cfe3dc9556784a2447970ef05a693d756fd507ebd7f63e35bb7"
+    },
+    {
+      "path": "adapters/valuation/pdf_probe.mjs",
+      "sha256": "82665ae33440748998c75dd6cd09f5c6342ac885888d832c1e8c6b6a0d48ec3c"
+    },
+    {
+      "path": "adapters/valuation/presentation.py",
+      "sha256": "b91f655c3426cd7cceac8249a2d857570422f616bb5728540a5f27e3cae40703"
+    },
+    {
+      "path": "adapters/valuation/query.py",
+      "sha256": "d3aeddbda5b3b851662983cf4d70271b8995124ccb8d3c90cb94cd41e57cab87"
+    },
+    {
+      "path": "adapters/valuation/ready.py",
+      "sha256": "3a8e8335d0f969fdbcebf7573e893eefa41fd9d648c0bafa9923997da2cffb41"
+    },
+    {
+      "path": "adapters/valuation/record_view.py",
+      "sha256": "0a5ccf326d9eac294d8181bd15ea0bff8a056ad629de18785c19511ad1854378"
+    },
+    {
+      "path": "adapters/valuation/render.py",
+      "sha256": "56cdb1757b263b612b10180600c2a9035171f18e304305ff10854bb0ea51e1ba"
+    },
+    {
+      "path": "adapters/valuation/report.py",
+      "sha256": "54aeb3511370ff1633bc1590da6095e6e9835b7cc7945f6e68c99b419dff1bb5"
+    },
+    {
+      "path": "adapters/valuation/requirements-review.txt",
+      "sha256": "f8d24c173ed971929259d9690a81b3ce214a3828cf5eef200a63b90955c04634"
+    },
+    {
+      "path": "adapters/valuation/requirements.txt",
+      "sha256": "2e6e8264fc55de7383622efc9092ea74fbdc82cc818d0ea087af13fbf02b1e0c"
+    },
+    {
+      "path": "adapters/valuation/review_packet.py",
+      "sha256": "06c84a13860778154161e0d97a756d1dbecd0fed9e8dac3d122ebe20f3e38642"
+    },
+    {
+      "path": "adapters/valuation/runtime.py",
+      "sha256": "535d1803a09349d42ad22d5b1ed5d2f975af4f3801d7ac58e650a783394960b9"
+    },
+    {
+      "path": "adapters/valuation/scenarios.py",
+      "sha256": "4a0e372721eb18f038b5cea597ee3df4d243c4ebab7e31cf431472c55ca8fa7c"
+    },
+    {
+      "path": "adapters/valuation/schema_tools.py",
+      "sha256": "3a362bc72e52025ae09d03459804f018d013cea9c072eb04f32f0c2d52444741"
+    },
+    {
+      "path": "adapters/valuation/skeleton.py",
+      "sha256": "79f7820540f5132353217fc34ccb93bc3a4237f8009e68ee15fa98ef0a4090aa"
+    },
+    {
+      "path": "adapters/valuation/source_audit.py",
+      "sha256": "1b7a0daa15ac8d24c2fdf7c1e2ca090c5c2ac79d37f5f6d3f71920dac7417920"
+    },
+    {
+      "path": "adapters/valuation/source_cells.py",
+      "sha256": "9003beba7f948a7d49dd14cc90c841741b8fb4306f9ee3afc7be3a7e0ed499ea"
+    },
+    {
+      "path": "adapters/valuation/terminal_capital.py",
+      "sha256": "b2676b49bea241535e401449d3f1014de83b534e032273341c5e271a7e15a475"
+    },
+    {
+      "path": "adapters/valuation/test_rendering.py",
+      "sha256": "cefb0f4f2999c646265f9952b823275446741c8a0d9ba3b22816f5749343c4b2"
+    },
+    {
+      "path": "adapters/valuation/trace.py",
+      "sha256": "dcc8a4adc808edd9673a692cbab12df94a5a431b97e27c72f37284fc6f8d2006"
+    },
+    {
+      "path": "adapters/valuation/validation-evidence.json",
+      "sha256": "5ab8f7b2e3e546090395ab93f92dcca4be204241353a6ff44994bc4d30a293ef"
+    },
+    {
+      "path": "adapters/valuation/vendor/NOTICE.md",
+      "sha256": "328c5fd39dc6ce4d979a7b7f6de371eaafd69c514d5346282affd85b3aa14af2"
+    },
+    {
+      "path": "adapters/valuation/vendor/manifest.json",
+      "sha256": "2050f1fec2b5a142aaa431038b3a3711ce0e8d95232075f5057b5ecafdc3e39b"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/NanumGothic-OFL.txt",
+      "sha256": "eeacf16032901d0ed0456876ec77b8f0fda6b3fecec7d972f8543eb602e6c30f"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/NanumGothic.ttf",
+      "sha256": "76f45ef4a6bcff344c837c95a7dcc26e017e38b5846d5ae0cdcb5b86be2e2d31"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/OpenSans-OFL.txt",
+      "sha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/OpenSans.ttf",
+      "sha256": "36643644f318a812aab2d2ed3bb98f8cf0872527f835fe9398d95fe6b9adb878"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/base.css",
+      "sha256": "de39b38a6cedbc1081bcc185f2ea2d39370173e5f63483e6fe9ad9fdf2be8b35"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/editorial.css",
+      "sha256": "f75f577b41d8f09b8f49c54ec3289a386092db05babf008b7a6b4aa733089556"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/executive.css",
+      "sha256": "1db17add71d5e65d04bb285c2117e6eb5c7197c0b7e530bcb15cb973d515a675"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/full-report.css",
+      "sha256": "ea24c91d44ffdf219373b3dc9dc5aa7b139378e6b94222d1ef72f849f2fc032f"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/full-report.js",
+      "sha256": "dba58943c6ed7c60025e0d5a0d44558f2248b7dc69e61b388d47bea99e89aad2"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/assets/transaction.css",
+      "sha256": "c52094f706a6a1600d01101295761b06fd452e124ac8b6dc1dd2b8117a64dec5"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/build.py",
+      "sha256": "b76eeb5c2ccc79225a39bb34993620f3554a4f5ddd4b2b660a5742bd7bc7b52f"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/full_report.py",
+      "sha256": "7287717ad18e2344c61f114425fe79d0b4abf4e0f14f8b71780398121a3cadfc"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/html_dom.py",
+      "sha256": "583abdf4b4c2c3709ff9208d08a916356941fc4468ea2198fe6305a1e33474c1"
+    },
+    {
+      "path": "adapters/valuation/vendor/report_outfit/render.mjs",
+      "sha256": "28dca7909cd40a314cd93db3c8c55847db26c2fb9a97cca32f8d930e15dbe0e1"
+    },
+    {
+      "path": "adapters/valuation/verify.py",
+      "sha256": "a0714fcede873961cf11b36c0c3fac2b091fa604667155bb74bbe5cc76627817"
+    },
+    {
+      "path": "adapters/valuation/workbook.mjs",
+      "sha256": "3edf8568b378e9ee6f1d3818fd1494d682ba638e691f15afd0432e44a71d965e"
+    },
+    {
+      "path": "adapters/valuation/workbook.py",
+      "sha256": "e7127e7351fc193ee5e9fb2d700b9af2e5138cf0c18f34a951db3108ad0e4160"
+    },
+    {
+      "path": "docs/esg-learning.md",
+      "sha256": "654ac9c788cac89543fbe796647ed76281b373158c9f8bee34a17c1e1cf6be5a"
+    },
+    {
+      "path": "docs/esg-system.md",
+      "sha256": "0fc6777cff36b553980e282aabcb71fcb82650259290a725d0c44264d479ae7b"
+    },
+    {
+      "path": "docs/evaluation.md",
+      "sha256": "f9917d1194d17765d28ff34e3bb4ef9d749802b180c918d79a827c288de55c7c"
+    },
+    {
+      "path": "docs/installation.md",
+      "sha256": "825ba9816e62cb54ec7b9e8a1439c76e225599a613d069444a7a694e628f8992"
+    },
+    {
+      "path": "docs/library-guide.md",
+      "sha256": "cfb4270427f3d19127736b40798ec6f098744a5418a220cf106d100dc5f9774b"
+    },
+    {
+      "path": "docs/native-handoff.md",
+      "sha256": "90e35b41553c0d58c0f3ed085bfdf701cad7a024cac25d9364132dc477cddc72"
+    },
+    {
+      "path": "docs/package-status.json",
+      "sha256": "98dc20860100e45c4f241f73d8c3fb265684eda7aaaeedf8f01acdd8a3dabca4"
+    },
+    {
+      "path": "docs/package-status.md",
+      "sha256": "c71eaf90b7d00ef04628bfb8ef8aa5c91173e01b6eb35fde6cf751d39b42663f"
+    },
+    {
+      "path": "docs/performance-profiler.md",
+      "sha256": "1f5b565d52acb7c0ac0fa75b55bd8032209691f223edae84f20b178c7a994e1a"
+    },
+    {
+      "path": "docs/report-speed.md",
+      "sha256": "9807e6ef3bc5aa9a3825d9f5d12653030d4af5808119ed8e9580e04a5153c261"
+    },
+    {
+      "path": "docs/risk-workflow.md",
+      "sha256": "aa54982b3b767814aefd94a01690346f7520a2747d203f59f9083fa7a161cd83"
+    },
+    {
+      "path": "docs/session-workflow.md",
+      "sha256": "e16e1d15af8b31195ffbbc1dcda8021c5e70ef88dae2391da5bc6568c9506caa"
+    },
+    {
+      "path": "docs/valuation-quickstart.md",
+      "sha256": "7579d530231fbd98805d3ce3d28a02822e3c11ae6ebe6f585183a7a98abfc9a0"
+    },
+    {
+      "path": "libraries/inventory.json",
+      "sha256": "a7ce194f9c7181c2bbfe043a2f194ed264b2e857dd3397f1aec14215481d1192"
+    },
+    {
+      "path": "libraries/orchestrations/esg-learning-report/POLICY.md",
+      "sha256": "f5ec51c7a41a274ca8bb9a5325f65b5b9f09c8c198f144fa3d9931e5278cb933"
+    },
+    {
+      "path": "libraries/orchestrations/esg-learning-report/component.json",
+      "sha256": "cbb9c89fea494caa7dcfca8f7e33c9754e6b445275f1269d15c8cf4d5d8b0c33"
+    },
+    {
+      "path": "libraries/orchestrations/esg-learning-report/contract.json",
+      "sha256": "9df95996a83bc165e56f35ec0ea0d4dd1dcd537eeb95ce19810a56c14243cd55"
+    },
+    {
+      "path": "libraries/orchestrations/esg-learning-report/plan-rules.json",
+      "sha256": "3df3e0a5e4552264e519fdddfa39c05bdd8373ae3ca5b9194cfb70bfe3e31bca"
+    },
+    {
+      "path": "libraries/orchestrations/esg/POLICY.md",
+      "sha256": "2c774b22a297299db56c8723675e3b7ae957b7fc61ad6b8f2f56990a66c08811"
+    },
+    {
+      "path": "libraries/orchestrations/esg/component.json",
+      "sha256": "f68b8268d9489992e6d4b934968b2acbbb120d8dc6eff432044008955ea072e2"
+    },
+    {
+      "path": "libraries/orchestrations/esg/domain-contract.json",
+      "sha256": "4a22c2a7d873aeafb3ab2654b9c7a0eda75ecbc44c5ca4d0babed7522b39bcd4"
+    },
+    {
+      "path": "libraries/orchestrations/esg/plan-rules.json",
+      "sha256": "e7694076f08b30a96fb985325eaa4b77b2de3655165d6880eae8ccb0ae69976e"
+    },
+    {
+      "path": "libraries/orchestrations/fdd/POLICY.md",
+      "sha256": "c92076c2d17dd50ff5bb639b3ff66e3d29ccf09c24cc8d58aa41fafad19ecfed"
+    },
+    {
+      "path": "libraries/orchestrations/fdd/component.json",
+      "sha256": "6be0e4ae4ca06c40db02ab2a3e45cca474b507c4c97ed0ac421d03f200952a8d"
+    },
+    {
+      "path": "libraries/orchestrations/fdd/domain-contract.json",
+      "sha256": "1630e39d35bc38fe2c82faa7f2d93f033b5bfee0b810d18cf11815b1ed8bdda3"
+    },
+    {
+      "path": "libraries/orchestrations/fdd/plan-rules.json",
+      "sha256": "c9f554eed1ddab87a9d8a23d2ade6a716bd1d67d42177f35c2d76fb98ddc3414"
+    },
+    {
+      "path": "libraries/orchestrations/investment-memo/POLICY.md",
+      "sha256": "66cac03bef2e0b4af2a76d784d89bd22bf5115d53289d98b86aa529dd0051ff1"
+    },
+    {
+      "path": "libraries/orchestrations/investment-memo/component.json",
+      "sha256": "e9b5ecc0f76aaafe87274006bab6f53d009807c34473e8e910db7ba03a6ab157"
+    },
+    {
+      "path": "libraries/orchestrations/investment-memo/domain-contract.json",
+      "sha256": "11b8be456e25daf01d9117be3a9918d214acd19230b102f62ec23fcd673dacbd"
+    },
+    {
+      "path": "libraries/orchestrations/investment-memo/plan-rules.json",
+      "sha256": "9f0a9e323ec4253a65bfaa3610f1a7303c23fe69569cf8ea010169d44eff8075"
+    },
+    {
+      "path": "libraries/orchestrations/library.json",
+      "sha256": "0be6da407a0714770525b0928e0e5028219c537e93cb3a582eb65cbe06535e51"
+    },
+    {
+      "path": "libraries/orchestrations/market-research/POLICY.md",
+      "sha256": "7d8f5bf8ba08de5e3ac88b9e52e1741724da66b3c6d4ee342d956f81d4fc6ba1"
+    },
+    {
+      "path": "libraries/orchestrations/market-research/component.json",
+      "sha256": "f0b4b9881ae0f27becdaed1bf9ae80d116569b042abd3a990ee00a3095a38b55"
+    },
+    {
+      "path": "libraries/orchestrations/market-research/domain-contract.json",
+      "sha256": "d034f745d5d718e01518efc644dc6daa31d3c5c77774b37f0a8642bf4834da18"
+    },
+    {
+      "path": "libraries/orchestrations/market-research/plan-rules.json",
+      "sha256": "28337af1cb1f18fe281579e04983a80fcfab375ba63e7ba995fb56de00d8cb0e"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/ORCHESTRATION.md",
+      "sha256": "87698d43091877de55e6c797c1b7629a6bbd5591e178eb4bb2a100c9ca6d5829"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/component.json",
+      "sha256": "bfdc7dfdeb9dc399b663f387d0f482312beb91aa8753cae4657fe908132f5a46"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/contract.json",
+      "sha256": "1ab782f22a0c256aa37443742d20a86ad2faea85ae04e16310716c09b850f0d9"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/development-cases.json",
+      "sha256": "25ecc8c106153d9f323b158020c9723923ac8e6101c07ce8ed673f6ca334ad48"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/selection-policy.json",
+      "sha256": "4e8ab0e63625866ebc7ef18a83b145b5c37d2a472607f046c867a3a817243787"
+    },
+    {
+      "path": "libraries/orchestrations/meta-orchestrator/stable-ids.json",
+      "sha256": "08225d780586990a205fab94283aaccb47bd91ceb02aae03438fc015f2aecb06"
+    },
+    {
+      "path": "libraries/orchestrations/reverse-dcf-diagnostic/component.json",
+      "sha256": "4bf9759260ea94918651c5a8954b0fa576616d180873af9a01d3c043c32bea45"
+    },
+    {
+      "path": "libraries/orchestrations/reverse-dcf-diagnostic/contract.json",
+      "sha256": "2805e2dde94d980c6ae8e66ec002f38a45fa05806dd087785fdd5b8f9bc2aae7"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/INTEGRATION.md",
+      "sha256": "b85abf5e1d76a09bbf47842dd0c0ed2139f79fe4a197b4cdb3eefeb070b0a681"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/POLICY.md",
+      "sha256": "8c6c6ea50794ca0a4894afa2b4b52e8790ea5b91e534bc8c53cbab9d1d45d75d"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/artifact-catalog.json",
+      "sha256": "98f2ed048492712e4ccac8562c30fcb44e2c2ece3034175957826e052b48aa86"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/component.json",
+      "sha256": "1ba3506c24dfacb636f8d7144ef47b3085868c3ac5eb54e42dfb4c4577f40979"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/development/check_contracts.py",
+      "sha256": "15538fd702239d98f07d427156915c4bef8a28b531359950aa361cdd3f46dcda"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/development/few-shot-cases.json",
+      "sha256": "562c91e91e5efd6dbae985493eeb8a0f33ffe443ffd017d11c2bcbf79eec5241"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/domain-contract.json",
+      "sha256": "d6872469a184e8b9f2da396f55b2a4a00cc085d15968d03482c8ea21cc240b73"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/plan-rules.json",
+      "sha256": "408695a7072fe6ad5b8c4b7d14df3533fdbda1a90dce42f33818a7474091f800"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/risk-evidence/clause-evidence.json",
+      "sha256": "70333fce6fca947d6d37a02c30c7a172b73cb249a03149eaf1f3a0ae8cbd8336"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/risk-evidence/findings.md",
+      "sha256": "7af364410ad94256fdd4cb59aa93ef6fe836b4956be5cbe58a5442ffe630b676"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/risk-evidence/source-registry.json",
+      "sha256": "8105b11e2fa3eacfb7ca433380c70bd11a86d80f2f3ae7e7a912290d2e3435cd"
+    },
+    {
+      "path": "libraries/orchestrations/valuation/risk-profile.json",
+      "sha256": "094fa96157b7b25b05914a046cfdce427e63ab7f57d226cfadb0b88b02f232f4"
+    },
+    {
+      "path": "libraries/personas/README.md",
+      "sha256": "c96ddbcb0fa8873b8a5cd6eb642e90b60a1a346bffcb2386f0ed40f00e5d3d68"
+    },
+    {
+      "path": "libraries/personas/accounting-reconciler/ROLE.md",
+      "sha256": "06193e7eaf781a1224efa1f71943c16439810b9f19eac00b7139b773476e098d"
+    },
+    {
+      "path": "libraries/personas/accounting-reconciler/component.json",
+      "sha256": "08023a177ef3a15b3ab2c1f4a44907d10d9a331fb2ef420e16e4ea32ec39a703"
+    },
+    {
+      "path": "libraries/personas/accounting-reconciler/development-cases.json",
+      "sha256": "14f14f5761801735a6f941e62e02279eb36ede2d7074d8ff4d4c9c4a6ede112b"
+    },
+    {
+      "path": "libraries/personas/accounting-reconciler/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/design-editor/ROLE.md",
+      "sha256": "575a020b0dae20ceb799eef851bf47f12f6153f25110c4d1817cd47c588cbcb5"
+    },
+    {
+      "path": "libraries/personas/design-editor/component.json",
+      "sha256": "c74e66bed93f21ff75b60c805e290994ba65205aac5c86ec2ce3b170fff46d6b"
+    },
+    {
+      "path": "libraries/personas/design-editor/development-cases.json",
+      "sha256": "862efdd83792b248f069b2c5805dd6241eb8dfb445dbb4c2430f252048a8a531"
+    },
+    {
+      "path": "libraries/personas/design-editor/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/evidence-researcher/ROLE.md",
+      "sha256": "a5b29d184178f0a50056ca47134d9fa76fa1df3975fb611d0a4d1cc44d5ad9c5"
+    },
+    {
+      "path": "libraries/personas/evidence-researcher/component.json",
+      "sha256": "6f42eea1d706877dcd06ef9a655c817c71e2939e91b3b0778ae93e566bff4b9b"
+    },
+    {
+      "path": "libraries/personas/evidence-researcher/development-cases.json",
+      "sha256": "62cdee5ac33cfcd8e56edc0a37c546d6aeb64fe7d234d2a6d678f731a79d7c20"
+    },
+    {
+      "path": "libraries/personas/evidence-researcher/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/finance-analyst/ROLE.md",
+      "sha256": "ef90e5933f5f1545886e58254a26e9ba5b2a3c4bcaa23d51b0c1556993329f96"
+    },
+    {
+      "path": "libraries/personas/finance-analyst/component.json",
+      "sha256": "4a95c0dff976e33588f2292136f9de260b67de04a9c0aeac7048a477b2bf2a8e"
+    },
+    {
+      "path": "libraries/personas/finance-analyst/development-cases.json",
+      "sha256": "155fb1d34bf8d6d8912857adb581b4ba4e15b7eda74a24adf45941b9261daa78"
+    },
+    {
+      "path": "libraries/personas/finance-analyst/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/industry-specialist/ROLE.md",
+      "sha256": "f60cd841d9cea97a0a43fa65631b2de974b980fae135b1036d405a7031d150fc"
+    },
+    {
+      "path": "libraries/personas/industry-specialist/component.json",
+      "sha256": "4fb46dbed63a3c07abff54b099b76fdad080cb34fef439a48685ab3c638487bf"
+    },
+    {
+      "path": "libraries/personas/industry-specialist/development-cases.json",
+      "sha256": "81b4be109f9208e861f92c0cd4a090ce89f9998af63b7d7d3c612e2d52129ebc"
+    },
+    {
+      "path": "libraries/personas/industry-specialist/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/investment-challenger/ROLE.md",
+      "sha256": "f7ab2ae595c2eab65a4eb2a55cf17370c170c9e4bfbd1aadfe0db786ae302ee1"
+    },
+    {
+      "path": "libraries/personas/investment-challenger/component.json",
+      "sha256": "9a42be5b1d3fa1fb8f4e6130ffaf58987da89b26474296d3bb21cf1bf5832eaf"
+    },
+    {
+      "path": "libraries/personas/investment-challenger/development-cases.json",
+      "sha256": "9334694dc10a554fe2a5723e5a5fc5f20a6ff1c58ec06da6a794188669a04abf"
+    },
+    {
+      "path": "libraries/personas/investment-challenger/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/library.json",
+      "sha256": "a062a7431f97100191289113ba22fd4e2f6a92082097ceae5c66cf5c37ac2ddf"
+    },
+    {
+      "path": "libraries/personas/project-manager/ROLE.md",
+      "sha256": "74a92bcbb677991adcf97b480e4fce0c8fd108806dd0ff884dbdacfa3836363f"
+    },
+    {
+      "path": "libraries/personas/project-manager/component.json",
+      "sha256": "1640928f3bbaa0234754aecc4c4e615dc3505dabdfc3b340e4c6258b4c1a908b"
+    },
+    {
+      "path": "libraries/personas/project-manager/development-cases.json",
+      "sha256": "7cba22af31573c1d8d277bd14ca751131d4580799954927211bbf9ca5595c6b2"
+    },
+    {
+      "path": "libraries/personas/project-manager/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/report-writer/ROLE.md",
+      "sha256": "5386da14739ddb30bbc259f6c596e541fcfaafc5455ecbf7a2b89ac2c744cf78"
+    },
+    {
+      "path": "libraries/personas/report-writer/component.json",
+      "sha256": "31629a53622b1685d7dd6c3b17f49412c7714764332853040c86dba78ba540db"
+    },
+    {
+      "path": "libraries/personas/report-writer/development-cases.json",
+      "sha256": "2be2d7fb8c1e7ade515293db5128a5929bc2a2427700aee6b85b38053250edd9"
+    },
+    {
+      "path": "libraries/personas/report-writer/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/risk-assessor/ROLE.md",
+      "sha256": "f0a65a3c5a004bbf761ed2fdae634d5cfc818c0c96c6d131898043a36de01f0b"
+    },
+    {
+      "path": "libraries/personas/risk-assessor/component.json",
+      "sha256": "af97ec9f5a2ea4c657741e15d00c1964f2bd11510c0233e2b9461dfbd8d88bd3"
+    },
+    {
+      "path": "libraries/personas/runtime-engineer/ROLE.md",
+      "sha256": "c57533e4b37addd3a3a4d9aee05530dcbef70648300952926fbb78e94c75bb5f"
+    },
+    {
+      "path": "libraries/personas/runtime-engineer/component.json",
+      "sha256": "704a2eb15cddf7cc962b9f77903cb301dc43e7d16a667d4d1efa47ead3706379"
+    },
+    {
+      "path": "libraries/personas/source-critic/ROLE.md",
+      "sha256": "6a193c34990f0a77c8f8106712b443f36e61652754ea9902d0081c954b5f6c18"
+    },
+    {
+      "path": "libraries/personas/source-critic/component.json",
+      "sha256": "c43a74e075f85c414a274891f365ce78b217bfcd2d65cee2dedd71102e5480fd"
+    },
+    {
+      "path": "libraries/personas/source-critic/development-cases.json",
+      "sha256": "27e3f3627dd3e7b1f28a826a3ae01603d1d9e8090551198ad6e6cce2a53014d3"
+    },
+    {
+      "path": "libraries/personas/source-critic/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/supervisor/ROLE.md",
+      "sha256": "dd514eb30aab43675e69154e4a4ed214139eedbb6551ebded6b1b30caea86aad"
+    },
+    {
+      "path": "libraries/personas/supervisor/component.json",
+      "sha256": "5af0b0e1c3ef44fe6fd68faf54f7733bf88254cd5ba166645ce15a41b3753322"
+    },
+    {
+      "path": "libraries/personas/supervisor/development-cases.json",
+      "sha256": "1382f7ff13e843370c64d76139ac9661230b78153dcd26372492f57148397f38"
+    },
+    {
+      "path": "libraries/personas/supervisor/reasoning-guidance.json",
+      "sha256": "52adaa375535fb325c529a5046173e83adee235e69f8e3d61e28ff8df3dbc776"
+    },
+    {
+      "path": "libraries/personas/valuation-specialist/ROLE.md",
+      "sha256": "19b418950c0ae7db906050bbdfab85d7ba7585270c2c0c708701440758a5c013"
+    },
+    {
+      "path": "libraries/personas/valuation-specialist/component.json",
+      "sha256": "30bc63992a066cab6021d79930e9d1c3ee1b65db4e007d3706df3210e1ef928b"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/RUNTIME.md",
+      "sha256": "35ac5373815f2282b0c9fa8f2f691de07612f35a55fc9eca3bc9ece763ebffe2"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/capabilities.json",
+      "sha256": "ab85c6d0b2854186f2e5ef063b61bbb0ad3d9182b5ecc3740d16f2293374aca9"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/component.json",
+      "sha256": "ab277490ff62c4b09ccbae5429886e81903abb05c735e01494f1c93bd69ccba7"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/host-protocol.json",
+      "sha256": "c311af82ce68e82b2c0ab5decdd62a0277eb152a8e81418aed24d5be08c263b1"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/reasoning-policy.json",
+      "sha256": "e6264448b852de2e14afe10a57099af320e39afe4d0c530439b90d084a46bca4"
+    },
+    {
+      "path": "libraries/runtimes/codex-native/session-policy.json",
+      "sha256": "f8773b00b5833f6944485dc4e72d1191d43093e88c962fbe373a3e1ed47f9e36"
+    },
+    {
+      "path": "libraries/runtimes/library.json",
+      "sha256": "813f6820852b3388298535aeccf2fa0a2c8bad05ef3c18bc821759eadf3f0a61"
+    },
+    {
+      "path": "libraries/runtimes/valuation-native/RUNTIME.md",
+      "sha256": "1a8555d9343a264e9d353f083b673a9ff4639dcd98f4a1a916f51d13645a65f0"
+    },
+    {
+      "path": "libraries/runtimes/valuation-native/component.json",
+      "sha256": "83834529ff9cb3326dff30dcdea699bedd02cfcecf48ee13cc9ba946790e41e0"
+    },
+    {
+      "path": "libraries/runtimes/valuation-native/requirements.lock",
+      "sha256": "7653850ab39994a99ef09b4c9ad3f87c335eddaa0adce8264885804578f32b08"
+    },
+    {
+      "path": "libraries/runtimes/valuation-native/scripts/prepare.py",
+      "sha256": "f20a812a5667450530a2f3059289a339b2da9b2eef284a23422e4b8715c5bf0a"
+    },
+    {
+      "path": "libraries/skills/audit-xls/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/audit-xls/LICENSE.upstream",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "libraries/skills/audit-xls/NOTICE",
+      "sha256": "481ffa1331448cf753d6d19ca725d4ee0fd16e2f34a749e282a4bdc3e4f025e5"
+    },
+    {
+      "path": "libraries/skills/audit-xls/SKILL.md",
+      "sha256": "fc8d190e46fdbde2ab54e5025377c113dc1bdb524567d04585935226ad8be10a"
+    },
+    {
+      "path": "libraries/skills/audit-xls/component.json",
+      "sha256": "677d5e9e1a38acf5d899db5021ba82f143dceb3bcc03b5f759b7b093c9689a91"
+    },
+    {
+      "path": "libraries/skills/audit-xls/contract.json",
+      "sha256": "84973b0d5cb14e433626538ee13debd18e24f0459fad96950e67ccf727d438ce"
+    },
+    {
+      "path": "libraries/skills/audit-xls/provenance.json",
+      "sha256": "ebe70bebd30393bc89601c776a43ddb5cfc8a3efcc03cf8b2831486c98d2c887"
+    },
+    {
+      "path": "libraries/skills/audit-xls/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/LICENSE.upstream",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/NOTICE",
+      "sha256": "a0e7aee28ecf9e5a0a8176d6c280614dcc892fc0d15d06eadbf5e19e11e66730"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/SKILL.md",
+      "sha256": "eb64a254a9c116cb30693a41cad8ed774dd4c63bc0d98843a35feaf5a80f3533"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/component.json",
+      "sha256": "4622c910ec93697a5447356e965c3947a1d64608a01d3148fb101ddf6f4751cb"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/contract.json",
+      "sha256": "eb70243b772dcdcc5412b3329fff14cf22bef6f98e415e56ac1b787b041bc43b"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/provenance.json",
+      "sha256": "f9a493ca0c0f41523a495f66b35791e1b16a482dc539773ee704bf72221ab521"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/references/domain-artifacts.md",
+      "sha256": "784758b8b32e3e130c361ef55e7e8e313d027514141ad01bb6a6f7d53e963c9b"
+    },
+    {
+      "path": "libraries/skills/comps-analysis/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/control-test/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/control-test/NOTICE",
+      "sha256": "a8f61db474927f24e9a12427634dac46ea4930407182c3510e994c3e3d50979c"
+    },
+    {
+      "path": "libraries/skills/control-test/SKILL.md",
+      "sha256": "ce2356ea32852a03d02296705de11c241b38c43dfdf7c4401e5b1cf627b86576"
+    },
+    {
+      "path": "libraries/skills/control-test/component.json",
+      "sha256": "53919db9aa1077477e327cd8556ca9749dde99fef7b339146d32774a21e34e12"
+    },
+    {
+      "path": "libraries/skills/control-test/contract.json",
+      "sha256": "728ca28f5a75d1915c10b50a69a139364806dd7dd66f0c5593f53abe738adfff"
+    },
+    {
+      "path": "libraries/skills/control-test/provenance.json",
+      "sha256": "9d7de83e051c61451c36f81b9907bd7c21efd1f25b7e3ef6a2069f727ff0d3ce"
+    },
+    {
+      "path": "libraries/skills/control-test/references/execution-contract.md",
+      "sha256": "488a8866ccdcc6f4b26235ca841a9f97cab8b0597ac530d5bfb469c97e8e3b9b"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/NOTICE",
+      "sha256": "dae3b61c551a524069fa366be068c3226f6ee77201d53375040e1116c5c1c341"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/SKILL.md",
+      "sha256": "debc1b9fea1513ee5e2e89e204d37faa8332685cee9dc5d61774d6e3a42ade9e"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/component.json",
+      "sha256": "0e6a631d6a36371a1e5ea4ce97ede92a660a23c74b7f132a84d30af7c4ddf490"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/contract.json",
+      "sha256": "8bd904685dfa3b021fdc21488cd7447ab5bcf55d11e6892452d3a825360f8ffa"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/provenance.json",
+      "sha256": "436e7034bb6790008b00dcf82fa75320d21d98b276d7a17d2524587ef94b018a"
+    },
+    {
+      "path": "libraries/skills/cost-analysis/references/execution-contract.md",
+      "sha256": "488a8866ccdcc6f4b26235ca841a9f97cab8b0597ac530d5bfb469c97e8e3b9b"
+    },
+    {
+      "path": "libraries/skills/dcf-model/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/dcf-model/LICENSE.upstream",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "libraries/skills/dcf-model/NOTICE",
+      "sha256": "83ecce794e2bd919bbefd9624c10f3444dde5aa19c43d45dc9ba186a4d287a63"
+    },
+    {
+      "path": "libraries/skills/dcf-model/SKILL.md",
+      "sha256": "3ff77cd179569d8384468ae1b3d4621e049b11f84a5a22c461d2f7e6f43f842c"
+    },
+    {
+      "path": "libraries/skills/dcf-model/component.json",
+      "sha256": "2d51446bbc88b890da64c706b3c71d2477e94f1d94a081b0a8da1317cc7daa94"
+    },
+    {
+      "path": "libraries/skills/dcf-model/contract.json",
+      "sha256": "fc110f4a9103ea3135f6bd4ea68e113f8e7afc773eb5acb55afc3428b0e36b79"
+    },
+    {
+      "path": "libraries/skills/dcf-model/provenance.json",
+      "sha256": "602c7332282aa933a734877c65b83e7ceca150fc9f42a0b343fb9431ffc84a11"
+    },
+    {
+      "path": "libraries/skills/dcf-model/references/domain-artifacts.md",
+      "sha256": "ce4325e7fe214fd42d8546eb154e305c2f47e543dfed5e3438eb674e17b7387b"
+    },
+    {
+      "path": "libraries/skills/dcf-model/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/esg-learning-report/SKILL.md",
+      "sha256": "3c3be0effeb951d01132a68ccd0e5e5a57a828a3233a1425fd213b12d2d443df"
+    },
+    {
+      "path": "libraries/skills/esg-learning-report/component.json",
+      "sha256": "013e355675b055d6f85577bd912411ec8cbdfde971c15bbcba60a91b93dbd14b"
+    },
+    {
+      "path": "libraries/skills/esg-learning-report/contract.json",
+      "sha256": "042f698ff66c611194eed76bdd0b981a117fa41908b945090fd8c1bb56076f9a"
+    },
+    {
+      "path": "libraries/skills/esg-learning-report/references/execution-contract.md",
+      "sha256": "240dfa525e4e45382aecbbbcf3a3de0efa3e874cb3f2bd5e1542c8a55db566e8"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/NOTICE",
+      "sha256": "95b31ff6bdaee98e4a4a65d9f5b1a81c245d0ce95af03b4b4b73d0e31be0bf65"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/SKILL.md",
+      "sha256": "29f49ecd089e56e50fe5e2e636460f03e1111bc0677b8a2db31de7925f24db65"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/component.json",
+      "sha256": "e0f04e69f2a72138467501d0515b211c04d83db35c141a4d4593b5913fea5cac"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/contract.json",
+      "sha256": "c96c7478efb0623c0e26870d8a865dd8a84159e34260f2883dfaa64f7f19a274"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/provenance.json",
+      "sha256": "257aa4ceb2f6ecf6811bcb82e60c61c3ff4b9ee2859654c80dfbc21caee69c50"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/references/domain-artifacts.md",
+      "sha256": "b464c1ad1ac99a96d25777e738330cd4648f46a84a4e6ab9e26df91cc79e75ed"
+    },
+    {
+      "path": "libraries/skills/financial-equity-valuation/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/NOTICE",
+      "sha256": "1da8ace96d607848ae636699d47d16ec1d0d8e5a76c228abc30b85ce2f726dba"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/SKILL.md",
+      "sha256": "7c0f087a6aa7d6b051ef57e73ea47998f507040b083ce129fab56b121c51c0ae"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/component.json",
+      "sha256": "2b29e1bcb3df85530dd8eec6cca9b561386b09ba9fb85c21d5a6a32569aae114"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/contract.json",
+      "sha256": "4cecc2f3984abb189ad43dfcb8f1f8064ccf954ff8a22ff07f6d9160f65f4921"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/provenance.json",
+      "sha256": "1dda9680ba75249d7d34a09d2c3d08e2e37888608ad9e9da3d06cf9b2f20a1a1"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/board.md",
+      "sha256": "53209f4d26dbd62d46d60383de89505bdc6d77bfba2124845900e6eab3bad1a1"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/earnings.md",
+      "sha256": "e8214c6158a0592a6921929719ac1bdee5c5689c5d4609738ee0a6b25c16e888"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/esg.md",
+      "sha256": "c7d165b98406ea72ac4c9102e25ca7981b425ea6640691f72ab72ad6acb2a551"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/evidence-contract.md",
+      "sha256": "f1019b55b0dcb5c2f1a7a4c95d72b56e1059024448ac592e0f6ce3db46c40d7a"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/fdd.md",
+      "sha256": "ed149165352b1ef18518425fc56c57f6137dcea0340205039e6e97fe9ca368ba"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/industry-lenses.md",
+      "sha256": "3f5a355dadfdf24e9bb6a80573e92b41677624b598be8ae158fc2daff847e4ce"
+    },
+    {
+      "path": "libraries/skills/financial-report-research/references/valuation.md",
+      "sha256": "d5a168c0cae9266a98cae4c14070be0915243f5f4f0dc6c3cd489007d47b6404"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/NOTICE",
+      "sha256": "556572d5fd07d3fb115aa33d2bcaf84a78729a2c45fdd252e358ffecd6155e39"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/SKILL.md",
+      "sha256": "4edab7967ab3c367872c197ba1b83cf00c65e5ba8763187e7e371a78173bdeb3"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/component.json",
+      "sha256": "48e59c99e65c7d794921b87744c9cc75787a04aca6f10d788bc7c50f29d09f1f"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/contract.json",
+      "sha256": "cb862f1f9ccae7e9bfd6fda854124bd1ed3c6d59e1b611e8b1ae5f7d193e0232"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/provenance.json",
+      "sha256": "acf8f6af5b0828f7845e39f4ca7ef44186440a26edb3be8459be9cf2c195633a"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/argument-contract.md",
+      "sha256": "5d9d2436dfb3323acc719375fb1661f7df581cc2380efd3a23b7b8f8c721bd64"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/board.md",
+      "sha256": "3203a74b47607d64b62d6f7d12088a38fd25c85532638ace450bb4ec016f33c9"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/earnings.md",
+      "sha256": "f181ae81199d8b4860d29f27aedf8fb6198d16280637e9d35df2e121179a7442"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/esg.md",
+      "sha256": "b26abfb1a3d3b7e384957c0697b27ab1f8c2a84aef1719ff1d1f43bf8b4e3a18"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/execution-contract.md",
+      "sha256": "d3958fa2ce1cd96a88f45ad8ee20e8a00aa2ef7d4c7fde28b16fa83ce86f7d2b"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/fdd.md",
+      "sha256": "927b54c53f7d000ab3757690ddee557b3561fa5388f19f50d6862af76433228f"
+    },
+    {
+      "path": "libraries/skills/financial-report-writing/references/valuation.md",
+      "sha256": "604808eaca05980872939b172069027b900630d0f66da090f59b36a9f557dcea"
+    },
+    {
+      "path": "libraries/skills/inventory.json",
+      "sha256": "3c303037715050008be2de5c2cfb3269941b571ec998954b68dcc8985d0b6168"
+    },
+    {
+      "path": "libraries/skills/library.json",
+      "sha256": "bb5e200728ac6312922b6a79ee781c0759c836d134f776988fd27317e11b8017"
+    },
+    {
+      "path": "libraries/skills/report-argument/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-argument/NOTICE",
+      "sha256": "352ac58ba4629b8030173d05754b0b984735d520d3cb83f66c28e80532bdbdc5"
+    },
+    {
+      "path": "libraries/skills/report-argument/SKILL.md",
+      "sha256": "bad7e83cd6729019b916f179d2f3126720bdfe60a93a2cc96b37f55a29ed9661"
+    },
+    {
+      "path": "libraries/skills/report-argument/component.json",
+      "sha256": "f7e9ed61bd7caef9a8e0da0ab76e070dde60f021ed1e971f9c8a5150e6a2f637"
+    },
+    {
+      "path": "libraries/skills/report-argument/contract.json",
+      "sha256": "d9bd26cd5b628d80374ea52dc973b311353fa8ebead2faa2d57962a305c917fd"
+    },
+    {
+      "path": "libraries/skills/report-argument/provenance.json",
+      "sha256": "de046fcb960495cbe465b2cb0d8735d5d5c4511e00693c8d986541bb979cd4ba"
+    },
+    {
+      "path": "libraries/skills/report-argument/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/NOTICE",
+      "sha256": "049fee1a796c0edfb4aff01fa07948b9342751edde11d2fbe8089595a73acf3f"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/SKILL.md",
+      "sha256": "ba52c813491299b05693060a7b618b498761c77fe2e944add1107c94e959550a"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/component.json",
+      "sha256": "b02adbb4639998fc3d95a8ae795d506cec30f9d24e2da5126a17abd6bc0a3949"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/contract.json",
+      "sha256": "ecfe45b443ae39a148f91d603d6f5e5755fabc96769bfcf2ae191b1fda433c92"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/provenance.json",
+      "sha256": "9a3333a1856447aa958b425818b56ed493a606adebf9f168e8800d81a7ead138"
+    },
+    {
+      "path": "libraries/skills/report-claim-check/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/NOTICE",
+      "sha256": "fba4edd5087effb267f08def7a2b647a7bd6a04c52838f437ec88e7ed3ceb334"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/SKILL.md",
+      "sha256": "d42b9d3a4fe5f6b6c4016d85fc5a28ef4809b35ebf19d665562f2af3a2cf49f8"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/component.json",
+      "sha256": "3ee638d4a36c1c31734af3cad8500dde801574f5d5caf6635df081e72a9dad39"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/contract.json",
+      "sha256": "4a19112a84568e3786040e5ed65b1c7aecde27e87b8bbc7866692131b5a3e729"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/provenance.json",
+      "sha256": "07c5d2b53878ea204cd4cdfbff18c14d6fb54f76a540b8a18033e2a1bac31fff"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/references/domain-artifacts.md",
+      "sha256": "57616f6248222ac9a1f04aa8c424ccab532a7e67da3f4f80ecec3ed92d8e03c9"
+    },
+    {
+      "path": "libraries/skills/report-data-reconcile/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-design/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-design/NOTICE",
+      "sha256": "1cc39f423f678e7bfa87a2b55b291be73d957486c23f542de1b7e4bc67182e74"
+    },
+    {
+      "path": "libraries/skills/report-design/SKILL.md",
+      "sha256": "1747de1ce00b324b40206720db5ec6d0a73ef6f6c4e5cbcfe43721d2c4c4f32a"
+    },
+    {
+      "path": "libraries/skills/report-design/component.json",
+      "sha256": "9e53bd00df909398b73e7a98e3af45a75a198633093a67d0e18d7aab3efd431d"
+    },
+    {
+      "path": "libraries/skills/report-design/contract.json",
+      "sha256": "e4ccdbb482dae0f1791357b4ba49385afa1ae48b07bb4f45938ba6b58cb5b0c2"
+    },
+    {
+      "path": "libraries/skills/report-design/provenance.json",
+      "sha256": "5a00eb7b8bf67b1bde88108d6a60bc8018ddba913b7e702810ca588e7f037622"
+    },
+    {
+      "path": "libraries/skills/report-design/references/approved-design.json",
+      "sha256": "8889677425e133f47f5bb8ae6c74609aa770758939b15f0a9f8b525e9a26e860"
+    },
+    {
+      "path": "libraries/skills/report-design/references/execution-contract.md",
+      "sha256": "d3958fa2ce1cd96a88f45ad8ee20e8a00aa2ef7d4c7fde28b16fa83ce86f7d2b"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/NOTICE",
+      "sha256": "857ba16d7db17e720f5678764b50bba5bc9da11022f58d601f96e3f74b342dba"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/SKILL.md",
+      "sha256": "aef8cfa1d45cd693f33b78619ab39ff50f7fef4e2a09dd4074e5d4e9943c2f43"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/component.json",
+      "sha256": "8d05899fb825b169c622626125a1b4b7457197dac3686c308b4108bed9791faf"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/contract.json",
+      "sha256": "4bc40d5d0ab4aad703f5b55928e1efe53778e724f1eca6fb0a3b8c919445b617"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/provenance.json",
+      "sha256": "bd086257d0859a7d764fd01062bc2ef7744888e52d3a0caadea276fa82118253"
+    },
+    {
+      "path": "libraries/skills/report-evidence-extract/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-findings/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-findings/NOTICE",
+      "sha256": "90cc9f257dad106ed66a43c96e71b6b0d3a2aa8ffb5ce8efe83d197b30fdde71"
+    },
+    {
+      "path": "libraries/skills/report-findings/SKILL.md",
+      "sha256": "a503f7511a60125310ad287924abee29c69b0a538de3d2bee95dbb9518ac6491"
+    },
+    {
+      "path": "libraries/skills/report-findings/component.json",
+      "sha256": "a24adf5614843eab248ab262b02819d31d8f141d517d1405181402892fecf4b0"
+    },
+    {
+      "path": "libraries/skills/report-findings/contract.json",
+      "sha256": "02cdce56ff9a91da5ff35902b45acfe8c24bd47edb077a1131d8cd48d722a192"
+    },
+    {
+      "path": "libraries/skills/report-findings/provenance.json",
+      "sha256": "8239d3833aadad94e76b06f57aa256d9f3a8188f668a3032f1d2ae6c3d38c9be"
+    },
+    {
+      "path": "libraries/skills/report-findings/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-frame/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-frame/NOTICE",
+      "sha256": "b70d826c9ca3dfc895d45a42d4b1dfba799069077d0b11a69cb782a9efe65f13"
+    },
+    {
+      "path": "libraries/skills/report-frame/SKILL.md",
+      "sha256": "22746e629281e13ae27e47008295c61d3fe48e48b4f9a193bbe6dfb9b6e279fd"
+    },
+    {
+      "path": "libraries/skills/report-frame/component.json",
+      "sha256": "eb44464025e102dc4c11737b16a748a49a58f31ff52da97c1bc682ec94284e24"
+    },
+    {
+      "path": "libraries/skills/report-frame/contract.json",
+      "sha256": "e015465009dcac821336e16b5a6ea4b6956fa7c7581d0fdb91f896377fcb3c05"
+    },
+    {
+      "path": "libraries/skills/report-frame/provenance.json",
+      "sha256": "99a29c409d34b64d1a6d441c630c76c4a17abf7c6f139a10ffc288c204b9a9b4"
+    },
+    {
+      "path": "libraries/skills/report-frame/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-outline/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-outline/NOTICE",
+      "sha256": "fe6b3d89a192d42cb471e867f70b1e7c11aa63ec76b37d2c8b71dfa64547c5e3"
+    },
+    {
+      "path": "libraries/skills/report-outline/SKILL.md",
+      "sha256": "112fcf7bb4db469db5ff28534948eded93453a2fb7b5e398d19d95e1189bb2c8"
+    },
+    {
+      "path": "libraries/skills/report-outline/component.json",
+      "sha256": "81f35f2a84b608c8e156550a7301f2c1d126f78b96416a751bb5542280aff2ac"
+    },
+    {
+      "path": "libraries/skills/report-outline/contract.json",
+      "sha256": "c65c6a47ee8018f4e95365c95be643bfe158c59509d039f9dcd55e041cf1ca90"
+    },
+    {
+      "path": "libraries/skills/report-outline/provenance.json",
+      "sha256": "cca0e519f04e358a077935df9ec2b04fd98245faf9d298c2df142307c2098078"
+    },
+    {
+      "path": "libraries/skills/report-outline/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/NOTICE",
+      "sha256": "0768b837a53bf7134426a14bb3c8d70cc7374e1e7b3a2a9387fe1e66eab2eb30"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/SKILL.md",
+      "sha256": "62ece2b5ae82b07dac493c7bef26a0c12e2a951ee719d3f6f884b1e1a6b63551"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/component.json",
+      "sha256": "466509cc72e57c6c5bd8ae5cd9ff06c31a2f40b5a8af7ce4e6d9fc11e542f5e6"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/contract.json",
+      "sha256": "e1abb5f9b74944f0c5d227c1134cd7d3cdb14d280ce05ac2229acc69a81c3555"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/provenance.json",
+      "sha256": "727da2f885c07e29c4ef5b77a826b70777719470fa8a7ee67886bc635c38a9f7"
+    },
+    {
+      "path": "libraries/skills/report-research-plan/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-section-write/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-section-write/NOTICE",
+      "sha256": "29fb2a29a25c8c774aa474ecb7ff6436db949fe66a9d229cd54da47f01d8c5a2"
+    },
+    {
+      "path": "libraries/skills/report-section-write/SKILL.md",
+      "sha256": "b62d93eb977da3b055b45bb0e77662d1dccf77fb91f41ab71cab931a130a5f37"
+    },
+    {
+      "path": "libraries/skills/report-section-write/component.json",
+      "sha256": "449386a79522bcd3810eec9943cc90da898b7381a1a407db352cf3efd30a0716"
+    },
+    {
+      "path": "libraries/skills/report-section-write/contract.json",
+      "sha256": "c94361dde287fbb51bbc69f5dc8f29819b4ea71eeaf0f2c8a65d0c16b9807ee6"
+    },
+    {
+      "path": "libraries/skills/report-section-write/provenance.json",
+      "sha256": "a10c3789ce5ae97a65c722d5aea9e94b4883818b4406f1bd16e49540c2cd2cb9"
+    },
+    {
+      "path": "libraries/skills/report-section-write/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/NOTICE",
+      "sha256": "4a82a4b8e2c023cf7639cc0a0e698af79ded5d948fe39dc19604f187d6a07569"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/SKILL.md",
+      "sha256": "107b3313103369dd99cf0065ed9616f32a21b7d2a31d214534ef16797ed3b77d"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/component.json",
+      "sha256": "79d74e8cc2143b0ff790e1705ddbd52c6c8df3682d8e690cc6803366d0c43d09"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/contract.json",
+      "sha256": "5f7b8f4cdfb1506afad0442ed0dede485e897ffc2d18ea89a7f3004029b35abc"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/provenance.json",
+      "sha256": "aa19f59da0dd2b2745da583c18e41009a3e581b41531579fd8eccfb80bd658a6"
+    },
+    {
+      "path": "libraries/skills/report-source-assess/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/reverse-dcf-report/SKILL.md",
+      "sha256": "adbae7234cbe64ccb85ff77e623d912b3900fa8e58931a7d32187df1963a60a4"
+    },
+    {
+      "path": "libraries/skills/reverse-dcf-report/component.json",
+      "sha256": "6c5c74d7216b65c9538aac147587ae7b883254ecac486b26fded04ff1bdebefe"
+    },
+    {
+      "path": "libraries/skills/review-design/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/review-design/NOTICE",
+      "sha256": "c341e6efefc4eeafff4233c17384fbb86a2ffb006391ca621a03efcf14800516"
+    },
+    {
+      "path": "libraries/skills/review-design/SKILL.md",
+      "sha256": "4d5740f54670a420c63bee099acef2d9c489c843cc2bcf1f97e921cd9a4a7eff"
+    },
+    {
+      "path": "libraries/skills/review-design/component.json",
+      "sha256": "95abe58bd3c0be2e0d4bf0dd6b3a7173e96bf0281b0a89626cb7ea734cbd86d7"
+    },
+    {
+      "path": "libraries/skills/review-design/contract.json",
+      "sha256": "16c37c032b83155c0b89377b1e3b8b1f1082132a9bc11e6be782cc1f6bc41f9b"
+    },
+    {
+      "path": "libraries/skills/review-design/provenance.json",
+      "sha256": "990583c1c4d935d1cf15a6205285cef502a9e7f59e90a69282c7027970156891"
+    },
+    {
+      "path": "libraries/skills/review-design/references/execution-contract.md",
+      "sha256": "488a8866ccdcc6f4b26235ca841a9f97cab8b0597ac530d5bfb469c97e8e3b9b"
+    },
+    {
+      "path": "libraries/skills/risk-frame/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/risk-frame/NOTICE",
+      "sha256": "7ed553853e3a2a8ab69444f41e3f07bd1cb40cedc77648d111e61411e46bea17"
+    },
+    {
+      "path": "libraries/skills/risk-frame/SKILL.md",
+      "sha256": "73466b441a8bb975ca46de0e47b1999a7439027c2ea02ed062dfe32c7d01a609"
+    },
+    {
+      "path": "libraries/skills/risk-frame/component.json",
+      "sha256": "8699eaaff3f985e894ccb9138e556dc09564eb23a19e22c77aff0736c0f19807"
+    },
+    {
+      "path": "libraries/skills/risk-frame/contract.json",
+      "sha256": "249389970b4d1bb04f46d4d436c67625b2fbf79ff6e19a9ca7029d6ec4f4f890"
+    },
+    {
+      "path": "libraries/skills/risk-frame/provenance.json",
+      "sha256": "1ed34f016290692edf481b451f345b094444785462616a281ee8de9eb8e54011"
+    },
+    {
+      "path": "libraries/skills/risk-frame/references/execution-contract.md",
+      "sha256": "488a8866ccdcc6f4b26235ca841a9f97cab8b0597ac530d5bfb469c97e8e3b9b"
+    },
+    {
+      "path": "libraries/skills/risk-frame/references/risk-records.md",
+      "sha256": "a3469f0c93912c8cbba73ecae8a36d3e0021a763f96286281119366e46d1dca2"
+    },
+    {
+      "path": "libraries/skills/runtime-prepare/SKILL.md",
+      "sha256": "7b4145c8a925dc3d2e8fe39bef0ed126c61237c75d17a596678aacce0ad2f294"
+    },
+    {
+      "path": "libraries/skills/runtime-prepare/component.json",
+      "sha256": "32c97dc6a70a9d2e0a3ab568da6a607c221f5b5145a4631092a91b9dff746072"
+    },
+    {
+      "path": "libraries/skills/runtime-prepare/contract.json",
+      "sha256": "47dc3527df542c1e7091731e514cab2227ae50f9679d240c2bdcf6d76d412596"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/NOTICE",
+      "sha256": "eea3abd10d768541266b78cd6ca55c6b7c48ac973730f0f10eacf900a79c8c3b"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/SKILL.md",
+      "sha256": "cb7988402ce8d41d580801730b83a8bb147b2041029629add539aa7ab63b04d5"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/component.json",
+      "sha256": "23cbf103773ca26cfe65af63640fdac4a3320969ed63d55490f21487f9e2efeb"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/contract.json",
+      "sha256": "c0ead8be83c5cf72b840249dc1f0e1cc6c7917695028b96ba46c9ca978c7a8d5"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/provenance.json",
+      "sha256": "6cc0a6383e57317b7f516fe468a37cf9e74f8cf46c6ac04f28a11a278286e75e"
+    },
+    {
+      "path": "libraries/skills/sensitivity-analysis/references/execution-contract.md",
+      "sha256": "488a8866ccdcc6f4b26235ca841a9f97cab8b0597ac530d5bfb469c97e8e3b9b"
+    },
+    {
+      "path": "libraries/skills/validate_library.py",
+      "sha256": "2dddc089065f28cdb41db8ddc4d35fe74a6e0c2fa973701fa96ac60cb6422dbc"
+    },
+    {
+      "path": "libraries/skills/validation.json",
+      "sha256": "8aad542a505799f05deb9cad863e3b30b401bc39c4f85916ca0ab4b65e78b659"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/NOTICE",
+      "sha256": "133b9325681fdf1d8cfb02a43f1736bff88dee5f28633e94064a9aeb708a8bff"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/SKILL.md",
+      "sha256": "c8999098c04a6ad345ace28c3bb689d2cfe9a9bdfc116f4753b9ddfb6e2fa874"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/component.json",
+      "sha256": "e118e63283f455b1e9fe889e770ed10ef5a56c79790ac1e2277164a62fe2f37b"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/contract.json",
+      "sha256": "1599f95add1650e1820ee0fd49fda4b1964246b55df1632cba723a5299c87934"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/provenance.json",
+      "sha256": "a1c99e32291cbe059295e31f3dc5a894db89ff8fbfc07864b6ca382f5061fd98"
+    },
+    {
+      "path": "libraries/skills/valuation-challenge/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/valuation-class-cashflows/SKILL.md",
+      "sha256": "b1d13a5c8252714feefc2353b76020f87821d00343af20af113ed476a0830313"
+    },
+    {
+      "path": "libraries/skills/valuation-class-cashflows/component.json",
+      "sha256": "4eda2b87c6f009f204a1d10c1efc03a6f7a08b1853566be7aacaf7be9d60350b"
+    },
+    {
+      "path": "libraries/skills/valuation-class-cashflows/contract.json",
+      "sha256": "f975c54aed8657cc6748525de15d2872992cf6e8d4274e672e8772173993790e"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/NOTICE",
+      "sha256": "74ffeac7c080ddccad49eb052226e009681f0325a2813ed558215ce31b34c429"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/SKILL.md",
+      "sha256": "e9255b2c4e8013176885a782a977f6e45d2863d000d58e1104e436bc9701224a"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/component.json",
+      "sha256": "24fb0f0aba8d5458277982f5df4b664461fc4866018dacbef1f9abf2ae2d64aa"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/contract.json",
+      "sha256": "33f7c02ada38cf5276708fc0a84e063cf596c5b2c5caf17aead414100156aae7"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/provenance.json",
+      "sha256": "53b5353a9a1e527a442363937f6ff37ec2234b12051ee43df77cc02b74270d36"
+    },
+    {
+      "path": "libraries/skills/valuation-compose/references/execution-contract.md",
+      "sha256": "d3958fa2ce1cd96a88f45ad8ee20e8a00aa2ef7d4c7fde28b16fa83ce86f7d2b"
+    },
+    {
+      "path": "libraries/skills/valuation-design/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/valuation-design/NOTICE",
+      "sha256": "dac0ca78709024b8b0b9255ea35b731e065aea54b37cb50dd007aebf7a0f59a2"
+    },
+    {
+      "path": "libraries/skills/valuation-design/SKILL.md",
+      "sha256": "74dfd432868a3950b6e252e2ca938288a3326d991f8ab9c84e442f406feea6be"
+    },
+    {
+      "path": "libraries/skills/valuation-design/component.json",
+      "sha256": "8ea152fd4e3051e84ab96275983537a0c097467b594ea70afce30a33f8de964f"
+    },
+    {
+      "path": "libraries/skills/valuation-design/contract.json",
+      "sha256": "19a3e04bc78faec04e6de76fbd78a737fce4bc8745c6f03146b6b0cfce0b3357"
+    },
+    {
+      "path": "libraries/skills/valuation-design/provenance.json",
+      "sha256": "050e28c746ce385c042dbf99ead0230635e4f33baadbd6a9bf5ef5197d7851b7"
+    },
+    {
+      "path": "libraries/skills/valuation-design/references/domain-artifacts.md",
+      "sha256": "1a5e10f35a64f09b77125b34b0410c8b3ee4306ce4bf7c194d0775c476c1f1bb"
+    },
+    {
+      "path": "libraries/skills/valuation-design/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/NOTICE",
+      "sha256": "8acbdd0c90bc62e792c6c8233c046f2067a485b890118bf289c52687b4a37579"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/SKILL.md",
+      "sha256": "fd1f43e96e3bf03961b67a7c08e1d056918cdcb9c63bc6d646bd431590272c9d"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/component.json",
+      "sha256": "e90b51cb35c2370dc66ba1f639aded86e16c35e66b70ddbc62358a8f920c6171"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/contract.json",
+      "sha256": "dd465109f56ef15e04aa85db945956c6d3594b44b26729c8fda86f0843bd6d2b"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/provenance.json",
+      "sha256": "98db44fca62092c59eb44f34382a95b12b6482300759c027638a467d437b5968"
+    },
+    {
+      "path": "libraries/skills/valuation-evidence/references/execution-contract.md",
+      "sha256": "d3958fa2ce1cd96a88f45ad8ee20e8a00aa2ef7d4c7fde28b16fa83ce86f7d2b"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/LICENSE.local",
+      "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/NOTICE",
+      "sha256": "0c5c889523d7560c2c6a62ccc45e890a88601d36dc3b38bc12c7ea7a7768a898"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/SKILL.md",
+      "sha256": "7bdf3a96cbc8b07ec07c64fe6d94c9ef6680f5640d71f47d416b97b637e1e565"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/component.json",
+      "sha256": "1fcfe763eca7fb063a0811791828408309fc539f579f4cedd1c7a1de77a98cdf"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/contract.json",
+      "sha256": "0812c34bc3973ab53294ed87c5b1411b1835cbc67f2e2971010ee0e86a636cfa"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/provenance.json",
+      "sha256": "fb0803926ece2d580645eeaa2da76d373e79501461cabb012ebc80e7e327418a"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/references/domain-artifacts.md",
+      "sha256": "21c37fc3a942020def0cea6de868c599e4bbcdf3668f6882c79fb86ab2577184"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/references/execution-contract.md",
+      "sha256": "e14cbbc70fe75d89f4257abdf04f8d7bc1f3eab2e0770115753c060b847eb3b6"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/scripts/calculate.py",
+      "sha256": "afde36860af67b62f9d65c46ab412caf9a00b2b0294bdd9770e70b4b84d1afb4"
+    },
+    {
+      "path": "libraries/skills/valuation-wacc/tests/test_calculate.py",
+      "sha256": "914523456839c9ebdb0ff0382e4c03e9f7de78690008946ab49f43ef8a2abc21"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "e4b9e7c908f75290092c89e03b29adcf944f17506bb4deb9db2127f2879280cf"
+    },
+    {
+      "path": "pr/__init__.py",
+      "sha256": "c6fa403fc52b9da2fcdd36ab61fbf6875aeb806157a0fdb568662ad17d313d9b"
+    },
+    {
+      "path": "pr/__main__.py",
+      "sha256": "8b3879700b35ffea41d63a3b34ded5aa4be6eec2532f39449764f53672ebe8e8"
+    },
+    {
+      "path": "pr/budget.py",
+      "sha256": "a5e9c5bb84cc40200a401974505c6f1837950cf5660c6eef9a394ee12ed13473"
+    },
+    {
+      "path": "pr/cost.py",
+      "sha256": "214949d9c49fbc55e8dd94fb255a8fc71f4fd6b9719784c78d9250f4f57f38d4"
+    },
+    {
+      "path": "pr/distribution.py",
+      "sha256": "c377f59f77ae9f2754c0e4acb9fb671ab6aa5f6ab65403d2b4854e48f462ed49"
+    },
+    {
+      "path": "pr/engine.py",
+      "sha256": "70e6a4521193cce3dcdf72e379e6493a9baf2751c8c994d3c530b0d7e7e45187"
+    },
+    {
+      "path": "pr/environment.py",
+      "sha256": "4e46e5c10b979bfab1788f2f21e696fb325879d3c3d145ac6a50fea35aebbd3c"
+    },
+    {
+      "path": "pr/esg.py",
+      "sha256": "8060b4aa776b2b87a6a24b7d246fc5170578dd810063e3d69aef4a7d0a1fb2bc"
+    },
+    {
+      "path": "pr/esg_system.py",
+      "sha256": "c2ebd22c6aaa07e5ed2d4a73f57ce712f97e996a0080e1a556a6d7ecbe15b552"
+    },
+    {
+      "path": "pr/evaluation.py",
+      "sha256": "e7f1d65401584fe0273b005944889147e136fdf25cc754859398b0f0be77fd0d"
+    },
+    {
+      "path": "pr/export.py",
+      "sha256": "0b6521f9b7799697fdf8f360640209e13b6d5adab35a9ebfb75fe81fdd25f9cc"
+    },
+    {
+      "path": "pr/materiality.py",
+      "sha256": "aef09bfbde986ffa953ab38247504bd9866e1c870daada7d6e810c4329a742d8"
+    },
+    {
+      "path": "pr/native.py",
+      "sha256": "5d06596fedee5185d9bce946c312b32325b94c164717b13419dab8fa76c9719e"
+    },
+    {
+      "path": "pr/package.py",
+      "sha256": "54ff6d30ff6832a13d6483d9209d7df13a8506e6c45fee51f203539a8a4d76a4"
+    },
+    {
+      "path": "pr/performance.py",
+      "sha256": "bc9ab168c38fbe931e41cc63758c66fe97e13ed3ded73176dc95bde51b92e4ec"
+    },
+    {
+      "path": "pr/planning.py",
+      "sha256": "5769615161f58b2e9eef4c18de881ec4ab90dc77b167023b5eae2a8909c4e287"
+    },
+    {
+      "path": "pr/registry.py",
+      "sha256": "3812e17b856172d94180ae319504319ee9af032744bb92541bf609c820d3b961"
+    },
+    {
+      "path": "pr/report_checks.py",
+      "sha256": "9618c8bc22217bc58165354bc78223f410baf78465620b73617c7d5ff853c0c8"
+    },
+    {
+      "path": "pr/report_metrics.py",
+      "sha256": "daddbe9d42167949ff0a32b5c103cb54a12a58b76326e850c574524cc9a16830"
+    },
+    {
+      "path": "pr/report_path.py",
+      "sha256": "440e2c167473ec64e72a6a2ccdf210afc7b92f79013ed8608852dcb3ea742f46"
+    },
+    {
+      "path": "pr/retrieval.py",
+      "sha256": "ddbaf5d730879295f695cc98ffc01093d3682100abe019cde5344d30758d3f6a"
+    },
+    {
+      "path": "pr/reverse_dcf.py",
+      "sha256": "e2a2aea6dad0287ac19c79e3a31271d259e8ec54bcac76a1e92adf0b75f65e03"
+    },
+    {
+      "path": "pr/risk.py",
+      "sha256": "00fc30c7491f2b46ec232aab3720717fde6f62c1298f842273cc16845052b58d"
+    },
+    {
+      "path": "pr/risk_experiment.py",
+      "sha256": "5fbfa774d813b061c7e4249465c1ac95d157c72f629f02b8d1aaefe49cf010fb"
+    },
+    {
+      "path": "pr/schema.py",
+      "sha256": "8f2d8ab65e5bc443a740b324d1c854b713813c52f3205c63f2f387bd4e387a55"
+    },
+    {
+      "path": "pr/sensitivity.py",
+      "sha256": "21c96065606319f24f0c66ac05d6a66eb0db286672a171d67f673c1506df2a3b"
+    },
+    {
+      "path": "pr/sessions.py",
+      "sha256": "c54804e85fd8dd3a6ebd205448f33ce141bc04095a286e25f2753c2ca46235ae"
+    },
+    {
+      "path": "pr/telemetry.py",
+      "sha256": "1f9914736100b84626b9e1bb0de3a0e96a5e50ebc83a24d8869fb18eed48172e"
+    },
+    {
+      "path": "pr/util.py",
+      "sha256": "6a7241b9985f75966d1e1cc76feb4d2bee89e9f5b84cbe678d401473c70a2a5f"
+    },
+    {
+      "path": "pr/valuation_sensitivity.py",
+      "sha256": "74d6bc1e2f4b966019415a7dfc37acbdbee82c11802449cc4235bb03be89ad74"
+    },
+    {
+      "path": "professional-reports",
+      "sha256": "71f2bce14271b5eb86768aae58e6c23fb5c7b8321940c9b5d815663843bfb530"
+    },
+    {
+      "path": "protected/cases/calibration-known-errors.json",
+      "sha256": "a5c6887aadc558d14dac73def9596218969d06843e513201fbb9171f682b5979"
+    },
+    {
+      "path": "protected/cases/meta-holdout.json",
+      "sha256": "cf5c8bee809852344604c262214ac15a458cf6e106f1ea6815b8f23d44631322"
+    },
+    {
+      "path": "protected/evaluations/valuation-v1.json",
+      "sha256": "87b06ad7b02cd6f722b4bd2013eca0fd621ae0c44213203874a82275ffc94d40"
+    },
+    {
+      "path": "protected/history/valuation-v1-1.0.0.json",
+      "sha256": "a886870b5bfb6d1e63cdee1d4d80cc7e912730ce40d1c6b8ea00821a3b8df8a4"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/adoption.json",
+      "sha256": "4258bc8419cdd33e80a651b06531e7440d8394d4545cc37c7e162ba8250e1ce7"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/approval.json",
+      "sha256": "a4d42c00f0a37827dc341fc75b4347c8eae6376d21fff35be759aecb67e6b4c6"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/candidate-calibration-plan.md",
+      "sha256": "91eb5802de25aecdd384bd1764a2dc52cbecf565322326566e95a060516a0f0b"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/candidate-five-axis-anchors.json",
+      "sha256": "7b36a8e132338778a5c65bd1445a47a2bc1d345b6339c22d1a7c27eb8fec067a"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/candidate-five-axis-anchors.md",
+      "sha256": "1663f23eba4563a64be260841f0477af1164bc478cc36c2a09a1b615e1a714cc"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/candidate-reviewer-config.json",
+      "sha256": "7d0967724bd276ba959f5bfc8fd0a03b2e3844886b2e8bf1aef1e8707178b496"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/candidate-reviewer-instructions.md",
+      "sha256": "f2aa12c860b195c03941d3ca2960b637cd8e5ccfd68441eb7babcca91a6a7200"
+    },
+    {
+      "path": "protected/reviewer-profiles/valuation-2026-10-03.1/source-anchors.json",
+      "sha256": "a81761173707ac1b6b833484993f8b7ceb86013e2c150e92f730309a7aa7b6e5"
+    },
+    {
+      "path": "requirements-runtime.lock.txt",
+      "sha256": "34f613a247c66e549a92bd8e06f438b98a7748139ba20298bf02d5210ba1cff4"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "37caf5bff910fbd7dda44433b92df25fbfd989aea829e9bc4ce37e70df1f1782"
+    },
+    {
+      "path": "schemas/artifact.schema.json",
+      "sha256": "dd4e3e9461fd7368ceb47d577512f4d7d705a4f6acecea23ab4b1933c6e9a5df"
+    },
+    {
+      "path": "schemas/binding.schema.json",
+      "sha256": "1c7a47807b1cbae96868c221bb539134eb9ef947b0acbc6501d27d29b2d86ddd"
+    },
+    {
+      "path": "schemas/component.schema.json",
+      "sha256": "b6f3a965ae6022da18e675e88cfff1683d1b94aeb7230f317d20ce0cec75d790"
+    },
+    {
+      "path": "schemas/composition.schema.json",
+      "sha256": "72e00fd1c9a5518c5d52ce45c2a46a5553582c8b83344cee896bbc98fa921a75"
+    },
+    {
+      "path": "schemas/esg-corpus.schema.json",
+      "sha256": "c2263ff66e75bcc38eed89ce5bbacbfc730f3d08da4e7766db2dec2dd19415c4"
+    },
+    {
+      "path": "schemas/esg-learning-report.schema.json",
+      "sha256": "c837a650c3e2b84dfa09fcb6024e4e9ae60ffa4e94c682aedebccc0b33e3145b"
+    },
+    {
+      "path": "schemas/event.schema.json",
+      "sha256": "7a8978e78194fa252d6606272fb6cc6377872e67bc5e688677d254f61012a45f"
+    },
+    {
+      "path": "schemas/experiment.schema.json",
+      "sha256": "6ad6a11438b3bdf062d1d2be8bf47bf4f2002b2391524611b15fdb2d2e13ca40"
+    },
+    {
+      "path": "schemas/handoff.schema.json",
+      "sha256": "b1888fe7b96e152185502e8bef44d8cbe1f85f54d1096a5c3fad88663a313499"
+    },
+    {
+      "path": "schemas/meta.schema.json",
+      "sha256": "d1f00eb474bc5c6e01ce4feef842fedd81c9b7e2962fb21a63ae6390b07ed646"
+    },
+    {
+      "path": "schemas/plan.schema.json",
+      "sha256": "0ac85346626e038dab4ad22a7f488702f17d19886e6b08c14d9942481420c3a1"
+    },
+    {
+      "path": "schemas/request.schema.json",
+      "sha256": "3cba8e27f4f17d41f160d0a63d839ae382e4ea81e135e3a1aeeda6e813c70975"
+    },
+    {
+      "path": "schemas/result.schema.json",
+      "sha256": "aa602422d460fb54aff91d70ecc00981cb69461fc7e4437f4d289f11738dc4ab"
+    },
+    {
+      "path": "schemas/retrieval-manifest.schema.json",
+      "sha256": "a301d1f5b2bf679f8899e47a81030da7f6a6fa7fa9394083fe12c5a58d8a3fae"
+    },
+    {
+      "path": "schemas/review.schema.json",
+      "sha256": "23279a8391cc3cf974e6df42b51de6a56891b071b1f723b9b591d455b4ae8c16"
+    },
+    {
+      "path": "schemas/risk.schema.json",
+      "sha256": "e394a9561f8d89213e49789b05875a9fb00fd19828fe2ce836907a897e453bf0"
+    },
+    {
+      "path": "schemas/source.schema.json",
+      "sha256": "a5b7825af9238d93277f821b7c3ad5adad42550dc1099dab126aef785ccbf518"
+    },
+    {
+      "path": "skills/professional-reports/SKILL.md",
+      "sha256": "af3f1c8bda97acded97f0f0583353657238fc29249c9b148d3d8e9bf1388fd02"
+    },
+    {
+      "path": "skills/professional-reports/scripts/bootstrap.py",
+      "sha256": "80aa8be9ebf44fb62f7b3304e981af84a2522a4811d7e0a5a03d8c3f54238050"
+    },
+    {
+      "path": "skills/reverse-dcf-report/SKILL.md",
+      "sha256": "f20f8385381848362b040e018246a7c1e49aabe0c5e94dbf99a2436958288b76"
+    },
+    {
+      "path": "skills/reverse-dcf-report/scripts/report-path.py",
+      "sha256": "8597526d3b66b3a7d0f3d80de0e332f1b5a977ed2f770d0efac9818f35be7486"
+    },
+    {
+      "path": "skills/short-reverse-dcf/SKILL.md",
+      "sha256": "7f7affe375a1c2086273d902b0a964d934a44e93b180b623874cf701171f684c"
+    }
+  ],
+  "acceptance": null,
+  "content_sha256": "484529b6aec1b49bcc1857ef75b1b5d03c4a3c33bdef7b697fc290bb3fefe40f",
+  "protected_sha256": "5cd4bcb5355a9b3168b26490c949bf5a682be54102707622a5a96356c2518ff5",
+  "release_id": "d2d7a8c2eef1fc18350a199cfa38f1a7f8c6157575332d43ed68a3fda43b57fe"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Synthetic engine demonstration only; not Hyundai or a financial-quality review",
+  "sample_input": "examples/synthetic-stub.json",
+  "final_build": ".validation/final-synthetic-cross-company",
+  "status": "completed_conditional",
+  "tests": {
+    "count": 26,
+    "result": "passed",
+    "native_engine_mutation_test": true
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "openpyxl": "3.1.5",
+    "artifact_tool": "2.8.84",
+    "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+    "browser": "154.0.8037.97",
+    "paths": "Discovered at runtime; no author checkout path dependency"
+  },
+  "input_sha256": "eac27ac637b108e33b6439ecab466d121ce0212c2e5d80f894b5bfe7351582d0",
+  "model_sha256": "660405db956aae1f5cba1fa523032a81c11f8a271df57f1ede1c950387cca968",
+  "xlsx_sha256": "abb4182384c56b865399f59c1e02e33144c13e798a245d90da966c0cf5e2640e",
+  "pdf_sha256": "1da5f6f3b66e326c6ae3be5a50aae521c43fba0d4cad7d97c9d4a08b1ee70d9f",
+  "formula_cells": 246,
+  "recalculation": "passed",
+  "saved": true,
+  "reopened": true,
+  "formula_errors": [],
+  "cached_value_differences": [],
+  "html_bindings": 232,
+  "html_and_rendered_binding_checks": true,
+  "pdf_pages": 21,
+  "native_layout_passed": true,
+  "visual_scope": {
+    "pdf": "All 21 PDF page rasters inspected through contact sheets; final rasters identical to the inspected revision",
+    "pixel_identity_to_inspected_revision": true,
+    "workbook": "First 22 rows, columns A:C of all nine sheets; full formula/value audit separately. Evidence wrapping changed and separately inspected.",
+    "independent_design_review": false,
+    "financial_review": false
+  },
+  "excluded": [
+    "Live company inputs",
+    "Source truth",
+    "Financial methodology review",
+    "Legal class rights",
+    "Native Microsoft Excel execution",
+    "Independent design selection",
+    "Professional-quality approval"
+  ]
+}

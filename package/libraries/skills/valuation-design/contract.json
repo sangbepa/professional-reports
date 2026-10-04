@@ -1,0 +1,96 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-design",
+  "category": "judgment",
+  "execution_mode": "agent",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_packet",
+    "reconciled_data",
+    "economic_unit_profile",
+    "available_method_capabilities"
+  ],
+  "outputs": [
+    "method_selection",
+    "assumption_cases",
+    "scenario_design",
+    "ownership_policy",
+    "segment_reconciliation",
+    "equity_bridge_design",
+    "method_reconciliation",
+    "design_returns",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Classify economic units and compare fit of candidate methods.",
+    "Calibrate material assumptions with alternatives and consequences.",
+    "Select coherent cash-flow, discount, terminal and ownership policies.",
+    "Reconcile methods and one claims bridge; return unavailable implementation or evidence."
+  ],
+  "acceptance": [
+    {
+      "id": "valuation-design-acceptance-1",
+      "kind": "semantic",
+      "expectation": "Method roles and exclusions follow economic fit, with no fixed DCF/comps pair."
+    },
+    {
+      "id": "valuation-design-acceptance-2",
+      "kind": "semantic",
+      "expectation": "Dominant assumptions include observed support, calibration, alternatives and supported conclusion strength."
+    },
+    {
+      "id": "valuation-design-acceptance-3",
+      "kind": "mechanical",
+      "expectation": "Ownership policy records consolidation_policy, nci_policy, lease_policy and share_rights_policy with model paths and exceptions."
+    },
+    {
+      "id": "valuation-design-acceptance-4",
+      "kind": "semantic",
+      "expectation": "Segment controls, finance funding, associates, dilution and claims are reconciled without double counting."
+    }
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "evidence_packet",
+    "reconciled_data",
+    "economic_unit_profile",
+    "available_method_capabilities"
+  ],
+  "failure_returns": [
+    "report-research-plan",
+    "report-data-reconcile"
+  ],
+  "failure": {
+    "return_to": [
+      "report-research-plan",
+      "report-data-reconcile"
+    ],
+    "conditions": [
+      "Required input unavailable or hash/version stale",
+      "Acceptance is failed or not performed",
+      "Required execution/source/review capability is unavailable"
+    ],
+    "record": "failure_records with affected record, missing evidence/test, consequence, owner, next action and interim conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md",
+  "domain_artifact_aliases": {
+    "valuation-method-decisions": "method_selection",
+    "valuation-equity-bridge": "equity_bridge_design",
+    "valuation-unknowns": "design_returns",
+    "full-consolidation-nci-bridge": "ownership_policy",
+    "proportional-ownership-bridge": "ownership_policy",
+    "unit-ownership-attribution-map": "ownership_policy",
+    "lease-policy-schedule": "ownership_policy",
+    "share-rights-waterfall": "ownership_policy",
+    "point-in-time-dilution-schedule": "ownership_policy",
+    "associate-attribution-schedule": "equity_bridge_design",
+    "sotp-unit-method-map": "method_selection",
+    "maintainable-economics-bridge": "assumption_cases",
+    "going-concern-recovery-assessment": "method_selection",
+    "capital-cost-policy": "assumption_cases"
+  },
+  "artifact_alias_semantics": "Logical plan output names for the corresponding method records, not extra completed artifacts. Preserve unit, current version and actual completion/review state; a design or formula specification is not an executed model or reconciled numerical bridge."
+}

@@ -1,0 +1,87 @@
+{
+  "id": "market-research-domain-contract",
+  "component_id": "market-research",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "execution_support": "planning-only",
+  "production_quality_verified": false,
+  "production_report_execution_allowed": false,
+  "files": {
+    "policy": "POLICY.md",
+    "rules": "plan-rules.json"
+  },
+  "interface": {
+    "inputs": [
+      "mandate",
+      "company_profile",
+      "facts",
+      "evidence_access_manifest"
+    ],
+    "mandate_fields": [
+      "decision",
+      "product_customer_geography",
+      "market_definition",
+      "measurement_period",
+      "information_cutoff",
+      "source_access"
+    ],
+    "outputs": [
+      "required_work",
+      "gates",
+      "unknowns",
+      "capability_gaps"
+    ],
+    "required_work": [
+      "market-definition-and-sizing-plan",
+      "demand-and-competition-inquiry-plan",
+      "source-triangulation-plan",
+      "coverage-and-access-gaps"
+    ],
+    "gates": [
+      {
+        "id": "market-research-gate-scope",
+        "status": "pending",
+        "review_role": "judgment"
+      },
+      {
+        "id": "market-research-gate-evidence-access",
+        "status": "pending",
+        "review_role": "source"
+      },
+      {
+        "id": "market-research-gate-production-execution",
+        "status": "blocked",
+        "reason": "Planning-only domain; no report-mode execution support."
+      }
+    ],
+    "unknown_fields": [
+      "question",
+      "affected_work",
+      "missing_evidence",
+      "next_assessment",
+      "conclusion_restriction"
+    ],
+    "engine_node_output_names": [
+      "market-research-research-plan",
+      "market-research-access-and-capability-gaps"
+    ],
+    "component_reference_fields": [
+      "id",
+      "version",
+      "sha256"
+    ]
+  },
+  "basis_clauses": [
+    "market-research-rule-planning",
+    "market-research-policy-production-block"
+  ],
+  "host_ownership": {
+    "meta_component_id": "meta-orchestrator",
+    "runtime_component_id": "codex-native"
+  },
+  "limitations": [
+    "Planning instructions do not implement a completed domain engagement, calculations, assurance or investment approval.",
+    "Unknown facts remain unknown; no access is not evidence of no issue.",
+    "Any future execution support requires explicit versioned domain/provider coverage and actual review; a valuation adapter does not silently confer it."
+  ]
+}

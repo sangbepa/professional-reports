@@ -1,0 +1,63 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "report-research-plan",
+  "category": "judgment",
+  "inputs": [
+    "artifact_manifest",
+    "engagement_frame",
+    "deliverable_acceptance",
+    "existing_evidence"
+  ],
+  "outputs": [
+    "question_plan",
+    "search_plan",
+    "calibration_plan",
+    "operation_record",
+    "failure_records"
+  ],
+  "procedure": [
+    "Bind the frame, acceptance and existing evidence.",
+    "Prioritize material questions and competing explanations.",
+    "Specify discriminating sources/tests and domain-owned calibration.",
+    "Set stopping conditions and return the plans and gaps."
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "engagement_frame",
+    "deliverable_acceptance",
+    "existing_evidence"
+  ],
+  "failure_returns": [
+    "report-frame"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "question-routing",
+      "kind": "mechanical",
+      "expectation": "Questions have stable IDs, source/test targets, stopping conditions and downstream work references; planned versus executed inquiries are distinguishable."
+    },
+    {
+      "id": "decision-materiality",
+      "kind": "semantic",
+      "expectation": "Priority and search scope follow decision consequences, access and credible counterevidence rather than a fixed source count."
+    },
+    {
+      "id": "calibration-and-stop",
+      "kind": "semantic",
+      "expectation": "Observation-to-assumption calibration is explicit; stopping cannot upgrade an unresolved reversible conclusion into an accepted recommendation."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "report-frame"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required source or execution tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; identify affected record, evidence/test, consequence, next action and conclusion restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "control-test",
+  "category": "verification",
+  "inputs": [
+    "artifact_manifest",
+    "risk_register",
+    "control_spec",
+    "test_population",
+    "plan_snapshot"
+  ],
+  "outputs": [
+    "control_test_results",
+    "control_exceptions",
+    "operation_record",
+    "failure_records"
+  ],
+  "consumes": [
+    "artifact_manifest",
+    "risk_register",
+    "control_spec",
+    "test_population",
+    "plan_snapshot"
+  ],
+  "procedure": [
+    "Bind each control to risk IDs and assertions, owner, frequency, input population and expected evidence. Separate design adequacy from actual operating effectiveness.",
+    "Retain test selection rationale, coverage, exclusions and executed evidence. Test failure paths when applicable. Report observed exceptions with numerator and denominator; samples alone do not establish population error or a probability guarantee.",
+    "Compare actual evidence with unchanged criteria and link uncovered exposure to plan nodes. Unperformed checks remain unverified. Route remediation and fresh independent retest; a producer self-check cannot become independent assurance."
+  ],
+  "failure_returns": [
+    "risk-frame",
+    "review-design"
+  ],
+  "execution_mode": "agent",
+  "acceptance": [
+    {
+      "id": "control-test-bindings",
+      "kind": "mechanical",
+      "expectation": "Current inputs and actual plan task/risk bindings are recorded; stale inputs return restricted results."
+    },
+    {
+      "id": "control-test-scope",
+      "kind": "semantic",
+      "expectation": "Named outputs reflect performed work, uncertainty and method-specific limits; risk evidence grants no authority."
+    }
+  ],
+  "failure": {
+    "return_to": [
+      "risk-frame",
+      "review-design"
+    ],
+    "conditions": [
+      "Missing or stale consumed input",
+      "Required evidence or tool unavailable",
+      "Acceptance test fails or remains unperformed"
+    ],
+    "record": "failure_records; affected object, missing evidence/test, owner, next action and restriction"
+  },
+  "execution_boundary": "references/execution-contract.md"
+}

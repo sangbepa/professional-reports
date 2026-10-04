@@ -1,0 +1,49 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "report-design",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-design/SKILL.md",
+      "sha256": "c1ca9db7e7b49511d35053c1eb34aff3309fd9cb8f275a080d92b1665489a8d8"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-design/references/content-contract.md",
+      "sha256": "6acec9841a4ac5c0e926aa1b964e4777a6d330c75f6f467767a800e5798f7f8e"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-design/references/design-judgment.md",
+      "sha256": "a3b6e8f1f19ea18433fd253bd759b91114f1ee69dd9e99348279a728466f94d6"
+    },
+    {
+      "origin": "repository",
+      "repository_relative_path": "valuation-workbench/skills/report-design/references/workflow.md",
+      "sha256": "740caa833e54bb6f12bbc5d80b7a89aefb37c245c5a9a671c83781040a528b80"
+    }
+  ],
+  "changes": [
+    "Adapted reusable method into a provisional self-contained component with explicit inputs, outputs, acceptance, failure routes and stable Markdown clauses.",
+    "Removed external author-machine paths, orchestration-contract dependencies and unsupported runtime promises.",
+    "Preserved domain-specific source, calibration, judgment and review boundaries.",
+    "Vendored no builders, renderers, fonts, images, company data or branded assets; preserved existing design through relative references and measured hashes only."
+  ],
+  "license": {
+    "status": "repository-license-found-provenance-scope-limited",
+    "spdx": "MIT",
+    "file": "LICENSE.local",
+    "observed_from": "LICENSE",
+    "unknowns": [
+      "No separate per-skill upstream license was found in inspected valuation-workbench skill sources. Root license does not establish third-party data, standard text, branding, font or linked-artifact rights."
+    ]
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "external_source_tools": "not_vendored",
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "codex-native",
+  "kind": "runtime",
+  "version": "0.2.0-dev.1",
+  "status": "provisional",
+  "description": "Task-scoped native Codex workers with fresh independent review rounds, inherited model, observed session limits and actual spawn/close receipts.",
+  "capabilities": [
+    "native-agent-dispatch",
+    "host-result-binding",
+    "reasoning-allocation",
+    "concurrency-control"
+  ],
+  "requires": [],
+  "entrypoint": "RUNTIME.md"
+}

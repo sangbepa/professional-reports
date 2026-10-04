@@ -1,0 +1,29 @@
+{
+  "schema_version": "cloud-readiness/1",
+  "package_version": "0.4.0-dev.2",
+  "release_id": "d2d7a8c2eef1fc18350a199cfa38f1a7f8c6157575332d43ed68a3fda43b57fe",
+  "channel": "development",
+  "local_checks": {
+    "isolated_install_activation_bootstrap": "passed",
+    "launcher_guard_tests": 7,
+    "conditional_python_smoke": "passed",
+    "private_paths_and_credential_scan": "passed",
+    "native_excel_recalculation_save_reopen_pdf": "passed",
+    "launcher_guard_tests_result": "7/7 passed"
+  },
+  "linux_github_actions": "Automated on each push; check the linked workflow for the current Linux result.",
+  "codex_cloud_environment": "not created or published by this repository upload",
+  "host_native_subagent_support": "must be verified in selected Codex environment",
+  "full_professional_report_accepted": false,
+  "public_edition_changes": [
+    "Company-specific frozen model and source archives excluded.",
+    "Documentation private paths redacted.",
+    "Existing protected review criteria and general valuation engine retained."
+  ],
+  "prior_local_snapshot": {
+    "version": "0.4.0-dev.1",
+    "tests": 822,
+    "scope": "Historical local mechanical validation; not a claim that all tests were rerun in this public edition."
+  },
+  "public_disclosure_scope": "User explicitly approved twelve protected evaluation/reviewer/approval files"
+}

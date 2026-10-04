@@ -1,0 +1,28 @@
+{
+  "schema_version": "professional-reports/skill-provenance/1",
+  "component_id": "sensitivity-analysis",
+  "adaptation_date": "2026-10-03",
+  "source_files": [
+    {
+      "origin": "repository",
+      "repository_relative_path": "professional-reports/libraries/skills/report-source-assess/component.json",
+      "sha256": "79d74e8cc2143b0ff790e1705ddbd52c6c8df3682d8e690cc6803366d0c43d09"
+    }
+  ],
+  "changes": [
+    "New locally authored method; existing component/contract pattern used for packaging only."
+  ],
+  "license": {
+    "status": "local-repository-license-retained",
+    "file": "LICENSE.local",
+    "unknowns": [
+      "No external standards or third-party rights established."
+    ]
+  },
+  "local_license": {
+    "file": "LICENSE.local",
+    "sha256": "cd9f0b52669a1bf69db3ada344c6aa7c64810d74cda2a50b39a022258b7682bf"
+  },
+  "heldout_material": "not_accessed_or_included",
+  "production_verification": "not_claimed"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "report-operation/1",
+  "id": "valuation-class-cashflows",
+  "category": "execution",
+  "execution_mode": "agent_with_local_calculation",
+  "inputs": ["artifact_manifest", "valuation-input.json", "rights_evidence", "selected_owner_cashflow_case"],
+  "consumes": ["artifact_manifest", "valuation-input.json", "rights_evidence", "selected_owner_cashflow_case"],
+  "outputs": ["class_cashflow_schedules", "class_parent_reconciliation", "operation_record", "failure_records"],
+  "procedure": ["Select a supported rights case and current-holder perimeter", "Run formula-linked model and independent scalar replay", "Reconcile amounts, timing, terminal entitlements and parent value; preserve semantic review gaps"],
+  "failure_returns": ["valuation-design", "valuation-evidence"],
+  "acceptance": [
+    {"id": "dated-owner-flows", "kind": "mechanical", "expectation": "Current class IDs, shares, distributions and owner funding reconcile separately at each supplied time"},
+    {"id": "class-parent-value", "kind": "mechanical", "expectation": "Supported terminal claims and class present values reconcile with current parent equity"},
+    {"id": "rights-capacity-support", "kind": "semantic", "expectation": "Actual reviewer verifies legal/economic entitlements, declaration contingencies, funding, discount rates and continuing claims"}
+  ],
+  "failure": {"return_to": ["valuation-design", "valuation-evidence"], "conditions": ["Unsupported rights or holder perimeter", "Unreconciled cashflows or equity value", "Stale model or source binding", "Unperformed independent semantic or calculation checks"], "record": "failure_records with exact artifact, scope, evidence, consequence and next action"},
+  "execution_boundary": "SKILL.md"
+}

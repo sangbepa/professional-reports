@@ -1,0 +1,12 @@
+{
+  "id": "review-design",
+  "kind": "skill",
+  "version": "0.1.0-dev.1",
+  "status": "provisional",
+  "description": "Design independent review coverage for task risks while preserving existing acceptance criteria.",
+  "capabilities": [
+    "risk-review-design"
+  ],
+  "requires": [],
+  "entrypoint": "SKILL.md"
+}
