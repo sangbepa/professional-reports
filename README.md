@@ -109,6 +109,19 @@ runtime-node/               Playwright 의존성·lock 파일
 
 상세 상태: [package-status](package/docs/package-status.md), [세션 계약](package/docs/session-workflow.md), [위험·비용](package/docs/risk-workflow.md).
 
+## 공개 계약 회귀시험과 다음 개발
+
+이벤트·입력 변경·검토 독립성·지적 종결과 재개방·native 제출·세션 종료·기한·profiler의 공개 합성 회귀시험을 실행합니다. 계약 suite는 임시 state에 릴리스를 새로 설치하고 별도 Python 프로세스로 사용합니다. 기존 프로젝트 활성 버전과 immutable 릴리스는 변경하지 않습니다.
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .runtime/python/bin/python -m unittest discover -s tests -v
+python3 scripts/profile-run.py --run /absolute/existing-run --out outputs/profile-new.json
+```
+
+profiler는 해당 실행의 `run.json`에 고정된 릴리스를 사용하며 기존 원장을 수정하지 않습니다. 원래 릴리스가 없으면 현재 활성 버전으로 대체하지 않습니다. 합성 영수증 시험은 실제 native worker 실행이나 전문 보고서 인수가 아닙니다.
+
+파일별 변경·실제 host 시험 절차·병목 측정·완료 기준: [다음 개발계획](docs/next-development.md). 실행 결과와 미확인 항목: [공개 계약 검증 요약](docs/public-contract-verification.json). 과거 822개 시험의 재실행이나 전체 품질·600초 통과를 주장하지 않습니다.
+
 ## 보호된 평가 자료
 
 사용자가 보호된 평가 사례·검토 프로필·승인 기록 12개 파일의 공개를 명시적으로 승인했습니다. 기존 평가 기준은 그대로 포함합니다. 공개된 평가 자료를 새로운 비공개 holdout으로 취급하지 않습니다. 이 공개 승인은 보고서 품질이나 생산 릴리스의 승인을 뜻하지 않습니다. 관련 범위는 [publication-scope](docs/publication-scope.json)에 기록합니다.

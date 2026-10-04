@@ -1,0 +1,84 @@
+{
+  "schema_version": "public-contract-verification/1",
+  "captured_at": "2026-10-04T05:52:46.905561+00:00",
+  "baseline_commit": "dd676c0d6453015d00c7efd485549f34895c1664",
+  "release_version": "0.4.0-dev.2",
+  "release_id": "d2d7a8c2eef1fc18350a199cfa38f1a7f8c6157575332d43ed68a3fda43b57fe",
+  "execution_scope": "Public installed-code regression using synthetic inputs and synthetic receipts; not native inference or report acceptance",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .runtime/python/bin/python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "outer_tests": 16,
+      "wrapper_tests": 4,
+      "inner_contract_tests": {
+        "engine_and_deadline": 20,
+        "native": 12,
+        "performance": 6,
+        "sessions": 7
+      },
+      "launcher_tests": 7,
+      "profile_launcher_tests": 5,
+      "distinct_behavior_tests_excluding_wrappers": 57,
+      "raw_log_sha256": "62bca3256c82d4e824bf10453a21791db665293bb66708d89ceeee5a8ab7bdf5",
+      "raw_log_location": "outputs/cloud-environment-evidence/regression-tests.log (local, gitignored)",
+      "ci_log_artifact": "outputs/contract-regression.log"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/verify.py",
+      "exit_code": 0,
+      "verified": true
+    }
+  ],
+  "files": {
+    "scripts/profile-run.py": "f1c14a658154ddbbc21507540c0d449089eb446eb4d9293d16a97c17a76f7335",
+    "tests/test_contracts.py": "d7a4c626410a99d39e1943151bf9642b012c08bcea7f59e1dc1bd5bfc3ee0b0f",
+    "tests/test_profile_run.py": "da65d63249b40207ae8d73174eb559041af3a3070180c1e4ffc1139e8635956b",
+    "tests/contracts/check_engine.py": "d2a5ff778541d595ff2f59554c9220399223d0f850b34ec0e88566c244c4abd6",
+    "tests/contracts/check_native.py": "7208889974b6b69717b70d971bc3005b18a0cb2a9175a5a3e44f346808ab77d3",
+    "tests/contracts/check_performance.py": "aa3085cd9d08febb73c4708110cead268f1ed011d313f8201ae130d4b2720867",
+    "tests/contracts/check_sessions.py": "34a8ed1f21752cf5b71d6c75a555781c5a4285056bbc36440c37695da34856c9",
+    "tests/contracts/fixture.py": "27f28056a4cc6e7a63ec384fd277a7112665aeceb230b968812b0c51d2d24441"
+  },
+  "historical_termination_summary": {
+    "source": "package/docs/package-status.json",
+    "source_sha256": "98dc20860100e45c4f241f73d8c3fb265684eda7aaaeedf8f01acdd8a3dabca4",
+    "attempt_count": 31,
+    "all_incomplete": true,
+    "deadline_termination_locations": {
+      "analyst": 5,
+      "author": 3,
+      "curator": 7,
+      "reviewer": 5,
+      "visual-left": 5,
+      "visual-right": 2
+    },
+    "other_termination_count": 4,
+    "classification": "Termination location summary only; no duration attribution or causal bottleneck measurement"
+  },
+  "host_contract": {
+    "metadata_observed": true,
+    "available_tools": [
+      "collaboration.spawn_agent",
+      "collaboration.send_message",
+      "collaboration.wait_agent",
+      "collaboration.interrupt_agent",
+      "collaboration.list_agents"
+    ],
+    "isolation_option": "fork_turns=none; not the installed fork_context=false wire field",
+    "installed_transport": "multi_agent_v1.spawn_agent or multi_agent_v1__spawn_agent",
+    "actual_close_available": false,
+    "actual_worker_reviewer_close_test": "not_run",
+    "limitation": "Transport receipt compatibility not established and no actual close tool; no synthetic receipt presented as authentic"
+  },
+  "historical_ledger_profiling": "not_run; original events.jsonl and pinned historical releases unavailable",
+  "runtime_optimization": "not_attempted; no causal bottleneck evidence",
+  "review_output_speedup": "unknown; concise packet is a proposed comparison candidate",
+  "professional_quality": "not_assessed",
+  "full_report_600_second_acceptance": "not_run",
+  "immutable_package_changed": false,
+  "existing_installed_release_changed": false,
+  "protected_criteria_changed": false,
+  "historical_ledgers_changed": false,
+  "private_holdout_claimed": false
+}

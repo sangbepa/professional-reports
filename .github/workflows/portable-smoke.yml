@@ -6,6 +6,8 @@ jobs:
   linux:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -16,12 +18,18 @@ jobs:
           node-version: '22'
       - name: Prepare isolated runtime and release
         run: bash scripts/cloud-setup.sh
-      - name: Check launcher guards
-        run: .runtime/python/bin/python -m unittest discover -s tests -v
+      - name: Check installed engine, native, session, profiler and launcher contracts
+        shell: bash
+        run: |
+          mkdir -p outputs
+          set -o pipefail
+          .runtime/python/bin/python -m unittest discover -s tests -v 2>&1 | tee outputs/contract-regression.log
       - name: Check synthetic Excel and PDF
         run: python3 scripts/smoke.py --render --out outputs/linux-smoke
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: synthetic-linux-smoke
-          path: outputs/linux-smoke
+          name: public-contracts-and-synthetic-smoke
+          path: |
+            outputs/contract-regression.log
+            outputs/linux-smoke
